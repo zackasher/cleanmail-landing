@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** May 26, 2026
+**Last updated:** June 8, 2026
 
 Calibrate LLC ("we," "our," or "us") operates CleanMail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using CleanMail, you agree to the practices described here.
 
@@ -70,7 +70,7 @@ CleanMail relies on the following third parties to provide its service. Each rec
 | **Supabase** (Supabase Inc., hosted in US East — Ohio) | Database and serverless functions | Your profile, digest content, events, subscription state |
 | **Anthropic** (Anthropic PBC) | AI digest generation via Claude API | Email subject + body for emails you have authorized, sent at request time and not stored at Anthropic per their API terms |
 | **Google** (Google LLC) | Sign-in, Gmail access, Calendar sync | OAuth tokens, Gmail messages from selected senders, Calendar event metadata |
-| **Stripe** (Stripe, Inc.) | Subscription billing | Email address, subscription tier, payment status (we never see card numbers) |
+| | **Stripe** (Stripe, Inc.) | Subscription billing | Email address, subscription status, payment status (we never see card numbers) |
 | **Apple Push Notification service** | Delivery of push notifications | Anonymous device token |
 | **Trigger.dev** | Scheduled job execution for digest delivery | User ID and digest ID at scheduled times — no email content |
 
@@ -92,7 +92,7 @@ The following are stored persistently:
 
 ## 6. Data Retention and Account Deletion
 
-Digest history is retained for the period you select in Settings (default 30 days; configurable up to 60 days for paid tiers). Older history is automatically deleted.
+Digest history is retained for the period you select in Settings (default 30 days; configurable up to 60 days). Older history is automatically deleted.
 
 You may permanently delete your account and all associated data at any time from within the app: Settings → Delete Account. Account deletion is immediate and removes:
 - Your profile and all in-app data (people, activities, senders, digest history, events).
@@ -151,4 +151,3 @@ Questions about this Privacy Policy:
 support@cleanmailapp.com
 
 For privacy-specific inquiries, please include "Privacy" in the subject line.
-

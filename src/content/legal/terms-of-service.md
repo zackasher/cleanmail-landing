@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last updated:** May 26, 2026
+**Last updated:** June 08, 2026
 
 These Terms of Service ("Terms") govern your use of CleanMail, an iOS application operated by Calibrate LLC ("we," "our," or "us"). By creating an account or using CleanMail, you agree to these Terms.
 
@@ -26,13 +26,15 @@ You are responsible for maintaining the confidentiality of your Google account c
 
 ## 3. Subscriptions and Billing
 
-CleanMail is offered on a monthly subscription basis with the following paid tiers: Basic ($5/month), Plus ($10/month), and Premium ($15/month). A free tier with limited functionality is also available.
+CleanMail is offered as a single monthly subscription at $6.99 per month. There is no free tier.
+
+**Free trial.** New subscribers receive a 14-day free trial. A valid payment card is required to start the trial. Unless you cancel before the trial ends, your subscription automatically converts to a paid subscription at $6.99 per month and your card is charged at that time. You can cancel at any time during the trial from within the app or via the Stripe customer portal; canceling before the trial ends prevents any charge.
 
 **Billing.** Subscriptions are billed in advance via Stripe at the beginning of each billing period. Your subscription renews automatically each month unless you cancel.
 
 **Payment processing.** All payments are processed by Stripe, Inc. We do not store or have access to your full payment card information. By subscribing, you agree to Stripe's [Terms of Service](https://stripe.com/legal/consumer) and [Privacy Policy](https://stripe.com/privacy).
 
-**Cancellation.** You may cancel your subscription at any time from within the app or via the Stripe customer portal linked from the app. Cancellation takes effect at the end of your current billing period — you retain access to paid features until the period ends, then your account reverts to the free tier.
+**Cancellation.** You may cancel your subscription at any time from within the app or via the Stripe customer portal linked from the app. Cancellation takes effect at the end of your current billing period — you retain access until the period ends, after which your access to CleanMail's features ends.
 
 **Pricing changes.** We may change subscription pricing with at least 30 days' notice via email and an in-app notice. Continued use after a price change takes effect constitutes acceptance.
 
@@ -40,7 +42,7 @@ CleanMail is offered on a monthly subscription basis with the following paid tie
 
 ## 4. Refund Policy
 
-Subscriptions are billed monthly in advance. You may cancel at any time; cancellation takes effect at the end of the current billing period and prevents future charges. **We do not offer refunds for partial billing periods or for time elapsed before cancellation.**
+Subscriptions are billed monthly in advance. You may cancel at any time; cancellation takes effect at the end of the current billing period and prevents future charges. If you cancel during your free trial before it ends, you will not be charged. **We do not offer refunds for partial billing periods or for time elapsed before cancellation.**
 
 We may, at our sole discretion, issue refunds in cases of:
 - Billing errors or duplicate charges.
