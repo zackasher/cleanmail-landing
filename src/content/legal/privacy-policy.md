@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** June 8, 2026
+**Last updated:** June 22, 2026
 
 Calibrate LLC ("we," "our," or "us") operates CleanMail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using CleanMail, you agree to the practices described here.
 
@@ -21,7 +21,7 @@ We collect only the information necessary to provide the CleanMail service.
 **Information collected from Google APIs (with your authorization):**
 - The email address of your Google account.
 - For each email sender you have explicitly selected: sender email, subject line, date, and message body.
-- Calendar event metadata for events we create or update on your behalf.
+- Calendar event metadata for events we create, update, or delete on your behalf.
 
 **Information collected automatically:**
 - Your selected time zone (used to schedule digest generation in your local time).
@@ -35,7 +35,7 @@ CleanMail uses the following Google API scopes:
 
 - `openid`, `profile`, `email` — to identify your Google account and sign you in.
 - `https://www.googleapis.com/auth/gmail.readonly` — to read emails from senders you have explicitly added to your digest. We do not read emails from any other sender.
-- `https://www.googleapis.com/auth/calendar` — to create and update calendar events extracted from your digest emails.
+- `https://www.googleapis.com/auth/calendar.events` — to create, update, and delete calendar events extracted from your digest emails.
 
 **Google API Services Limited Use disclosure:** CleanMail's use and transfer of information received from Google APIs to any other app will adhere to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. Specifically:
 
