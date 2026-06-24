@@ -107,7 +107,7 @@ CleanMail lets two people — for example, two parents — share one digest as c
 
 **Leaving or being removed from a shared digest.** A primary account can remove a partner, and a partner can leave on their own, at any time. When a partner leaves or is removed:
 - Their access to the shared digest ends immediately, and their own mailbox stops contributing new emails to it.
-- The summaries, calendar events, and sender configurations they contributed **remain in the shared digest** for the remaining participant. Leaving does not delete the shared digest's existing content. If the remaining participant wants to remove a departed partner's senders or other configuration, they can do so manually in the app.
+- The email senders that the departing participant had added are automatically removed from the shared digest, so that participant's mailbox no longer feeds it in any form. The digest summaries and calendar events already created from those emails **remain in the shared digest** for the remaining participant; leaving does not delete the shared digest's existing summaries or events.
 - The departing partner is no longer charged anything for the shared digest; to continue using CleanMail with their own digest, they would start their own subscription.
 
 To permanently delete your own personal data, see Section 7 (Account Deletion).
