@@ -18,14 +18,14 @@ const { title } = Astro.props;
       max-width: 720px;
       margin: 40px auto;
       padding: 0 24px;
-      color: var(--dark);
+      color: var(--navy);
       line-height: 1.7;
     }
 
     .legal-content :global(h1) {
       font-size: 28px;
       font-weight: 500;
-      color: var(--blue);
+      color: var(--purple);
       margin-bottom: 24px;
       margin-top: 0;
       letter-spacing: -0.5px;
@@ -34,7 +34,7 @@ const { title } = Astro.props;
     .legal-content :global(h2) {
       font-size: 20px;
       font-weight: 500;
-      color: var(--dark);
+      color: var(--navy);
       margin-top: 36px;
       margin-bottom: 12px;
     }
@@ -42,21 +42,21 @@ const { title } = Astro.props;
     .legal-content :global(h3) {
       font-size: 16px;
       font-weight: 500;
-      color: var(--dark);
+      color: var(--navy);
       margin-top: 28px;
       margin-bottom: 10px;
     }
 
     .legal-content :global(p) {
       font-size: 15px;
-      color: var(--gray);
+      color: var(--muted);
       margin-bottom: 16px;
     }
 
     .legal-content :global(ul),
     .legal-content :global(ol) {
       margin: 12px 0 20px 24px;
-      color: var(--gray);
+      color: var(--muted);
       font-size: 15px;
     }
 
@@ -65,18 +65,18 @@ const { title } = Astro.props;
     }
 
     .legal-content :global(strong) {
-      color: var(--dark);
+      color: var(--navy);
       font-weight: 500;
     }
 
     .legal-content :global(a) {
-      color: var(--blue);
+      color: var(--purple);
       text-decoration: underline;
     }
 
     .legal-content :global(hr) {
       border: none;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--line);
       margin: 32px 0;
     }
 
@@ -89,15 +89,15 @@ const { title } = Astro.props;
 
     .legal-content :global(th),
     .legal-content :global(td) {
-      border: 1px solid var(--border);
+      border: 1px solid var(--line);
       padding: 10px 12px;
       text-align: left;
-      color: var(--gray);
+      color: var(--muted);
     }
 
     .legal-content :global(th) {
-      background: var(--card-bg);
-      color: var(--dark);
+      background: var(--card);
+      color: var(--navy);
       font-weight: 500;
     }
   </style>
