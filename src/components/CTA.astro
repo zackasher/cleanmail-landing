@@ -1,0 +1,90 @@
+---
+import { SITE_STAGE, APP_STORE_URL } from "../config";
+const SUPABASE_URL = "https://cxnxjnuvbsyymhxkrmpw.supabase.co";
+const SUPABASE_KEY = "sb_publishable_SicQ5RchA4Q5YI3DevGMlQ_1XWOPRjy";
+---
+{SITE_STAGE === "waitlist" && (
+  <div class="cta-block">
+    <form class="waitlist-form" id="waitlist-form" novalidate>
+      <input type="email" id="email-input" placeholder="name@email.com" required />
+      <button type="submit" id="submit-btn">Join the waitlist</button>
+    </form>
+    <p class="cta-note" id="cta-note">No spam. Just one note when it's ready.</p>
+    <p class="cta-ok" id="cta-ok">You're in. We'll come get you, promise.</p>
+    <p class="cta-err" id="cta-err">Something went wrong. Please try again.</p>
+  </div>
+)}
+
+{SITE_STAGE === "beta" && (
+  <a class="appstore-btn" href="/support">Request beta access</a>
+)}
+
+{SITE_STAGE === "launched" && (
+  <a class="appstore-btn" href={APP_STORE_URL}>Download on the App Store</a>
+)}
+
+<style>
+  .cta-block{text-align:center}
+  .waitlist-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .waitlist-form input{min-width:240px;padding:14px 18px;border:1px solid var(--line);border-radius:999px;font-size:15px;color:var(--navy);background:#fff;outline:none;transition:border-color .15s}
+  .waitlist-form input:focus{border-color:var(--purple)}
+  .waitlist-form input::placeholder{color:#b9c0d0}
+  .waitlist-form button{padding:14px 26px;background:var(--orange);color:#fff;border:none;border-radius:999px;font-size:15px;font-weight:500;cursor:pointer;box-shadow:0 8px 20px rgba(232,140,48,.28);transition:transform .15s,box-shadow .15s;white-space:nowrap}
+  .waitlist-form button:hover{transform:translateY(-1px);box-shadow:0 11px 26px rgba(232,140,48,.36)}
+  .waitlist-form button:disabled{opacity:.55;cursor:not-allowed}
+  .cta-note{font-size:12.5px;color:var(--muted);margin-top:12px}
+  .cta-ok{display:none;font-size:14px;color:#2e9e5b;font-weight:500;margin-top:12px}
+  .cta-ok.visible{display:block}
+  .cta-err{display:none;font-size:13px;color:var(--orange);margin-top:12px}
+  .cta-err.visible{display:block}
+  .appstore-btn{display:inline-block;background:var(--orange);color:#fff;font-size:16px;font-weight:500;padding:15px 30px;border-radius:999px;text-decoration:none;box-shadow:0 10px 26px rgba(232,140,48,.32)}
+</style>
+
+<script is:inline define:vars={{ SUPABASE_URL, SUPABASE_KEY }}>
+  const form = document.getElementById("waitlist-form");
+  if (form) {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const input = document.getElementById("email-input");
+      const btn = document.getElementById("submit-btn");
+      const note = document.getElementById("cta-note");
+      const ok = document.getElementById("cta-ok");
+      const err = document.getElementById("cta-err");
+      const val = input.value.trim();
+      if (!val || !val.includes("@")) return;
+      btn.disabled = true;
+      btn.textContent = "Joining...";
+      err.classList.remove("visible");
+      try {
+        const res = await fetch(`${SUPABASE_URL}/rest/v1/waitlist`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "apikey": SUPABASE_KEY,
+            "Authorization": `Bearer ${SUPABASE_KEY}`,
+            "Prefer": "return=minimal",
+          },
+          body: JSON.stringify({ email: val }),
+        });
+        if (res.ok || res.status === 201) {
+          input.value = "";
+          if (note) note.style.display = "none";
+          ok.classList.add("visible");
+          btn.textContent = "You're in!";
+        } else if (res.status === 409) {
+          ok.textContent = "You're already on the list!";
+          ok.classList.add("visible");
+          if (note) note.style.display = "none";
+          btn.disabled = false;
+          btn.textContent = "Join the waitlist";
+        } else {
+          throw new Error("Server error");
+        }
+      } catch (e2) {
+        err.classList.add("visible");
+        btn.disabled = false;
+        btn.textContent = "Join the waitlist";
+      }
+    });
+  }
+</script>

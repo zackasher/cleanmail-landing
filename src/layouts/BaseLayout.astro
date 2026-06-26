@@ -1,133 +1,55 @@
 ---
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 export interface Props {
   title: string;
   description?: string;
+  image?: string;
 }
-
-const { title, description = "Get out of your inbox and into your life. CleanMail summarizes the emails that matter to you." } = Astro.props;
+const {
+  title,
+  description = "Cleanmail reads the email so you don't have to. Every newsletter, reminder, and update, organized by person and activity, with every date on your calendar.",
+  image = "/logo.png",
+} = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content={description} />
   <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content={image} />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <style is:global>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --blue: #4A6FE3;
-      --green: #66EE78;
-      --orange: #E88C30;
-      --dark: #1a1a2e;
-      --gray: #888;
-      --light-gray: #aaa;
-      --bg: #ffffff;
-      --card-bg: #f7f9ff;
-      --border: #e8edf7;
+    :root{
+      --purple:#4A6FE3; --orange:#E88C30; --green:#66EE78;
+      --navy:#1b2236; --ink:#3a4156; --muted:#7a8196;
+      --card:#f7f9ff; --line:#e6ebf6;
     }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      color: var(--dark);
-      background: var(--bg);
-      -webkit-font-smoothing: antialiased;
-    }
-
-    header.site-header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 80px 24px 0;
-    }
-
-    .logo {
-      font-size: 32px;
-      font-weight: 300;
-      color: var(--dark);
-      letter-spacing: -1px;
-      text-decoration: none;
-    }
-
-    .logo span {
-      color: var(--blue);
-    }
-
-    .logo-wrapper {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: center;
-      width: fit-content;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .logo-underline {
-      height: 2px;
-      width: 75%;
-      background: var(--blue);
-      border-radius: 2px;
-      margin-top: 12px;
-    }
-
-    .logo-img {
-      width: auto;
-      height: 120px;
-      display: block;
-    }
-
-    footer.site-footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 24px;
-      text-align: center;
-      margin-top: 56px;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 12px;
-    }
-
-    .footer-links a {
-      font-size: 12px;
-      color: var(--light-gray);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    .footer-links a:hover {
-      color: var(--blue);
-    }
-
-    .footer-copy {
-      font-size: 12px;
-      color: #ccc;
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:"Helvetica Neue",Helvetica,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--navy);background:#fff;-webkit-font-smoothing:antialiased}
+    .page{
+      position:relative;min-height:100vh;
+      background:
+        radial-gradient(1250px 1250px at 0% 0%, rgba(74,111,227,.34) 0%, rgba(74,111,227,.13) 15%, rgba(74,111,227,0) 58%),
+        radial-gradient(1250px 1250px at 100% 0%, rgba(74,111,227,.32) 0%, rgba(74,111,227,.12) 15%, rgba(74,111,227,0) 58%),
+        radial-gradient(1480px 1480px at 0% 100%, rgba(232,140,48,.42) 0%, rgba(232,140,48,.17) 16%, rgba(232,140,48,0) 62%),
+        radial-gradient(1480px 1480px at 100% 100%, rgba(232,140,48,.40) 0%, rgba(232,140,48,.16) 16%, rgba(232,140,48,0) 62%),
+        #ffffff;
     }
   </style>
 </head>
 <body>
-
-  <header class="site-header">
-    <a href="/" class="logo-wrapper">
-      <img src="/logo.png" alt="Cleanmail" class="logo-img" />
-    </a>
-  </header>
-
-  <slot />
-
-  <footer class="site-footer">
-    <div class="footer-links">
-      <a href="/privacy">Privacy Policy</a>
-      <a href="/terms">Terms of Service</a>
-      <a href="/support">Support</a>
-    </div>
-    <p class="footer-copy">© 2026 Calibrate LLC. All rights reserved.</p>
-  </footer>
-
+  <div class="page">
+    <Nav />
+    <slot />
+    <Footer />
+  </div>
 </body>
 </html>

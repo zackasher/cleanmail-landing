@@ -1,0 +1,12 @@
+---
+---
+<div class="phone-wrap">
+  <img class="phone-img" src="/iphone-frame.png" alt="" />
+  <div class="screen"><slot /></div>
+</div>
+
+<style>
+  .phone-wrap{position:relative;width:278px;filter:drop-shadow(0 16px 40px rgba(27,34,54,.10))}
+  .phone-img{display:block;width:100%;height:auto}
+  .screen{position:absolute;left:5%;right:5%;top:1.9%;bottom:7.2%;border-radius:30px;overflow:hidden;background:#fff}
+</style>
