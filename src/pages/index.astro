@@ -6,25 +6,49 @@ import PhoneFrame from "../components/PhoneFrame.astro";
 <BaseLayout title="Cleanmail: Family Inbox">
   <Hero />
 
-  <section class="peek" id="how">
-    <PhoneFrame>
-      <video class="hero-video" autoplay muted loop playsinline>
-      <source src="/hero.mp4" type="video/mp4" />
-    </video>
-    </PhoneFrame>
+  <section class="story" id="how">
+     <hr class="story-rule" />
+    <div class="story-grid">
+      <div class="story-visual">
+        <PhoneFrame>
+          <video class="hero-video" autoplay muted loop playsinline>
+            <source src="/hero.mp4" type="video/mp4" />
+          </video>
+        </PhoneFrame>
+      </div>
+
+      <div class="story-text">
+        <div class="story-bubble">
+          <p class="story-eyebrow">From the founder</p>
+          <p class="story-lead">Hi. I'm Zack, and I kept missing things.</p>
+          <p class="story-copy">I'm a dad of two, and for a long time I was juggling three calendars and pages-long emails from nine different schools and apps. I still kept missing things that mattered to my kids.</p>
+          <p class="story-copy">So one night I'd had enough. I wrote a quick script that turned all that email into one simple digest I could actually read, and dropped every date straight onto my calendar.</p>
+          <p class="story-copy">Then the craziest thing happened. I became the expert on my own family's schedule. Every event, every appointment, a brief of my kids' days I could read in seconds instead of hours.</p>
+          <p class="story-copy">Every parent I showed asked the same thing: which app is that? So I built the one they already thought it was. Now my email notifications are off, and I just swipe through Cleanmail every day.</p>
+          <p class="story-sig">Zack, founder of Cleanmail</p>
+        </div>
+      </div>
+    </div>
+     <hr class="story-rule" />
   </section>
 </BaseLayout>
 
 <style>
-  .peek{display:flex;justify-content:center;padding:8px 24px 88px;background:transparent}
-  .screen-pad{padding:16px 12px 0}
-  .scr-h{font-size:12px;color:var(--muted);text-align:center;margin-bottom:13px}
-  .scr-h b{color:var(--navy);font-weight:500;font-size:14px;display:block;margin-bottom:2px}
-  .person{font-size:12.5px;font-weight:500;color:#fff;background:var(--purple);padding:6px 11px;border-radius:8px;margin-bottom:7px}
-  .act{font-size:10.5px;font-weight:500;color:var(--orange);margin:0 2px 5px;text-transform:uppercase;letter-spacing:.4px}
-  .bullet{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 11px;margin-bottom:7px;font-size:11.5px;line-height:1.42;color:var(--ink);text-align:left}
-  .evt{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:8px;padding:8px 10px;margin-bottom:7px}
-  .evt .d{font-size:10.5px;font-weight:500;color:var(--orange);min-width:30px}
-  .evt .t{font-size:11px;color:var(--ink)}
+  .story{padding: 0px 24px 40px}
+  .story-grid{max-width:1010px;margin:0 auto;display:flex;align-items:flex-start;justify-content:center;gap:48px}
+  .story-visual{flex:0 0 auto}
+  .story-text{flex:1 1 0;max-width:530px}
+  .story-bubble{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 34px}
+  .story-eyebrow{font-size:11px;font-weight:500;color:var(--orange);text-transform:uppercase;letter-spacing:.6px;margin-bottom:14px}
+  .story-lead{font-size:20px;font-weight:500;line-height:1.35;color:var(--navy);margin-bottom:20px}
+  .story-copy{font-size:16px;line-height:1.62;color:var(--ink);margin-bottom:20px}
+  .story-sig{margin-top:6px;font-size:14px;font-weight:500;color:var(--muted)}
   .hero-video{width:100%;height:100%;object-fit:cover;display:block}
+  .story-rule{height:1px;border:0;width:calc(100% - 48px);max-width:860px;margin:24px auto;background:linear-gradient(90deg, transparent, rgba(74,111,227,.5) 22%, rgba(74,111,227,.5) 78%, transparent)}
+  .story-rule:first-of-type{margin-bottom:56px}
+  .story-rule:last-of-type{margin-top:56px}
+  @media(max-width:800px){
+    .story-grid{flex-direction:column;align-items:center;gap:30px}
+    .story-text{max-width:530px;width:100%}
+  }
 </style>
