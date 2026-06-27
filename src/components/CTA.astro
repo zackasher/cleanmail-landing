@@ -41,8 +41,10 @@ const SUPABASE_KEY = "sb_publishable_SicQ5RchA4Q5YI3DevGMlQ_1XWOPRjy";
 </style>
 
 <script is:inline define:vars={{ SUPABASE_URL, SUPABASE_KEY }}>
-  const form = document.getElementById("waitlist-form");
-  if (form) {
+  function bindWaitlist() {
+    const form = document.getElementById("waitlist-form");
+    if (!form || form.dataset.bound) return;
+    form.dataset.bound = "1";
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
       const input = document.getElementById("email-input");
@@ -86,5 +88,10 @@ const SUPABASE_KEY = "sb_publishable_SicQ5RchA4Q5YI3DevGMlQ_1XWOPRjy";
         btn.textContent = "Join the waitlist";
       }
     });
+  }
+  bindWaitlist();
+  if (!window.__cmWaitlistInit) {
+    window.__cmWaitlistInit = true;
+    document.addEventListener("astro:page-load", bindWaitlist);
   }
 </script>

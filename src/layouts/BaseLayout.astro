@@ -1,6 +1,7 @@
 ---
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import { ClientRouter } from "astro:transitions";
 export interface Props {
   title: string;
   description?: string;
@@ -8,7 +9,7 @@ export interface Props {
 }
 const {
   title,
-  description = "Cleanmail reads the email so you don't have to. Every newsletter, reminder, and update, organized by person and activity, with every date on your calendar.",
+  description = "Stop reading every email. Cleanmail turns the school, camp, and sports noise into one clean digest, organized by person and activity, with every date already on your calendar.",
   image = "/og.png",
 } = Astro.props;
 ---
@@ -30,6 +31,7 @@ const {
   <meta name="twitter:image" content={new URL(image, "https://cleanmailapp.com").href} />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="/favicon.png" />
+  <ClientRouter />
   <style is:global>
     :root{
       --purple:#4A6FE3; --orange:#E88C30; --green:#66EE78; --teal:#5dc4b8;

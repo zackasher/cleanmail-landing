@@ -1,5 +1,6 @@
 ---
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const isHome = path === "/";
 const links = [
   { href: "/how-it-works", label: "How It Works" },
   { href: "/subscriptions", label: "Subscriptions" },
@@ -7,7 +8,7 @@ const links = [
   { href: "/faq", label: "FAQ" },
 ];
 ---
-<nav>
+<nav transition:persist class:list={[{ compact: !isHome }]}>
   <a class="wordmark" href="/" aria-label="Cleanmail home">
     <img src="/icon.png" alt="Cleanmail" class="mark" />
   </a>
@@ -28,6 +29,8 @@ const links = [
 
 <style>
   nav{position:sticky;top:14px;z-index:50;width:calc(100% - 40px);max-width:2200px;margin:14px auto 0;display:flex;align-items:center;justify-content:space-between;padding:11px 26px;background:linear-gradient(135deg, rgba(255,255,255,.34), rgba(255,255,255,.20));backdrop-filter:blur(8px) saturate(1.2);-webkit-backdrop-filter:blur(8px) saturate(1.2);;-webkit-backdrop-filter:blur(22px) saturate(1.7);border:1px solid rgba(255,255,255,.55);border-radius:22px;box-shadow:0 12px 34px rgba(27,34,54,.10), inset 0 1px 0 rgba(255,255,255,.7)}
+  nav{transition:width .55s cubic-bezier(.2,.7,.2,1)}
+  nav.compact{width:66%}
   .wordmark{position:relative;z-index:2;display:inline-flex;align-items:center;text-decoration:none}
   .wordmark .mark{height:40px;width:auto;display:block;filter:drop-shadow(0 1px 3px rgba(27,34,54,.16))}
   .navright{display:flex;align-items:center;gap:18px}
@@ -48,9 +51,20 @@ const links = [
 </style>
 
 <script>
-  const btn = document.getElementById("menu-btn");
-  const menu = document.getElementById("mobile-menu");
-  if (btn && menu) {
+  function syncNav() {
+    const nav = document.querySelector("nav");
+    if (!nav) return;
+    const p = location.pathname.replace(/\/$/, "") || "/";
+    nav.classList.toggle("compact", p !== "/");
+    nav.querySelectorAll(".chip").forEach((c) =>
+      c.classList.toggle("active", c.getAttribute("href") === p)
+    );
+  }
+  function initBurger() {
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
+    if (!btn || !menu || btn.dataset.bound) return;
+    btn.dataset.bound = "1";
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       const open = menu.classList.toggle("open");
@@ -58,4 +72,10 @@ const links = [
     });
     document.addEventListener("click", () => menu.classList.remove("open"));
   }
+  initBurger();
+  syncNav();
+  document.addEventListener("astro:page-load", () => {
+    initBurger();
+    syncNav();
+  });
 </script>

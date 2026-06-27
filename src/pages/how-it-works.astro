@@ -12,19 +12,19 @@ const oldWay = [
 
 const newWay = [
   "Connect Gmail once, read-only",
-  "It reads only the senders you pick",
+  "Only the senders you choose, nothing else",
   "Summarized by kid and by activity",
   "Every date on your calendar, automatically",
 ];
 ---
 <BaseLayout
   title="How It Works | Cleanmail"
-  description="Cleanmail reads your school, camp, and sports email and turns it into one organized digest, with every date already on your calendar. Here's how."
+  description="Cleanmail turns your school, camp, and sports mail into one organized digest, with every date already on your calendar. Here's how."
 >
   <section class="hiw">
     <p class="eyebrow">How it works</p>
-    <h1>It reads the email. You don't.</h1>
-    <p class="lede">Connect your inbox once, tell it who and what matters, and Cleanmail does the reading from then on. Three steps, then it runs on its own.</p>
+    <h1>From inbox noise to one clean digest.</h1>
+    <p class="lede">Connect once, tell it who and what matters, and the noise becomes one tidy digest with every date on your calendar. Three steps, then it runs on its own.</p>
 
     <div class="steps">
 
@@ -116,8 +116,9 @@ const newWay = [
     .step.flip{flex-direction:row-reverse}
     .step-text{flex:1;max-width:460px;background:#fff;border:1.5px solid rgba(74,111,227,.40);border-radius:20px;padding:24px;box-shadow:0 10px 30px rgba(27,34,54,.05)}
     .step-visual{flex:1;display:flex;justify-content:center}
-    .step-num{display:inline-block;font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--teal);margin-bottom:12px}
-    .step h2{position:relative;overflow:hidden;font-size:clamp(18px,2.2vw,22px);font-weight:500;color:#fff;background:var(--purple);padding:13px 20px;border-radius:14px;margin:0 0 14px;letter-spacing:-.2px;box-shadow:0 8px 20px rgba(74,111,227,.22)}
+    .step-num{position:relative;overflow:hidden;display:block;font-size:clamp(18px,2.2vw,22px);font-weight:500;letter-spacing:-.2px;color:#fff;background:var(--purple);padding:7px 20px;border-radius:10px;margin-bottom:10px;box-shadow:0 8px 20px rgba(74,111,227,.22)}
+    .step-num::after{content:"";position:absolute;right:0;bottom:0;width:40px;height:40px;background:rgba(0,0,0,.15);clip-path:polygon(100% 0,100% 100%,0 100%)}
+    .step h2{position:relative;overflow:hidden;font-size:clamp(18px,2.2vw,22px);font-weight:500;color:#fff;background:var(--teal);padding:8px 20px;border-radius:10px;margin:0 0 14px;letter-spacing:-.2px;box-shadow:0 8px 20px rgba(93,196,184,.22)}
     .step h2::after{content:"";position:absolute;right:0;bottom:0;width:44px;height:44px;background:rgba(0,0,0,.15);clip-path:polygon(100% 0,100% 100%,0 100%)}
     .step p{font-size:17px;line-height:1.6;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:16px;padding:17px 20px;margin:0;box-shadow:0 8px 22px rgba(27,34,54,.05)}
     .step-trust{font-size:13.5px;color:var(--muted)}
