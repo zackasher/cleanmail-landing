@@ -9,7 +9,7 @@ export interface Props {
 const {
   title,
   description = "Cleanmail reads the email so you don't have to. Every newsletter, reminder, and update, organized by person and activity, with every date on your calendar.",
-  image = "/logo.png",
+  image = "/og.png",
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -22,7 +22,12 @@ const {
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content={image} />
+  <meta property="og:image" content={new URL(image, "https://cleanmailapp.com").href} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Cleanmail. Stop reading every email, just read the words that matter." />
+  <meta property="og:url" content={new URL(Astro.url.pathname, "https://cleanmailapp.com").href} />
+  <meta name="twitter:image" content={new URL(image, "https://cleanmailapp.com").href} />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <style is:global>
