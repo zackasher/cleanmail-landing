@@ -58,5 +58,15 @@ const {
     <slot />
     <Footer />
   </div>
+  <script>
+    function playHeroVideo() {
+      document.querySelectorAll("video.hero-video").forEach((v) => {
+        const p = v.play();
+        if (p && p.catch) p.catch(() => {});
+      });
+    }
+    playHeroVideo();
+    document.addEventListener("astro:page-load", playHeroVideo);
+  </script>
 </body>
 </html>
