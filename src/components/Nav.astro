@@ -8,7 +8,9 @@ const links = [
 ];
 ---
 <nav>
-  <a class="wordmark" href="/">Clean<span class="m">mail</span></a>
+  <a class="wordmark" href="/" aria-label="Cleanmail home">
+    <img src="/icon.png" alt="Cleanmail" class="mark" />
+  </a>
   <div class="navright">
     <div class="seg">
       {links.map((l) => (
@@ -27,17 +29,17 @@ const links = [
 </nav>
 
 <style>
-  nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:14px 30px;background:rgba(255,255,255,.72);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid rgba(74,111,227,.10)}
-  .wordmark{font-size:22px;font-weight:400;letter-spacing:-.4px;text-decoration:none;color:var(--navy)}
-  .wordmark .m{color:var(--purple)}
+  nav{position:sticky;top:14px;z-index:50;width:calc(100% - 40px);max-width:2200px;margin:14px auto 0;display:flex;align-items:center;justify-content:space-between;padding:11px 26px;background:linear-gradient(135deg, rgba(255,255,255,.34), rgba(255,255,255,.20));backdrop-filter:blur(8px) saturate(1.2);-webkit-backdrop-filter:blur(8px) saturate(1.2);;-webkit-backdrop-filter:blur(22px) saturate(1.7);border:1px solid rgba(255,255,255,.55);border-radius:22px;box-shadow:0 12px 34px rgba(27,34,54,.10), inset 0 1px 0 rgba(255,255,255,.7)}
+  .wordmark{position:relative;z-index:2;display:inline-flex;align-items:center;text-decoration:none}
+  .wordmark .mark{height:40px;width:auto;display:block;filter:drop-shadow(0 1px 3px rgba(27,34,54,.16))}
   .navright{display:flex;align-items:center;gap:18px}
   .seg{display:flex;align-items:center;gap:8px}
-  .chip{font-size:14px;font-weight:400;color:var(--ink);background:var(--card);border:1px solid var(--line);padding:8px 15px;border-radius:999px;text-decoration:none;transition:all .15s;white-space:nowrap}
-  .chip:hover{border-color:rgba(74,111,227,.5);color:var(--purple)}
+  .chip{font-size:14px;font-weight:400;color:var(--ink);background:rgba(255,255,255,.82);border:1px solid rgba(74,111,227,.16);padding:8px 15px;border-radius:999px;text-decoration:none;transition:all .15s;white-space:nowrap}
+  .chip:hover{border-color:rgba(74,111,227,.5);color:var(--purple);background:#fff}
   .chip.active{background:var(--purple);color:#fff;border-color:var(--purple);box-shadow:0 5px 14px rgba(74,111,227,.28)}
-  .menupill{display:none;align-items:center;gap:8px;font-size:14.5px;font-weight:400;color:var(--navy);background:var(--card);border:1px solid var(--line);padding:9px 15px;border-radius:999px;cursor:pointer}
+  .menupill{display:none;align-items:center;gap:8px;font-size:14.5px;font-weight:400;color:var(--navy);background:rgba(255,255,255,.82);border:1px solid rgba(74,111,227,.16);padding:9px 15px;border-radius:999px;cursor:pointer}
   .menupill svg{display:block}
-  .mobile-menu{display:none;position:absolute;top:100%;right:30px;margin-top:8px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 40px rgba(27,34,54,.12);padding:8px;min-width:200px;z-index:60}
+  .mobile-menu{display:none;position:absolute;top:100%;right:14px;margin-top:10px;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 14px 40px rgba(27,34,54,.12);padding:8px;min-width:200px;z-index:60}
   .mobile-menu.open{display:block}
   .mobile-menu a{display:block;padding:10px 14px;font-size:15px;color:var(--ink);text-decoration:none;border-radius:9px}
   .mobile-menu a:hover{background:var(--card);color:var(--purple)}
