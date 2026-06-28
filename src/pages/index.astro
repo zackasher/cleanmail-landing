@@ -31,59 +31,6 @@ import PhoneFrame from "../components/PhoneFrame.astro";
     </div>
      <hr class="story-rule" />
   </section>
-
-  <section class="features-show">
-    <p class="eyebrow">Features</p>
-    <h2 class="show-title">Everything Cleanmail does</h2>
-    <p class="show-sub">All of it in service of one clean digest.</p>
-    <div class="feat-grid">
-        <div class="feat">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3.5v3M16 3.5v3"/></svg></div>
-          <h3>Upcoming Events</h3>
-          <p>Every date from your inbox, lined up so nothing sneaks up on you.</p>
-        </div>
-        <div class="feat">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg></div>
-          <h3>Searchable History</h3>
-          <p>Past digests stay put and searchable, for that detail you need weeks later.</p>
-        </div>
-        <div class="feat">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4v6M5 14v6M12 4v3M12 11v9M19 4v9M19 17v3"/><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="9" r="1.8"/><circle cx="19" cy="15" r="1.8"/></svg></div>
-          <h3>Digest Customization</h3>
-          <p>Daily or weekly, and exactly who and what you want to track.</p>
-        </div>
-        <div class="feat">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12a7.5 7.5 0 11-2.2-5.3"/><path d="M19.5 4.5v4h-4"/></svg></div>
-          <h3>Swipe to Refresh</h3>
-          <p>Need it now? Pull down and Cleanmail checks for anything new.</p>
-        </div>
-        <div class="feat">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6"/><path d="M10.8 6.6l1.6-1.6a4 4 0 015.6 5.6L16.4 12.2"/><path d="M13.2 17.4l-1.6 1.6a4 4 0 01-5.6-5.6L7.6 11.8"/></svg></div>
-          <h3>Linked Inboxes</h3>
-          <p>Add up to three Google inboxes and read them all in one digest.</p>
-        </div>
-        <div class="feat">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.8 19a5.2 5.2 0 0110.4 0"/><path d="M15.5 5.6a3 3 0 010 4.8"/><path d="M16.2 13.4a5.2 5.2 0 013.9 5.6"/></svg></div>
-          <h3>Shared Inboxes</h3>
-          <p>Two parents, one shared digest, both on the same page.</p>
-        </div>
-        <div class="feat">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.5h6l-1 6 2.5 2.5h-11L8 9.5l1-6z"/><path d="M12 14.5V21"/></svg></div>
-          <h3>Pinned Events</h3>
-          <p>Pin the ones that matter so they stay right up top.</p>
-        </div>
-        <div class="feat">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 16.5V11a5.5 5.5 0 1111 0v5.5l1.5 2h-14l1.5-2z"/><path d="M10 20.5a2 2 0 004 0"/></svg></div>
-          <h3>Custom Notifications</h3>
-          <p>A nudge when it counts, on your schedule, not a pile of pings.</p>
-        </div>
-        <div class="feat">
-          <div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5l1.7 4.6 4.6 1.7-4.6 1.7L12 16l-1.7-4.5L5.7 9.8l4.6-1.7L12 3.5z"/><path d="M18.6 15l.7 1.9 1.9 .7-1.9 .7-.7 1.9-.7-1.9-1.9-.7 1.9-.7 .7-1.9z"/></svg></div>
-          <h3>Suggested Senders</h3>
-          <p>Name the activity and Cleanmail finds the senders who fit it.</p>
-        </div>
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
@@ -104,16 +51,4 @@ import PhoneFrame from "../components/PhoneFrame.astro";
     .story-grid{flex-direction:column;align-items:center;gap:30px}
     .story-text{max-width:530px;width:100%}
   }
-  .features-show{max-width:1040px;margin:0 auto;padding:34px 24px 92px}
-  .features-show .eyebrow{text-align:center;text-transform:uppercase;letter-spacing:1.5px;font-size:12.5px;font-weight:600;color:var(--purple);margin:0 0 14px}
-  .show-title{text-align:center;font-size:clamp(24px,3.2vw,34px);font-weight:400;letter-spacing:-.8px;color:var(--navy);margin:14px 0 10px}
-  .show-sub{text-align:center;color:var(--muted);font-size:16px;margin:0 0 40px}
-  .feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-  .feat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 8px 24px rgba(27,34,54,.05)}
-  .feat-ic{width:42px;height:42px;border-radius:12px;background:rgba(74,111,227,.10);display:flex;align-items:center;justify-content:center;color:var(--purple);margin-bottom:14px}
-  .feat-ic svg{width:22px;height:22px}
-  .feat h3{font-size:16.5px;font-weight:600;color:var(--navy);margin:0 0 7px}
-  .feat p{font-size:14.5px;line-height:1.5;color:var(--muted);margin:0}
-  @media (max-width:860px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:560px){.feat-grid{grid-template-columns:1fr}}
 </style>

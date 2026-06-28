@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+---
+<BaseLayout title="Coming soon | Cleanmail" description="Cleanmail is coming to the App Store. Join the waitlist and we'll tell you the moment it's live.">
+  <section class="cs">
+    <p class="cs-eyebrow">Coming soon to the App Store</p>
+    <h1 class="cs-title">Cleanmail is almost here.</h1>
+    <p class="cs-lede">One clean digest of every school, camp, and sports email, organized by person and activity, with every date already on your calendar. Drop your email and we'll tell you the moment it lands on iPhone.</p>
+    <CTA />
+  </section>
+</BaseLayout>
+<style>
+  .cs{max-width:600px;margin:0 auto;padding:84px 24px 120px;text-align:center}
+  .cs-eyebrow{text-transform:uppercase;letter-spacing:1.5px;font-size:12.5px;font-weight:600;color:var(--purple);margin:0 0 18px}
+  .cs-title{font-size:clamp(30px,5vw,46px);font-weight:400;letter-spacing:-1.2px;color:var(--navy);margin:0 0 18px}
+  .cs-lede{font-size:17px;line-height:1.6;color:var(--ink);margin:0 auto 34px;max-width:480px}
+</style>
