@@ -1,10 +1,36 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Can Cleanmail read my whole inbox?","acceptedAnswer":{"@type":"Answer","text":"No. Cleanmail gets read-only access to Gmail, and it only ever reads mail from the senders you choose. Everyone else in your inbox stays untouched."}},
+    {"@type":"Question","name":"Do you sell my data or use it for ads?","acceptedAnswer":{"@type":"Answer","text":"Never. We do not sell your information, and we never use your email for advertising."}},
+    {"@type":"Question","name":"Are my emails stored somewhere?","acceptedAnswer":{"@type":"Answer","text":"Your raw emails are not kept. At digest time they are read, summarized, and then discarded. Only the short text summary is stored, never the original message."}},
+    {"@type":"Question","name":"Does the AI train on my email? Can a person read it?","acceptedAnswer":{"@type":"Answer","text":"No to both. Your email goes to our AI provider only to write that one summary, and is not kept there afterward. No one at Cleanmail reads your mail, outside narrow security or legal exceptions."}},
+    {"@type":"Question","name":"How is my data protected?","acceptedAnswer":{"@type":"Answer","text":"Everything is encrypted in transit and at rest, and your Google sign-in tokens are encrypted. No one at Cleanmail reads your email. Cleanmail passed Google's CASA security assessment, the independent security review Google requires of any app that reads Gmail."}},
+    {"@type":"Question","name":"How do I revoke access or delete everything?","acceptedAnswer":{"@type":"Answer","text":"Anytime. Disconnect Cleanmail from your Google account permissions, or delete your account in the app, which wipes your data and revokes Cleanmail's access to Google."}},
+    {"@type":"Question","name":"What can Cleanmail help me organize?","acceptedAnswer":{"@type":"Answer","text":"The parent firehose: school, camp, sports, clubs, the newsletters and reminders and forms. You pick the senders that matter and Cleanmail handles the reading."}},
+    {"@type":"Question","name":"Does it work with any email account?","acceptedAnswer":{"@type":"Answer","text":"We work with Google today, with plans to expand to more email providers soon."}},
+    {"@type":"Question","name":"Does Cleanmail send or delete my emails?","acceptedAnswer":{"@type":"Answer","text":"No. It only reads. Cleanmail never sends, replies to, or deletes anything in your inbox."}},
+    {"@type":"Question","name":"How does it get the dates onto my calendar?","acceptedAnswer":{"@type":"Answer","text":"It reads each email, pulls out the events, and adds them to your Google Calendar automatically. For anything critical it is worth a glance at the original, which is one tap away."}},
+    {"@type":"Question","name":"Can I track more than one kid?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add up to eight people, each with their own activities, all in one digest."}},
+    {"@type":"Question","name":"Can I only put kids in the people section?","acceptedAnswer":{"@type":"Answer","text":"No. You can use Cleanmail for kids, a family section, work, anything where you want your email organized."}},
+    {"@type":"Question","name":"Can my partner and I share a digest?","acceptedAnswer":{"@type":"Answer","text":"Yes. Two parents can share one digest, so you are both looking at the same schedule."}},
+    {"@type":"Question","name":"Can I connect more than one inbox?","acceptedAnswer":{"@type":"Answer","text":"Yes. Link up to three Google inboxes and read them all in a single digest."}},
+    {"@type":"Question","name":"How does the plan work?","acceptedAnswer":{"@type":"Answer","text":"Cleanmail is one simple subscription with a 14-day free trial, no tiers and no add-ons. A card starts the trial and you will see the price in the app before anything is charged."}},
+    {"@type":"Question","name":"Do I need a card for the trial, and can I cancel?","acceptedAnswer":{"@type":"Answer","text":"A card starts the trial, and you can cancel anytime from the app or the Stripe billing portal. Cancel before day 14 and you will not be charged."}},
+    {"@type":"Question","name":"What devices does it run on?","acceptedAnswer":{"@type":"Answer","text":"Cleanmail is on iPhone today. Android is on our list."}},
+    {"@type":"Question","name":"How do I get help?","acceptedAnswer":{"@type":"Answer","text":"Email support@cleanmailapp.com or visit our Support page. A real person reads every message."}}
+  ]
+};
 ---
 <BaseLayout
   title="FAQ | Cleanmail"
   description="Answers about Cleanmail: how your data is handled, how plans work, and how it works for your whole family."
+  faqSchema={faqSchema}
 >
   <section class="faq">
     <p class="eyebrow">FAQ</p>

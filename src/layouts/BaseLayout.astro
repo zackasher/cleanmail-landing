@@ -6,11 +6,13 @@ export interface Props {
   title: string;
   description?: string;
   image?: string;
+  faqSchema?: unknown;
 }
 const {
   title,
   description = "Stop reading every email. Cleanmail turns the school, camp, and sports noise into one clean digest, organized by person and activity, with every date already on your calendar.",
   image = "/og.png",
+  faqSchema,
 } = Astro.props;
 ---
 <!DOCTYPE html>
@@ -19,6 +21,7 @@ const {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
+  <link rel="canonical" href={new URL(Astro.url.pathname, "https://cleanmailapp.com").href} />
   <meta name="description" content={description} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -31,6 +34,23 @@ const {
   <meta name="twitter:image" content={new URL(image, "https://cleanmailapp.com").href} />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="/favicon.png" />
+  {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Cleanmail",
+    "url": "https://cleanmailapp.com",
+    "logo": "https://cleanmailapp.com/logo.png"
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Cleanmail",
+    "applicationCategory": "LifestyleApplication",
+    "operatingSystem": "iOS",
+    "url": "https://cleanmailapp.com",
+    "description": "Cleanmail turns school, camp, and sports emails into one clean digest, organized by person and activity, with every date already on your calendar."
+  })} />
   <ClientRouter />
   <style is:global>
     :root{
