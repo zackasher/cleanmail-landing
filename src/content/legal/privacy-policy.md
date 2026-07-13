@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** June 23, 2026
+**Last updated:** July 1, 2026
 
 Calibrate LLC ("we," "our," or "us") operates CleanMail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using CleanMail, you agree to the practices described here.
 
