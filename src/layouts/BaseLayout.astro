@@ -46,17 +46,42 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Cleanmail",
+    "legalName": "Calibrate LLC",
     "url": "https://cleanmailapp.com",
-    "logo": "https://cleanmailapp.com/logo.png"
+    "logo": "https://cleanmailapp.com/logo.png",
+    "founder": { "@type": "Person", "name": "Zack" },
+    "description": "Cleanmail turns school, camp, and sports emails into one AI-powered digest organized by person and activity, with every date synced to your calendar."
   })} />
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "MobileApplication",
     "name": "Cleanmail",
+    "alternateName": "Cleanmail: Family Inbox",
     "applicationCategory": "LifestyleApplication",
     "operatingSystem": "iOS",
     "url": "https://cleanmailapp.com",
-    "description": "Cleanmail turns school, camp, and sports emails into one clean digest, organized by person and activity, with every date already on your calendar."
+    "image": "https://cleanmailapp.com/og.png",
+    "screenshot": "https://cleanmailapp.com/Digest_Sample.png",
+    "author": { "@type": "Organization", "name": "Calibrate LLC" },
+    "publisher": { "@type": "Organization", "name": "Calibrate LLC" },
+    "description": "Cleanmail connects directly to Gmail and turns school, camp, and sports emails into one AI-powered digest organized by person and activity. It extracts the important dates and syncs them to your Google Calendar automatically, so you read less email and never miss what matters. Read-only access, only the senders you choose.",
+    "offers": {
+      "@type": "Offer",
+      "price": "6.99",
+      "priceCurrency": "USD",
+      "description": "6.99 US dollars per month with a 14-day free trial"
+    },
+    "featureList": [
+      "Connects directly to Gmail with no forwarding or manual entry",
+      "AI digest organized by person and activity",
+      "Automatically extracts events and syncs them to Google Calendar",
+      "Upcoming Events timeline of every date from your inbox",
+      "Daily or weekly digest scheduling",
+      "Track up to 8 people in one digest",
+      "Share one digest across a household of up to 4 members",
+      "Link up to 3 Gmail inboxes into one digest",
+      "Read-only access to only the senders you choose"
+    ]
   })} />
   <ClientRouter />
   <style is:global>
