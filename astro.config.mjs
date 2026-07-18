@@ -6,5 +6,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://cleanmailapp.com',
   trailingSlash: 'never',
+  build: { format: 'file' },
   integrations: [sitemap()],
 });
