@@ -14,6 +14,12 @@ const {
   image = "/og.png",
   faqSchema,
 } = Astro.props;
+
+const canonicalPath = Astro.url.pathname
+  .replace(/index\.html$/, "")
+  .replace(/\.html$/, "")
+  .replace(/(.+)\/$/, "$1");
+const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").href;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +28,7 @@ const {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="j0driezVtY4Wr0F1EeHI5-nBMDQfm_KR4BI9JMa1Ggo" />
   <title>{title}</title>
-  <link rel="canonical" href={new URL(Astro.url.pathname, "https://cleanmailapp.com").href} />
+  <link rel="canonical" href={canonicalURL} />
   <meta name="description" content={description} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -31,7 +37,7 @@ const {
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Cleanmail. Stop reading every email, just read the words that matter." />
-  <meta property="og:url" content={new URL(Astro.url.pathname, "https://cleanmailapp.com").href} />
+  <meta property="og:url" content={canonicalURL} />
   <meta name="twitter:image" content={new URL(image, "https://cleanmailapp.com").href} />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/png" href="/favicon.png" />
