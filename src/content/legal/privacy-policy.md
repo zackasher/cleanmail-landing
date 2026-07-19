@@ -2,7 +2,7 @@
 
 **Last updated:** July 12, 2026
 
-Calibrate LLC ("we," "our," or "us") operates CleanMail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using CleanMail, you agree to the practices described here.
+Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
 This policy is hosted at https://cleanmailapp.com/privacy and is referenced from our OAuth consent screen and in-app Settings.
 
@@ -10,7 +10,7 @@ This policy is hosted at https://cleanmailapp.com/privacy and is referenced from
 
 ## 1. Information We Collect
 
-We collect only the information necessary to provide the CleanMail service.
+We collect only the information necessary to provide the Cleanmail service.
 
 **Information you provide directly:**
 - Your name and email address, obtained from your Google account when you sign in.
@@ -32,25 +32,25 @@ We collect only the information necessary to provide the CleanMail service.
 
 ## 2. Google API Services and Limited Use
 
-CleanMail uses the following Google API scopes:
+Cleanmail uses the following Google API scopes:
 
 - `openid`, `profile`, `email` — to identify your Google account and sign you in.
 - `https://www.googleapis.com/auth/gmail.readonly` — used in two ways: (a) to read emails from senders you have explicitly added to your digest, in order to generate your digest summaries; and (b) when you tap "View Email" on a digest item, to retrieve that one specific message so we can display the full original email inside the app. To locate the message you tapped, we search your Gmail account by its message identifier across all folders, **including Trash and Spam**, so an email you have deleted (but not permanently removed) can still be opened from your digest. We do not browse, index, or bulk-collect your mailbox; we read selected senders' mail for digests, and we fetch a single message only when you explicitly open it.
 - `https://www.googleapis.com/auth/calendar.events` — to create, update, and delete calendar events extracted from your digest emails, and to read your existing calendar events so we can display them alongside your Cleanmail events in the app. Google's consent screen describes this permission as "View and edit events on all calendars you have access to in Google Calendar." In practice, Cleanmail only writes to your primary calendar, only creates, updates, and deletes events it extracted for you, and never modifies or deletes an event that Cleanmail did not create.
 
-**Google API Services Limited Use disclosure:** CleanMail's use and transfer of information received from Google APIs to any other app will adhere to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. Specifically:
+**Google API Services Limited Use disclosure:** Cleanmail's use and transfer of information received from Google APIs to any other app will adhere to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. Specifically:
 
-- We use Gmail data only to provide and improve user-facing features that are prominent in CleanMail's user interface (the email digest, the in-app email viewer, and calendar sync features).
+- We use Gmail data only to provide and improve user-facing features that are prominent in Cleanmail's user interface (the email digest, the in-app email viewer, and calendar sync features).
 - We do not use Gmail data for serving advertisements.
 - We do not allow humans to read your Gmail data, except (a) with your explicit consent, (b) when necessary for security purposes such as investigating abuse, (c) to comply with applicable law, or (d) when the data has been aggregated and anonymized for internal operations.
-- We do not transfer Gmail data to others unless necessary to provide CleanMail's user-facing features (see Section 4 below).
+- We do not transfer Gmail data to others unless necessary to provide Cleanmail's user-facing features (see Section 4 below).
 - We do not sell Gmail data.
 
 ---
 
 ## 3. How We Use Your Information
 
-We use your information solely to provide CleanMail:
+We use your information solely to provide Cleanmail:
 
 - Generate digest summaries from emails sent by senders you have selected.
 - Display the full original email inside the app when you choose to open a digest item.
@@ -65,7 +65,7 @@ We do not sell, rent, or share your personal information with third parties for 
 
 ## 4. Third-Party Sub-Processors
 
-CleanMail relies on the following third parties to provide its service. Each receives only the data necessary for its function:
+Cleanmail relies on the following third parties to provide its service. Each receives only the data necessary for its function:
 
 | Service | Purpose | Data shared |
 |---|---|---|
@@ -95,7 +95,7 @@ The following are stored persistently:
 
 ## 6. Shared Digests (Partner Accounts)
 
-CleanMail lets two people — for example, two parents — share one digest as co-equal participants. The account that creates the digest is the **primary account**; a second person who joins is a **partner account**. Both see and manage the same shared digest. This is different from linking an additional Gmail inbox to your *own* account (a "linked inbox"), which pools your own mailboxes and does not involve a second person; this section concerns partner accounts only.
+Cleanmail lets two people — for example, two parents — share one digest as co-equal participants. The account that creates the digest is the **primary account**; a second person who joins is a **partner account**. Both see and manage the same shared digest. This is different from linking an additional Gmail inbox to your *own* account (a "linked inbox"), which pools your own mailboxes and does not involve a second person; this section concerns partner accounts only.
 
 **Each person connects their own Google account, and neither can read the other's mailbox.** Sender discovery — the search that finds senders to add to a digest — only ever searches the mailbox of the person performing the search. As a result:
 
@@ -108,7 +108,7 @@ CleanMail lets two people — for example, two parents — share one digest as c
 **Leaving or being removed from a shared digest.** A primary account can remove a partner, and a partner can leave on their own, at any time. When a partner leaves or is removed:
 - Their access to the shared digest ends immediately, and their own mailbox stops contributing new emails to it.
 - The email senders that the departing participant had added are automatically removed from the shared digest, so that participant's mailbox no longer feeds it in any form. The digest summaries and calendar events already created from those emails **remain in the shared digest** for the remaining participant; leaving does not delete the shared digest's existing summaries or events.
-- The departing partner is no longer charged anything for the shared digest; to continue using CleanMail with their own digest, they would start their own subscription.
+- The departing partner is no longer charged anything for the shared digest; to continue using Cleanmail with their own digest, they would start their own subscription.
 
 To permanently delete your own personal data, see Section 7 (Account Deletion).
 
@@ -126,7 +126,7 @@ You may permanently delete your account and all associated data at any time from
 
 **If you are part of a shared digest:**
 - If you are a **partner** (you joined someone else's digest), deleting your account removes you from that shared digest. The shared digest itself, and the content you contributed to it, remain for the primary account. Your own profile and personal data are deleted.
-- If you are the **primary** (you own the shared digest), deleting your account deletes the shared digest and all of its content for every participant. Any partner is removed and, on their next use of CleanMail, would need to start their own digest and subscription.
+- If you are the **primary** (you own the shared digest), deleting your account deletes the shared digest and all of its content for every participant. Any partner is removed and, on their next use of Cleanmail, would need to start their own digest and subscription.
 
 After deletion, no recovery is possible. If you have trouble deleting your account in the app, contact support@cleanmailapp.com and we will delete it manually within 30 days.
 
@@ -139,7 +139,7 @@ Depending on your jurisdiction, you may have the right to:
 - **Correct** inaccurate data (you can edit most of this yourself in Settings).
 - **Delete** your account and associated data (see Section 7).
 - **Export** your data in a portable format — contact support@cleanmailapp.com.
-- **Withdraw consent** for Google API access at any time via [Google account permissions](https://myaccount.google.com/permissions). Revoking access will stop CleanMail from generating new digests.
+- **Withdraw consent** for Google API access at any time via [Google account permissions](https://myaccount.google.com/permissions). Revoking access will stop Cleanmail from generating new digests.
 
 Residents of California (CCPA) and the European Union (GDPR) have additional rights under applicable law. To exercise any of these rights, contact support@cleanmailapp.com.
 
@@ -155,7 +155,7 @@ No system is 100% secure. If we become aware of a data breach affecting your per
 
 ## 10. Children's Privacy
 
-CleanMail is not directed at children under 13, and we do not knowingly collect personal information from anyone under 13. If you believe a child under 13 has provided personal information to us, contact support@cleanmailapp.com and we will delete it.
+Cleanmail is not directed at children under 13, and we do not knowingly collect personal information from anyone under 13. If you believe a child under 13 has provided personal information to us, contact support@cleanmailapp.com and we will delete it.
 
 ---
 
@@ -167,7 +167,7 @@ We may disclose personal information when required to do so by law, such as in r
 
 ## 12. Changes to This Policy
 
-We may update this Privacy Policy from time to time. Material changes will be communicated by email and by updating the date at the top of this policy. Continued use of CleanMail after changes take effect constitutes acceptance of the updated policy.
+We may update this Privacy Policy from time to time. Material changes will be communicated by email and by updating the date at the top of this policy. Continued use of Cleanmail after changes take effect constitutes acceptance of the updated policy.
 
 ---
 
