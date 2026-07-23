@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last updated:** June 08, 2026
+**Last updated:** July 12, 2026
 
 These Terms of Service ("Terms") govern your use of Cleanmail, an iOS application operated by Calibrate LLC ("we," "our," or "us"). By creating an account or using Cleanmail, you agree to these Terms.
 
