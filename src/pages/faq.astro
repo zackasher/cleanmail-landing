@@ -6,22 +6,26 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type":"Question","name":"Can Cleanmail read my whole inbox?","acceptedAnswer":{"@type":"Answer","text":"No. Cleanmail gets read-only access to Gmail, and it only ever reads mail from the senders you choose. Everyone else in your inbox stays untouched."}},
-    {"@type":"Question","name":"Do you sell my data or use it for ads?","acceptedAnswer":{"@type":"Answer","text":"Never. We do not sell your information, and we never use your email for advertising."}},
-    {"@type":"Question","name":"Are my emails stored somewhere?","acceptedAnswer":{"@type":"Answer","text":"Your raw emails are not kept. At digest time they are read, summarized, and then discarded. Only the short text summary is stored, never the original message."}},
-    {"@type":"Question","name":"Does the AI train on my email? Can a person read it?","acceptedAnswer":{"@type":"Answer","text":"No to both. Your email goes to our AI provider only to write that one summary, and is not kept there afterward. No one at Cleanmail reads your mail, outside narrow security or legal exceptions."}},
-    {"@type":"Question","name":"How is my data protected?","acceptedAnswer":{"@type":"Answer","text":"Everything is encrypted in transit and at rest, and your Google sign-in tokens are encrypted. No one at Cleanmail reads your email. Cleanmail passed Google's CASA security assessment, the independent security review Google requires of any app that reads Gmail."}},
+    {"@type":"Question","name":"Does Cleanmail see my whole inbox?","acceptedAnswer":{"@type":"Answer","text":"No. Cleanmail gets read-only access to Gmail and only ever opens mail from the senders you choose. Everyone else in your inbox stays untouched. Full details are in our Privacy Policy."}},
+    {"@type":"Question","name":"Do you sell my data or use it for ads?","acceptedAnswer":{"@type":"Answer","text":"Never. We do not sell your information, and we never use your email for advertising. You mean too much to us for that."}},
+    {"@type":"Question","name":"Are my emails stored somewhere?","acceptedAnswer":{"@type":"Answer","text":"Your raw emails are not kept. At digest time they're summarized and then discarded. Only the short text summary is stored, never the original message."}},
+    {"@type":"Question","name":"Does the AI train on my email? Can a person read it?","acceptedAnswer":{"@type":"Answer","text":"No to both. Your email goes to our AI provider only to write that one summary, and is never used to train their models. No one at Cleanmail reads your mail, outside narrow security or legal exceptions."}},
+    {"@type":"Question","name":"How is my data protected?","acceptedAnswer":{"@type":"Answer","text":"Everything is encrypted in transit and at rest, and your Google sign-in tokens are encrypted. No one at Cleanmail reads your email. Cleanmail passed Google's CASA security assessment, the independent security review Google requires of any app that connects to Gmail."}},
     {"@type":"Question","name":"How do I revoke access or delete everything?","acceptedAnswer":{"@type":"Answer","text":"Anytime. Disconnect Cleanmail from your Google account permissions, or delete your account in the app, which wipes your data and revokes Cleanmail's access to Google."}},
-    {"@type":"Question","name":"What can Cleanmail help me organize?","acceptedAnswer":{"@type":"Answer","text":"The parent firehose: school, camp, sports, clubs, the newsletters and reminders and forms. You pick the senders that matter and Cleanmail handles the reading."}},
-    {"@type":"Question","name":"Does it work with any email account?","acceptedAnswer":{"@type":"Answer","text":"We work with Google today, with plans to expand to more email providers soon."}},
-    {"@type":"Question","name":"Does Cleanmail send or delete my emails?","acceptedAnswer":{"@type":"Answer","text":"No. It only reads. Cleanmail never sends, replies to, or deletes anything in your inbox."}},
-    {"@type":"Question","name":"How does it get the dates onto my calendar?","acceptedAnswer":{"@type":"Answer","text":"The dates buried in your inbox land on your Google Calendar automatically, no copying and no retyping. For anything critical it is worth a glance at the original, which is one tap away."}},
-    {"@type":"Question","name":"Can I track more than one kid?","acceptedAnswer":{"@type":"Answer","text":"Yes. Add up to eight people, each with their own activities, all in one digest."}},
-    {"@type":"Question","name":"Can I only put kids in the people section?","acceptedAnswer":{"@type":"Answer","text":"No. You can use Cleanmail for kids, a family section, work, anything where you want your email organized."}},
-    {"@type":"Question","name":"Can my partner and I share a digest?","acceptedAnswer":{"@type":"Answer","text":"Yes. Two parents can share one digest, so you are both looking at the same schedule."}},
-    {"@type":"Question","name":"Can I connect more than one inbox?","acceptedAnswer":{"@type":"Answer","text":"Yes. Link up to three Google inboxes and read them all in a single digest."}},
-    {"@type":"Question","name":"How does the plan work?","acceptedAnswer":{"@type":"Answer","text":"Cleanmail is one simple subscription with a 14-day free trial, no tiers and no add-ons. A card starts the trial and you will see the price in the app before anything is charged."}},
-    {"@type":"Question","name":"Do I need a card for the trial, and can I cancel?","acceptedAnswer":{"@type":"Answer","text":"A card starts the trial, and you can cancel anytime from the app or the Stripe billing portal. Cancel before day 14 and you will not be charged."}},
+    {"@type":"Question","name":"What can Cleanmail help me organize?","acceptedAnswer":{"@type":"Answer","text":"The parent firehose: school, camp, sports, clubs, the newsletters and reminders and forms. You pick the senders that matter and Cleanmail handles the rest."}},
+    {"@type":"Question","name":"What if it misses something?","acceptedAnswer":{"@type":"Answer","text":"Cleanmail is careful and good at catching what matters, but it's a helper, not magic. Anything that came from your inbox links straight back to the email it came from, so the source is one tap away. Anything that never arrived by email you can add yourself in seconds. The goal is to stop you digging through your inbox, not to make you trust it blindly."}},
+    {"@type":"Question","name":"What happens when something changes?","acceptedAnswer":{"@type":"Answer","text":"Schools move things constantly. When a follow-up email lands saying the recital moved, Cleanmail updates the event and shows you the old time crossed out right underneath the new one. You see what changed at a glance instead of staring at two entries wondering which one is real."}},
+    {"@type":"Question","name":"Do I have to wait for an email?","acceptedAnswer":{"@type":"Answer","text":"No. Some things never hit your inbox, so you can add them yourself: snap a flyer, add a photo, drop in a PDF, or just say it out loud. Cleanmail turns it into an event and files it with the right person."}},
+    {"@type":"Question","name":"Can I get reminders?","acceptedAnswer":{"@type":"Answer","text":"Yes. For any event, pick a nudge the day before, the morning of, or an hour out, so it lands before you're late, not after."}},
+    {"@type":"Question","name":"Does it work with any email account?","acceptedAnswer":{"@type":"Answer","text":"Cleanmail works with Google today."}},
+    {"@type":"Question","name":"Does Cleanmail send or delete my emails?","acceptedAnswer":{"@type":"Answer","text":"No. Cleanmail never sends, replies to, or deletes anything in your inbox. Its Gmail access is read-only, so it can read but never write."}},
+    {"@type":"Question","name":"How does it get the dates onto my calendar?","acceptedAnswer":{"@type":"Answer","text":"The dates buried in your inbox land on your Google Calendar automatically, no copying and no retyping. It works both ways too, so the events already on your Google Calendar show up right inside Cleanmail."}},
+    {"@type":"Question","name":"How many people and activities can I add?","acceptedAnswer":{"@type":"Answer","text":"Your digest holds up to eight people, each with up to six activities, and up to twenty-five senders per activity. Plenty for a busy family. That's separate from your household, which is up to four members who share the whole digest."}},
+    {"@type":"Question","name":"Can I put anyone in the people section, or just kids?","acceptedAnswer":{"@type":"Answer","text":"Anyone. A kid, a family bucket, work, even the dog, whatever you want organized. Cleanmail doesn't care what you call them."}},
+    {"@type":"Question","name":"Can my whole household share a digest?","acceptedAnswer":{"@type":"Answer","text":"Yes. Up to four people can share one digest, so the whole household sees the same schedule. Invite them from the Household screen, with roles for who runs it."}},
+    {"@type":"Question","name":"Can I connect more than one of my own inboxes?","acceptedAnswer":{"@type":"Answer","text":"Yes. If your mail is spread across a few Google accounts, link up to three of them and they all flow into one digest."}},
+    {"@type":"Question","name":"How does the plan work?","acceptedAnswer":{"@type":"Answer","text":"Cleanmail is one simple subscription with a 14-day free trial, no tiers and no add-ons. A card starts the trial and you'll see the price in the app before anything is charged, so there's no commitment up front."}},
+    {"@type":"Question","name":"Do I need a card for the trial, and can I cancel?","acceptedAnswer":{"@type":"Answer","text":"A card starts the trial, and you can cancel anytime from the app or the Stripe billing portal. Cancel before day 14 and you won't be charged."}},
     {"@type":"Question","name":"What devices does it run on?","acceptedAnswer":{"@type":"Answer","text":"Cleanmail is on iPhone today. Android is on our list."}},
     {"@type":"Question","name":"How do I get help?","acceptedAnswer":{"@type":"Answer","text":"Email support@cleanmailapp.com or visit our Support page. A real person reads every message."}}
   ]
@@ -35,14 +39,14 @@ const faqSchema = {
   <section class="faq">
     <p class="eyebrow">FAQ</p>
     <h1>Questions, answered.</h1>
-    <p class="lede">The things parents ask most, especially about your privacy. If yours isn't here, just ask.</p>
+    <p class="lede">The things parents ask most about Cleanmail&trade;, especially your privacy. If yours isn't here, just ask.</p>
 
     <div class="faq-section">
       <h2>Privacy and security</h2>
 
       <details class="qa">
-        <summary class="q">Can Cleanmail read my whole inbox?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">No. Cleanmail gets read-only access to Gmail, and it only ever reads mail from the senders you choose. Everyone else in your inbox stays untouched. Full details are in our <a href="/privacy">Privacy Policy</a>.</div>
+        <summary class="q">Does Cleanmail see my whole inbox?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="a">No. Cleanmail gets read-only access to Gmail and only ever opens mail from the senders you choose. Everyone else in your inbox stays untouched. Full details are in our <a href="/privacy">Privacy Policy</a>.</div>
       </details>
 
       <details class="qa">
@@ -52,17 +56,17 @@ const faqSchema = {
 
       <details class="qa">
         <summary class="q">Are my emails stored somewhere?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">Your raw emails are not kept. At digest time they're read, summarized, and then discarded. Only the short text summary is stored, never the original message.</div>
+        <div class="a">Your raw emails are not kept. At digest time they're summarized and then discarded. Only the short text summary is stored, never the original message.</div>
       </details>
 
       <details class="qa">
         <summary class="q">Does the AI train on my email? Can a person read it?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">No to both. Your email goes to our AI provider only to write that one summary, and isn't kept there afterward. And no one at Cleanmail reads your mail, outside narrow security or legal exceptions.</div>
+        <div class="a">No to both. Your email goes to our AI provider only to write that one summary, and is never used to train their models. No one at Cleanmail reads your mail, outside narrow security or legal exceptions.</div>
       </details>
 
       <details class="qa">
         <summary class="q">How is my data protected?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">Everything is encrypted in transit and at rest, and your Google sign-in tokens are encrypted and never stored on your device. No one at Cleanmail reads your email. And before we could connect to Gmail at all, Cleanmail had to pass Google's CASA security assessment, the independent security review Google requires of any app that reads Gmail.</div>
+        <div class="a">Everything is encrypted in transit and at rest, and your Google sign-in tokens are encrypted. No one at Cleanmail reads your email. Cleanmail passed Google's CASA security assessment, the independent security review Google requires of any app that connects to Gmail.</div>
       </details>
 
       <details class="qa">
@@ -76,46 +80,66 @@ const faqSchema = {
 
       <details class="qa">
         <summary class="q">What can Cleanmail help me organize?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">The parent firehose: school, camp, sports, clubs, the newsletters and reminders and forms. You pick the senders that matter and Cleanmail handles the reading.</div>
+        <div class="a">The parent firehose: school, camp, sports, clubs, the newsletters and reminders and forms. You pick the senders that matter and Cleanmail handles the rest.</div>
+      </details>
+
+      <details class="qa">
+        <summary class="q">What if it misses something?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="a">Cleanmail is careful and good at catching what matters, but it's a helper, not magic. Anything that came from your inbox links straight back to the email it came from, so the source is one tap away. Anything that never arrived by email you can add yourself in seconds. The goal is to stop you digging through your inbox, not to make you trust it blindly.</div>
+      </details>
+
+      <details class="qa">
+        <summary class="q">What happens when something changes?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="a">Schools move things constantly. When a follow-up email lands saying the recital moved, Cleanmail updates the event and shows you the old time crossed out right underneath the new one. You see what changed at a glance instead of staring at two entries wondering which one is real.</div>
+      </details>
+
+      <details class="qa">
+        <summary class="q">Do I have to wait for an email?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="a">No. Some things never hit your inbox, so you can add them yourself: snap a flyer, add a photo, drop in a PDF, or just say it out loud. Cleanmail turns it into an event and files it with the right person.</div>
+      </details>
+
+      <details class="qa">
+        <summary class="q">Can I get reminders?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="a">Yes. For any event, pick a nudge the day before, the morning of, or an hour out, so it lands before you're late, not after.</div>
       </details>
 
       <details class="qa">
         <summary class="q">Does it work with any email account?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">We work with Google today, with plans to expand to more email providers soon.</div>
+        <div class="a">Cleanmail works with Google today.</div>
       </details>
 
       <details class="qa">
         <summary class="q">Does Cleanmail send or delete my emails?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">No. It only reads. Cleanmail never sends, replies to, or deletes anything in your inbox.</div>
+        <div class="a">No. Cleanmail never sends, replies to, or deletes anything in your inbox. Its Gmail access is read-only, so it can read but never write.</div>
       </details>
 
       <details class="qa">
         <summary class="q">How does it get the dates onto my calendar?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">The dates buried in your inbox land on your Google Calendar automatically, no copying and no retyping. It's a smart helper, not magic, so for anything critical it's worth a glance at the original, which is one tap away.</div>
+        <div class="a">The dates buried in your inbox land on your Google Calendar automatically, no copying and no retyping. It works both ways too, so the events already on your Google Calendar show up right inside Cleanmail.</div>
       </details>
     </div>
 
     <div class="faq-section">
-      <h2>Your family, your inboxes</h2>
+      <h2>Your household and inboxes</h2>
 
       <details class="qa">
-        <summary class="q">Can I track more than one kid?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">Yes. Add up to eight people, each with their own activities, all in one digest.</div>
+        <summary class="q">How many people and activities can I add?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="a">Your digest holds up to eight people, each with up to six activities, and up to twenty-five senders per activity. Plenty for a busy family. That's separate from your household, which is up to four members who share the whole digest.</div>
       </details>
 
       <details class="qa">
-        <summary class="q">Can I only put kids in the people section?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">Nope! You can use Cleanmail for kids, a family section, work, anything you can think of where you want your email organized.</div>
+        <summary class="q">Can I put anyone in the people section, or just kids?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="a">Anyone. A kid, a family bucket, work, even the dog, whatever you want organized. Cleanmail doesn't care what you call them.</div>
       </details>
 
       <details class="qa">
-        <summary class="q">Can my partner and I share a digest?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">Yes. Two parents can share one digest, so you're both looking at the same schedule.</div>
+        <summary class="q">Can my whole household share a digest?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="a">Yes. Up to four people can share one digest, so the whole household sees the same schedule. Invite them from the Household screen, with roles for who runs it.</div>
       </details>
 
       <details class="qa">
-        <summary class="q">Can I connect more than one inbox?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
-        <div class="a">Yes. Link up to three Google inboxes and read them all in a single digest.</div>
+        <summary class="q">Can I connect more than one of my own inboxes?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="a">Yes. If your mail is spread across a few Google accounts, link up to three of them and they all flow into one digest.</div>
       </details>
     </div>
 
@@ -145,7 +169,7 @@ const faqSchema = {
 
     <div class="final">
       <h2>Still have a question?</h2>
-      <p>Cleanmail is coming to iPhone. Drop your email and we'll tell you the moment it's live.</p>
+      <p>If it isn't here, we're one message away. Ask us anything.</p>
       <CTA />
     </div>
 
@@ -156,10 +180,8 @@ const faqSchema = {
     .eyebrow{text-align:center;text-transform:uppercase;letter-spacing:1.5px;font-size:12.5px;font-weight:600;color:var(--purple);margin:0 0 14px}
     h1{text-align:center;font-size:clamp(30px,4.4vw,44px);font-weight:400;letter-spacing:-1px;color:var(--orange);margin:0 0 16px;line-height:1.08}
     .lede{text-align:center;max-width:540px;margin:0 auto;color:var(--ink);font-size:17px;line-height:1.55}
-
     .faq-section{margin-top:46px}
     .faq-section h2{font-size:19px;font-weight:600;color:var(--navy);margin:0 0 14px;letter-spacing:-.3px}
-
     details.qa{border:1px solid var(--line);border-radius:14px;background:#fff;margin-bottom:12px}
     details.qa[open]{box-shadow:0 10px 28px rgba(27,34,54,.05)}
     summary.q{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 20px;font-size:16px;font-weight:500;color:var(--navy)}
@@ -168,7 +190,6 @@ const faqSchema = {
     details.qa[open] summary.q .chev{transform:rotate(180deg)}
     .qa .a{padding:0 20px 18px;font-size:15px;line-height:1.6;color:var(--muted)}
     .qa .a a{color:var(--purple);text-decoration:underline}
-
     .final{text-align:center;margin-top:72px}
     .final h2{font-size:clamp(24px,3vw,32px);font-weight:500;color:var(--navy);margin:0 0 12px;letter-spacing:-.4px}
     .final p{font-size:16px;color:var(--muted);max-width:460px;margin:0 auto 26px;line-height:1.5}
