@@ -3,7 +3,7 @@ import CTA from "./CTA.astro";
 ---
 <section class="hero">
   <div class="hero-inner">
-    <img class="logo" src="/logo.png" alt="Cleanmail" />
+    <span class="logo-lock"><img class="logo" src="/logo.png" alt="Cleanmail" /><sup class="tm">™</sup></span>
     <h1>Stop reading every email,<br />just read <span class="accent">the words that matter.</span></h1>
     <p class="sub">Every newsletter, reminder, and update summarized and organized for you, with every date already on your calendar.</p>
     <div class="actions">
@@ -17,7 +17,9 @@ import CTA from "./CTA.astro";
   .hero{position:relative;text-align:center;min-height:52vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:58px 24px 40px}
   .hero-inner{position:relative;z-index:1;max-width:760px;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
   @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-  .logo{width:clamp(220px,30vw,310px);height:auto;display:block;margin:0 auto 28px}
+  .logo{width:clamp(220px,30vw,310px);height:auto;display:block}
+  .logo-lock{display:inline-flex;align-items:flex-start;margin-bottom:28px}
+  .tm{font-size:clamp(11px,1.4vw,16px);color:var(--muted);font-weight:400;line-height:1;margin:.3em 0 0 2px}
   h1{font-size:clamp(30px,4.6vw,50px);font-weight:400;line-height:1.1;letter-spacing:-1.2px;color:var(--navy)}
   h1 .accent{color:var(--purple)}
   .sub{margin:20px auto 0;max-width:560px;font-size:clamp(15px,1.7vw,18px);line-height:1.6;color:var(--muted);font-weight:400}

@@ -12,11 +12,11 @@ We aim to reply within 1–2 business days.
 
 ### What does Cleanmail do?
 
-Cleanmail connects to your Gmail and reads the school, camp, sports, and activity emails for you. It pulls out the events, deadlines, and details that matter, organizes them by person and activity, and adds the events straight to your Google Calendar — so you don't have to dig through your inbox to stay on top of your family's schedule.
+Cleanmail connects to your Gmail and turns the school, camp, sports, and activity emails into one clean digest. It pulls out the events, deadlines, and details that matter, organizes them by person and activity, and adds the events straight to your Google Calendar, so you don't have to dig through your inbox to stay on top of your family's schedule.
 
 ### How do I connect my Gmail account?
 
-When you first open Cleanmail, you'll be asked to sign in with Google and grant read-only access to your Gmail. Cleanmail only reads your email to build your digests — it never sends, deletes, or modifies anything in your inbox. You can disconnect at any time from your account settings.
+When you first open Cleanmail, you'll be asked to sign in with Google and grant read-only access to your Gmail. That access is used only to build your digests. Cleanmail never sends, deletes, or modifies anything in your inbox, and you can disconnect at any time from your account settings.
 
 ### How does billing work?
 
