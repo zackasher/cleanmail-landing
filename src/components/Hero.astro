@@ -9,7 +9,7 @@ import CTA from "./CTA.astro";
     <div class="actions">
       <CTA />
     </div>
-    <p class="trust"><b>Read-only access.</b><span class="dot"></span>Only the senders you choose.<span class="dot"></span>We do not sell your info, you mean too much to us.</p>
+    <p class="trust"><b>We never change your inbox.</b><span class="dot"></span>Read-only, only the senders you choose.<span class="dot"></span>We never sell your info, you mean too much to us.</p>
   </div>
 </section>
 
@@ -18,8 +18,8 @@ import CTA from "./CTA.astro";
   .hero-inner{position:relative;z-index:1;max-width:760px;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
   @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
   .logo{width:clamp(220px,30vw,310px);height:auto;display:block}
-  .logo-lock{display:inline-flex;align-items:flex-start;margin-bottom:28px}
-  .tm{font-size:clamp(11px,1.4vw,16px);color:var(--muted);font-weight:400;line-height:1;margin:.3em 0 0 2px}
+  .logo-lock{position:relative;display:inline-block;margin-bottom:28px}
+  .tm{position:absolute;top:5%;left:100%;margin-left:3px;font-size:clamp(12px,1.5vw,17px);color:var(--muted);font-weight:400;line-height:1}
   h1{font-size:clamp(30px,4.6vw,50px);font-weight:400;line-height:1.1;letter-spacing:-1.2px;color:var(--navy)}
   h1 .accent{color:var(--purple)}
   .sub{margin:20px auto 0;max-width:560px;font-size:clamp(15px,1.7vw,18px);line-height:1.6;color:var(--muted);font-weight:400}
