@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PhoneFrame from "../components/PhoneFrame.astro";
 import CTA from "../components/CTA.astro";
 ---
 <BaseLayout title="Features | Cleanmail" description="The mail and events that matter, sorted, and already on your calendar.">
@@ -8,33 +9,41 @@ import CTA from "../components/CTA.astro";
     <h1 class="show-title">Just what you <span class="pop">need</span>. Nothing you don't.</h1>
     <p class="show-sub">No feature dump. No 30-day grid to squint at. Here is the short list of things Cleanmail&trade; does, and does well.</p>
 
+    <div class="demo">
+      <h2>See it in action</h2>
+      <p class="demo-sub">One photo of a paper calendar. Every date on your Google Calendar.</p>
+      <div class="demo-phone">
+        <PhoneFrame>
+          <video class="demo-video" autoplay muted loop playsinline poster="/feat-demo-poster.jpg">
+            <source src="/feat-demo.mp4" type="video/mp4" />
+          </video>
+        </PhoneFrame>
+      </div>
+    </div>
+
     <div class="marquee">
       <p class="mq-kicker">The whole point</p>
       <h2 class="mq-title">Sorted by <span class="pop">person</span>, not by sender.</h2>
       <p class="mq-body">Cleanmail sorts the school, camp, and activity mail by the people you care about, then breaks each thread into short, plain-language snippets. You get your whole family's week at a glance, without reading a single full email. And your calendar stays yours: keep it private inside Cleanmail, or share it with your household so everyone sees the same schedule.</p>
-      <div class="mq-flow" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="6" width="17" height="12" rx="2"/><path d="M4 7.5l8 6 8-6"/></svg>
-        <svg class="mq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h14M13 7l5 5-5 5"/></svg>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><rect x="6.5" y="6.5" width="11" height="2.5" rx="1.2" fill="currentColor" stroke="none" opacity="0.28"/><path d="M6.5 12.5h7M6.5 16h9"/></svg>
-      </div>
+      <img class="mq-shot" src="/mq-digest.jpg" alt="A Cleanmail digest sorted by person and activity, with camp events for one child" />
     </div>
 
     <div class="feat-grid">
-      <div class="feat"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 8.5h18M7 3v3M17 3v3M7.5 12h1.5M11.2 12h1.6M15 12h1.5M7.5 16h1.5M11.2 16h1.6M15 16h1.5"/></svg></div><h3>Snap anything</h3><p>See a flyer, yard sign, or calendar? Snap it, upload it, add it all instantly.</p></div>
-      <div class="feat"><div class="feat-ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3.5v3M16 3.5v3"/><rect x="6" y="12.5" width="12" height="3" rx="1.2" fill="currentColor" stroke="none" opacity="0.28"/></svg></div><h3>Your weekly view</h3><p>Always up to date. The week ahead at a glance, no monthly grid.</p></div>
-      <div class="feat"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v8M8 12h8"/></svg></div><h3>Add anything</h3><p>Not everything comes by email. Add custom events by photo, tap, or voice.</p></div>
-      <div class="feat"><div class="feat-ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M9 13l-2 2 2 2M15 19l2-2-2-2M7 15h10"/></svg></div><h3>Two-way calendar</h3><p>Two-way Google Calendar sync. Change it anywhere and it changes everywhere.</p></div>
-      <div class="feat"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.8 19a5.2 5.2 0 0110.4 0"/><path d="M15.5 5.6a3 3 0 010 4.8"/><path d="M16.2 13.4a5.2 5.2 0 013.9 5.6"/></svg></div><h3>Your whole household</h3><p>Finally, the whole house on one shared calendar. Up to four people.</p></div>
-      <div class="feat"><div class="feat-ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 16.5V11a5.5 5.5 0 1111 0v5.5l1.5 2h-14l1.5-2z"/><path d="M10 20.5a2 2 0 004 0"/></svg></div><h3>Reminders</h3><p>A nudge before each event, so nothing ever sneaks up on you.</p></div>
-      <div class="feat"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 15l6-6"/><path d="M10.8 6.6l1.6-1.6a4 4 0 015.6 5.6L16.4 12.2"/><path d="M13.2 17.4l-1.6 1.6a4 4 0 01-5.6-5.6L7.6 11.8"/></svg></div><h3>Multiple inboxes</h3><p>Mail split across accounts? Link up to three Gmail inboxes to the same Cleanmail.</p></div>
-      <div class="feat"><div class="feat-ic teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9.5" y="3" width="5" height="10" rx="2.5"/><path d="M6.5 11a5.5 5.5 0 0011 0M12 16.5V20M9 20h6"/></svg></div><h3>Voice edits</h3><p>Change any event's time out loud. Cleanmail hears you and updates it.</p></div>
-      <div class="feat"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 13.5h5.5L10 21l8-10.5h-5.5L13 3z"/></svg></div><h3>Instant updates</h3><p>The moment an email arrives, it's already waiting in Cleanmail.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-snap.jpg" alt="Adding an event by snapping a flyer" /><h3>Snap anything</h3><p>See a flyer, yard sign, or calendar? Snap it, upload it, add it all instantly.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-weekly.jpg" alt="The upcoming events list, a clean weekly view" /><h3>Your weekly view</h3><p>Always up to date. The week ahead at a glance, no monthly grid.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-add.jpg" alt="The add-an-event menu with type, photo, camera, PDF, and voice options" /><h3>Add anything</h3><p>Not everything comes by email. Add custom events by photo, tap, or voice.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-calendar.jpg" alt="An event synced from Google Calendar shown inside Cleanmail" /><h3>Two-way calendar</h3><p>Two-way Google Calendar sync. Change it anywhere and it changes everywhere.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-household.jpg" alt="Household members sharing one digest" /><h3>Your whole household</h3><p>Finally, the whole house on one shared calendar. Up to four people.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-reminders.jpg" alt="Choosing a reminder: the day before, the morning of, or an hour before" /><h3>Reminders</h3><p>A nudge before each event, so nothing ever sneaks up on you.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-inboxes.jpg" alt="Linking multiple Gmail inboxes into one digest" /><h3>Multiple inboxes</h3><p>Mail split across accounts? Link up to three Gmail inboxes to the same Cleanmail.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-voice.jpg" alt="Adding an event by voice" /><h3>Voice edits</h3><p>Change any event's time out loud. Cleanmail hears you and updates it.</p></div>
     </div>
 
     <div class="more">
       <h2>A few more things</h2>
       <p class="more-sub">Small, but they earn their place.</p>
       <div class="more-list">
+        <div class="more-item"><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg><p><b>Instant updates.</b> <span>The moment an email arrives, it's already waiting in Cleanmail, no refreshing.</span></p></div>
         <div class="more-item"><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg><p><b>Pinned events.</b> <span>Keep the big ones stuck to the top of your digest.</span></p></div>
         <div class="more-item"><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg><p><b>Smart senders.</b> <span>Name an activity and Cleanmail finds the senders that fit, groups a company's many addresses into one, and moves a sender to another person in a tap.</span></p></div>
         <div class="more-item"><svg class="chk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg><p><b>Tap straight through.</b> <span>Cards from your inbox link back to the email they came from, and any address opens in maps.</span></p></div>
@@ -50,23 +59,25 @@ import CTA from "../components/CTA.astro";
   .features-show{max-width:960px;margin:0 auto;padding:54px 24px 96px}
   .features-show .eyebrow{text-align:center;text-transform:uppercase;letter-spacing:1.5px;font-size:12.5px;font-weight:600;color:var(--purple);margin:0 0 14px}
   .show-title{text-align:center;font-size:clamp(26px,3.6vw,40px);font-weight:400;letter-spacing:-1px;color:var(--navy);margin:14px 0 10px}
-  .show-sub{text-align:center;color:var(--muted);font-size:16.5px;line-height:1.55;margin:0 auto 44px;max-width:560px}
+  .show-sub{text-align:center;color:var(--muted);font-size:16.5px;line-height:1.55;margin:0 auto 48px;max-width:560px}
   .pop{color:var(--orange)}
 
-  .marquee{background:linear-gradient(135deg,rgba(74,111,227,.09),rgba(93,196,184,.11));border:1px solid var(--line);border-radius:24px;padding:34px 30px;text-align:center;margin-bottom:44px}
+  .demo{text-align:center;margin-bottom:56px}
+  .demo h2{font-size:clamp(20px,2.6vw,27px);font-weight:500;letter-spacing:-.5px;color:var(--navy);margin:0 0 8px}
+  .demo-sub{color:var(--muted);font-size:15.5px;margin:0 0 26px}
+  .demo-phone{max-width:290px;margin:0 auto}
+  .demo-video{width:100%;height:100%;object-fit:cover;display:block}
+
+  .marquee{background:linear-gradient(135deg,rgba(74,111,227,.09),rgba(93,196,184,.11));border:1px solid var(--line);border-radius:24px;padding:34px 30px;text-align:center;margin-bottom:48px}
   .mq-kicker{text-transform:uppercase;letter-spacing:1.4px;font-size:11.5px;font-weight:600;color:var(--teal);margin:0 0 10px}
   .mq-title{font-size:clamp(22px,3vw,32px);font-weight:500;letter-spacing:-.6px;color:var(--navy);margin:0 0 14px}
   .mq-body{font-size:16px;line-height:1.65;color:var(--ink);max-width:580px;margin:0 auto}
-  .mq-flow{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:24px;color:var(--purple)}
-  .mq-flow svg{width:46px;height:46px}
-  .mq-flow .mq-arrow{width:30px;height:30px;color:var(--muted)}
+  .mq-shot{display:block;width:100%;max-width:360px;margin:26px auto 0;border-radius:16px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(27,34,54,.10)}
 
   .feat-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;align-items:stretch}
-  .feat{flex:0 1 calc(33.333% - 12px);min-width:210px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px 22px;text-align:center;box-shadow:0 8px 24px rgba(27,34,54,.05)}
-  .feat-ic{width:54px;height:54px;border-radius:16px;background:rgba(74,111,227,.10);color:var(--purple);display:flex;align-items:center;justify-content:center;margin:0 auto 15px}
-  .feat-ic.teal{background:rgba(93,196,184,.15);color:var(--teal)}
-  .feat-ic svg{width:27px;height:27px}
-  .feat h3{font-size:17px;font-weight:600;color:var(--navy);margin:0 0 8px;letter-spacing:-.2px}
+  .feat{flex:0 1 calc(33.333% - 12px);min-width:220px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 8px 24px rgba(27,34,54,.05)}
+  .feat-shot{width:100%;height:158px;object-fit:cover;object-position:top;border-radius:12px;border:1px solid var(--line);background:#f4f6fc;display:block;margin-bottom:14px}
+  .feat h3{font-size:17px;font-weight:600;color:var(--navy);margin:0 0 7px;letter-spacing:-.2px}
   .feat p{font-size:14px;line-height:1.55;color:var(--muted);margin:0}
 
   .more{margin-top:60px}
