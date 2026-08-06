@@ -11,7 +11,7 @@ import CTA from "../components/CTA.astro";
 
     <div class="demo">
       <h2>See it in action</h2>
-      <p class="demo-sub">One photo of a paper calendar. Every date on your Google Calendar.</p>
+      <p class="demo-sub">One photo. 41 smart events. One Clean Mailbox.</p>
       <div class="demo-phone">
         <PhoneFrame>
           <video class="demo-video" autoplay muted loop playsinline poster="/feat-demo-poster.jpg">
@@ -25,17 +25,16 @@ import CTA from "../components/CTA.astro";
       <p class="mq-kicker">The whole point</p>
       <h2 class="mq-title">Sorted by <span class="pop">person</span>, not by sender.</h2>
       <p class="mq-body">Cleanmail sorts the school, camp, and activity mail by the people you care about, then breaks each thread into short, plain-language snippets. You get your whole family's week at a glance, without reading a single full email. And your calendar stays yours: keep it private inside Cleanmail, or share it with your household so everyone sees the same schedule.</p>
-      <img class="mq-shot" src="/mq-digest.jpg" alt="A Cleanmail digest sorted by person and activity, with camp events for one child" />
+      <img class="mq-shot" src="/mq-digest.jpg" alt="A Cleanmail digest sorted by person, showing a child's camp events" />
     </div>
 
     <div class="feat-grid">
-      <div class="feat"><img class="feat-shot" src="/feat-snap.jpg" alt="Adding an event by snapping a flyer" /><h3>Snap anything</h3><p>See a flyer, yard sign, or calendar? Snap it, upload it, add it all instantly.</p></div>
-      <div class="feat"><img class="feat-shot" src="/feat-weekly.jpg" alt="The upcoming events list, a clean weekly view" /><h3>Your weekly view</h3><p>Always up to date. The week ahead at a glance, no monthly grid.</p></div>
-      <div class="feat"><img class="feat-shot" src="/feat-add.jpg" alt="The add-an-event menu with type, photo, camera, PDF, and voice options" /><h3>Add anything</h3><p>Not everything comes by email. Add custom events by photo, tap, or voice.</p></div>
-      <div class="feat"><img class="feat-shot" src="/feat-calendar.jpg" alt="An event synced from Google Calendar shown inside Cleanmail" /><h3>Two-way calendar</h3><p>Two-way Google Calendar sync. Change it anywhere and it changes everywhere.</p></div>
-      <div class="feat"><img class="feat-shot" src="/feat-household.jpg" alt="Household members sharing one digest" /><h3>Your whole household</h3><p>Finally, the whole house on one shared calendar. Up to four people.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-snap.jpg" alt="Adding an event by snapping a flyer or photo" /><h3>Snap anything</h3><p>See a flyer, yard sign, or calendar? Snap it, upload it, add it all instantly.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-weekly.jpg" alt="A day of upcoming events, sorted by person and activity" /><h3>Your weekly view</h3><p>Always up to date. The week ahead at a glance, no monthly grid.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-add.jpg" alt="The add-an-event menu with type, photos, camera, PDF, and voice options" /><h3>Add anything</h3><p>Not everything comes by email. Add custom events by photo, tap, or voice.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-calendar.jpg" alt="The month calendar with an event synced from Google Calendar" /><h3>Two-way calendar</h3><p>Two-way Google Calendar sync. Change it anywhere and it changes everywhere.</p></div>
+      <div class="feat"><img class="feat-shot" src="/feat-household.jpg" alt="Household members and linked inboxes feeding one digest" /><h3>Household &amp; inboxes</h3><p>Share one digest with up to four people, and pull up to three Gmail inboxes into it. Everyone and everything in one place.</p></div>
       <div class="feat"><img class="feat-shot" src="/feat-reminders.jpg" alt="Choosing a reminder: the day before, the morning of, or an hour before" /><h3>Reminders</h3><p>A nudge before each event, so nothing ever sneaks up on you.</p></div>
-      <div class="feat"><img class="feat-shot" src="/feat-inboxes.jpg" alt="Linking multiple Gmail inboxes into one digest" /><h3>Multiple inboxes</h3><p>Mail split across accounts? Link up to three Gmail inboxes to the same Cleanmail.</p></div>
       <div class="feat"><img class="feat-shot" src="/feat-voice.jpg" alt="Adding an event by voice" /><h3>Voice edits</h3><p>Change any event's time out loud. Cleanmail hears you and updates it.</p></div>
     </div>
 
@@ -72,15 +71,15 @@ import CTA from "../components/CTA.astro";
   .mq-kicker{text-transform:uppercase;letter-spacing:1.4px;font-size:11.5px;font-weight:600;color:var(--teal);margin:0 0 10px}
   .mq-title{font-size:clamp(22px,3vw,32px);font-weight:500;letter-spacing:-.6px;color:var(--navy);margin:0 0 14px}
   .mq-body{font-size:16px;line-height:1.65;color:var(--ink);max-width:580px;margin:0 auto}
-  .mq-shot{display:block;width:100%;max-width:360px;margin:26px auto 0;border-radius:16px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(27,34,54,.10)}
+  .mq-shot{display:block;width:100%;max-width:330px;margin:26px auto 0;border-radius:16px;border:1px solid var(--line);box-shadow:0 12px 30px rgba(27,34,54,.10)}
 
-  .feat-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;align-items:stretch}
-  .feat{flex:0 1 calc(33.333% - 12px);min-width:220px;display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 8px 24px rgba(27,34,54,.05)}
-  .feat-shot{width:100%;height:158px;object-fit:cover;object-position:top;border-radius:12px;border:1px solid var(--line);background:#f4f6fc;display:block;margin-bottom:14px}
+  .feat-grid{columns:3;column-gap:18px}
+  .feat{break-inside:avoid;-webkit-column-break-inside:avoid;margin:0 0 18px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px;box-shadow:0 8px 24px rgba(27,34,54,.05)}
+  .feat-shot{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line);margin-bottom:14px}
   .feat h3{font-size:17px;font-weight:600;color:var(--navy);margin:0 0 7px;letter-spacing:-.2px}
   .feat p{font-size:14px;line-height:1.55;color:var(--muted);margin:0}
 
-  .more{margin-top:60px}
+  .more{margin-top:44px}
   .more h2{text-align:center;font-size:clamp(21px,2.6vw,27px);font-weight:400;letter-spacing:-.5px;color:var(--navy);margin:0 0 6px}
   .more-sub{text-align:center;color:var(--muted);font-size:15px;margin:0 0 30px}
   .more-list{display:grid;grid-template-columns:1fr 1fr;gap:18px 30px}
@@ -92,10 +91,10 @@ import CTA from "../components/CTA.astro";
 
   .features-cta{margin-top:60px}
 
-  @media (max-width:820px){ .feat{flex:0 1 calc(50% - 9px)} }
+  @media (max-width:820px){ .feat-grid{columns:2} }
   @media (max-width:640px){
     .more-list{grid-template-columns:1fr;gap:16px}
     .marquee{padding:28px 22px}
   }
-  @media (max-width:520px){ .feat{flex:0 1 100%} }
+  @media (max-width:520px){ .feat-grid{columns:1} }
 </style>
