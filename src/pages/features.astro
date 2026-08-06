@@ -63,7 +63,7 @@ import CTA from "../components/CTA.astro";
   function initScroller(){
     const sc=document.getElementById('featScroller');
     if(!sc||sc.dataset.bound) return; sc.dataset.bound='1';
-    const step=()=>((sc.querySelector('.feat')||{}).offsetWidth||330)+18;
+    const step=()=>{const c=sc.querySelector('.feat');return (c?c.getBoundingClientRect().width:330)+18;};
     const prev=document.querySelector('.scroll-btn.prev'), next=document.querySelector('.scroll-btn.next');
     prev&&prev.addEventListener('click',()=>sc.scrollBy({left:-step(),behavior:'smooth'}));
     next&&next.addEventListener('click',()=>sc.scrollBy({left:step(),behavior:'smooth'}));
@@ -100,10 +100,10 @@ import CTA from "../components/CTA.astro";
   .feat-shot{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);margin-top:auto}
   .scroll-btn{display:none}
   @media (min-width:821px){
-    .scroll-btn{display:flex;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);box-shadow:0 6px 18px rgba(27,34,54,.14);color:var(--navy);font-size:24px;cursor:pointer;line-height:0;padding-bottom:3px}
+    .scroll-btn{display:flex;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border-radius:50%;background:var(--purple);border:none;box-shadow:0 6px 18px rgba(74,111,227,.4);color:#fff;font-size:24px;cursor:pointer;line-height:0;padding-bottom:3px}
     .scroll-btn.prev{left:-14px}
     .scroll-btn.next{right:-14px}
-    .scroll-btn:hover{background:var(--card)}
+    .scroll-btn:hover{filter:brightness(0.93)}
   }
 
   .more{margin-top:44px}
