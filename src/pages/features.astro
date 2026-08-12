@@ -68,8 +68,12 @@ import CTA from "../components/CTA.astro";
     prev&&prev.addEventListener('click',()=>sc.scrollBy({left:-step(),behavior:'smooth'}));
     next&&next.addEventListener('click',()=>sc.scrollBy({left:step(),behavior:'smooth'}));
   }
-  document.addEventListener('astro:page-load', initScroller);
-  if(document.readyState!=='loading') initScroller();
+  function playDemo(){
+    const v=document.querySelector('.demo-video');
+    if(v){v.muted=true;const p=v.play();if(p&&p.catch)p.catch(()=>{});}
+  }
+  document.addEventListener('astro:page-load', ()=>{initScroller();playDemo();});
+  if(document.readyState!=='loading'){initScroller();playDemo();}
 </script>
 
 <style>
