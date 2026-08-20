@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PayResult from "../components/PayResult.astro";
+---
+<BaseLayout title="You're all set | Cleanmail" description="Your Cleanmail subscription is active." noindex={true}>
+  <PayResult
+    variant="success"
+    title="You're all set."
+    message="Your Cleanmail subscription is active and your free trial has started. Head back to the app whenever you're ready, your digest is waiting."
+    href="cleanmail://checkout-success"
+    buttonLabel="Open Cleanmail"
+  />
+</BaseLayout>

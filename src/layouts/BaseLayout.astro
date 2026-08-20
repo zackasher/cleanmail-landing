@@ -7,12 +7,14 @@ export interface Props {
   description?: string;
   image?: string;
   faqSchema?: unknown;
+  noindex?: boolean;
 }
 const {
   title,
   description = "Stop reading every email. Cleanmail turns the school, camp, and sports noise into one clean digest, organized by person and activity, with every date already on your calendar.",
   image = "/og.png",
   faqSchema,
+  noindex = false,
 } = Astro.props;
 
 const canonicalPath = Astro.url.pathname
@@ -27,6 +29,7 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="j0driezVtY4Wr0F1EeHI5-nBMDQfm_KR4BI9JMa1Ggo" />
+  {noindex && <meta name="robots" content="noindex" />}
   <title>{title}</title>
   <link rel="canonical" href={canonicalURL} />
   <meta name="description" content={description} />

@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PayResult from "../components/PayResult.astro";
+---
+<BaseLayout title="Checkout canceled | Cleanmail" description="Nothing was charged." noindex={true}>
+  <PayResult
+    variant="neutral"
+    title="No charge, all good."
+    message="You stepped away before finishing, so nothing was charged. Whenever you're ready, you can start again right from the app."
+    href="cleanmail://checkout-cancel"
+    buttonLabel="Back to Cleanmail"
+  />
+</BaseLayout>

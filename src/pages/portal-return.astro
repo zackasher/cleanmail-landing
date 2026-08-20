@@ -1,0 +1,13 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PayResult from "../components/PayResult.astro";
+---
+<BaseLayout title="Changes saved | Cleanmail" description="Your billing changes are saved." noindex={true}>
+  <PayResult
+    variant="success"
+    title="All changes saved."
+    message="Any updates you made to your billing are saved. Head back to the app to pick up right where you left off."
+    href="cleanmail://portal-return"
+    buttonLabel="Back to Cleanmail"
+  />
+</BaseLayout>
