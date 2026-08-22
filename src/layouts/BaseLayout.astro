@@ -117,8 +117,11 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   <script>
     function playHeroVideo() {
       document.querySelectorAll("video.hero-video").forEach((v) => {
-        const p = v.play();
-        if (p && p.catch) p.catch(() => {});
+        v.muted = true;
+        const go = () => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+        go();
+        v.addEventListener("canplay", go, { once: true });
+        v.addEventListener("loadeddata", go, { once: true });
       });
     }
     playHeroVideo();

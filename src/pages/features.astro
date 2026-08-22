@@ -14,7 +14,7 @@ import CTA from "../components/CTA.astro";
       <p class="demo-sub">One photo. 41 smart events. One Clean Mailbox.</p>
       <div class="demo-phone">
         <PhoneFrame>
-          <video class="demo-video" autoplay muted loop playsinline poster="/feat-demo-poster.jpg">
+          <video class="demo-video" autoplay muted loop playsinline preload="auto" poster="/feat-demo-poster.jpg">
             <source src="/feat-demo.mp4" type="video/mp4" />
           </video>
         </PhoneFrame>
@@ -70,7 +70,12 @@ import CTA from "../components/CTA.astro";
   }
   function playDemo(){
     const v=document.querySelector('.demo-video');
-    if(v){v.muted=true;const p=v.play();if(p&&p.catch)p.catch(()=>{});}
+    if(!v) return;
+    v.muted=true;
+    const go=()=>{const p=v.play();if(p&&p.catch)p.catch(()=>{});};
+    go();
+    v.addEventListener('canplay',go,{once:true});
+    v.addEventListener('loadeddata',go,{once:true});
   }
   document.addEventListener('astro:page-load', ()=>{initScroller();playDemo();});
   if(document.readyState!=='loading'){initScroller();playDemo();}
