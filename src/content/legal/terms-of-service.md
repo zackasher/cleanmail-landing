@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last updated:** July 12, 2026
+**Last updated:** September 2, 2026
 
 These Terms of Service ("Terms") govern your use of Cleanmail, an iOS application operated by Calibrate LLC ("we," "our," or "us"). By creating an account or using Cleanmail, you agree to these Terms.
 
@@ -28,13 +28,13 @@ You are responsible for maintaining the confidentiality of your Google account c
 
 Cleanmail is offered as a single monthly subscription at $6.99 per month. There is no free tier.
 
-**Free trial.** New subscribers receive a 14-day free trial. A valid payment card is required to start the trial. Unless you cancel before the trial ends, your subscription automatically converts to a paid subscription at $6.99 per month and your card is charged at that time. You can cancel at any time during the trial from within the app or via the Stripe customer portal; canceling before the trial ends prevents any charge.
+**Free trial.** New subscribers receive a 14-day free trial. Unless you cancel at least 24 hours before the trial ends, your subscription automatically converts to a paid subscription at $6.99 per month and your Apple Account is charged at that time. You can cancel at any time during the trial in your Apple Account subscription settings; canceling before the trial ends prevents any charge.
 
-**Billing.** Subscriptions are billed in advance via Stripe at the beginning of each billing period. Your subscription renews automatically each month unless you cancel.
+**Billing.** Subscriptions are billed in advance through Apple in-app purchase at the beginning of each billing period. Your subscription renews automatically each month unless you cancel at least 24 hours before the end of the current period.
 
-**Payment processing.** All payments are processed by Stripe, Inc. We do not store or have access to your full payment card information. By subscribing, you agree to Stripe's [Terms of Service](https://stripe.com/legal/consumer) and [Privacy Policy](https://stripe.com/privacy).
+**Payment processing.** All payments are processed by Apple through in-app purchase and charged to your Apple Account. We do not store or have access to your payment card information. Purchases are also governed by Apple's [Terms of Use](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/).
 
-**Cancellation.** You may cancel your subscription at any time from within the app or via the Stripe customer portal linked from the app. Cancellation takes effect at the end of your current billing period — you retain access until the period ends, after which your access to Cleanmail's features ends.
+**Cancellation.** You may cancel your subscription at any time in your Apple Account subscription settings, reachable from within the app. Cancellation takes effect at the end of your current billing period — you retain access until the period ends, after which your access to Cleanmail's features ends. We cannot cancel an Apple subscription on your behalf.
 
 **Pricing changes.** We may change subscription pricing with at least 30 days' notice via email and an in-app notice. Continued use after a price change takes effect constitutes acceptance.
 
@@ -89,7 +89,7 @@ We do not warrant the accuracy, completeness, or reliability of AI-generated con
 
 We provide Cleanmail on an "as is" and "as available" basis. We do not guarantee that the service will be uninterrupted, error-free, or that every email from your selected senders will be captured in a digest.
 
-Scheduled maintenance, third-party service outages (Google, Anthropic, Supabase, Stripe), or unforeseen technical issues may cause temporary service disruption. We will use reasonable efforts to communicate planned downtime in advance.
+Scheduled maintenance, third-party service outages (Google, Anthropic, Supabase, Apple), or unforeseen technical issues may cause temporary service disruption. We will use reasonable efforts to communicate planned downtime in advance.
 
 ---
 
