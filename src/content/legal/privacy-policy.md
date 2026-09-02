@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** July 12, 2026
+**Last updated:** September 2, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -16,7 +16,7 @@ We collect only the information necessary to provide the Cleanmail service.
 - Your name and email address, obtained from your Google account when you sign in.
 - People, activities, and sender lists you configure in onboarding.
 - Profile photos you upload for each person (optional).
-- Subscription and payment information you provide to Stripe at checkout. We do not store or have access to your full payment card details — only the subscription status returned by Stripe.
+- Subscription purchases are processed by Apple through in-app purchase. We never see or store your payment card details; we receive only your subscription status from Apple.
 
 **Information collected from Google APIs (with your authorization):**
 - The email address of your Google account.
@@ -72,7 +72,7 @@ Cleanmail relies on the following third parties to provide its service. Each rec
 | **Supabase** (Supabase Inc., hosted in US East — Ohio) | Database and serverless functions | Your profile, digest content, events, subscription state |
 | **Anthropic** (Anthropic PBC) | AI digest generation via Claude API | Email subject + body for emails you have authorized, sent at request time and not stored at Anthropic per their API terms |
 | **Google** (Google LLC) | Sign-in, Gmail access, Calendar sync | OAuth tokens; Gmail messages from selected senders; the individual message you open via "View Email"; Calendar event metadata |
-| **Stripe** (Stripe, Inc.) | Subscription billing | Email address, subscription status, payment status (we never see card numbers) |
+| **Apple** (Apple Inc.) | Subscription billing via in-app purchase | Purchase and subscription status (we never see card numbers or your Apple Account details) |
 | **Resend** (Resend, Inc.) | Transactional email delivery (partner invitations) | The recipient email address you enter when inviting a partner, and the inviter's display name |
 | **Apple Push Notification service** | Delivery of push notifications | Anonymous device token |
 | **Trigger.dev** | Scheduled job execution for digest delivery | User ID and digest ID at scheduled times — no email content |
@@ -121,7 +121,7 @@ Digest history is retained for the period you select in Settings (default 30 day
 You may permanently delete your account and all associated data at any time from within the app: Settings → Delete Account. Account deletion is immediate and removes:
 - Your profile and all in-app data (people, activities, senders, digest history, events) for digests you own.
 - Profile photos from our storage.
-- Your Stripe customer record (subscriptions are canceled automatically).
+- Your billing records held by us. Subscriptions purchased through Apple must be canceled in your Apple Account settings; deleting your Cleanmail account does not cancel an Apple subscription.
 - Your stored Google refresh token (revoked with Google), and the credentials for any additional inboxes you have linked (each revoked with Google and deleted).
 
 **If you are part of a shared digest:**
