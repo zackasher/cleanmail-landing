@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** September 6, 2026
+**Last updated:** September 7, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -95,7 +95,7 @@ The following are stored persistently:
 
 ## 6. Shared Digests (Household)
 
-Cleanmail lets a household share one digest: up to four people in total, the person who creates the digest (the **owner**) plus up to three additional people who join (**members**). Everyone in the household sees and manages the same shared digest. This is different from linking an additional Gmail inbox to your *own* account (a "linked inbox"), which pools your own mailboxes and does not involve anyone else; this section concerns shared household digests only.
+Cleanmail lets a household share one digest: up to four people in total. The person who creates the digest is the **Primary**. The Primary can invite up to three other people to join. Any other adults the Primary designates are **Household Leads**, who can help manage the digest and the permissions of the other people in it; everyone else is a **Household Member**. Everyone in the household sees the same shared digest. This is different from linking an additional Gmail inbox to your *own* account (a "linked inbox"), which pools your own mailboxes and does not involve anyone else; this section concerns shared household digests only.
 
 **Each person connects their own Google account, and no one can read anyone else's mailbox.** Sender discovery, the search that finds senders to add to a digest, only ever searches the mailbox of the person performing the search. As a result:
 
@@ -103,12 +103,12 @@ Cleanmail lets a household share one digest: up to four people in total, the per
 - Because every sender in a shared digest was added by the person whose mailbox it came from, each person has, by adding a sender, consented to that sender's emails being summarized into the shared digest.
 - Emails that are summarized into the shared digest can be opened by anyone in the household via "View Email," including emails sourced from another person's mailbox. This is limited to emails that have been surfaced in the shared digest through a sender someone added; it does not allow anyone to retrieve arbitrary mail from another person's inbox.
 
-**Each person's Gmail credentials remain private to them.** A member's mailbox feeds the shared digest using that member's own live authorization; we do not copy one person's Google access to anyone else.
+**Each person's Gmail credentials remain private to them.** Each person's mailbox feeds the shared digest using that person's own live authorization; we do not copy one person's Google access to anyone else.
 
-**Leaving or being removed from a shared digest.** The owner can remove any member, and any member can leave on their own, at any time. When someone leaves or is removed:
+**Leaving or being removed from a shared digest.** The Primary can remove any Household Lead or Household Member, and anyone can leave on their own, at any time. When someone leaves or is removed:
 - Their access to the shared digest ends immediately, and their own mailbox stops contributing new emails to it.
 - The email senders that the departing person had added are automatically removed from the shared digest, so their mailbox no longer feeds it in any form. The digest summaries and calendar events already created from those emails **remain in the shared digest** for the rest of the household; leaving does not delete the shared digest's existing summaries or events.
-- Only the owner is charged for the household; members share the digest at no additional cost. A member who leaves and later wants their own digest would start their own subscription.
+- Only the Primary is charged for the household; Household Leads and Household Members share the digest at no additional cost. Someone who leaves and later wants their own digest would start their own subscription.
 
 To permanently delete your own personal data, see Section 7 (Account Deletion).
 
@@ -125,8 +125,8 @@ You may permanently delete your account and all associated data at any time from
 - Your stored Google refresh token (revoked with Google), and the credentials for any additional inboxes you have linked (each revoked with Google and deleted).
 
 **If you are part of a shared digest:**
-- If you are a **member** (you joined someone else's digest), deleting your account removes you from that shared digest. The shared digest itself, and the content you contributed to it, remain for the owner and any other members. Your own profile and personal data are deleted.
-- If you are the **owner** (you own the shared digest), deleting your account deletes the shared digest and all of its content for everyone in the household. All members are removed and, on their next use of Cleanmail, would need to start their own digest and subscription.
+- If you are a **Household Lead** or **Household Member** (you joined someone else's digest), deleting your account removes you from that shared digest. The shared digest itself, and the content you contributed to it, remain for the Primary and the rest of the household. Your own profile and personal data are deleted.
+- If you are the **Primary** (you created the shared digest), deleting your account deletes the shared digest and all of its content for everyone in the household. Everyone else is removed and, on their next use of Cleanmail, would need to start their own digest and subscription.
 
 After deletion, no recovery is possible. If you have trouble deleting your account in the app, contact support@cleanmailapp.com and we will delete it manually within 30 days.
 
