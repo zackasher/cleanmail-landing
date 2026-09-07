@@ -20,11 +20,11 @@ When you first open Cleanmail, you'll be asked to sign in with Google and grant 
 
 ### How does billing work?
 
-Cleanmail is a single subscription of $6.99/month, billed through Stripe. New accounts start with a 14-day free trial; if you don't cancel before the trial ends, it converts automatically to a paid subscription. You can view or update your billing details, change your payment method, or cancel anytime from the billing portal inside the app.
+Cleanmail is a single monthly subscription, purchased through the App Store and billed by Apple to your Apple Account. New accounts start with a 14-day free trial; if you don't cancel before the trial ends, it converts automatically to a paid subscription. Your payment method, billing details, and receipts all live in your Apple subscription settings.
 
 ### How do I cancel my subscription?
 
-Open Cleanmail, go to your account settings, and select the billing or subscription option to open the billing portal. From there you can cancel in a couple of taps. If you cancel during your trial, you won't be charged.
+Cancellation is handled by Apple, not by us. On your iPhone, open Settings, tap your name at the top, tap Subscriptions, choose Cleanmail, and tap Cancel Subscription. If you cancel during your trial, you won't be charged. You'll keep access until the end of the period you've already paid for.
 
 ### How do I delete my account and my data?
 
