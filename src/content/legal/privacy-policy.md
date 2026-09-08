@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** September 7, 2026
+**Last updated:** September 8, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -26,7 +26,7 @@ We collect only the information necessary to provide the Cleanmail service.
 
 **Information collected automatically:**
 - Your selected time zone (used to schedule digest generation in your local time).
-- Anonymous error logs containing no email content (used to diagnose app problems).
+- Server-side diagnostic logs recording account identifiers, timestamps, and whether an operation succeeded or failed. These contain no email content. Cleanmail uses no third-party analytics, advertising, or crash-reporting service.
 
 ---
 
@@ -70,20 +70,24 @@ Cleanmail relies on the following third parties to provide its service. Each rec
 | Service | Purpose | Data shared |
 |---|---|---|
 | **Supabase** (Supabase Inc., hosted in US East — Ohio) | Database and serverless functions | Your profile, digest content, events, subscription state |
-| **Anthropic** (Anthropic PBC) | AI digest generation via Claude API | Email subject + body for emails you have authorized, sent at request time and not stored at Anthropic per their API terms |
+| **Anthropic** (Anthropic PBC) | AI summarization and event extraction via the Claude API | (a) the subject line and message body of emails from senders you have selected; (b) photos and PDFs you choose to scan; (c) the text of voice notes you record, which your device transcribes before anything is sent. Sent at the time of the request and not used to train Anthropic's models. |
 | **Google** (Google LLC) | Sign-in, Gmail access, Calendar sync | OAuth tokens; Gmail messages from selected senders; the individual message you open via "View Email"; Calendar event metadata |
 | **Apple** (Apple Inc.) | Subscription billing via in-app purchase | Purchase and subscription status (we never see card numbers or your Apple Account details) |
 | **Resend** (Resend, Inc.) | Transactional email delivery (household invitations) | The recipient email address you enter when inviting a household member, and the inviter's display name |
 | **Apple Push Notification service** | Delivery of push notifications | Anonymous device token |
 | **Trigger.dev** | Scheduled job execution for digest delivery | User ID and digest ID at scheduled times — no email content |
 
-We do not transfer Gmail data to any sub-processor other than Anthropic (for digest generation) and Supabase (for storage of the AI-generated summary, not the raw email). The full body of an email you open via "View Email" is retrieved from Google and rendered on your device; it is not stored on our servers (see Section 5).
+Anthropic is the only third party that receives your email content, your scanned documents, or the text of your voice notes, and it receives them only to produce the summaries and events you asked for. We do not send any of that content to any other AI service. Supabase stores the resulting summaries and events, not the raw email. The full body of an email you open via "View Email" is retrieved from Google and rendered on your device; it is not stored on our servers (see Section 5).
+
+Every sub-processor listed above is bound by its agreement with us to protect the data it receives to a standard equal to or greater than the protections described in this policy, and to use that data only to provide the service described in its row.
 
 ---
 
 ## 5. Data Storage and Location
 
 All data is stored in the Supabase region US East (Ohio). Raw email content is not stored at rest — emails are fetched from Gmail at digest-generation time, sent to Anthropic's API for summarization, and discarded after the AI-generated summary is written to our database. Likewise, when you open an email via "View Email," its full body is fetched from Gmail and rendered on your device for that viewing session only; it is not written to our database.
+
+Photos and PDFs you scan are uploaded to a private storage area on our servers only for as long as it takes to read them, then deleted as the final step of the scan, whether it succeeded or failed. Voice notes are transcribed to text on your device; the audio recording itself is never uploaded and is never stored.
 
 The following are stored persistently:
 - Your profile (name, email, time zone, subscription state).
