@@ -29,6 +29,18 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="j0driezVtY4Wr0F1EeHI5-nBMDQfm_KR4BI9JMa1Ggo" />
+
+  <!-- Reddit Pixel -->
+  <script is:inline>
+    !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);
+    rdt('init','a2_jpb5d247ugq0');
+    document.addEventListener('astro:page-load', function () { rdt('track', 'PageVisit'); });
+    document.addEventListener('click', function (e) {
+      var el = e.target;
+      if (!el || !el.closest) return;
+      if (el.closest('a[href*="apps.apple.com"]')) rdt('track', 'SignUp');
+    });
+  </script>
   {noindex && <meta name="robots" content="noindex" />}
   <title>{title}</title>
   <link rel="canonical" href={canonicalURL} />
@@ -87,6 +99,7 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
       "Read-only access to only the senders you choose"
     ]
   })} />
+
   <ClientRouter />
   <style is:global>
     :root{
