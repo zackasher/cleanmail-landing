@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** September 8, 2026
+**Last updated:** September 23, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -10,7 +10,7 @@ This policy is hosted at https://cleanmailapp.com/privacy and is referenced from
 
 ## 1. Information We Collect
 
-We collect only the information necessary to provide the Cleanmail service.
+We collect only the information needed to provide and improve Cleanmail.
 
 **Information you provide directly:**
 - Your name and email address, obtained from your Google account when you sign in.
@@ -27,6 +27,7 @@ We collect only the information necessary to provide the Cleanmail service.
 **Information collected automatically:**
 - Your selected time zone (used to schedule digest generation in your local time).
 - Server-side diagnostic logs recording account identifiers, timestamps, and whether an operation succeeded or failed. These contain no email content. Cleanmail uses no third-party analytics, advertising, or crash-reporting service.
+- Setup progress: which setup steps you reached and whether sign-in completed, recorded with a random install identifier and, once you sign in, your account. It never includes email content, names, or search terms.
 
 ---
 
@@ -50,7 +51,7 @@ Cleanmail uses the following Google API scopes:
 
 ## 3. How We Use Your Information
 
-We use your information solely to provide Cleanmail:
+We use your information solely to provide and improve Cleanmail:
 
 - Generate digest summaries from emails sent by senders you have selected.
 - Display the full original email inside the app when you choose to open a digest item.
@@ -58,6 +59,7 @@ We use your information solely to provide Cleanmail:
 - Deliver push notifications when a new digest is ready.
 - Process subscription payments and manage your account.
 - Diagnose and resolve technical issues.
+- Understand where people get stuck during setup, so we can make it easier.
 
 We do not sell, rent, or share your personal information with third parties for marketing purposes.
 
