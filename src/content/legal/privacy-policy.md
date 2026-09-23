@@ -27,7 +27,7 @@ We collect only the information needed to provide and improve Cleanmail.
 **Information collected automatically:**
 - Your selected time zone (used to schedule digest generation in your local time).
 - Server-side diagnostic logs recording account identifiers, timestamps, and whether an operation succeeded or failed. These contain no email content. Cleanmail uses no third-party analytics, advertising, or crash-reporting service.
-- Setup progress: which setup steps you reached and whether sign-in completed, recorded with a random install identifier and, once you sign in, your account. It never includes email content, names, or search terms.
+- Setup progress: which setup steps you reached, whether you viewed or started a plan, and whether sign-in completed, recorded with a random install identifier and, once you sign in, your account. It never includes email content, names, or search terms.
 
 ---
 
