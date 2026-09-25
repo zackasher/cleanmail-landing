@@ -73,7 +73,7 @@ Cleanmail relies on the following third parties to provide its service. Each rec
 
 | Service | Purpose | Data shared |
 |---|---|---|
-| **Supabase** (Supabase Inc., hosted in US East: Ohio) | Database and serverless functions | Your profile, digest content, events, subscription state |
+| **Supabase** (Supabase Inc., hosted in US East, Ohio) | Database and serverless functions | Your profile, digest content, events, subscription state |
 | **Anthropic** (Anthropic PBC) | AI summarization and event extraction via the Claude API | (a) the subject line and message body of emails from senders you have selected; (b) photos and PDFs you choose to scan; (c) the text of voice notes you record, which your device transcribes before anything is sent. Sent at the time of the request and not used to train Anthropic's models. |
 | **Google** (Google LLC) | Sign-in, Gmail access, Calendar sync | OAuth tokens; Gmail messages from selected senders; the individual message you open via "View Email"; Calendar event metadata |
 | **Apple** (Apple Inc.) | Subscription billing via in-app purchase | Purchase and subscription status (we never see card numbers or your Apple Account details) |
