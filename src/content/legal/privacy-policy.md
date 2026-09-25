@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** September 23, 2026
+**Last updated:** September 25, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -23,6 +23,7 @@ We collect only the information needed to provide and improve Cleanmail.
 - For each email sender you have explicitly selected: sender email, subject line, date, and message body, used to generate your digest summaries.
 - When you tap "View Email" on a digest item, the full original message (subject, sender, date, and body) of that specific email, fetched on demand at the moment you open it so we can display it inside the app. See Section 2 for how that message is located, including in your Trash or Spam.
 - Calendar event metadata for events we create, update, or delete on your behalf.
+- If someone shares a Google Calendar with you: the calendar's name, its identifier, and the sharer's email address, from Google's sharing notice. We do not store the notice itself.
 
 **Information collected automatically:**
 - Your selected time zone (used to schedule digest generation in your local time).
@@ -35,13 +36,13 @@ We collect only the information needed to provide and improve Cleanmail.
 
 Cleanmail uses the following Google API scopes:
 
-- `openid`, `profile`, `email` — to identify your Google account and sign you in.
-- `https://www.googleapis.com/auth/gmail.readonly` — used in two ways: (a) to read emails from senders you have explicitly added to your digest, in order to generate your digest summaries; and (b) when you tap "View Email" on a digest item, to retrieve that one specific message so we can display the full original email inside the app. To locate the message you tapped, we search your Gmail account by its message identifier across all folders, **including Trash and Spam**, so an email you have deleted (but not permanently removed) can still be opened from your digest. We do not browse, index, or bulk-collect your mailbox; we read selected senders' mail for digests, and we fetch a single message only when you explicitly open it.
-- `https://www.googleapis.com/auth/calendar.events` — to create, update, and delete calendar events extracted from your digest emails, and to read your existing calendar events so we can display them alongside your Cleanmail events in the app. Google's consent screen describes this permission as "View and edit events on all calendars you have access to in Google Calendar." In practice, Cleanmail only writes to your primary calendar, only creates, updates, and deletes events it extracted for you, and never modifies or deletes an event that Cleanmail did not create.
+- `openid`, `profile`, `email`: to identify your Google account and sign you in.
+- `https://www.googleapis.com/auth/gmail.readonly`: used in three ways: (a) to read emails from senders you have explicitly added to your digest, in order to generate your digest summaries; (b) when you tap "View Email" on a digest item, to retrieve that one specific message so we can display the full original email inside the app; and (c) to find Google Calendar's sharing notices, the messages Google sends when someone shares a calendar with you, so we can offer to show that calendar in Cleanmail. From a sharing notice we keep only the calendar's name, its identifier, and the sharer's email address. To locate the message you tapped, we search your Gmail account by its message identifier across all folders, **including Trash and Spam**, so an email you have deleted (but not permanently removed) can still be opened from your digest. We do not browse, index, or bulk-collect your mailbox; we read selected senders' mail for digests, look only for Google's calendar-sharing notices, and fetch a single message only when you explicitly open it.
+- `https://www.googleapis.com/auth/calendar.events`: to create, update, and delete calendar events extracted from your digest emails, and to read events on your calendars, including calendars shared with you that you choose to show, so we can display them alongside your Cleanmail events in the app. Google's consent screen describes this permission as "View and edit events on all calendars you have access to in Google Calendar." In practice, Cleanmail writes only to one calendar you choose (your primary calendar, unless you pick a shared calendar you can edit), only creates, updates, moves, and deletes events it extracted for you, and never modifies or deletes an event that Cleanmail did not create. If you choose a different calendar, Cleanmail moves your upcoming Cleanmail events there; past events stay where they are.
 
 **Google API Services Limited Use disclosure:** Cleanmail's use and transfer of information received from Google APIs to any other app will adhere to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. Specifically:
 
-- We use Gmail data only to provide and improve user-facing features that are prominent in Cleanmail's user interface (the email digest, the in-app email viewer, and calendar sync features).
+- We use Gmail data only to provide and improve user-facing features that are prominent in Cleanmail's user interface (the email digest, the in-app email viewer, calendar sync features, and offering calendars shared with you).
 - We do not use Gmail data for serving advertisements.
 - We do not allow humans to read your Gmail data, except (a) with your explicit consent, (b) when necessary for security purposes such as investigating abuse, (c) to comply with applicable law, or (d) when the data has been aggregated and anonymized for internal operations.
 - We do not transfer Gmail data to others unless necessary to provide Cleanmail's user-facing features (see Section 4 below).
@@ -56,6 +57,7 @@ We use your information solely to provide and improve Cleanmail:
 - Generate digest summaries from emails sent by senders you have selected.
 - Display the full original email inside the app when you choose to open a digest item.
 - Extract event dates and times from those emails and create corresponding entries on your Google Calendar.
+- Offer to show calendars other people have shared with you, and add your events to the calendar you choose.
 - Deliver push notifications when a new digest is ready.
 - Process subscription payments and manage your account.
 - Diagnose and resolve technical issues.
@@ -71,13 +73,13 @@ Cleanmail relies on the following third parties to provide its service. Each rec
 
 | Service | Purpose | Data shared |
 |---|---|---|
-| **Supabase** (Supabase Inc., hosted in US East — Ohio) | Database and serverless functions | Your profile, digest content, events, subscription state |
+| **Supabase** (Supabase Inc., hosted in US East: Ohio) | Database and serverless functions | Your profile, digest content, events, subscription state |
 | **Anthropic** (Anthropic PBC) | AI summarization and event extraction via the Claude API | (a) the subject line and message body of emails from senders you have selected; (b) photos and PDFs you choose to scan; (c) the text of voice notes you record, which your device transcribes before anything is sent. Sent at the time of the request and not used to train Anthropic's models. |
 | **Google** (Google LLC) | Sign-in, Gmail access, Calendar sync | OAuth tokens; Gmail messages from selected senders; the individual message you open via "View Email"; Calendar event metadata |
 | **Apple** (Apple Inc.) | Subscription billing via in-app purchase | Purchase and subscription status (we never see card numbers or your Apple Account details) |
 | **Resend** (Resend, Inc.) | Transactional email delivery (household invitations) | The recipient email address you enter when inviting a household member, and the inviter's display name |
 | **Apple Push Notification service** | Delivery of push notifications | Anonymous device token |
-| **Trigger.dev** | Scheduled job execution for digest delivery | User ID and digest ID at scheduled times — no email content |
+| **Trigger.dev** | Scheduled job execution for digest delivery | User ID and digest ID at scheduled times: no email content |
 
 Anthropic is the only third party that receives your email content, your scanned documents, or the text of your voice notes, and it receives them only to produce the summaries and events you asked for. We do not send any of that content to any other AI service. Supabase stores the resulting summaries and events, not the raw email. The full body of an email you open via "View Email" is retrieved from Google and rendered on your device; it is not stored on our servers (see Section 5).
 
@@ -87,7 +89,7 @@ Every sub-processor listed above is bound by its agreement with us to protect th
 
 ## 5. Data Storage and Location
 
-All data is stored in the Supabase region US East (Ohio). Raw email content is not stored at rest — emails are fetched from Gmail at digest-generation time, sent to Anthropic's API for summarization, and discarded after the AI-generated summary is written to our database. Likewise, when you open an email via "View Email," its full body is fetched from Gmail and rendered on your device for that viewing session only; it is not written to our database.
+All data is stored in the Supabase region US East (Ohio). Raw email content is not stored at rest: emails are fetched from Gmail at digest-generation time, sent to Anthropic's API for summarization, and discarded after the AI-generated summary is written to our database. Likewise, when you open an email via "View Email," its full body is fetched from Gmail and rendered on your device for that viewing session only; it is not written to our database.
 
 Photos and PDFs you scan are uploaded to a private storage area on our servers only for as long as it takes to read them, then deleted as the final step of the scan, whether it succeeded or failed. Voice notes are transcribed to text on your device; the audio recording itself is never uploaded and is never stored.
 
@@ -95,6 +97,7 @@ The following are stored persistently:
 - Your profile (name, email, time zone, subscription state).
 - AI-generated digest summaries (text only, no raw email bodies).
 - Calendar event records linked to your account.
+- For calendars shared with you: the calendar's name, identifier, sharer's email address, and whether you chose to show it. Events on those calendars are read live and never stored. A calendar you show is visible to your household only if you turn on sharing your calendar with your household.
 - People, activities, and sender configurations you set up.
 
 ---
@@ -144,7 +147,7 @@ Depending on your jurisdiction, you may have the right to:
 - **Access** the personal data we hold about you.
 - **Correct** inaccurate data (you can edit most of this yourself in Settings).
 - **Delete** your account and associated data (see Section 7).
-- **Export** your data in a portable format — contact support@cleanmailapp.com.
+- **Export** your data in a portable format: contact support@cleanmailapp.com.
 - **Withdraw consent** for Google API access at any time via [Google account permissions](https://myaccount.google.com/permissions). Revoking access will stop Cleanmail from generating new digests.
 
 Residents of California (CCPA) and the European Union (GDPR) have additional rights under applicable law. To exercise any of these rights, contact support@cleanmailapp.com.
