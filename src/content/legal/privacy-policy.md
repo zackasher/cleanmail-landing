@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** September 25, 2026
+**Last updated:** September 28, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -38,7 +38,7 @@ Cleanmail uses the following Google API scopes:
 
 - `openid`, `profile`, `email`: to identify your Google account and sign you in.
 - `https://www.googleapis.com/auth/gmail.readonly`: used in three ways: (a) to read emails from senders you have explicitly added to your digest, in order to generate your digest summaries; (b) when you tap "View Email" on a digest item, to retrieve that one specific message so we can display the full original email inside the app; and (c) to find Google Calendar's sharing notices, the messages Google sends when someone shares a calendar with you, so we can offer to show that calendar in Cleanmail. From a sharing notice we keep only the calendar's name, its identifier, and the sharer's email address. To locate the message you tapped, we search your Gmail account by its message identifier across all folders, **including Trash and Spam**, so an email you have deleted (but not permanently removed) can still be opened from your digest. We do not browse, index, or bulk-collect your mailbox; we read selected senders' mail for digests, look only for Google's calendar-sharing notices, and fetch a single message only when you explicitly open it.
-- `https://www.googleapis.com/auth/calendar.events`: to create, update, and delete calendar events extracted from your digest emails, and to read events on your calendars, including calendars shared with you that you choose to show, so we can display them alongside your Cleanmail events in the app. Google's consent screen describes this permission as "View and edit events on all calendars you have access to in Google Calendar." In practice, Cleanmail writes only to one calendar you choose (your primary calendar, unless you pick a shared calendar you can edit), only creates, updates, moves, and deletes events it extracted for you, and never modifies or deletes an event that Cleanmail did not create. If you choose a different calendar, Cleanmail moves your upcoming Cleanmail events there; past events stay where they are.
+- `https://www.googleapis.com/auth/calendar.events`: to create, update, and delete calendar events extracted from your digest emails, and to read events on your calendars, including calendars shared with you that you choose to show, so we can display them alongside your Cleanmail events in the app. Google's consent screen describes this permission as "View and edit events on all calendars you have access to in Google Calendar." In practice, Cleanmail writes only to one calendar you choose (your primary calendar, unless you pick a shared calendar you can edit), only creates, updates, moves, and deletes events it extracted for you, and never modifies or deletes an event that Cleanmail did not create. If you choose a different calendar, Cleanmail moves your upcoming Cleanmail events there; past events stay where they are. To keep Cleanmail in step with your calendar, we also subscribe to Google's change notices for the calendars that hold your Cleanmail events. When you edit or delete a Cleanmail event in Google Calendar, Cleanmail applies that change in the app. We read these changes only to recognize edits to Cleanmail's own events; changes to other events are ignored and nothing from them is stored.
 
 **Google API Services Limited Use disclosure:** Cleanmail's use and transfer of information received from Google APIs to any other app will adhere to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements. Specifically:
 
@@ -58,6 +58,7 @@ We use your information solely to provide and improve Cleanmail:
 - Display the full original email inside the app when you choose to open a digest item.
 - Extract event dates and times from those emails and create corresponding entries on your Google Calendar.
 - Offer to show calendars other people have shared with you, and add your events to the calendar you choose.
+- Keep your Cleanmail events in step with Google Calendar: when you edit or delete one in Google Calendar, the app reflects it.
 - Deliver push notifications when a new digest is ready.
 - Process subscription payments and manage your account.
 - Diagnose and resolve technical issues.
@@ -97,6 +98,7 @@ The following are stored persistently:
 - Your profile (name, email, time zone, subscription state).
 - AI-generated digest summaries (text only, no raw email bodies).
 - Calendar event records linked to your account.
+- A record of each change we applied from Google Calendar (which event, which fields changed, and when), and the notice channel and sync bookmark Google provides so we only read what changed.
 - For calendars shared with you: the calendar's name, identifier, sharer's email address, and whether you chose to show it. Events on those calendars are read live and never stored. A calendar you show is visible to your household only if you turn on sharing your calendar with your household.
 - People, activities, and sender configurations you set up.
 
