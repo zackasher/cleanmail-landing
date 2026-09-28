@@ -16,6 +16,7 @@ We collect only the information needed to provide and improve Cleanmail.
 - Your name and email address, obtained from your Google account when you sign in.
 - People, activities, and sender lists you configure in onboarding.
 - Profile photos you upload for each person (optional).
+- Notes and emoji reactions you leave on cards and events. Everyone in your household can see them.
 - Subscription purchases are processed by Apple through in-app purchase. We never see or store your payment card details; we receive only your subscription status from Apple.
 
 **Information collected from Google APIs (with your authorization):**
@@ -101,6 +102,7 @@ The following are stored persistently:
 - A record of each change we applied from Google Calendar (which event, which fields changed, and when), and the notice channel and sync bookmark Google provides so we only read what changed.
 - For calendars shared with you: the calendar's name, identifier, sharer's email address, and whether you chose to show it. Events on those calendars are read live and never stored. A calendar you show is visible to your household only if you turn on sharing your calendar with your household.
 - People, activities, and sender configurations you set up.
+- Notes and emoji reactions left on cards and events by you and your household.
 
 ---
 
@@ -136,7 +138,7 @@ You may permanently delete your account and all associated data at any time from
 - Your stored Google refresh token (revoked with Google), and the credentials for any additional inboxes you have linked (each revoked with Google and deleted).
 
 **If you are part of a shared digest:**
-- If you are a **Household Lead** or **Household Member** (you joined someone else's digest), deleting your account removes you from that shared digest. The shared digest itself, and the content you contributed to it, remain for the Primary and the rest of the household. Your own profile and personal data are deleted.
+- If you are a **Household Lead** or **Household Member** (you joined someone else's digest), deleting your account removes you from that shared digest. The shared digest itself, and the content you contributed to it, remain for the Primary and the rest of the household. Your own profile and personal data are deleted, including the notes you left. Emoji reactions you left stay on the shared digest without your name.
 - If you are the **Primary** (you created the shared digest), deleting your account deletes the shared digest and all of its content for everyone in the household. Everyone else is removed and, on their next use of Cleanmail, would need to start their own digest and subscription.
 
 After deletion, no recovery is possible. If you have trouble deleting your account in the app, contact support@cleanmailapp.com and we will delete it manually within 30 days.
