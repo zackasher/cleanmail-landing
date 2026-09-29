@@ -7,7 +7,20 @@ import CTA from "../components/CTA.astro";
   <section class="features-show">
     <p class="eyebrow">Features</p>
     <h1 class="show-title">Just what you <span class="pop">need</span>. Nothing you don't.</h1>
-    <p class="show-sub">No feature dump. No 30-day grid to squint at. Here is the short list of things Cleanmail&trade; does, and does well.</p>
+    <p class="show-sub">No feature dump. Here is the short list of things Cleanmail&trade; does, and does well.</p>
+
+    <div class="sec">
+      <svg class="sec-shield" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.4l8 3v5.6c0 5.3-3.4 8.9-8 10.5-4.6-1.6-8-5.2-8-10.5V5.4l8-3z" fill="currentColor"/><rect x="9" y="11.2" width="6" height="5.2" rx="1.1" fill="#fff"/><path d="M10.3 11.2V9.8a1.7 1.7 0 013.4 0v1.4" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <h2 class="sec-title">Trusted with the family inbox.</h2>
+      <p class="sec-body">Cleanmail connects to Gmail read-only and only ever opens mail from the senders you pick. Everything else in your inbox stays untouched, and nothing you share is ever sold.</p>
+      <ul class="sec-pills">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M7.5 12.4l3.1 3.1 6-6.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>Gmail stays read-only</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M7.5 12.4l3.1 3.1 6-6.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>Only senders you pick</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M7.5 12.4l3.1 3.1 6-6.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>Encrypted</li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="currentColor"/><path d="M7.5 12.4l3.1 3.1 6-6.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg>Never sold</li>
+      </ul>
+      <p class="sec-casa">Cleanmail passed Google's CASA security assessment, the independent review Google requires of any app that connects to Gmail. <a href="/privacy">Read the privacy policy</a></p>
+    </div>
 
     <div class="demo">
       <h2>See it in action</h2>
@@ -32,7 +45,7 @@ import CTA from "../components/CTA.astro";
       <button class="scroll-btn prev" type="button" aria-label="Previous features">‹</button>
       <div class="feat-scroller" id="featScroller">
       <div class="feat"><h3>Snap anything</h3><p>See a flyer, yard sign, or calendar? Snap it, upload it, add it all instantly.</p><img class="feat-shot" src="/feat-snap.jpg" alt="Adding an event by snapping a flyer or photo" /></div>
-      <div class="feat"><h3>Your weekly view</h3><p>Always up to date. The week ahead at a glance, no monthly grid.</p><img class="feat-shot" src="/feat-weekly.jpg" alt="A day of upcoming events, sorted by person and activity" /></div>
+      <div class="feat"><h3>Week or month</h3><p>Always up to date. Scan the week as a list, or open the month to see it all at once.</p><img class="feat-shot" src="/feat-weekly.jpg" alt="A day of upcoming events, sorted by person and activity" /></div>
       <div class="feat"><h3>Add anything</h3><p>Not everything comes by email. Add custom events by photo, tap, or voice.</p><img class="feat-shot" src="/feat-add.jpg" alt="The add-an-event menu with type, photos, camera, PDF, and voice options" /></div>
       <div class="feat"><h3>Two-way calendar</h3><p>Two-way Google Calendar sync. Change it anywhere and it changes everywhere.</p><img class="feat-shot" src="/feat-calendar.jpg" alt="The month calendar with an event synced from Google Calendar" /></div>
       <div class="feat"><h3>Household &amp; inboxes</h3><p>Share one digest with up to four people, and pull up to three Gmail inboxes into it. Everyone and everything in one place.</p><img class="feat-shot" src="/feat-household.jpg" alt="A household of up to four people, plus linked inboxes, feeding one digest" /></div>
@@ -87,6 +100,17 @@ import CTA from "../components/CTA.astro";
   .show-title{text-align:center;font-size:clamp(26px,3.6vw,40px);font-weight:400;letter-spacing:-1px;color:var(--navy);margin:14px 0 10px}
   .show-sub{text-align:center;color:var(--muted);font-size:16.5px;line-height:1.55;margin:0 auto 48px;max-width:560px}
   .pop{color:var(--orange)}
+
+  .sec{text-align:center;background:linear-gradient(135deg,rgba(74,111,227,.08),rgba(93,196,184,.10));border:1px solid var(--line);border-radius:24px;padding:34px 28px 30px;margin-bottom:56px}
+  .sec-shield{width:52px;height:52px;color:var(--purple);display:block;margin:0 auto 14px}
+  .sec-title{font-size:clamp(21px,2.8vw,29px);font-weight:500;letter-spacing:-.5px;color:var(--navy);margin:0 0 12px}
+  .sec-body{font-size:16px;line-height:1.65;color:var(--ink);max-width:540px;margin:0 auto 22px}
+  .sec-pills{list-style:none;margin:0 0 20px;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+  .sec-pills li{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 17px 9px 13px;font-size:14.5px;font-weight:500;color:var(--navy);box-shadow:0 5px 14px rgba(27,34,54,.06)}
+  .sec-pills svg{width:19px;height:19px;color:var(--teal);flex:0 0 auto}
+  .sec-casa{font-size:13.5px;line-height:1.55;color:var(--muted);max-width:520px;margin:0 auto}
+  .sec-casa a{color:var(--purple);text-decoration:none;font-weight:500;white-space:nowrap}
+  .sec-casa a:hover{text-decoration:underline}
 
   .demo{text-align:center;margin-bottom:56px}
   .demo h2{font-size:clamp(20px,2.6vw,27px);font-weight:500;letter-spacing:-.5px;color:var(--navy);margin:0 0 8px}
