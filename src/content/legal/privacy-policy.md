@@ -76,7 +76,7 @@ Cleanmail relies on the following third parties to provide its service. Each rec
 | Service | Purpose | Data shared |
 |---|---|---|
 | **Supabase** (Supabase Inc., hosted in US East, Ohio) | Database and serverless functions | Your profile, digest content, events, subscription state |
-| **Anthropic** (Anthropic PBC) | AI summarization and event extraction via the Claude API | (a) the subject line and message body of emails from senders you have selected; (b) photos and PDFs you choose to scan; (c) the text of voice notes you record, which your device transcribes before anything is sent. Sent at the time of the request and not used to train Anthropic's models. |
+| **Anthropic** (Anthropic PBC) | AI summarization and event extraction via the Claude API | (a) the subject line and message body of emails from senders you have selected; (b) photos and PDFs you choose to scan; (c) the text of voice notes you record, which your device transcribes before anything is sent; (d) images and PDF attachments inside emails from senders you have selected, read to find dates and events; not stored. Sent at the time of the request and not used to train Anthropic's models. |
 | **Google** (Google LLC) | Sign-in, Gmail access, Calendar sync | OAuth tokens; Gmail messages from selected senders; the individual message you open via "View Email"; Calendar event metadata |
 | **Apple** (Apple Inc.) | Subscription billing via in-app purchase | Purchase and subscription status (we never see card numbers or your Apple Account details) |
 | **Resend** (Resend, Inc.) | Transactional email delivery (household invitations) | The recipient email address you enter when inviting a household member, and the inviter's display name |
@@ -91,7 +91,7 @@ Every sub-processor listed above is bound by its agreement with us to protect th
 
 ## 5. Data Storage and Location
 
-All data is stored in the Supabase region US East (Ohio). Raw email content is not stored at rest: emails are fetched from Gmail at digest-generation time, sent to Anthropic's API for summarization, and discarded after the AI-generated summary is written to our database. Likewise, when you open an email via "View Email," its full body is fetched from Gmail and rendered on your device for that viewing session only; it is not written to our database.
+All data is stored in the Supabase region US East (Ohio). Raw email content is not stored at rest: emails are fetched from Gmail at digest-generation time, sent to Anthropic's API for summarization, and discarded after the AI-generated summary is written to our database. Likewise, when you open an email via "View Email," its full body is fetched from Gmail and rendered on your device for that viewing session only; it is not written to our database. Images and PDF attachments inside emails from your selected senders are fetched at digest-generation time only so they can be read for dates and events, and are never saved.
 
 Photos and PDFs you scan are uploaded to a private storage area on our servers only for as long as it takes to read them, then deleted as the final step of the scan, whether it succeeded or failed. Voice notes are transcribed to text on your device; the audio recording itself is never uploaded and is never stored.
 
