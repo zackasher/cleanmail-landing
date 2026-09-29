@@ -7,10 +7,16 @@ import PhoneFrame from "../components/PhoneFrame.astro";
   <Hero />
 
   <section class="film">
-    <video class="hero-video film-video" autoplay muted playsinline preload="auto" poster="/hero-film-poster.jpg">
-      <source src="/hero-film.webm" type="video/webm" />
-      <source src="/hero-film.mp4" type="video/mp4" />
-    </video>
+    <div class="film-wrap">
+      <video class="hero-video film-video" autoplay muted playsinline preload="auto" poster="/hero-film-poster.jpg">
+        <source src="/hero-film.webm" type="video/webm" />
+        <source src="/hero-film.mp4" type="video/mp4" />
+      </video>
+      <button class="film-sound" type="button" aria-label="Unmute video" aria-pressed="false">
+        <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6.5 9H3v6h3.5L11 19V5z"/><path d="M16.5 9.5l5 5M21.5 9.5l-5 5"/></svg>
+        <svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6.5 9H3v6h3.5L11 19V5z"/><path d="M15.5 8.8a4.5 4.5 0 010 6.4M18.3 6a8.5 8.5 0 010 12"/></svg>
+      </button>
+    </div>
   </section>
 
   <section class="story" id="how">
@@ -40,9 +46,38 @@ import PhoneFrame from "../components/PhoneFrame.astro";
   </section>
 </BaseLayout>
 
+<script>
+  function initFilmSound(){
+    const video = document.querySelector(".film-video");
+    const button = document.querySelector(".film-sound");
+    if (!video || !button || button.dataset.bound) return;
+    button.dataset.bound = "1";
+    button.addEventListener("click", () => {
+      video.muted = !video.muted;
+      const unmuted = !video.muted;
+      button.classList.toggle("unmuted", unmuted);
+      button.setAttribute("aria-label", unmuted ? "Mute video" : "Unmute video");
+      button.setAttribute("aria-pressed", String(unmuted));
+      if (unmuted && video.paused) {
+        const played = video.play();
+        if (played && played.catch) played.catch(() => {});
+      }
+    });
+  }
+  document.addEventListener("astro:page-load", initFilmSound);
+  if (document.readyState !== "loading") initFilmSound();
+</script>
+
 <style>
   .film{max-width:1010px;margin:0 auto 8px;padding:0 24px}
+  .film-wrap{position:relative;line-height:0}
   .film-video{width:100%;height:auto;display:block;border-radius:20px;border:1px solid var(--line);box-shadow:0 18px 44px rgba(27,34,54,.12);background:#eef2fb}
+  .film-sound{position:absolute;right:16px;bottom:16px;width:42px;height:42px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#fff;background:rgba(27,34,54,.5);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);transition:background .15s ease}
+  .film-sound:hover{background:rgba(27,34,54,.72)}
+  .film-sound svg{width:20px;height:20px}
+  .film-sound .on{display:none}
+  .film-sound.unmuted .off{display:none}
+  .film-sound.unmuted .on{display:block}
   .story{padding: 0px 24px 40px}
   .story-grid{max-width:1010px;margin:0 auto;display:flex;align-items:flex-start;justify-content:center;gap:48px}
   .story-visual{flex:0 0 auto}
