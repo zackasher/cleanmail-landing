@@ -6,12 +6,19 @@ import PhoneFrame from "../components/PhoneFrame.astro";
 <BaseLayout title="Cleanmail: Family Inbox">
   <Hero />
 
+  <section class="film">
+    <video class="hero-video film-video" autoplay muted playsinline preload="auto" poster="/hero-film-poster.jpg">
+      <source src="/hero-film.webm" type="video/webm" />
+      <source src="/hero-film.mp4" type="video/mp4" />
+    </video>
+  </section>
+
   <section class="story" id="how">
      <hr class="story-rule" />
     <div class="story-grid">
       <div class="story-visual">
         <PhoneFrame>
-          <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="/hero-poster.jpg">
+          <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="/hero-poster.jpg">
             <source src="/hero.mp4" type="video/mp4" />
           </video>
         </PhoneFrame>
@@ -34,6 +41,8 @@ import PhoneFrame from "../components/PhoneFrame.astro";
 </BaseLayout>
 
 <style>
+  .film{max-width:1010px;margin:0 auto 8px;padding:0 24px}
+  .film-video{width:100%;height:auto;display:block;border-radius:20px;border:1px solid var(--line);box-shadow:0 18px 44px rgba(27,34,54,.12);background:#eef2fb}
   .story{padding: 0px 24px 40px}
   .story-grid{max-width:1010px;margin:0 auto;display:flex;align-items:flex-start;justify-content:center;gap:48px}
   .story-visual{flex:0 0 auto}
