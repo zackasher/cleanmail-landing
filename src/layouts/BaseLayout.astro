@@ -94,12 +94,20 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
     "author": { "@type": "Organization", "name": "Calibrate LLC" },
     "publisher": { "@type": "Organization", "name": "Calibrate LLC" },
     "description": "Cleanmail connects directly to Gmail and turns school, camp, and sports emails into one AI-powered digest organized by person and activity. It extracts the important dates and syncs them to your Google Calendar automatically, so you read less email and never miss what matters. Read-only access, only the senders you choose.",
-    "offers": {
-      "@type": "Offer",
-      "price": "6.99",
-      "priceCurrency": "USD",
-      "description": "6.99 US dollars per month with a 14-day free trial"
-    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "6.99",
+        "priceCurrency": "USD",
+        "description": "6.99 US dollars per month with a 14-day free trial"
+      },
+      {
+        "@type": "Offer",
+        "price": "68.99",
+        "priceCurrency": "USD",
+        "description": "68.99 US dollars per year, two months free, with a 14-day free trial"
+      }
+    ],
     "featureList": [
       "Connects directly to Gmail with no forwarding or manual entry",
       "AI digest organized by person and activity",
