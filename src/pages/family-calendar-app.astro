@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import PhoneFrame from "../components/PhoneFrame.astro";
+import { PRICE_MONTHLY, PRICE_YEARLY, PRICE_YEARLY_PER_MONTH, TRIAL_DAYS, HOUSEHOLD_SIZE } from "../config";
+import "../styles/info-page.css";
+
+const phones = [
+  { src: "/hiw-digest.png", caption: "School email, sorted by kid", alt: "A Cleanmail digest sorted by person and activity" },
+  { src: "/feat-weekly.jpg", caption: "Every date on one calendar", alt: "Cleanmail's month calendar with events on each day" },
+  { src: "/feat-add.jpg", caption: "Add a flyer, a PDF, or say it", alt: "Adding an event from a flyer photo, a document, or by voice" },
+];
+
+const features = [
+  { tone: "", title: "Writes itself from email", body: "Pick the school, camp, and sports senders. Their dates land on your calendar without retyping.", icon: '<path d="M4 6.5h16v11H4z"/><path d="M4 7l8 6 8-6"/>' },
+  { tone: "orange", title: "Dedicated two-way sync", body: "Edit or delete in Google Calendar and Cleanmail follows within seconds.", icon: '<path d="M5 9h12l-3-3M19 15H7l3 3"/>' },
+  { tone: "teal", title: "Sorted by kid", body: "Every update filed by person, then activity, so you read what matters to you.", icon: '<circle cx="9" cy="8.5" r="3"/><circle cx="16.5" cy="10" r="2.3"/><path d="M3.5 19c.7-3 3-4.5 5.5-4.5s4.8 1.5 5.5 4.5M14.5 15.2c2.6-.4 5 .9 5.8 3.8"/>' },
+  { tone: "", title: "Snap it or say it", body: "A flyer, a paper calendar, a PDF, or your voice becomes events.", icon: '<path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.2"/>' },
+  { tone: "teal", title: `Whole household`, body: `Up to ${HOUSEHOLD_SIZE} people, you included, share one calendar and digest.`, icon: '<path d="M4 11l8-6.5 8 6.5"/><path d="M6 10v9.5h12V10"/><path d="M10 19.5v-5h4v5"/>' },
+  { tone: "orange", title: "Reminders that land early", body: "The day before, the morning of, or an hour out.", icon: '<path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>' },
+];
+
+---
+<BaseLayout
+  title="Family Calendar App With Dedicated Two-Way Google Calendar Sync | Cleanmail"
+  description={`Cleanmail is a family calendar app for iPhone that writes itself from school email with dedicated two-way Google Calendar sync. ${TRIAL_DAYS}-day free trial, then ${PRICE_MONTHLY}/month or ${PRICE_YEARLY}/year.`}
+>
+  <section class="ip">
+    <p class="ip-eyebrow">Family calendar app</p>
+    <h1>The family calendar that writes itself from your inbox.</h1>
+    <p class="ip-lede">Every date from the school, camp, and sports email you pick lands on one family calendar, sorted by kid and kept in dedicated two-way sync with Google Calendar.</p>
+
+    <div class="phones">
+      {phones.map((item) => (
+        <figure>
+          <PhoneFrame><img class="shot" src={item.src} alt={item.alt} loading="lazy" /></PhoneFrame>
+          <figcaption>{item.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <div class="ip-section">
+      <h2>At a Glance</h2>
+      <div class="ip-grid">
+        {features.map((item) => (
+          <div class="ip-tile center">
+            <div class={`ip-ic ${item.tone}`}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" set:html={item.icon} /></div>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="ip-section">
+      <h2>One plan, everything included</h2>
+      <p class="ip-sub">{TRIAL_DAYS} days free, then pick monthly or yearly. No tiers, no add-ons.</p>
+      <div class="price">
+        <div class="price-card best">
+          <span class="price-tag">2 weeks free</span>
+          <span class="price-name">Monthly</span>
+          <span class="price-num">{PRICE_MONTHLY}<small>/month</small></span>
+          <span class="price-per">Flexible</span>
+        </div>
+        <div class="price-card best">
+          <span class="price-tag">2 months free</span>
+          <span class="price-name">Yearly</span>
+          <span class="price-num">{PRICE_YEARLY}<small>/year</small></span>
+          <span class="price-per">{PRICE_YEARLY_PER_MONTH}/month</span>
+        </div>
+      </div>
+      <p class="ip-note">Your whole household of up to {HOUSEHOLD_SIZE} is covered by one plan. Billed through Apple, cancel anytime in your iPhone's subscription settings.</p>
+    </div>
+
+    <div class="ip-section">
+      <div class="ip-links">
+        <a href="/google-calendar-sync">How two-way sync works</a>
+      </div>
+    </div>
+
+    <div class="ip-final">
+      <h2>Try it free for {TRIAL_DAYS} days</h2>
+      <p>Set up takes a few minutes, and your first digest shows up right after.</p>
+      <CTA />
+    </div>
+  </section>
+
+  <style>
+    .phones{display:flex;justify-content:center;gap:28px;margin-top:56px;flex-wrap:wrap}
+    .phones figure{margin:0;display:flex;flex-direction:column;align-items:center;gap:14px}
+    .phones figcaption{font-size:15px;font-weight:600;color:var(--navy)}
+    .phones :global(.phone-wrap){width:230px}
+    .shot{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+    .price{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+    .price-card{position:relative;width:240px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 22px;text-align:center;display:flex;flex-direction:column;gap:6px;box-shadow:0 8px 22px rgba(27,34,54,.05)}
+    .price-card.best{border:2px solid var(--purple)}
+    .price-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:999px;white-space:nowrap}
+    .price-name{font-size:15px;color:var(--muted);font-weight:600}
+    .price-num{font-size:36px;font-weight:500;color:var(--navy);letter-spacing:-1px}
+    .price-per{font-size:14px;color:var(--muted)}
+    .price-num small{font-size:15px;color:var(--muted);letter-spacing:0;margin-left:2px}
+  </style>
+</BaseLayout>

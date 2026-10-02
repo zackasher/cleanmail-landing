@@ -1,0 +1,19 @@
+---
+export interface Props { kind: "yes" | "no" | "partial" }
+const { kind } = Astro.props;
+---
+{kind === "yes" && (
+  <svg class="mark yes" viewBox="0 0 20 20" aria-label="Yes"><circle cx="10" cy="10" r="10" /><path d="M5.6 10.3l2.9 2.9 5.9-6.2" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+)}
+{kind === "no" && (
+  <svg class="mark no" viewBox="0 0 20 20" aria-label="No"><circle cx="10" cy="10" r="10" /><path d="M6.6 6.6l6.8 6.8M13.4 6.6l-6.8 6.8" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" /></svg>
+)}
+{kind === "partial" && (
+  <svg class="mark partial" viewBox="0 0 20 20" aria-label="Partly"><circle cx="10" cy="10" r="10" /><path d="M6 10h8" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" /></svg>
+)}
+<style>
+  .mark{width:20px;height:20px;flex-shrink:0;vertical-align:-4px}
+  .mark.yes circle{fill:var(--purple)}
+  .mark.no circle{fill:#c7cddb}
+  .mark.partial circle{fill:var(--orange)}
+</style>

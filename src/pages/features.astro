@@ -2,6 +2,18 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
 import CTA from "../components/CTA.astro";
+
+const voiceBars = [
+  { left: 26.12, top: 46.17, height: 5.67, color: "#E5C2A1" },
+  { left: 31.72, top: 45.07, height: 7.86, color: "#E6AE72" },
+  { left: 37.32, top: 44.21, height: 9.59, color: "#DC9044" },
+  { left: 42.92, top: 43.23, height: 11.54, color: "#586CAF" },
+  { left: 48.52, top: 42.18, height: 13.65, color: "#526EDB" },
+  { left: 54.11, top: 43.19, height: 11.62, color: "#586CAF" },
+  { left: 59.71, top: 44.29, height: 9.43, color: "#DC9044" },
+  { left: 65.31, top: 45.38, height: 7.24, color: "#E6AE72" },
+  { left: 70.91, top: 46.79, height: 4.42, color: "#E5C2A1" },
+];
 ---
 <BaseLayout title="Features | Cleanmail" description="The mail and events that matter, sorted, and already on your calendar.">
   <section class="features-show">
@@ -52,12 +64,14 @@ import CTA from "../components/CTA.astro";
       <button class="scroll-btn prev" type="button" aria-label="Previous features">‹</button>
       <div class="feat-scroller" id="featScroller">
       <div class="feat"><h3>Snap anything</h3><p>See a flyer, yard sign, or calendar? Snap it, upload it, add it all instantly.</p><img class="feat-shot" src="/feat-snap.jpg" alt="Adding an event by snapping a flyer or photo" /></div>
-      <div class="feat"><h3>Week or month</h3><p>Always up to date. Scan the week as a list, or open the month to see it all at once.</p><img class="feat-shot" src="/feat-weekly.jpg" alt="A day of upcoming events, sorted by person and activity" /></div>
+      <div class="feat"><h3>Week or month</h3><p>Always up to date. Scan the week as a list, or open the month to see it all at once.</p><img class="feat-shot" src="/feat-weekly.jpg" alt="The month view with dots on busy days and the day's events listed below" /></div>
       <div class="feat"><h3>Add anything</h3><p>Not everything comes by email. Add custom events by photo, tap, or voice.</p><img class="feat-shot" src="/feat-add.jpg" alt="The add-an-event menu with type, photos, camera, PDF, and voice options" /></div>
-      <div class="feat"><h3>Two-way calendar</h3><p>Two-way Google Calendar sync. Change it anywhere and it changes everywhere.</p><img class="feat-shot" src="/feat-calendar.jpg" alt="The month calendar with an event synced from Google Calendar" /></div>
+      <div class="feat"><h3>Two-way calendar</h3><p>Dedicated two-way Google Calendar sync. Pick your main calendar, then change it anywhere and it changes everywhere.</p><img class="feat-shot" src="/feat-calendar.jpg" alt="Calendar settings: which calendars to show, and the main calendar Cleanmail writes to" /></div>
+      <div class="feat"><h3>Cancellations, caught</h3><p>Did the school email to cancel an event? It's now cancelled in Cleanmail and on your Google Calendar too.</p><img class="feat-shot" src="/feat-cancel.jpg" alt="A dress rehearsal marked cancelled, with its old time crossed out" /></div>
       <div class="feat"><h3>Household &amp; inboxes</h3><p>Share one digest with up to four people, and pull up to three Gmail inboxes into it. Everyone and everything in one place.</p><img class="feat-shot" src="/feat-household.jpg" alt="A household of up to four people, plus linked inboxes, feeding one digest" /></div>
+      <div class="feat"><h3>Notes &amp; reactions</h3><p>Leave a quick note or a reaction on any card, and the whole household sees it.</p><img class="feat-shot" src="/feat-notes.jpg" alt="A school event with a household note asking for a ride, and a reaction on the card" /></div>
       <div class="feat"><h3>Reminders</h3><p>A nudge before each event, so nothing ever sneaks up on you.</p><img class="feat-shot" src="/feat-reminders.jpg" alt="Choosing a reminder: the day before, the morning of, or an hour before" /></div>
-      <div class="feat"><h3>Voice edits</h3><p>Change any event's time out loud. Cleanmail hears you and updates it.</p><img class="feat-shot" src="/feat-voice.jpg" alt="Adding an event by voice" /></div>
+      <div class="feat"><h3>Voice edits</h3><p>Change any event's time out loud. Cleanmail hears you and updates it.</p><div class="voice-shot"><img class="feat-shot" src="/feat-voice.jpg" alt="Adding an event by voice, with a live waveform" /><div class="voice-bars" aria-hidden="true">{voiceBars.map((bar, index) => <span style={`left:${bar.left}%;top:${bar.top}%;height:${bar.height}%;background:${bar.color};animation-delay:${-index * 0.13}s`} />)}</div></div></div>
       </div>
       <button class="scroll-btn next" type="button" aria-label="Next features">›</button>
     </div>
@@ -142,6 +156,12 @@ import CTA from "../components/CTA.astro";
   .feat h3{font-size:17.5px;font-weight:600;color:var(--navy);margin:0 0 7px;letter-spacing:-.2px}
   .feat p{font-size:14px;line-height:1.55;color:var(--muted);margin:0 0 16px}
   .feat-shot{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);margin-top:auto}
+  .voice-shot{position:relative;margin-top:auto}
+  .voice-bars span{position:absolute;width:3.05%;border-radius:999px;transform-origin:center;animation:voice-pulse 1.1s ease-in-out infinite alternate}
+  .voice-bars span:nth-child(odd){animation-duration:.9s}
+  .voice-bars span:nth-child(3n){animation-duration:1.3s}
+  @keyframes voice-pulse{0%{transform:scaleY(.45)}50%{transform:scaleY(1.05)}100%{transform:scaleY(.7)}}
+  @media (prefers-reduced-motion:reduce){.voice-bars span{animation:none}}
   .scroll-btn{display:none}
   @media (min-width:821px){
     .scroll-btn{display:flex;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border-radius:50%;background:var(--purple);border:none;box-shadow:0 6px 18px rgba(74,111,227,.4);color:#fff;font-size:24px;cursor:pointer;line-height:0;padding-bottom:3px}
