@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /checkout-success
+Disallow: /checkout-cancel
+Disallow: /portal-return
+
+Sitemap: https://cleanmailapp.com/sitemap-index.xml

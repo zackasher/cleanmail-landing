@@ -1,0 +1,267 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import Mark from "../components/Mark.astro";
+import { PRICE_MONTHLY, PRICE_YEARLY, TRIAL_DAYS, COMPETITOR_FACTS_CHECKED_ON, FOUNDER_NAME } from "../config";
+import PhoneFrame from "../components/PhoneFrame.astro";
+import { ICON_PATHS } from "../data-icons";
+import "../styles/info-page.css";
+
+type Verdict = "yes" | "but" | "paid" | "partial" | "no";
+type Cell = { kind: Verdict; text: string };
+type Row = { label: string; icon: string; cells: Cell[] };
+
+const apps = [
+  { name: "Cleanmail", initial: "C", us: true, icon: "/icon.png" },
+  { name: "Skylight", initial: "S", us: false },
+  { name: "Cozi", initial: "C", us: false },
+];
+
+const directions = [
+  { name: "Cleanmail", line: "Dedicated two-way sync", body: "Edits and deletes come back.", kind: "both" },
+  { name: "Skylight", line: "Two-way sync", body: "When you turn it on.", kind: "both-grey" },
+  { name: "Cozi", line: "Read-only feed", body: "Google edits don't come back.", kind: "feeds" },
+];
+
+const rows: Row[] = [
+  { label: "Price for these features", icon: ICON_PATHS.tag, cells: [
+    { kind: "yes", text: `${PRICE_YEARLY}/yr` }, { kind: "partial", text: "$79/yr, display extra" }, { kind: "partial", text: "$79/yr" } ] },
+  { label: "Two-way Google sync", icon: ICON_PATHS.sync, cells: [
+    { kind: "yes", text: "Yes" }, { kind: "but", text: "Opt in" }, { kind: "no", text: "Read-only" } ] },
+  { label: "Events from email", icon: ICON_PATHS.emailFast, cells: [
+    { kind: "yes", text: "Automatic" }, { kind: "partial", text: "Forward each one" }, { kind: "partial", text: "Forward each one" } ] },
+  { label: "Gmail digest by kid", icon: ICON_PATHS.digest, cells: [
+    { kind: "yes", text: "Yes" }, { kind: "no", text: "No" }, { kind: "no", text: "No" } ] },
+  { label: "Multiple Gmail inboxes", icon: ICON_PATHS.inboxes, cells: [
+    { kind: "yes", text: "Up to 3" }, { kind: "no", text: "No" }, { kind: "no", text: "No" } ] },
+  { label: "Snap a flyer", icon: ICON_PATHS.camera, cells: [
+    { kind: "yes", text: "Yes" }, { kind: "paid", text: "Plus plan" }, { kind: "paid", text: "Max plan" } ] },
+  { label: "Add, edit, or cancel by voice", icon: ICON_PATHS.microphone, cells: [
+    { kind: "yes", text: "Yes" }, { kind: "paid", text: "Add only, Plus plan" }, { kind: "no", text: "No" } ] },
+  { label: "Shared household", icon: ICON_PATHS.household, cells: [
+    { kind: "yes", text: "Up to 4 for free" }, { kind: "yes", text: "Invite link" }, { kind: "but", text: "One shared password" } ] },
+];
+
+const legend = [
+  { kind: "yes", label: "Yes" },
+  { kind: "but", label: "Yes, with a catch" },
+  { kind: "paid", label: "Paid plan" },
+  { kind: "partial", label: "Kind of" },
+  { kind: "no", label: "No" },
+] as const;
+
+const reasons = [
+  { icon: ICON_PATHS.email, title: "School email organizer", body: "Reads only the senders you pick. No forwarding.", color: "var(--purple)" },
+  { icon: ICON_PATHS.digest, title: "Email digest by kid", body: "The gist of every email, sorted by person.", color: "var(--orange)" },
+  { icon: ICON_PATHS.sync, title: "Two-way Google Calendar sync", body: "Edit anywhere, it changes everywhere.", color: "var(--teal)" },
+  { icon: ICON_PATHS.emailFast, title: "Automatic events from email", body: "Dates land on your calendar on their own.", color: "var(--purple)" },
+  { icon: ICON_PATHS.household, title: "Shared family calendar", body: "Up to 4 people, each with their own login.", color: "var(--orange)" },
+  { icon: ICON_PATHS.microphone, title: "Snap it or say it", body: "A flyer, a PDF, or your voice becomes events.", color: "var(--teal)" },
+];
+
+
+const sources = [
+  { label: "Skylight: two-way sync with Google", url: "https://skylight.zendesk.com/hc/en-us/articles/19197773155995-Skylight-Calendar-Two-Way-Sync-with-Google-Calendar" },
+  { label: "Skylight: Magic Import", url: "https://skylight.zendesk.com/hc/en-us/articles/18039340445211-How-To-Use-Skylight-Magic-Import" },
+  { label: "Skylight: Sidekick", url: "https://skylight.zendesk.com/hc/en-us/articles/39335273393947-Sidekick" },
+  { label: "Skylight: inviting others", url: "https://skylight.zendesk.com/hc/en-us/articles/45667401818523-Invite-Others" },
+  { label: "Skylight: Calendar Plus", url: "https://myskylight.com/products/calendar-skylight-plus/" },
+  { label: "Cozi: other calendars", url: "https://www.cozi.com/using-cozi-with-other-calendars/" },
+  { label: "Cozi: FAQ", url: "https://www.cozi.com/faq/" },
+  { label: "Cozi: plans", url: "https://www.cozi.com/compare-plans/" },
+];
+
+const faqs = [
+  { q: "Can I keep using Skylight or Cozi with Cleanmail?", a: "Yes. Cleanmail puts events on your Google Calendar, and Skylight and Cozi can both show your Google Calendar. Keep the one you like, and let Cleanmail fill it from your school email." },
+  { q: "What is the best family calendar app for school emails?", a: "If your family's schedule mostly arrives as school, camp, and sports email in Gmail, Cleanmail is built for exactly that. It reads only the senders you pick, sorts every update into a digest by kid, turns the dates into events automatically, and keeps them in dedicated two-way sync with Google Calendar for a household of up to four people." },
+  { q: "Which family calendar apps have two-way Google Calendar sync?", a: `As of ${COMPETITOR_FACTS_CHECKED_ON}, Cleanmail has dedicated two-way Google Calendar sync, Skylight offers two-way sync once you turn it on, and Cozi connects with read-only feeds. Cleanmail is the one that builds events straight from your Gmail, with nothing to forward.` },
+  { q: "How is Cleanmail different from Skylight?", a: "Skylight turns email into events when you forward each email to a Skylight address. Cleanmail connects to Gmail read-only, picks up the senders you choose on its own, and sorts everything into one digest by kid, across up to three inboxes." },
+  { q: "How is Cleanmail different from Cozi?", a: "Cozi's Google Calendar connection is read-only feeds, and its email import works by forwarding on the Max plan. Cleanmail syncs with Google Calendar both ways and reads the school email you pick for you." },
+  { q: "How much do these apps cost?", a: `Cleanmail is ${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year after a ${TRIAL_DAYS}-day free trial. Skylight Calendar Plus, which adds email import, is $79 a year. Cozi Max, which adds email import, is $79 a year.` },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a },
+  })),
+};
+---
+<BaseLayout
+  title="Cleanmail vs Skylight vs Cozi: Family Calendars Compared | Cleanmail"
+  description="Cleanmail vs Skylight vs Cozi: which family calendar app has two-way Google Calendar sync, turns school email into events automatically, and sorts it into a digest by kid."
+  faqSchema={faqSchema}
+>
+  <section class="ip">
+    <p class="ip-eyebrow">Compare</p>
+    <h1 class="title">Cleanmail vs Skylight vs Cozi</h1>
+    <p class="ip-lede lede-lines wide"><span>Three family calendar apps, side by side.</span><span>If your family's schedule lives in school email, Cleanmail is the only one of the three that reads Gmail for you.</span></p>
+    <p class="byline">By {FOUNDER_NAME}, founder of Cleanmail · Updated {COMPETITOR_FACTS_CHECKED_ON}</p>
+
+    <div class="ip-section">
+      <h2>Side by side</h2>
+      <p class="ip-sub">Checked {COMPETITOR_FACTS_CHECKED_ON}, from each company's own pages.</p>
+      <div class="table" role="table" aria-label="Cleanmail, Skylight, and Cozi compared">
+        <div class="t-row t-head" role="row">
+          <span role="columnheader"></span>
+          {apps.map((app) => (
+            <span role="columnheader" class:list={[{ us: app.us }]}>{app.icon ? <img class="badge-img" src={app.icon} alt="" /> : <span class="badge">{app.initial}</span>}{app.name}</span>
+          ))}
+        </div>
+        {rows.map((row) => (
+          <div class="t-row" role="row">
+            <span class="t-label" role="rowheader"><svg class="row-ic" viewBox="0 0 24 24" aria-hidden="true"><path d={row.icon} fill="currentColor" /></svg>{row.label}</span>
+            {row.cells.map((cell, index) => (
+              <span class:list={["t-cell", { us: apps[index].us }]} role="cell"><span class="t-app">{apps[index].name}</span><Mark kind={cell.kind} />{cell.text}</span>
+            ))}
+          </div>
+        ))}
+      </div>
+      <div class="legend">{legend.map((item) => <span><Mark kind={item.kind} />{item.label}</span>)}</div>
+    </div>
+
+    <div class="ip-section">
+      <h2>Why families switch to Cleanmail</h2>
+      <p class="ip-sub">The family calendar app that writes itself from school email.</p>
+      <div class="why">
+      <div class="why-shot"><PhoneFrame><img class="shot" src="/mq-digest.jpg" alt="A Cleanmail digest sorted by kid, with school events and updates" loading="lazy" /></PhoneFrame></div>
+      <div class="why-tiles">
+        {reasons.map((item) => (
+          <div class="ip-tile strength">
+            <div class="ip-ic center-ic"><svg viewBox="0 0 24 24" aria-hidden="true" style={`color:${item.color}`}><path d={item.icon} fill="currentColor" /></svg></div>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </div>
+        ))}
+      </div>
+      </div>
+    </div>
+
+    <div class="ip-section">
+      <h2>How each one talks to Google Calendar</h2>
+      <p class="ip-sub">Does a change in Google Calendar make it back?</p>
+      <div class="dirs">
+        {directions.map((item) => (
+          <div class={`ip-tile dir ${item.kind}`}>
+            <span class="dir-name">{item.name}</span>
+            <div class="dir-visual" aria-hidden="true">
+              {item.kind === "both" ? <img class="dir-node app-img" src="/icon.png" alt="" /> : <span class="dir-node app">{item.name.charAt(0)}</span>}
+              <svg viewBox="0 0 120 40" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                {item.kind === "both" && (<>
+                  <path d="M10 13h96M100 7l7 6-7 6" stroke="var(--purple)" />
+                  <path d="M110 27H14M20 21l-7 6 7 6" stroke="var(--orange)" />
+                </>)}
+                {item.kind === "both-grey" && (<>
+                  <path d="M10 13h96M100 7l7 6-7 6" stroke="#9aa1b4" />
+                  <path d="M110 27H14M20 21l-7 6 7 6" stroke="#9aa1b4" />
+                </>)}
+                {item.kind === "feeds" && (
+                  <path d="M10 20h96M100 14l7 6-7 6" stroke="#9aa1b4" stroke-dasharray="5 6" />
+                )}
+                {item.kind === "in" && (
+                  <path d="M110 20H14M20 14l-7 6 7 6" stroke="#9aa1b4" />
+                )}
+              </svg>
+              <span class="dir-node cal">G</span>
+            </div>
+            <h3>{item.line}</h3>
+            <p>{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="ip-section">
+      <h2>Quick answers</h2>
+      <div class="ip-faq">
+        {faqs.map((item) => (
+          <details>
+            <summary>{item.q}</summary>
+            <p>{item.a}</p>
+          </details>
+        ))}
+      </div>
+      <div class="ip-links">
+        <a href="/google-calendar-sync">How two-way sync works</a>
+        <a href="/family-calendar-app">Everything in the app</a>
+      </div>
+    </div>
+
+    <div class="ip-final">
+      <h2>Try Cleanmail free for {TRIAL_DAYS} days</h2>
+      <p>Connect Gmail and Google Calendar once, and the dates take care of themselves.</p>
+      <CTA />
+    </div>
+
+    <div class="sources">
+      <p>We make Cleanmail. Every fact about Skylight and Cozi comes from their own pages, linked below.</p>
+      <p>Sources, checked {COMPETITOR_FACTS_CHECKED_ON}. Prices in US dollars, before tax. Skylight displays start at $149.99; Calendar Plus is $79 a year. Skylight and Cozi are trademarks of their owners.</p>
+      <ul>{sources.map((item) => <li><a href={item.url} rel="nofollow noopener" target="_blank">{item.label}</a></li>)}</ul>
+    </div>
+  </section>
+
+  <style>
+    .title{max-width:none;font-size:clamp(28px,3.7vw,42px)}
+    .lede-lines span{display:block}
+    .byline{text-align:center;font-size:13.5px;color:var(--muted);margin:14px 0 0}
+    .wide{max-width:900px}
+    .why{display:flex;align-items:center;gap:36px;max-width:960px;margin:0 auto}
+    .why-shot{flex:0 0 auto;display:flex;justify-content:center}
+    .why-tiles{flex:1;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .why-shot :global(.phone-wrap){width:220px}
+    .shot{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+
+    .dirs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:860px;margin:0 auto}
+    .dir,.strength{text-align:center;padding:20px 14px}
+    .dir-name{display:block;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;color:var(--muted)}
+    .dir.both .dir-name{color:var(--purple)}
+    .dir.both,.strength.us{border:2px solid var(--purple)}
+    .dir-visual{display:flex;align-items:center;justify-content:center;gap:4px;margin:12px 0 2px}
+    .dir-visual svg{width:96px;height:34px}
+    .dir-node{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0}
+    .dir-node.app{background:#eef1f7;color:var(--muted)}
+    .dir.both .dir-node.app{background:rgba(74,111,227,.12);color:var(--purple)}
+    .dir-node.cal{background:#fff;border:2px solid var(--line);color:var(--navy)}
+    .dir h3,.strength h3{margin-top:8px}
+    .dir p,.strength p{font-size:14.5px}
+
+    .center-ic{margin:0 auto;background:#f3f5fb}
+    .legend{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margin-top:16px;font-size:13.5px;color:var(--muted)}
+    .legend span{display:inline-flex;align-items:center;gap:6px}
+
+    .table{max-width:900px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 10px 30px rgba(27,34,54,.06)}
+    .t-row{display:grid;grid-template-columns:1.4fr repeat(3,1fr);border-top:1px solid var(--line)}
+    .t-head{border-top:0}
+    .t-head > span{display:flex;align-items:center;gap:8px;padding:12px 14px;font-size:14px;font-weight:600;color:var(--navy);background:var(--card)}
+    .t-head > span.us{color:#fff;background:var(--purple)}
+    .badge{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;background:#e3e8f3;color:var(--muted)}
+    .badge-img{width:26px;height:26px;border-radius:7px;background:#fff}
+    .dir-node.app-img{padding:0;background:#fff;box-shadow:0 3px 8px rgba(74,111,227,.25)}
+    .t-label{display:flex;align-items:center;gap:10px;padding:13px 14px;font-size:14.5px;font-weight:600;color:var(--navy);background:var(--card);white-space:nowrap}
+    .row-ic{width:20px;height:20px;color:var(--purple);flex-shrink:0}
+    .t-cell{display:flex;align-items:center;gap:8px;padding:13px 14px;font-size:14px;color:var(--ink);white-space:nowrap}
+    .t-cell.us{background:rgba(74,111,227,.05);color:var(--navy);font-weight:500}
+    .t-app{display:none}
+
+    .sources p{margin:0 0 4px}
+    .sources{max-width:760px;margin:56px auto 0;text-align:center;font-size:13px;color:var(--muted);line-height:1.6}
+    .sources ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px}
+    .sources a{color:var(--muted)}
+
+    @media (max-width:900px){
+      .dirs{grid-template-columns:1fr}
+      .why{flex-direction:column}
+      .why-tiles{grid-template-columns:1fr;width:100%}
+      .t-head{display:none}
+      .t-row{grid-template-columns:1fr;padding:6px 0}
+      .t-label{background:none;padding:12px 18px 6px}
+      .t-cell{padding:5px 18px}
+      .t-cell.us{background:none}
+      .t-app{display:inline-block;width:84px;flex-shrink:0;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+      .t-cell.us .t-app{color:var(--purple)}
+    }
+  </style>
+</BaseLayout>

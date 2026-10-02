@@ -8,3 +8,4 @@ export const PRICE_YEARLY_PER_MONTH = "$5.75";
 export const TRIAL_DAYS = 14;
 export const HOUSEHOLD_SIZE = 4;
 export const COMPETITOR_FACTS_CHECKED_ON = "October 2, 2026";
+export const FOUNDER_NAME = "Zack Asher";

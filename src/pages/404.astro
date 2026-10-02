@@ -1,0 +1,19 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import "../styles/info-page.css";
+---
+<BaseLayout title="Page not found | Cleanmail" description="That page doesn't exist." noindex={true}>
+  <section class="ip">
+    <p class="ip-eyebrow">404</p>
+    <h1>That page took a sick day.</h1>
+    <p class="ip-lede">It isn't here, but everything else is.</p>
+    <div class="ip-links">
+      <a href="/">Home</a>
+      <a href="/features">Features</a>
+      <a href="/how-it-works">How It Works</a>
+      <a href="/faq">FAQ</a>
+    </div>
+    <div class="ip-final"><CTA /></div>
+  </section>
+</BaseLayout>
