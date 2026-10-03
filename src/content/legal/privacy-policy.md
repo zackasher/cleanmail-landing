@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** September 29, 2026
+**Last updated:** October 2, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -30,6 +30,7 @@ We collect only the information needed to provide and improve Cleanmail.
 - Your selected time zone (used to schedule digest generation in your local time).
 - Server-side diagnostic logs recording account identifiers, timestamps, and whether an operation succeeded or failed. These contain no email content. Cleanmail uses no third-party analytics, advertising, or crash-reporting service.
 - Setup progress: which setup steps you reached, whether you viewed or started a plan, whether sign-in completed, and, if you choose to answer, a reason for stopping picked from a short fixed list, recorded with a random install identifier and, once you sign in, your account. It never includes email content, names, or search terms.
+- Error reports: when the app hits an error, a short technical description of where it happened and what went wrong in the code, the app and update version, and your device platform, recorded with a random install identifier and, once you sign in, your account. They never include email content, names, event details, or sign-in tokens.
 
 ---
 
