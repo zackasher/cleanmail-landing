@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import { REFERRAL_CODE_PATTERN, REFERRAL_PATH_PREFIX } from "../config";
+
+const HEADLINE = "A friend invited you to Cleanmail";
+const PITCH = "Cleanmail turns school and activity email into a family calendar that builds itself. Try it free for two weeks.";
+const REDEEM_HINT = "After you sign in, tap 'Have a code?' on the plan screen and enter this code.";
+const COPY_LABEL = "Copy";
+const COPIED_LABEL = "Copied";
+---
+<BaseLayout title="You're invited | Cleanmail" description={PITCH} noindex={true} noTracking={true}>
+  <section class="invite">
+    <div class="invite-card">
+      <h1>{HEADLINE}</h1>
+      <p class="pitch">{PITCH}</p>
+      <div class="code-block" id="referral-code-block" hidden>
+        <span class="code-label">Your invite code</span>
+        <div class="code-row">
+          <span class="code" id="referral-code"></span>
+          <button class="copy-btn" id="referral-copy" type="button">{COPY_LABEL}</button>
+        </div>
+      </div>
+      <div class="cta-wrap"><CTA /></div>
+      <p class="hint" id="referral-hint" hidden>{REDEEM_HINT}</p>
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ codePattern: REFERRAL_CODE_PATTERN, pathPrefix: REFERRAL_PATH_PREFIX, copiedLabel: COPIED_LABEL, copyLabel: COPY_LABEL }}>
+    (function () {
+      var path = location.pathname;
+      var rawCode = path.indexOf(pathPrefix) === 0 ? decodeURIComponent(path.slice(pathPrefix.length)).replace(/\/+$/, "") : "";
+      var code = rawCode.toUpperCase();
+      if (!new RegExp(codePattern).test(code)) return;
+
+      document.getElementById("referral-code").textContent = code;
+      document.getElementById("referral-code-block").hidden = false;
+      document.getElementById("referral-hint").hidden = false;
+
+      var copyButton = document.getElementById("referral-copy");
+      copyButton.addEventListener("click", function () {
+        var markCopied = function () {
+          copyButton.textContent = copiedLabel;
+          setTimeout(function () { copyButton.textContent = copyLabel; }, 1800);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(markCopied, function () {});
+          return;
+        }
+        var selection = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents(document.getElementById("referral-code"));
+        selection.removeAllRanges();
+        selection.addRange(range);
+      });
+    })();
+  </script>
+
+  <style>
+    .invite{max-width:600px;margin:0 auto;padding:72px 24px 110px;text-align:center}
+    .invite-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:44px 32px;box-shadow:0 14px 40px rgba(27,34,54,.08)}
+    h1{font-size:clamp(26px,4.4vw,36px);font-weight:500;letter-spacing:-.7px;color:var(--navy);margin:0 0 14px;line-height:1.15}
+    .pitch{font-size:17px;line-height:1.55;color:var(--ink);margin:0 auto 28px;max-width:440px}
+    .code-block{margin:0 auto 28px;padding:20px 18px;border:1.5px dashed rgba(74,111,227,.45);border-radius:18px;background:var(--card);max-width:380px}
+    .code-label{display:block;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:1.2px;color:var(--purple);margin-bottom:10px}
+    .code-row{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+    .code{font-family:"SF Mono",Menlo,Consolas,monospace;font-size:clamp(32px,8vw,42px);font-weight:600;letter-spacing:6px;color:var(--navy)}
+    .copy-btn{font:inherit;font-size:15px;font-weight:600;color:var(--purple);background:#fff;border:1.5px solid var(--purple);border-radius:12px;padding:9px 18px;cursor:pointer}
+    .copy-btn:hover{background:rgba(74,111,227,.08)}
+    .cta-wrap{display:flex;justify-content:center}
+    .cta-wrap :global(.appstore-btn){background:var(--purple);box-shadow:0 8px 20px rgba(74,111,227,.35)}
+    .hint{font-size:14px;line-height:1.5;color:var(--muted);margin:20px auto 0;max-width:380px}
+    .hint[hidden],.code-block[hidden]{display:none}
+  </style>
+</BaseLayout>

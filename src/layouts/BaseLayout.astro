@@ -8,6 +8,7 @@ export interface Props {
   image?: string;
   faqSchema?: unknown;
   noindex?: boolean;
+  noTracking?: boolean;
 }
 const {
   title,
@@ -15,6 +16,7 @@ const {
   image = "/og.png",
   faqSchema,
   noindex = false,
+  noTracking = false,
 } = Astro.props;
 
 const canonicalPath = Astro.url.pathname
@@ -31,14 +33,17 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   <meta name="google-site-verification" content="j0driezVtY4Wr0F1EeHI5-nBMDQfm_KR4BI9JMa1Ggo" />
   <meta name="facebook-domain-verification" content="9sqy4uylfm7ujcai4ailmlpdx9iopm" />
 
+  {!noTracking && (
+  <Fragment>
   <!-- Reddit Pixel -->
   <script is:inline>
     !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);
     rdt('init','a2_jpb5d247ugq0');
-    document.addEventListener('astro:page-load', function () { rdt('track', 'PageVisit'); });
+    document.addEventListener('astro:page-load', function () { if (/^\/r(\/|$)/.test(location.pathname)) return; rdt('track', 'PageVisit'); });
     document.addEventListener('click', function (e) {
       var el = e.target;
       if (!el || !el.closest) return;
+      if (/^\/r(\/|$)/.test(location.pathname)) return;
       if (el.closest('a[href*="apps.apple.com"]')) rdt('track', 'SignUp');
     });
   </script>
@@ -47,13 +52,16 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   <script is:inline>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1107558851670464');
-    document.addEventListener('astro:page-load', function () { fbq('track', 'PageView'); });
+    document.addEventListener('astro:page-load', function () { if (/^\/r(\/|$)/.test(location.pathname)) return; fbq('track', 'PageView'); });
     document.addEventListener('click', function (e) {
       var el = e.target;
       if (!el || !el.closest) return;
+      if (/^\/r(\/|$)/.test(location.pathname)) return;
       if (el.closest('a[href*="apps.apple.com"]')) fbq('track', 'Lead');
     });
   </script>
+  </Fragment>
+  )}
   {noindex && <meta name="robots" content="noindex" />}
   <title>{title}</title>
   <link rel="canonical" href={canonicalURL} />

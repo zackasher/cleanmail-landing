@@ -9,3 +9,6 @@ export const TRIAL_DAYS = 14;
 export const HOUSEHOLD_SIZE = 4;
 export const COMPETITOR_FACTS_CHECKED_ON = "October 2, 2026";
 export const FOUNDER_NAME = "Zack Asher";
+
+export const REFERRAL_CODE_PATTERN = "^[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{6}$";
+export const REFERRAL_PATH_PREFIX = "/r/";

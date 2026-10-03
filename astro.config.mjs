@@ -7,5 +7,5 @@ export default defineConfig({
   site: 'https://cleanmailapp.com',
   trailingSlash: 'never',
   build: { format: 'file' },
-  integrations: [sitemap({ filter: (page) => !/\/(coming-soon|checkout-success|checkout-cancel|portal-return)$/.test(page) })],
+  integrations: [sitemap({ filter: (page) => !/\/(coming-soon|checkout-success|checkout-cancel|portal-return|r)$/.test(page) })],
 });
