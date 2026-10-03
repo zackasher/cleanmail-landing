@@ -12,6 +12,7 @@ const COPIED_LABEL = "Copied";
 <BaseLayout title="You're invited | Cleanmail" description={PITCH} noindex={true} noTracking={true}>
   <section class="invite">
     <div class="invite-card">
+      <img class="invite-logo" src="/logo.png" alt="Cleanmail" />
       <h1>{HEADLINE}</h1>
       <p class="pitch">{PITCH}</p>
       <div class="code-block" id="referral-code-block" hidden>
@@ -69,6 +70,7 @@ const COPIED_LABEL = "Copied";
     .copy-btn:hover{background:rgba(74,111,227,.08)}
     .cta-wrap{display:flex;justify-content:center}
     .cta-wrap :global(.appstore-btn){background:var(--purple);box-shadow:0 8px 20px rgba(74,111,227,.35)}
+    .invite-logo{display:block;width:150px;height:auto;margin:0 auto 22px}
     .hint{font-size:14px;line-height:1.5;color:var(--muted);margin:20px auto 0;max-width:380px}
     .hint[hidden],.code-block[hidden]{display:none}
   </style>
