@@ -12,3 +12,4 @@ export const FOUNDER_NAME = "Zack Asher";
 
 export const REFERRAL_CODE_PATTERN = "^[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{6}$";
 export const REFERRAL_PATH_PREFIX = "/r/";
+export const STORE_BADGE_LABEL = "Download on the";

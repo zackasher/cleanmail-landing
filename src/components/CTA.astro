@@ -1,5 +1,6 @@
 ---
-import { SITE_STAGE, APP_STORE_URL } from "../config";
+import StoreBadge from "./StoreBadge.astro";
+import { SITE_STAGE, APP_STORE_URL, STORE_BADGE_LABEL } from "../config";
 const SUPABASE_URL = "https://cxnxjnuvbsyymhxkrmpw.supabase.co";
 const SUPABASE_KEY = "sb_publishable_SicQ5RchA4Q5YI3DevGMlQ_1XWOPRjy";
 ---
@@ -20,7 +21,7 @@ const SUPABASE_KEY = "sb_publishable_SicQ5RchA4Q5YI3DevGMlQ_1XWOPRjy";
 )}
 
 {SITE_STAGE === "launched" && (
-  <a class="appstore-btn" href={APP_STORE_URL}>Download on the App Store</a>
+  <StoreBadge href={APP_STORE_URL} label={STORE_BADGE_LABEL} />
 )}
 
 <style>
