@@ -1,0 +1,35 @@
+---
+import { APP_STORE_REVIEWS, APP_STORE_REVIEWS_URL } from "../data-reviews";
+
+const STAR_COUNT = 5;
+const stars = "★".repeat(STAR_COUNT);
+---
+<section class="reviews" aria-labelledby="reviews-heading">
+  <p class="reviews-stars" aria-hidden="true">{stars}</p>
+  <h2 id="reviews-heading">What parents say on the App Store</h2>
+  <div class="reviews-grid">
+    {APP_STORE_REVIEWS.map((review) => (
+      <figure class="review">
+        <span class="review-stars" aria-label={`${STAR_COUNT} out of ${STAR_COUNT} stars`}>{stars}</span>
+        <h3>{review.title}</h3>
+        <blockquote>{review.quote}</blockquote>
+        <figcaption>{review.author}</figcaption>
+      </figure>
+    ))}
+  </div>
+  <a class="reviews-link" href={APP_STORE_REVIEWS_URL}>Read every review on the App Store <span aria-hidden="true">›</span></a>
+</section>
+
+<style>
+  .reviews{max-width:1080px;margin:0 auto;padding:56px 24px 24px;text-align:center}
+  .reviews-stars{margin:0 0 6px;font-size:22px;letter-spacing:4px;color:var(--orange)}
+  .reviews h2{margin:0 0 32px;font-size:clamp(26px,3.6vw,36px);font-weight:500;letter-spacing:-.6px;color:var(--navy)}
+  .reviews-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:18px;text-align:left}
+  .review{flex:0 1 330px;margin:0;padding:22px 22px 20px;border-radius:22px;background:linear-gradient(145deg,rgba(255,255,255,.75),rgba(255,255,255,.45));border:1px solid rgba(255,255,255,.9);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 10px 28px rgba(27,34,54,.07);-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%)}
+  .review-stars{display:block;font-size:15px;letter-spacing:2px;color:var(--orange)}
+  .review h3{margin:8px 0 8px;font-size:17px;font-weight:600;color:var(--navy)}
+  .review blockquote{margin:0;font-size:15.5px;line-height:1.55;color:var(--ink)}
+  .review figcaption{margin-top:12px;font-size:13.5px;color:var(--muted)}
+  .reviews-link{display:inline-block;margin-top:10px;font-size:15px;font-weight:600;color:var(--purple);text-decoration:none}
+  .reviews-link:hover{text-decoration:underline}
+</style>
