@@ -1,0 +1,36 @@
+---
+import { TRUST_HEADING, TRUST_ROWS, TRUST_SCENE_ALT } from "../data-trust";
+---
+<section class="deal" aria-labelledby="deal-heading">
+  <div class="deal-scene"><img src="/welcome-scene.webp" alt={TRUST_SCENE_ALT} width="900" height="900" loading="lazy" /></div>
+  <div class="deal-card">
+    <h2 id="deal-heading">{TRUST_HEADING}</h2>
+    <ul>
+      {TRUST_ROWS.map((row) => (
+        <li>
+          <span class="deal-ic"><svg viewBox="0 0 24 24" aria-hidden="true">{row.paths.map((path) => <path d={path} fill="currentColor" />)}</svg></span>
+          <span>{row.text}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .deal{position:relative;max-width:920px;margin:24px auto 40px;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+  .deal-scene{border-radius:32px;overflow:hidden;aspect-ratio:1;box-shadow:0 18px 44px rgba(27,34,54,.12)}
+  .deal-scene img{display:block;width:100%;height:100%;object-fit:cover}
+  .deal-card{margin-left:-64px;padding:34px 34px 30px;border-radius:30px;background:linear-gradient(150deg,rgba(214,244,236,.78),rgba(255,255,255,.55));border:1px solid rgba(255,255,255,.9);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),0 18px 44px rgba(27,34,54,.12);-webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%)}
+  .deal-card h2{margin:0 0 20px;font-size:clamp(26px,3.4vw,34px);font-weight:500;letter-spacing:-.6px;color:var(--navy)}
+  .deal-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
+  .deal-card li{display:flex;align-items:center;gap:16px;font-size:17px;line-height:1.45;color:var(--navy)}
+  .deal-ic{flex:0 0 48px;width:48px;height:48px;border-radius:50%;background:rgba(232,238,252,.95);color:var(--purple);display:flex;align-items:center;justify-content:center}
+  .deal-ic svg{width:24px;height:24px}
+  @media (max-width:720px){
+    .deal{grid-template-columns:1fr;padding:0 16px}
+    .deal-scene{aspect-ratio:1}
+    .deal-scene img{object-position:top}
+    .deal-card{margin:-96px 12px 0;padding:26px 22px 24px}
+    .deal-card li{font-size:16px}
+  }
+</style>
