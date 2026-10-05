@@ -9,7 +9,7 @@ import CTA from "./CTA.astro";
     <div class="actions">
       <CTA />
     </div>
-    <p class="trust"><b>Only the senders you choose, read-only.</b><span class="dot"></span>We never change your inbox.<span class="dot"></span>We never sell your info, you mean too much to us.</p>
+    <p class="trust"><b>Your digest only covers the senders you pick.</b><span class="dot"></span>We never change your inbox.<span class="dot"></span>We never sell your info, you mean too much to us.</p>
   </div>
 </section>
 
@@ -26,7 +26,7 @@ import CTA from "./CTA.astro";
   .actions{margin-top:32px}
   .see-how{display:inline-flex;align-items:center;gap:7px;margin-top:22px;font-size:15px;font-weight:500;color:var(--purple);text-decoration:none}
   .see-how:hover{opacity:.85}
-  .trust{margin-top:26px;font-size:13px;color:var(--muted);letter-spacing:.1px}
+  .trust{margin:26px 0 0 50%;transform:translateX(-50%);width:max-content;max-width:calc(100vw - 32px);font-size:13px;color:var(--muted);letter-spacing:.1px}
   .trust b{color:var(--ink);font-weight:500}
   .dot{display:inline-block;width:4px;height:4px;border-radius:50%;background:#cfd6e6;margin:0 9px;vertical-align:middle}
 </style>
