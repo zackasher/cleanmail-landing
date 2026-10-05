@@ -1,0 +1,128 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import { ICON_PATHS } from "../data-icons";
+import "../styles/info-page.css";
+
+const steps = [
+  { icon: ICON_PATHS.share, tone: "purple", title: "Share your code", note: "From the menu in the app" },
+  { icon: ICON_PATHS.accountPlus, tone: "orange", title: "Your friend joins", note: "Using your code" },
+  { icon: ICON_PATHS.gift, tone: "teal", title: "You get 2 weeks free", note: "After about 60 days" },
+];
+
+const finePrint = [
+  {
+    title: "How it works",
+    items: [
+      "In the Cleanmail app, open the menu and tap \"Share, get 2 weeks free\". You get your own personal code and a link to share.",
+      "Your friend downloads Cleanmail and enters your code under \"Have a code?\" on the plan screen.",
+      "Your friend gets the standard 2-week free trial. The code does not give them anything extra.",
+      "You earn 2 free weeks of Cleanmail once your friend has been a paying subscriber for about 60 days.",
+    ],
+  },
+  {
+    title: "When your reward is earned",
+    lead: "About 60 days after your friend joins, we check that:",
+    items: [
+      "your friend's subscription is still active (not cancelled or refunded),",
+      "your friend has paid for at least one renewal,",
+      "your friend is still using Cleanmail (their family digest has run in the last 30 days),",
+      "you are a current Cleanmail subscriber through the App Store.",
+    ],
+  },
+  {
+    title: "How you get your reward",
+    items: [
+      "We send you a notification with a one-time Apple offer code for 2 free weeks, and a \"Redeem 2 free weeks\" button appears in the app.",
+      "Redeem it in the App Store. It applies to your current plan, monthly or yearly.",
+      "The code expires 90 days after it is sent.",
+      "Our notifications never name the friend who used your code.",
+    ],
+  },
+  {
+    title: "Limits",
+    items: [
+      "One reward per member. You can share your code with as many people as you like, but the reward is earned once.",
+      "Available in the United States and Canada.",
+      "Rewards are delivered as Apple subscription offer codes and redeemed through the App Store.",
+    ],
+  },
+];
+---
+<BaseLayout
+  title="Share Cleanmail, Get 2 Weeks Free | Cleanmail"
+  description="Give the gift of Cleanmail. Share your code with a friend and get 2 weeks of Cleanmail free."
+>
+  <section class="ip">
+    <p class="ip-eyebrow">Give the gift of Cleanmail</p>
+    <h1 class="one-line">Share Cleanmail, get 2 weeks free.</h1>
+
+    <div class="flow">
+      <span class="glow purple" aria-hidden="true"></span>
+      <span class="glow orange" aria-hidden="true"></span>
+      <span class="glow teal" aria-hidden="true"></span>
+      {steps.map((step, index) => (
+        <div class="glass-card">
+          <span class={`step-num ${step.tone}`}>Step {index + 1}</span>
+          <span class={`flow-circle ${step.tone}`}><svg viewBox="0 0 24 24" aria-hidden="true"><path d={step.icon} fill="currentColor" /></svg></span>
+          <h2>{step.title}</h2>
+          <p>{step.note}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="ip-final">
+      <CTA />
+    </div>
+
+    <details class="fine-print">
+      <summary>The fine print</summary>
+      {finePrint.map((group) => (
+        <div class="fp-group">
+          <h3>{group.title}</h3>
+          {group.lead && <p>{group.lead}</p>}
+          <ul>{group.items.map((item) => <li>{item}</li>)}</ul>
+        </div>
+      ))}
+    </details>
+  </section>
+
+  <style>
+    .one-line{max-width:none}
+    .flow{position:relative;display:flex;align-items:stretch;justify-content:center;gap:22px;margin-top:56px}
+    .glow{position:absolute;width:260px;height:260px;border-radius:50%;filter:blur(60px);opacity:.55;z-index:0}
+    .glow.purple{background:#9fb3f3;left:8%;top:-30px}
+    .glow.orange{background:#f6c08f;left:50%;top:60px;transform:translateX(-50%)}
+    .glow.teal{background:#9edcd3;right:8%;top:-10px}
+    .glass-card{position:relative;z-index:1;flex:0 1 270px;text-align:center;padding:26px 20px 30px;border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(255,255,255,.28));border:1px solid rgba(255,255,255,.85);box-shadow:inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(255,255,255,.35),0 12px 34px rgba(27,34,54,.10);-webkit-backdrop-filter:blur(22px) saturate(170%);backdrop-filter:blur(22px) saturate(170%)}
+    .step-num{display:block;margin-bottom:16px;font-size:13px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase}
+    .step-num.purple{color:var(--purple)}
+    .step-num.orange{color:var(--orange)}
+    .step-num.teal{color:#3a9e93}
+    .flow-circle{width:120px;height:120px;border-radius:50%;margin:0 auto 22px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.9)}
+    .flow-circle svg{width:58px;height:58px}
+    .flow-circle.purple{background:rgba(74,111,227,.14);color:var(--purple)}
+    .flow-circle.orange{background:rgba(232,140,48,.16);color:var(--orange)}
+    .flow-circle.teal{background:rgba(93,196,184,.22);color:#3a9e93}
+    .glass-card h2{font-size:clamp(20px,2.4vw,24px);font-weight:600;color:var(--navy);margin:0 0 6px;letter-spacing:-.3px;white-space:nowrap}
+    .glass-card p{font-size:16px;color:var(--muted);margin:0}
+    .ip-final{margin-top:56px}
+    .fine-print{max-width:680px;margin:64px auto 0;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 22px}
+    .fine-print summary{cursor:pointer;font-size:15px;font-weight:600;color:var(--muted);text-align:center;list-style:none}
+    .fine-print summary::-webkit-details-marker{display:none}
+    .fine-print summary::after{content:" +";color:var(--purple)}
+    .fine-print[open] summary::after{content:" −"}
+    .fp-group{margin-top:18px}
+    .fp-group h3{font-size:15px;font-weight:600;color:var(--navy);margin:0 0 6px}
+    .fp-group p{font-size:14.5px;color:var(--ink);margin:0 0 4px}
+    .fp-group ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-size:14.5px;line-height:1.5;color:var(--ink)}
+    @media (max-width:720px){
+      .flow{flex-direction:column;align-items:center;gap:16px;margin-top:40px}
+      .glass-card{flex:none;width:100%;max-width:320px}
+      .glow{width:200px;height:200px}
+      .glow.purple{left:0;top:0}
+      .glow.orange{left:auto;right:0;top:40%;transform:none}
+      .glow.teal{right:auto;left:0;top:auto;bottom:0}
+    }
+  </style>
+</BaseLayout>
