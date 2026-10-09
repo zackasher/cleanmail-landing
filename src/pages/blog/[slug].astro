@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CTA from "../../components/CTA.astro";
+import { publishedPosts, formatPostDate, type BlogPost } from "../../data-blog";
+import { SITE_URL, TRIAL_DAYS } from "../../config";
+import "../../styles/info-page.css";
+
+export function getStaticPaths() {
+  return publishedPosts().map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props as { post: BlogPost };
+const { title, description, date, author } = post.frontmatter;
+const { Content } = post;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "datePublished": date,
+  "author": { "@type": "Person", "name": author },
+  "publisher": { "@type": "Organization", "name": "Cleanmail", "url": SITE_URL },
+  "mainEntityOfPage": `${SITE_URL}/blog/${post.slug}`,
+};
+---
+<BaseLayout title={`${title} | Cleanmail`} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <article class="ip post">
+    <p class="ip-eyebrow"><a href="/blog">Blog</a></p>
+    <h1>{title}</h1>
+    <p class="post-byline">By {author} · {formatPostDate(date)}</p>
+    <div class="post-body"><Content /></div>
+    <div class="ip-final">
+      <h2>Try Cleanmail free for {TRIAL_DAYS} days</h2>
+      <p>School and activity email, sorted by kid, with every date on your family calendar.</p>
+      <CTA />
+    </div>
+  </article>
+  <style>
+    .post .ip-eyebrow a{color:inherit;text-decoration:none}
+    .post-byline{text-align:center;font-size:14px;color:var(--muted);margin:10px 0 0}
+    .post-body{max-width:680px;margin:40px auto 0;font-size:17.5px;line-height:1.7;color:var(--ink)}
+    .post-body :global(h2){font-size:25px;font-weight:600;color:var(--navy);margin:38px 0 10px;letter-spacing:-.3px;text-align:left}
+    .post-body :global(p){margin:0 0 18px}
+    .post-body :global(ul),.post-body :global(ol){margin:0 0 18px;padding-left:22px}
+    .post-body :global(li){margin-bottom:8px}
+    .post-body :global(a){color:var(--purple)}
+  </style>
+</BaseLayout>

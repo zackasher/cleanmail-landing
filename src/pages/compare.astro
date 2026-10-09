@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import Mark from "../components/Mark.astro";
-import { PRICE_MONTHLY, PRICE_YEARLY, TRIAL_DAYS, COMPETITOR_FACTS_CHECKED_ON, FOUNDER_NAME } from "../config";
+import { PRICE_MONTHLY, PRICE_YEARLY, TRIAL_DAYS, COMPETITOR_FACTS_CHECKED_ON, FOUNDER_NAME, FAMBOT_FACTS_CHECKED_ON } from "../config";
 import PhoneFrame from "../components/PhoneFrame.astro";
 import { ICON_PATHS } from "../data-icons";
 import "../styles/info-page.css";
@@ -51,7 +51,7 @@ const legend = [
 ] as const;
 
 const reasons = [
-  { icon: ICON_PATHS.email, title: "School email organizer", body: "Reads only the senders you pick. No forwarding.", color: "var(--purple)" },
+  { icon: ICON_PATHS.email, title: "School email organizer", body: "Your digest only covers the senders you pick. No forwarding.", color: "var(--purple)" },
   { icon: ICON_PATHS.digest, title: "Email digest by kid", body: "The gist of every email, sorted by person.", color: "var(--orange)" },
   { icon: ICON_PATHS.sync, title: "Two-way Google Calendar sync", body: "Edit anywhere, it changes everywhere.", color: "var(--teal)" },
   { icon: ICON_PATHS.emailFast, title: "Automatic events from email", body: "Dates land on your calendar on their own.", color: "var(--purple)" },
@@ -60,7 +60,13 @@ const reasons = [
 ];
 
 
+const focusCards = [
+  { name: "All-in-one assistants, like Fambot", us: false, body: "An AI assistant for the whole family's logistics. Fambot reads email, calendar invites, and group chats, sends daily summaries by text, and lets parents assign to-dos to each other. On iOS and Android, free while in beta." },
+  { name: "Cleanmail", us: true, body: "One job, done well. School and activity email becomes a digest sorted by kid, and every date lands on a family calendar with two-way Google sync. No to-do lists or chores to keep up with." },
+];
+
 const sources = [
+  { label: "Fambot: launch announcement", url: "https://fambot.com/press-releases/fambot-launches-ai-chief-of-staff-for-families" },
   { label: "Skylight: two-way sync with Google", url: "https://skylight.zendesk.com/hc/en-us/articles/19197773155995-Skylight-Calendar-Two-Way-Sync-with-Google-Calendar" },
   { label: "Skylight: Magic Import", url: "https://skylight.zendesk.com/hc/en-us/articles/18039340445211-How-To-Use-Skylight-Magic-Import" },
   { label: "Skylight: Sidekick", url: "https://skylight.zendesk.com/hc/en-us/articles/39335273393947-Sidekick" },
@@ -73,7 +79,7 @@ const sources = [
 
 const faqs = [
   { q: "Can I keep using Skylight or Cozi with Cleanmail?", a: "Yes. Cleanmail puts events on your Google Calendar, and Skylight and Cozi can both show your Google Calendar. Keep the one you like, and let Cleanmail fill it from your school email." },
-  { q: "What is the best family calendar app for school emails?", a: "If your family's schedule mostly arrives as school, camp, and sports email in Gmail, Cleanmail is built for exactly that. It reads only the senders you pick, sorts every update into a digest by kid, turns the dates into events automatically, and keeps them in dedicated two-way sync with Google Calendar for a household of up to four people." },
+  { q: "What is the best family calendar app for school emails?", a: "If your family's schedule mostly arrives as school, camp, and sports email in Gmail, Cleanmail is built for exactly that. It sorts every update from the senders you pick into a digest by kid, turns the dates into events automatically, and keeps them in dedicated two-way sync with Google Calendar for a household of up to four people." },
   { q: "Which family calendar apps have two-way Google Calendar sync?", a: `As of ${COMPETITOR_FACTS_CHECKED_ON}, Cleanmail has dedicated two-way Google Calendar sync, Skylight offers two-way sync once you turn it on, and Cozi connects with read-only feeds. Cleanmail is the one that builds events straight from your Gmail, with nothing to forward.` },
   { q: "How is Cleanmail different from Skylight?", a: "Skylight turns email into events when you forward each email to a Skylight address. Cleanmail connects to Gmail read-only, picks up the senders you choose on its own, and sorts everything into one digest by kid, across up to three inboxes." },
   { q: "How is Cleanmail different from Cozi?", a: "Cozi's Google Calendar connection is read-only feeds, and its email import works by forwarding on the Max plan. Cleanmail syncs with Google Calendar both ways and reads the school email you pick for you." },
@@ -175,6 +181,19 @@ const faqSchema = {
     </div>
 
     <div class="ip-section">
+      <h2>Focused vs. all-in-one</h2>
+      <p class="ip-sub">Fambot facts checked {FAMBOT_FACTS_CHECKED_ON}, from Fambot's own launch page.</p>
+      <div class="ip-grid two">
+        {focusCards.map((card) => (
+          <div class={`ip-tile focus-card${card.us ? " us" : ""}`}>
+            <h3>{card.name}</h3>
+            <p>{card.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="ip-section">
       <h2>Quick answers</h2>
       <div class="ip-faq">
         {faqs.map((item) => (
@@ -187,6 +206,7 @@ const faqSchema = {
       <div class="ip-links">
         <a href="/google-calendar-sync">How two-way sync works</a>
         <a href="/family-calendar-app">Everything in the app</a>
+        <a href="/maple-alternative">Leaving Maple?</a>
       </div>
     </div>
 
@@ -197,13 +217,14 @@ const faqSchema = {
     </div>
 
     <div class="sources">
-      <p>We make Cleanmail. Every fact about Skylight and Cozi comes from their own pages, linked below.</p>
-      <p>Sources, checked {COMPETITOR_FACTS_CHECKED_ON}. Prices in US dollars, before tax. Skylight displays start at $149.99; Calendar Plus is $79 a year. Skylight and Cozi are trademarks of their owners.</p>
+      <p>We make Cleanmail. Every fact about Skylight, Cozi, and Fambot comes from their own pages, linked below.</p>
+      <p>Sources, checked {COMPETITOR_FACTS_CHECKED_ON}. Prices in US dollars, before tax. Skylight displays start at $149.99; Calendar Plus is $79 a year. Skylight, Cozi, and Fambot are trademarks of their owners.</p>
       <ul>{sources.map((item) => <li><a href={item.url} rel="nofollow noopener" target="_blank">{item.label}</a></li>)}</ul>
     </div>
   </section>
 
   <style>
+    .focus-card.us{border:2px solid var(--purple)}
     .title{max-width:none;font-size:clamp(28px,3.7vw,42px)}
     .lede-lines span{display:block}
     .byline{text-align:center;font-size:13.5px;color:var(--muted);margin:14px 0 0}

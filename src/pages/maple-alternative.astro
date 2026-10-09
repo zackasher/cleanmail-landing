@@ -1,0 +1,123 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import TrustDeal from "../components/TrustDeal.astro";
+import { ICON_PATHS } from "../data-icons";
+import { PRICE_MONTHLY, PRICE_YEARLY, TRIAL_DAYS, HOUSEHOLD_SIZE, MAPLE_FACTS_CHECKED_ON, MAPLE_SHUTDOWN_DATE } from "../config";
+import "../styles/info-page.css";
+
+const MAPLE_NOTICE_URL = "https://www.growmaple.com/";
+
+const carryOver = [
+  { icon: ICON_PATHS.email, tone: "", title: "School email, sorted by kid", body: "Pick the school, camp, and sports senders once. What matters from each one shows up in one short digest, sorted by kid." },
+  { icon: ICON_PATHS.calendarHeart, tone: "orange", title: "Every date on one calendar", body: "Dates from those emails go straight onto your family calendar, with nothing to retype." },
+  { icon: ICON_PATHS.sync, tone: "teal", title: "Two-way Google Calendar sync", body: "Change an event in Google Calendar and Cleanmail follows. Change it in Cleanmail and Google follows." },
+  { icon: ICON_PATHS.household, tone: "", title: "Shared with your household", body: `Up to ${HOUSEHOLD_SIZE} people, you included, see the same digest and calendar.` },
+];
+
+const beforeShutdown = [
+  { title: "Copy out your lists, recipes, and notes", body: `Maple says everything is deleted after ${MAPLE_SHUTDOWN_DATE}, with no way to recover it. Save anything you want to keep.` },
+  { title: "Check your calendar", body: "Make sure the events you care about are in your Google, Apple, or Outlook calendar, since Maple's calendar connections end at shutdown." },
+  { title: "Know where your plan stands", body: "Maple says annual plans won't renew, and monthly plans stay active until the shutdown date." },
+];
+
+const steps = [
+  { title: "Download Cleanmail and connect Gmail", body: "Sign in with the Gmail account your school, camp, and coaches email." },
+  { title: "Pick your senders", body: "Choose the school, camp, and sports senders. Your first digest shows up a few minutes later, with the dates already on your calendar." },
+  { title: "Invite your household", body: `Add up to ${HOUSEHOLD_SIZE} people, you included, so everyone sees the same week.` },
+];
+
+const faqs = [
+  { q: "When is Maple shutting down?", a: `Maple's own site says it will sunset on ${MAPLE_SHUTDOWN_DATE}, and that data is deleted after that date. Checked ${MAPLE_FACTS_CHECKED_ON}.` },
+  { q: "What happens to my Maple subscription?", a: "Maple says annual plans won't renew and monthly plans stay active until the shutdown date." },
+  { q: "Does Cleanmail do everything Maple did?", a: "No. Cleanmail does one job: it turns school and activity email into a digest sorted by kid and puts every date on a family calendar with two-way Google sync. It doesn't do meal planning or lists." },
+  { q: "What do I need to use Cleanmail?", a: "An iPhone and a Gmail account. Cleanmail connects to Gmail read-only, and your digest only covers the senders you pick." },
+  { q: "How much is Cleanmail?", a: `${TRIAL_DAYS} days free, then ${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year. One plan covers your whole household.` },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({ "@type": "Question", "name": item.q, "acceptedAnswer": { "@type": "Answer", "text": item.a } })),
+};
+---
+<BaseLayout
+  title="Leaving Maple? A Home for Your School Email | Cleanmail"
+  description={`Maple closes ${MAPLE_SHUTDOWN_DATE}. Cleanmail turns school email into a digest sorted by kid, with every date on a calendar that syncs with Google.`}
+  faqSchema={faqSchema}
+>
+  <section class="ip">
+    <p class="ip-eyebrow">Leaving Maple?</p>
+    <h1>Leaving Maple? Cleanmail handles your school email.</h1>
+    <p class="ip-lede">Maple helped a lot of families keep the week straight, and it's closing on {MAPLE_SHUTDOWN_DATE}. If school and activity email was the part you leaned on, Cleanmail can pick that up.</p>
+
+    <div class="ip-section">
+      <h2>If school email was your favorite part of Maple</h2>
+      <p class="ip-sub">That's the part Cleanmail does. It doesn't do meal planning, lists, or trip planning.</p>
+      <div class="ip-grid two">
+        {carryOver.map((item) => (
+          <div class="ip-tile center">
+            <div class={`ip-ic ${item.tone}`}><svg viewBox="0 0 24 24" aria-hidden="true"><path d={item.icon} fill="currentColor" /></svg></div>
+            <h3>{item.title}</h3>
+            <p>{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="ip-section">
+      <h2>Before {MAPLE_SHUTDOWN_DATE}</h2>
+      <ol class="move-steps">
+        {beforeShutdown.map((step, index) => (
+          <li><span class="move-num muted">{index + 1}</span><div><h3>{step.title}</h3><p>{step.body}</p></div></li>
+        ))}
+      </ol>
+    </div>
+
+    <div class="ip-section">
+      <h2>Setting up Cleanmail takes a few minutes</h2>
+      <ol class="move-steps">
+        {steps.map((step, index) => (
+          <li><span class="move-num">{index + 1}</span><div><h3>{step.title}</h3><p>{step.body}</p></div></li>
+        ))}
+      </ol>
+    </div>
+
+    <TrustDeal />
+
+    <div class="ip-section">
+      <h2>Quick answers</h2>
+      <div class="ip-faq">
+        {faqs.map((item) => (
+          <details>
+            <summary>{item.q}</summary>
+            <p>{item.a}</p>
+          </details>
+        ))}
+      </div>
+      <div class="ip-links">
+        <a href="/compare">Cleanmail vs other family apps</a>
+        <a href="/google-calendar-sync">How two-way sync works</a>
+      </div>
+    </div>
+
+    <div class="ip-final">
+      <h2>Try it free for {TRIAL_DAYS} days</h2>
+      <p>Then {PRICE_MONTHLY} a month or {PRICE_YEARLY} a year. Cancel anytime in your iPhone's settings.</p>
+      <CTA />
+    </div>
+
+    <p class="maple-source">Maple's shutdown date is from <a href={MAPLE_NOTICE_URL} rel="nofollow noopener" target="_blank">growmaple.com</a>, checked {MAPLE_FACTS_CHECKED_ON}. Maple is a trademark of its owner. Cleanmail is not affiliated with Maple.</p>
+  </section>
+
+  <style>
+    .move-steps{list-style:none;margin:0 auto;padding:0;max-width:640px;display:flex;flex-direction:column;gap:14px}
+    .move-steps li{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:0 8px 22px rgba(27,34,54,.05)}
+    .move-num{flex:0 0 36px;height:36px;border-radius:50%;background:var(--purple);color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center}
+    .move-steps h3{margin:4px 0 4px;font-size:17px;font-weight:600;color:var(--navy)}
+    .move-steps p{margin:0;font-size:15.5px;line-height:1.5;color:var(--ink)}
+    .move-num.muted{background:var(--teal)}
+    .maple-source{margin:40px auto 0;max-width:640px;text-align:center;font-size:13px;color:var(--muted)}
+    .maple-source a{color:var(--muted)}
+  </style>
+</BaseLayout>

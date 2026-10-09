@@ -13,3 +13,8 @@ export const FOUNDER_NAME = "Zack Asher";
 export const REFERRAL_CODE_PATTERN = "^[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{6}$";
 export const REFERRAL_PATH_PREFIX = "/r/";
 export const STORE_BADGE_LABEL = "Download on the";
+export const MAPLE_FACTS_CHECKED_ON = "October 9, 2026";
+export const MAPLE_SHUTDOWN_DATE = "December 31, 2026";
+export const FAMBOT_FACTS_CHECKED_ON = "October 9, 2026";
+export const YOUTUBE_VIDEO_URL = "https://www.youtube.com/watch?v=WnpRfSZfQ8o";
+export const SITE_URL = "https://cleanmailapp.com";

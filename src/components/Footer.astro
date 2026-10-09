@@ -1,5 +1,6 @@
 ---
 import AppLink from "./AppLink.astro";
+import { YOUTUBE_VIDEO_URL } from "../config";
 ---
 <AppLink />
 <footer>
@@ -11,6 +12,9 @@ import AppLink from "./AppLink.astro";
     <a href="/family-calendar-app">Family Calendar App</a>
     <a href="/compare">Compare</a>
     <a href="/share">Share, get 2 weeks free</a>
+    <a href="/blog">Blog</a>
+    <a href="/maple-alternative">Leaving Maple?</a>
+    <a href={YOUTUBE_VIDEO_URL} rel="noopener" target="_blank">Watch on YouTube</a>
   </div>
   <p class="footer-copy">© 2026 Calibrate LLC. All rights reserved.</p>
 </footer>

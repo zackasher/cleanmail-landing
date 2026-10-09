@@ -1,6 +1,6 @@
 # Cleanmail: Family Inbox
 
-> Cleanmail is an iPhone app for parents. It connects to Gmail read-only, reads only the school, camp, and activity senders you pick (including ParentSquare and Remind email notifications), sums every email up in a digest sorted by kid, turns the dates into events automatically, and keeps them in dedicated two-way sync with Google Calendar.
+> Cleanmail is an iPhone app for parents. It connects to Gmail read-only, sums up email from the school, camp, and activity senders you pick (including ParentSquare and Remind email notifications) in a digest sorted by kid, turns the dates into events automatically, and keeps them in dedicated two-way sync with Google Calendar.
 
 - App Store: https://apps.apple.com/app/id6777857105
 - Price: 14-day free trial, then $6.99 a month or $68.99 a year. One plan covers a household of up to 4 people.
