@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last updated:** September 2, 2026
+**Last updated:** October 9, 2026
 
 These Terms of Service ("Terms") govern your use of Cleanmail, an iOS application operated by Calibrate LLC ("we," "our," or "us"). By creating an account or using Cleanmail, you agree to these Terms.
 
@@ -10,7 +10,7 @@ If you do not agree to these Terms, do not use Cleanmail.
 
 ## 1. The Service
 
-Cleanmail is an AI-powered email digest application currently available on iOS. It reads emails from Gmail senders you have explicitly selected, generates summary digests using Anthropic's Claude API, and creates corresponding events on your Google Calendar.
+Cleanmail is an AI-powered email digest application currently available on iOS. It reads emails from Gmail senders you have explicitly selected, generates summary digests using Anthropic's Claude API, and adds the dates it finds to an in-app family calendar kept in two-way sync with your Google Calendar.
 
 Cleanmail is a service of Calibrate LLC, registered in the State of Illinois, United States.
 
@@ -26,15 +26,15 @@ You are responsible for maintaining the confidentiality of your Google account c
 
 ## 3. Subscriptions and Billing
 
-Cleanmail is offered as a single monthly subscription at $6.99 per month. There is no free tier.
+Cleanmail is offered as a subscription with two plans: monthly at $6.99 per month, or yearly at $68.99 per year. Both plans include the same features. There is no free tier.
 
-**Free trial.** New subscribers receive a 14-day free trial. Unless you cancel at least 24 hours before the trial ends, your subscription automatically converts to a paid subscription at $6.99 per month and your Apple Account is charged at that time. You can cancel at any time during the trial in your Apple Account subscription settings; canceling before the trial ends prevents any charge.
+**Free trial.** New subscribers receive a 14-day free trial. Unless you cancel at least 24 hours before the trial ends, your subscription automatically converts to a paid subscription on the plan you chose ($6.99 per month or $68.99 per year) and your Apple Account is charged at that time. You can cancel at any time during the trial in your Apple Account subscription settings; canceling before the trial ends prevents any charge.
 
-**Billing.** Subscriptions are billed in advance through Apple in-app purchase at the beginning of each billing period. Your subscription renews automatically each month unless you cancel at least 24 hours before the end of the current period.
+**Billing.** Subscriptions are billed in advance through Apple in-app purchase at the beginning of each billing period. Your subscription renews automatically at the end of each billing period (every month on the monthly plan, every year on the yearly plan) unless you cancel at least 24 hours before the end of the current period.
 
 **Payment processing.** All payments are processed by Apple through in-app purchase and charged to your Apple Account. We do not store or have access to your payment card information. Purchases are also governed by Apple's [Terms of Use](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/).
 
-**Cancellation.** You may cancel your subscription at any time in your Apple Account subscription settings, reachable from within the app. Cancellation takes effect at the end of your current billing period — you retain access until the period ends, after which your access to Cleanmail's features ends. We cannot cancel an Apple subscription on your behalf.
+**Cancellation.** You may cancel your subscription at any time in your Apple Account subscription settings, reachable from within the app. Cancellation takes effect at the end of your current billing period. You retain access until the period ends, after which your access to Cleanmail's features ends. We cannot cancel an Apple subscription on your behalf.
 
 **Pricing changes.** We may change subscription pricing with at least 30 days' notice via email and an in-app notice. Continued use after a price change takes effect constitutes acceptance.
 
@@ -42,7 +42,7 @@ Cleanmail is offered as a single monthly subscription at $6.99 per month. There 
 
 ## 4. Refund Policy
 
-Subscriptions are billed monthly in advance. You may cancel at any time; cancellation takes effect at the end of the current billing period and prevents future charges. If you cancel during your free trial before it ends, you will not be charged. **We do not offer refunds for partial billing periods or for time elapsed before cancellation.**
+Subscriptions are billed in advance for each billing period, monthly or yearly depending on your plan. You may cancel at any time; cancellation takes effect at the end of the current billing period and prevents future charges. If you cancel during your free trial before it ends, you will not be charged. **We do not offer refunds for partial billing periods or for time elapsed before cancellation.**
 
 We may, at our sole discretion, issue refunds in cases of:
 - Billing errors or duplicate charges.
