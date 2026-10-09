@@ -6,6 +6,7 @@ const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {"@type":"Question","name":"Does Cleanmail work with ParentSquare and Remind?","acceptedAnswer":{"@type":"Answer","text":"Yes. Turn on email notifications in ParentSquare or Remind, then pick that sender in Cleanmail like any school sender. Their messages land in your digest and their dates land on your calendar."}},
     {"@type":"Question","name":"Does Cleanmail see my whole inbox?","acceptedAnswer":{"@type":"Answer","text":"No. Cleanmail gets read-only access to Gmail. Your digest only covers the senders you pick. Everyone else in your inbox stays untouched. Full details are in our Privacy Policy."}},
     {"@type":"Question","name":"Does Cleanmail change my actual Gmail?","acceptedAnswer":{"@type":"Answer","text":"No. Cleanmail never touches your inbox. It doesn't move, label, delete, or rearrange a single email, so your Gmail looks and works exactly like it always has. Cleanmail just builds a separate, organized view alongside it."}},
     {"@type":"Question","name":"Do you sell my data or use it for ads?","acceptedAnswer":{"@type":"Answer","text":"Never. We do not sell your information, and we never use your email for advertising. You mean too much to us for that."}},
@@ -46,6 +47,11 @@ const faqSchema = {
 
     <div class="faq-section">
       <h2>Privacy and security</h2>
+
+      <details class="qa">
+        <summary class="q">Does Cleanmail work with ParentSquare and Remind?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
+        <div class="a">Yes. Turn on email notifications in ParentSquare or Remind, then pick that sender in Cleanmail like any school sender. Their messages land in your digest and their dates land on your calendar.</div>
+      </details>
 
       <details class="qa">
         <summary class="q">Does Cleanmail see my whole inbox?<svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></summary>
