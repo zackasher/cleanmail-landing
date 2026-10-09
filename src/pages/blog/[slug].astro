@@ -10,7 +10,7 @@ export function getStaticPaths() {
 }
 
 const { post } = Astro.props as { post: BlogPost };
-const { title, description, date, author } = post.frontmatter;
+const { title, description, date, author, faqs = [] } = post.frontmatter;
 const { Content } = post;
 
 const articleSchema = {
@@ -23,14 +23,33 @@ const articleSchema = {
   "publisher": { "@type": "Organization", "name": "Cleanmail", "url": SITE_URL },
   "mainEntityOfPage": `${SITE_URL}/blog/${post.slug}`,
 };
+const hasFaqs = faqs.length > 0;
+const faqSchema = hasFaqs ? {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((item) => ({ "@type": "Question", "name": item.q, "acceptedAnswer": { "@type": "Answer", "text": item.a } })),
+} : undefined;
 ---
-<BaseLayout title={`${title} | Cleanmail`} description={description}>
+<BaseLayout title={`${title} | Cleanmail`} description={description} faqSchema={faqSchema}>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <article class="ip post">
     <p class="ip-eyebrow"><a href="/blog">Blog</a></p>
     <h1>{title}</h1>
     <p class="post-byline">By {author} · {formatPostDate(date)}</p>
     <div class="post-body"><Content /></div>
+    {hasFaqs && (
+      <div class="ip-section">
+        <h2>Quick answers</h2>
+        <div class="ip-faq">
+          {faqs.map((item) => (
+            <details>
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    )}
     <div class="ip-final">
       <h2>Try Cleanmail free for {TRIAL_DAYS} days</h2>
       <p>School and activity email, sorted by kid, with every date on your family calendar.</p>

@@ -1,5 +1,6 @@
 // Posts are Markdown files in src/content/blog. A post with `draft: true` is never built.
-export type BlogFrontmatter = { title: string; description: string; date: string; author: string; draft?: boolean };
+export type BlogFaq = { q: string; a: string };
+export type BlogFrontmatter = { title: string; description: string; date: string; author: string; keyword?: string; faqs?: BlogFaq[]; draft?: boolean };
 export type BlogPost = { slug: string; frontmatter: BlogFrontmatter; Content: any };
 
 const postModules = import.meta.glob("./content/blog/*.md", { eager: true }) as Record<string, { frontmatter: BlogFrontmatter; Content: any }>;
