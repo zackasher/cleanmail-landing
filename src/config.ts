@@ -18,3 +18,4 @@ export const MAPLE_SHUTDOWN_DATE = "December 31, 2026";
 export const FAMBOT_FACTS_CHECKED_ON = "October 9, 2026";
 export const YOUTUBE_VIDEO_URL = "https://www.youtube.com/watch?v=WnpRfSZfQ8o";
 export const SITE_URL = "https://cleanmailapp.com";
+export const CLARITY_PROJECT_ID = "yvohvnfbnr";
