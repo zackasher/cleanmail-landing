@@ -20,7 +20,7 @@ When you first open Cleanmail, you'll be asked to sign in with Google and grant 
 
 ### How does billing work?
 
-Cleanmail is a single monthly subscription, purchased through the App Store and billed by Apple to your Apple Account. New accounts start with a 14-day free trial; if you don't cancel before the trial ends, it converts automatically to a paid subscription. Your payment method, billing details, and receipts all live in your Apple subscription settings.
+Cleanmail is a subscription, monthly or yearly, purchased through the App Store and billed by Apple to your Apple Account. New accounts start with a 14-day free trial; if you don't cancel before the trial ends, it converts automatically to a paid subscription. Your payment method, billing details, and receipts all live in your Apple subscription settings.
 
 ### How do I cancel my subscription?
 
