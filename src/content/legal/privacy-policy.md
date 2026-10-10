@@ -33,7 +33,7 @@ We collect only the information needed to provide and improve Cleanmail.
 - Error reports: when the app hits an error, a short technical description of where it happened and what went wrong in the code, the app and update version, and your device platform, recorded with a random install identifier and, once you sign in, your account. They never include email content, names, event details, or sign-in tokens. Error reports are deleted after 30 days.
 - Referrals: if you sign up with another member's referral code, we record the link between your account and theirs so we can reward them. They are notified when a friend they invited gets a first digest and first subscribes, and receive their reward if you stay subscribed. These notifications never include your name, email, or any of your content. Each member's referral code is a random six-character code.
 
-**Our website:** Our website uses Microsoft Clarity to understand how visitors use the site. Clarity uses cookies and collects usage data such as clicks and scrolling. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement).
+**Our website:** Our website uses Microsoft Clarity to understand how visitors use the site. Clarity uses cookies and collects usage data such as clicks and scrolling. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement). Our website also uses the Reddit and Meta pixels to measure how our ads perform. They use cookies to note page visits and taps on the App Store button. See [Reddit's privacy policy](https://www.reddit.com/policies/privacy-policy) and [Meta's privacy policy](https://www.facebook.com/privacy/policy/).
 
 ---
 
