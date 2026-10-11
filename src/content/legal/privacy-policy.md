@@ -31,6 +31,7 @@ We collect only the information needed to provide and improve Cleanmail.
 - Server-side diagnostic logs recording account identifiers, timestamps, and whether an operation succeeded or failed. These contain no email content. The Cleanmail app uses no third-party analytics, advertising, or crash-reporting service.
 - Setup progress: which setup steps you reached, whether you viewed or started a plan, whether sign-in completed (and if it did not, Apple's error code, your iOS version, and whether you are on an iPhone or iPad), and, if you choose to answer, a reason for stopping picked from a short fixed list, recorded with a random install identifier and, once you sign in, your account. It never includes email content, names, or search terms.
 - Error reports: when the app hits an error, a short technical description of where it happened and what went wrong in the code, the app and update version, and your device platform, recorded with a random install identifier and, once you sign in, your account. They never include email content, names, event details, or sign-in tokens. Error reports are deleted after 30 days.
+- App version and activity: the app and update version you are running, your device platform, and when you last opened the app or returned to it, kept with your account so we can see whether a fix has reached you and how many people use the app. It is one record per account, replaced each time, and never includes email content.
 - Referrals: if you sign up with another member's referral code, we record the link between your account and theirs so we can reward them. They are notified when a friend they invited gets a first digest and first subscribes, and receive their reward if you stay subscribed. These notifications never include your name, email, or any of your content. Each member's referral code is a random six-character code.
 
 **Our website:** Our website uses Microsoft Clarity to understand how visitors use the site. Clarity uses cookies and collects usage data such as clicks and scrolling. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement). Our website also uses the Reddit and Meta pixels to measure how our ads perform. They use cookies to note page visits and taps on the App Store button. See [Reddit's privacy policy](https://www.reddit.com/policies/privacy-policy) and [Meta's privacy policy](https://www.facebook.com/privacy/policy/).
@@ -68,6 +69,7 @@ We use your information solely to provide and improve Cleanmail:
 - Process subscription payments and manage your account.
 - Diagnose and resolve technical issues.
 - Understand where people get stuck during setup, so we can make it easier.
+- Count how many people use the app.
 
 We do not sell, rent, or share your personal information with third parties for marketing purposes.
 
