@@ -1,4 +1,5 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import BlogReads from "../components/BlogReads.astro";
@@ -39,7 +40,7 @@ const faqSchema = {
 };
 ---
 <BaseLayout
-  title="Dedicated Two-Way Google Calendar Sync | Cleanmail"
+  title={pageTitle("Two-Way Google Calendar Sync")}
   description="Dates from school email go to Google Calendar, and your edits and deletes in Google come back to Cleanmail automatically."
   faqSchema={faqSchema}
 >

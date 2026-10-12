@@ -1,4 +1,5 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
 import CTA from "../components/CTA.astro";
@@ -15,7 +16,7 @@ const voiceBars = [
   { left: 70.91, top: 46.79, height: 4.42, color: "#E5C2A1" },
 ];
 ---
-<BaseLayout title="Features | Cleanmail" description="The mail and events that matter, sorted, and already on your calendar.">
+<BaseLayout title={pageTitle("Features")} description="The mail and events that matter, sorted, and already on your calendar.">
   <section class="features-show">
     <p class="eyebrow">Features</p>
     <h1 class="show-title">Just what you <span class="pop">need</span>. Nothing you don't.</h1>

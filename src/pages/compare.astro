@@ -1,4 +1,5 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import Mark from "../components/Mark.astro";
@@ -97,7 +98,7 @@ const faqSchema = {
 };
 ---
 <BaseLayout
-  title="Cleanmail vs Skylight vs Cozi: Family Calendars Compared | Cleanmail"
+  title={pageTitle("Cleanmail vs Skylight vs Cozi")}
   description="Cleanmail vs Skylight vs Cozi: which family calendar app has two-way Google sync and turns school email into events automatically."
   faqSchema={faqSchema}
 >

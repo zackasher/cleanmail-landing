@@ -1,4 +1,5 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
@@ -22,7 +23,7 @@ const features = [
 
 ---
 <BaseLayout
-  title="Family Calendar App With Dedicated Two-Way Google Calendar Sync | Cleanmail"
+  title={pageTitle("Family Calendar App for Gmail")}
   description={`A family calendar app for iPhone that writes itself from school email, with two-way Google sync. ${TRIAL_DAYS}-day free trial, then ${PRICE_MONTHLY}/month or ${PRICE_YEARLY}/year.`}
 >
   <section class="ip">

@@ -1,8 +1,9 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/info-page.css";
 ---
-<BaseLayout title="Page not found | Cleanmail" description="That page doesn't exist." noindex={true}>
+<BaseLayout title={pageTitle("Page not found")} description="That page doesn't exist." noindex={true}>
   <section class="ip">
     <p class="ip-eyebrow">404</p>
     <h1>That page took a sick day.</h1>

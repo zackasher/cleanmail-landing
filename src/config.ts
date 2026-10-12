@@ -23,3 +23,4 @@ export const CLARITY_PROJECT_ID = "yvohvnfbnr";
 export const BLOG_READS_HEADING = "From the blog";
 export const BLOG_SLUG_SCHOOL_EVENTS_CALENDAR = "add-school-events-to-google-calendar-automatically";
 export const BLOG_SLUG_STOP_MISSING_EMAILS = "how-to-stop-missing-school-emails";
+export const APP_STORE_NAME = "Cleanmail: Family Inbox";

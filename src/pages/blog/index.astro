@@ -1,11 +1,12 @@
 ---
+import { pageTitle } from "../../page-title";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { publishedPosts, formatPostDate } from "../../data-blog";
 import "../../styles/info-page.css";
 
 const posts = publishedPosts();
 ---
-<BaseLayout title="Blog: School Email, Family Calendars, and Busy Weeks | Cleanmail" description="Practical help for parents juggling school email, activity schedules, and a shared family calendar. From the team behind Cleanmail.">
+<BaseLayout title={pageTitle("Blog: School Email and Calendars")} description="Practical help for parents juggling school email, activity schedules, and a shared family calendar. From the team behind Cleanmail.">
   <section class="ip">
     <p class="ip-eyebrow">Blog</p>
     <h1>Help for the busiest inbox in the house.</h1>

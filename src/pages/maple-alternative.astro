@@ -1,4 +1,5 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import TrustDeal from "../components/TrustDeal.astro";
@@ -42,7 +43,7 @@ const faqSchema = {
 };
 ---
 <BaseLayout
-  title="Leaving Maple? A Home for Your School Email | Cleanmail"
+  title={pageTitle("Maple Alternative for School Email")}
   description={`Maple closes ${MAPLE_SHUTDOWN_DATE}. Cleanmail turns school email into a digest sorted by kid, with every date on a calendar that syncs with Google.`}
   faqSchema={faqSchema}
 >

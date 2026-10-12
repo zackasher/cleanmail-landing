@@ -1,8 +1,9 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PayResult from "../components/PayResult.astro";
 ---
-<BaseLayout title="You're all set | Cleanmail" description="Your Cleanmail subscription is active." noindex={true}>
+<BaseLayout title={pageTitle("You're all set")} description="Your Cleanmail subscription is active." noindex={true}>
   <PayResult
     variant="success"
     title="You're all set."

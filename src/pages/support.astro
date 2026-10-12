@@ -1,8 +1,9 @@
 ---
+import { pageTitle } from "../page-title";
 import LegalLayout from "../layouts/LegalLayout.astro";
 import { Content } from "../content/legal/support.md";
 ---
 
-<LegalLayout title="Support — Cleanmail">
+<LegalLayout title={pageTitle("Support")}>
   <Content />
 </LegalLayout>

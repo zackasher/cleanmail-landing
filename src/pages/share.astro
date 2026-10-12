@@ -1,4 +1,5 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import { ICON_PATHS } from "../data-icons";
@@ -50,7 +51,7 @@ const finePrint = [
 ];
 ---
 <BaseLayout
-  title="Share Cleanmail, Get 2 Weeks Free | Cleanmail"
+  title={pageTitle("Share Cleanmail, Get 2 Weeks Free")}
   description="Give the gift of Cleanmail. Share your code with a friend and get 2 weeks of Cleanmail free."
 >
   <section class="ip">

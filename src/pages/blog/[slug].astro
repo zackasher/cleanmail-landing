@@ -1,4 +1,5 @@
 ---
+import { pageTitle } from "../../page-title";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { publishedPosts, formatPostDate, type BlogPost } from "../../data-blog";
@@ -30,7 +31,7 @@ const faqSchema = hasFaqs ? {
   "mainEntity": faqs.map((item) => ({ "@type": "Question", "name": item.q, "acceptedAnswer": { "@type": "Answer", "text": item.a } })),
 } : undefined;
 ---
-<BaseLayout title={`${title} | Cleanmail`} description={description} faqSchema={faqSchema}>
+<BaseLayout title={pageTitle(title)} description={description} faqSchema={faqSchema}>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <article class="ip post">
     <p class="ip-eyebrow"><a href="/blog">Blog</a></p>

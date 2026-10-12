@@ -1,8 +1,9 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PayResult from "../components/PayResult.astro";
 ---
-<BaseLayout title="Changes saved | Cleanmail" description="Your billing changes are saved." noindex={true}>
+<BaseLayout title={pageTitle("Changes saved")} description="Your billing changes are saved." noindex={true}>
   <PayResult
     variant="success"
     title="All changes saved."

@@ -2,7 +2,7 @@
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
-import { CLARITY_PROJECT_ID } from "../config";
+import { CLARITY_PROJECT_ID, APP_STORE_URL, APP_STORE_NAME } from "../config";
 export interface Props {
   title: string;
   description?: string;
@@ -100,12 +100,15 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
     "@type": "MobileApplication",
-    "name": "Cleanmail",
-    "alternateName": "Cleanmail: Family Inbox",
+    "name": APP_STORE_NAME,
+    "alternateName": "Cleanmail",
     "disambiguatingDescription":"Family inbox app for parents by Calibrate LLC. Not affiliated with Clean Email (inbox cleanup) or CleanMail.dev (email verification).",
     "applicationCategory": "LifestyleApplication",
     "operatingSystem": "iOS",
     "url": "https://cleanmailapp.com",
+    "installUrl": APP_STORE_URL,
+    "downloadUrl": APP_STORE_URL,
+    "sameAs": [APP_STORE_URL],
     "image": "https://cleanmailapp.com/og.png",
     "screenshot": "https://cleanmailapp.com/Digest_Sample.png",
     "author": { "@type": "Organization", "name": "Calibrate LLC" },
@@ -116,13 +119,15 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
         "@type": "Offer",
         "price": "6.99",
         "priceCurrency": "USD",
-        "description": "6.99 US dollars per month with a 14-day free trial"
+        "description": "6.99 US dollars per month with a 14-day free trial",
+        "url": APP_STORE_URL
       },
       {
         "@type": "Offer",
         "price": "68.99",
         "priceCurrency": "USD",
-        "description": "68.99 US dollars per year, two months free, with a 14-day free trial"
+        "description": "68.99 US dollars per year, two months free, with a 14-day free trial",
+        "url": APP_STORE_URL
       }
     ],
     "featureList": [

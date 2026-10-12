@@ -1,4 +1,5 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
 import CTA from "../components/CTA.astro";
@@ -22,7 +23,7 @@ const newWay = [
 ];
 ---
 <BaseLayout
-  title="How It Works | Cleanmail"
+  title={pageTitle("How It Works")}
   description="See how Cleanmail turns your school, camp, and sports email into one clean digest, sorted by kid, with every date on your Google Calendar."
 >
   <section class="hiw">

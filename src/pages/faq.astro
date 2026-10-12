@@ -1,4 +1,5 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import BlogReads from "../components/BlogReads.astro";
@@ -38,7 +39,7 @@ const faqSchema = {
 };
 ---
 <BaseLayout
-  title="FAQ | Cleanmail"
+  title={pageTitle("FAQ")}
   description="Answers about Cleanmail: how your data is handled, how plans work, and how it works for your whole family."
   faqSchema={faqSchema}
 >

@@ -1,8 +1,9 @@
 ---
+import { pageTitle } from "../page-title";
 import LegalLayout from "../layouts/LegalLayout.astro";
 import { Content } from "../content/legal/privacy-policy.md";
 ---
 
-<LegalLayout title="Privacy Policy — Cleanmail">
+<LegalLayout title={pageTitle("Privacy Policy")}>
   <Content />
 </LegalLayout>

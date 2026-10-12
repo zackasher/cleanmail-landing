@@ -1,4 +1,5 @@
 ---
+import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import { REFERRAL_CODE_PATTERN, REFERRAL_PATH_PREFIX } from "../config";
@@ -9,7 +10,7 @@ const REDEEM_HINT = "After you sign in, tap 'Have a code?' on the plan screen an
 const COPY_LABEL = "Copy";
 const COPIED_LABEL = "Copied";
 ---
-<BaseLayout title="You're invited | Cleanmail" description={PITCH} noindex={true} noTracking={true}>
+<BaseLayout title={pageTitle("You're invited")} description={PITCH} noindex={true} noTracking={true}>
   <section class="invite">
     <div class="invite-card">
       <img class="invite-logo" src="/logo.png" alt="Cleanmail" />
