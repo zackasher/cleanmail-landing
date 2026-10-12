@@ -2,7 +2,7 @@
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
-import { CLARITY_PROJECT_ID, APP_STORE_URL, APP_STORE_NAME } from "../config";
+import { CLARITY_PROJECT_ID, APP_STORE_URL, APP_STORE_NAME, SOCIAL_PROFILE_URLS } from "../config";
 export interface Props {
   title: string;
   description?: string;
@@ -94,6 +94,7 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
     "legalName": "Calibrate LLC",
     "url": "https://cleanmailapp.com",
     "logo": "https://cleanmailapp.com/logo.png",
+    "sameAs": [...SOCIAL_PROFILE_URLS, APP_STORE_URL],
     "founder": { "@type": "Person", "name": "Zachary Asher" },
     "description": "Cleanmail turns school, camp, and sports emails into one AI-powered digest organized by person and activity, with every date synced to your calendar."
   })} />
