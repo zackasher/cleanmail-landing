@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
 import CTA from "../components/CTA.astro";
+import BlogReads from "../components/BlogReads.astro";
+import { BLOG_SLUG_STOP_MISSING_EMAILS } from "../config";
 
 const oldWay = [
   "Forward emails to an app, one at a time",
@@ -119,6 +121,8 @@ const newWay = [
         </ul>
       </div>
     </div>
+
+    <BlogReads slugs={[BLOG_SLUG_STOP_MISSING_EMAILS]} />
 
     <div class="final">
       <h2>See it for yourself</h2>

@@ -19,3 +19,7 @@ export const FAMBOT_FACTS_CHECKED_ON = "October 9, 2026";
 export const YOUTUBE_VIDEO_URL = "https://www.youtube.com/watch?v=WnpRfSZfQ8o";
 export const SITE_URL = "https://cleanmailapp.com";
 export const CLARITY_PROJECT_ID = "yvohvnfbnr";
+
+export const BLOG_READS_HEADING = "From the blog";
+export const BLOG_SLUG_SCHOOL_EVENTS_CALENDAR = "add-school-events-to-google-calendar-automatically";
+export const BLOG_SLUG_STOP_MISSING_EMAILS = "how-to-stop-missing-school-emails";

@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import BlogReads from "../components/BlogReads.astro";
+import { BLOG_SLUG_SCHOOL_EVENTS_CALENDAR, BLOG_SLUG_STOP_MISSING_EMAILS } from "../config";
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -190,6 +192,8 @@ const faqSchema = {
         <div class="a">Email <a href="mailto:support@cleanmailapp.com">support@cleanmailapp.com</a> or visit our <a href="/support">Support</a> page. A real person reads every message.</div>
       </details>
     </div>
+
+    <BlogReads slugs={[BLOG_SLUG_SCHOOL_EVENTS_CALENDAR, BLOG_SLUG_STOP_MISSING_EMAILS]} />
 
     <div class="final">
       <h2>Still have a question?</h2>

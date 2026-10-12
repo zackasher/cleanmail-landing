@@ -1,6 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
+import BlogReads from "../components/BlogReads.astro";
+import { BLOG_SLUG_SCHOOL_EVENTS_CALENDAR } from "../config";
 import Mark from "../components/Mark.astro";
 import SyncDiagram from "../components/SyncDiagram.astro";
 import { ICON_PATHS } from "../data-icons";
@@ -90,6 +92,8 @@ const faqSchema = {
         <a href="/compare">Cleanmail vs Skylight vs Cozi</a>
       </div>
     </div>
+
+    <BlogReads slugs={[BLOG_SLUG_SCHOOL_EVENTS_CALENDAR]} />
 
     <div class="ip-final">
       <h2>Let your calendar keep itself</h2>
