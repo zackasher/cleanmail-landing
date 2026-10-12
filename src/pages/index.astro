@@ -12,7 +12,7 @@ const explore = [
   { href: "/family-calendar-app", icon: ICON_PATHS.calendarHeart, color: "var(--teal)", title: "The family calendar that writes itself", body: "Every feature and the price, at a glance." },
 ];
 ---
-<BaseLayout title="Cleanmail: Family Inbox | School Email Digest and Family Calendar">
+<BaseLayout title="Cleanmail: Your family calendar, on autopilot" description="Cleanmail reads the school, camp and sports email in your Gmail, builds your family calendar and syncs it with Google Calendar. 14-day free trial.">
   <Hero />
 
   <a class="gift-banner" href="/share">
@@ -48,6 +48,7 @@ const explore = [
 
   <section class="story" id="how">
      <hr class="story-rule" />
+    <h2 class="story-title">Stop reading every email,<br />just read <span class="accent">the words that matter.</span></h2>
     <div class="story-grid">
       <div class="story-visual">
         <PhoneFrame>
@@ -118,7 +119,9 @@ const explore = [
   .story-sig{margin-top:6px;font-size:14px;font-weight:500;color:var(--muted)}
   .hero-video{width:100%;height:100%;object-fit:cover;display:block}
   .story-rule{height:1px;border:0;width:calc(100% - 48px);max-width:860px;margin:24px auto;background:linear-gradient(90deg, transparent, rgba(74,111,227,.5) 22%, rgba(74,111,227,.5) 78%, transparent)}
-  .story-rule:first-of-type{margin-bottom:56px}
+  .story-rule:first-of-type{margin-bottom:40px}
+  .story-title{margin:0 auto 44px;max-width:760px;padding:0 24px;text-align:center;font-size:clamp(26px,3.6vw,40px);font-weight:400;line-height:1.15;letter-spacing:-.9px;color:var(--navy)}
+  .story-title .accent{color:var(--purple)}
   .story-rule:last-of-type{margin-top:56px}
   @media(max-width:800px){
     .story-grid{flex-direction:column;align-items:center;gap:30px}
