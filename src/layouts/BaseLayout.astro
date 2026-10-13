@@ -2,7 +2,7 @@
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
-import { CLARITY_PROJECT_ID, APP_STORE_URL, APP_STORE_NAME, SOCIAL_PROFILE_URLS } from "../config";
+import { CLARITY_PROJECT_ID, APP_STORE_URL, APP_STORE_NAME, SOCIAL_PROFILE_URLS, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH } from "../config";
 export interface Props {
   title: string;
   description?: string;
@@ -35,41 +35,59 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   <meta name="facebook-domain-verification" content="9sqy4uylfm7ujcai4ailmlpdx9iopm" />
 
   {!noTracking && (
-  <Fragment>
-  <!-- Microsoft Clarity -->
-  <script is:inline define:vars={{ clarityProjectId: CLARITY_PROJECT_ID }}>
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", clarityProjectId);
-  </script>
-  <!-- Reddit Pixel -->
-  <script is:inline>
-    !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);
-    rdt('init','a2_jpb5d247ugq0');
-    document.addEventListener('astro:page-load', function () { if (/^\/r(\/|$)/.test(location.pathname)) return; rdt('track', 'PageVisit'); });
-    document.addEventListener('click', function (e) {
-      var el = e.target;
-      if (!el || !el.closest) return;
-      if (/^\/r(\/|$)/.test(location.pathname)) return;
-      if (el.closest('a[href*="apps.apple.com"]')) rdt('track', 'SignUp');
-    });
-  </script>
+  <script is:inline define:vars={{ clarityProjectId: CLARITY_PROJECT_ID, blockedCountryCodes: TRACKING_BLOCKED_COUNTRY_CODES, blockedTimeZonePrefixes: TRACKING_BLOCKED_TIME_ZONE_PREFIXES, countryLookupPath: VISITOR_COUNTRY_LOOKUP_PATH }}>
+    // Ad and analytics tags load only once we know the visitor is outside the EEA, UK and Switzerland.
+    // Any doubt (European time zone, lookup failure) means no tags: a missed page view is cheaper than an unconsented cookie.
+    (function () {
+      var timeZone = "";
+      try { timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (error) {}
+      var inBlockedTimeZone = blockedTimeZonePrefixes.some(function (prefix) { return timeZone.indexOf(prefix) === 0; });
+      if (inBlockedTimeZone) return;
+      fetch(countryLookupPath, { cache: "no-store" })
+        .then(function (response) { return response.ok ? response.text() : ""; })
+        .then(function (traceText) {
+          var countryMatch = /^loc=([A-Z]{2})$/m.exec(traceText);
+          if (!countryMatch) return;
+          if (blockedCountryCodes.indexOf(countryMatch[1]) !== -1) return;
+          loadTrackingTags();
+        })
+        .catch(function () {});
 
-  <!-- Meta Pixel -->
-  <script is:inline>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1107558851670464');
-    document.addEventListener('astro:page-load', function () { if (/^\/r(\/|$)/.test(location.pathname)) return; fbq('track', 'PageView'); });
-    document.addEventListener('click', function (e) {
-      var el = e.target;
-      if (!el || !el.closest) return;
-      if (/^\/r(\/|$)/.test(location.pathname)) return;
-      if (el.closest('a[href*="apps.apple.com"]')) fbq('track', 'Lead');
-    });
+      function isReferralPage() { return /^\/r(\/|$)/.test(location.pathname); }
+
+      function loadTrackingTags() {
+        // Microsoft Clarity
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", clarityProjectId);
+        // Reddit Pixel
+        !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);
+        rdt('init','a2_jpb5d247ugq0');
+        // Meta Pixel
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1107558851670464');
+
+        function trackPageView() {
+          if (isReferralPage()) return;
+          rdt('track', 'PageVisit');
+          fbq('track', 'PageView');
+        }
+        // The lookup finishes after the first astro:page-load, so the first page view is sent here.
+        trackPageView();
+        document.addEventListener('astro:page-load', trackPageView);
+        document.addEventListener('click', function (event) {
+          var clicked = event.target;
+          if (!clicked || !clicked.closest) return;
+          if (isReferralPage()) return;
+          if (!clicked.closest('a[href*="apps.apple.com"]')) return;
+          rdt('track', 'SignUp');
+          fbq('track', 'Lead');
+        });
+      }
+    })();
   </script>
-  </Fragment>
   )}
   {noindex && <meta name="robots" content="noindex" />}
   <title>{title}</title>

@@ -30,3 +30,10 @@ export const SOCIAL_PROFILE_URLS = [
   "https://www.threads.com/@cleanmailapp",
   "https://www.youtube.com/@getcleanmailapp",
 ];
+// EEA, UK and Switzerland. Ad and analytics tags never load for visitors here (no cookie consent banner).
+export const TRACKING_BLOCKED_COUNTRY_CODES = [
+  "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL",
+  "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "CH",
+];
+export const TRACKING_BLOCKED_TIME_ZONE_PREFIXES = ["Europe/", "Atlantic/Reykjavik", "Atlantic/Canary", "Atlantic/Madeira", "Atlantic/Azores", "Atlantic/Faroe"];
+export const VISITOR_COUNTRY_LOOKUP_PATH = "/cdn-cgi/trace";
