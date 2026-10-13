@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** October 11, 2026
+**Last updated:** October 13, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -34,7 +34,7 @@ We collect only the information needed to provide and improve Cleanmail.
 - App version and activity: the app and update version you are running, your device platform, and when you last opened the app or returned to it, kept with your account so we can see whether a fix has reached you and how many people use the app. It is one record per account, replaced each time, and never includes email content.
 - Referrals: if you sign up with another member's referral code, we record the link between your account and theirs so we can reward them. They are notified when a friend they invited gets a first digest and first subscribes, and receive their reward if you stay subscribed. These notifications never include your name, email, or any of your content. Each member's referral code is a random six-character code.
 
-**Our website:** Our website uses Microsoft Clarity to understand how visitors use the site. Clarity uses cookies and collects usage data such as clicks and scrolling. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement). Our website also uses the Reddit and Meta pixels to measure how our ads perform. They use cookies to note page visits and taps on the App Store button. See [Reddit's privacy policy](https://www.reddit.com/policies/privacy-policy) and [Meta's privacy policy](https://www.facebook.com/privacy/policy/).
+**Our website:** Our website uses Microsoft Clarity to understand how visitors use the site. Clarity uses cookies and collects usage data such as clicks and scrolling. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement). Our website also uses the Reddit and Meta pixels to measure how our ads perform. They use cookies to note page visits and taps on the App Store button. See [Reddit's privacy policy](https://www.reddit.com/policies/privacy-policy) and [Meta's privacy policy](https://www.facebook.com/privacy/policy/). None of these three load for visitors in the European Economic Area, the United Kingdom or Switzerland, or when we cannot tell where a visitor is.
 
 ---
 
@@ -86,7 +86,8 @@ Cleanmail relies on the following third parties to provide its service. Each rec
 | **Google** (Google LLC) | Sign-in, Gmail access, Calendar sync | OAuth tokens; Gmail messages from selected senders; the individual message you open via "View Email"; Calendar event metadata |
 | **Apple** (Apple Inc.) | Subscription billing via in-app purchase | Purchase and subscription status (we never see card numbers or your Apple Account details) |
 | **Resend** (Resend, Inc.) | Transactional email delivery (household invitations) | The recipient email address you enter when inviting a household member, and the inviter's display name |
-| **Apple Push Notification service** | Delivery of push notifications | Anonymous device token |
+| **Expo** (650 Industries, Inc.) | Push notification relay to Apple | Your device push token and the notification text, such as an event title in a reminder |
+| **Apple Push Notification service** | Delivery of push notifications | Device push token and the notification text |
 | **Trigger.dev** | Scheduled job execution for digest delivery | User ID and digest ID at scheduled times: no email content |
 
 Anthropic is the only third party that receives your email content, your scanned documents, or the text of your voice notes, and it receives them only to produce the summaries and events you asked for. We do not send any of that content to any other AI service. Supabase stores the resulting summaries and events, not the raw email. The full body of an email you open via "View Email" is retrieved from Google and rendered on your device; it is not stored on our servers (see Section 5).
@@ -160,7 +161,7 @@ Depending on your jurisdiction, you may have the right to:
 - **Export** your data in a portable format: contact support@cleanmailapp.com.
 - **Withdraw consent** for Google API access at any time via [Google account permissions](https://myaccount.google.com/permissions). Revoking access will stop Cleanmail from generating new digests.
 
-Residents of California (CCPA) and the European Union (GDPR) have additional rights under applicable law. To exercise any of these rights, contact support@cleanmailapp.com.
+Residents of California (CCPA) have additional rights under applicable law; contact support@cleanmailapp.com to exercise them. If you are in the European Economic Area, the United Kingdom or Switzerland, Section 13 explains your rights under the GDPR and how to use them.
 
 ---
 
@@ -190,7 +191,30 @@ We may update this Privacy Policy from time to time. Material changes will be co
 
 ---
 
-## 13. Contact
+## 13. If You Are in the EEA, the UK or Switzerland (GDPR)
+
+**Who is responsible for your data.** Calibrate LLC, a United States company, is the controller of the personal data described in this policy.
+
+**Who processes it for us.** The main companies that process your data on our behalf are Google (Gmail and Google Calendar), Supabase (storage and our servers), Anthropic (reading the emails from senders you pick, and the photos, PDFs and voice notes you send, to write your digest and find events) and Apple (payments and push notifications). Section 4 lists every company we use and exactly what each one receives.
+
+**Where your data is stored and processed.** In the United States. Our database runs in Supabase's US East (Ohio) region, and the companies above process data in the United States. Your data is transferred to the United States because that is where the service you signed up for runs.
+
+**Why we are allowed to use it (legal basis).**
+- **The service you signed up for.** We use your account details, the people, activities and senders you set up, your digests, your events and your subscription status to provide Cleanmail to you and your household.
+- **Your consent.** We read your Gmail and use your Google Calendar only after you allow it on Google's sign-in screen, and we send email content to Anthropic only after you agree on Cleanmail's AI screen. You can withdraw consent at any time: turn off AI in Settings, remove Cleanmail's access in your [Google account permissions](https://myaccount.google.com/permissions), or delete your account. Withdrawing consent stops future processing; it does not affect processing done before.
+- **The law.** We keep or disclose information when the law requires it (Section 11).
+
+**How long we keep it.** Digest history is kept for the period you choose in Settings, up to 60 days, and deleted automatically within a few days after that. Items you delete go to Trash and leave it after 3 days. Your profile, setup, and calendar events stay until you delete them or delete your account. Section 7 describes deletion in full.
+
+**Your rights.** You can ask for a copy of your data, ask us to correct or delete it, ask us to limit or stop using it, and withdraw your consent. You also have the right to complain to the data protection authority in your country.
+
+**How to get a copy of your data or delete it.**
+- **Delete:** open Cleanmail, go to Settings, then Delete Account. Deletion is immediate and covers everything listed in Section 7.
+- **Get a copy, or anything else:** email support@cleanmailapp.com from the address on your account. We reply within one month.
+
+---
+
+## 14. Contact
 
 Questions about this Privacy Policy:
 
