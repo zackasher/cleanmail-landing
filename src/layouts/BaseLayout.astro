@@ -2,7 +2,7 @@
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
-import { CLARITY_PROJECT_ID, APP_STORE_URL, APP_STORE_NAME, SOCIAL_PROFILE_URLS, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH } from "../config";
+import { CLARITY_PROJECT_ID, APP_STORE_URL, APP_STORE_NAME, SOCIAL_PROFILE_URLS, GOOGLE_TAG_ID, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH } from "../config";
 export interface Props {
   title: string;
   description?: string;
@@ -35,7 +35,7 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   <meta name="facebook-domain-verification" content="9sqy4uylfm7ujcai4ailmlpdx9iopm" />
 
   {!noTracking && (
-  <script is:inline define:vars={{ clarityProjectId: CLARITY_PROJECT_ID, blockedCountryCodes: TRACKING_BLOCKED_COUNTRY_CODES, blockedTimeZonePrefixes: TRACKING_BLOCKED_TIME_ZONE_PREFIXES, countryLookupPath: VISITOR_COUNTRY_LOOKUP_PATH }}>
+  <script is:inline define:vars={{ clarityProjectId: CLARITY_PROJECT_ID, googleTagId: GOOGLE_TAG_ID, blockedCountryCodes: TRACKING_BLOCKED_COUNTRY_CODES, blockedTimeZonePrefixes: TRACKING_BLOCKED_TIME_ZONE_PREFIXES, countryLookupPath: VISITOR_COUNTRY_LOOKUP_PATH }}>
     // Ad and analytics tags load only once we know the visitor is outside the EEA, UK and Switzerland.
     // Any doubt (European time zone, lookup failure) means no tags: a missed page view is cheaper than an unconsented cookie.
     (function () {
@@ -62,6 +62,15 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
         })(window, document, "clarity", "script", clarityProjectId);
+        // Google tag (Analytics)
+        var googleTagScript = document.createElement("script");
+        googleTagScript.async = true;
+        googleTagScript.src = "https://www.googletagmanager.com/gtag/js?id=" + googleTagId;
+        document.head.appendChild(googleTagScript);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { window.dataLayer.push(arguments); };
+        gtag('js', new Date());
+        gtag('config', googleTagId, { send_page_view: false });
         // Reddit Pixel
         !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);
         rdt('init','a2_jpb5d247ugq0');
@@ -69,10 +78,15 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '1107558851670464');
 
+        // The first page view can arrive from both the call below and astro:page-load, so each URL is sent once.
+        var lastTrackedUrl = "";
         function trackPageView() {
           if (isReferralPage()) return;
+          if (lastTrackedUrl === location.href) return;
+          lastTrackedUrl = location.href;
           rdt('track', 'PageVisit');
           fbq('track', 'PageView');
+          gtag('event', 'page_view', { page_location: location.href, page_title: document.title });
         }
         // The lookup finishes after the first astro:page-load, so the first page view is sent here.
         trackPageView();
