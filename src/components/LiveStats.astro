@@ -1,0 +1,62 @@
+---
+import { SUPABASE_PROJECT_URL, SUPABASE_PUBLISHABLE_KEY, LIVE_STATS_FUNCTION_PATH, MINUTES_SAVED_PER_EMAIL } from "../config";
+const statsUrl = `${SUPABASE_PROJECT_URL}${LIVE_STATS_FUNCTION_PATH}`;
+---
+<section class="live-stats" id="live-stats" hidden aria-label="Cleanmail in the last 30 days">
+  <p class="live-kicker"><span class="live-dot" aria-hidden="true"></span>Live: the last 30 days</p>
+  <div class="live-grid">
+    <div class="live-stat"><strong data-stat="emails">0</strong><span>school emails summed up</span></div>
+    <div class="live-stat"><strong data-stat="events">0</strong><span>dates put on family calendars</span></div>
+    <div class="live-stat"><strong data-stat="hours">0</strong><span>hours saved for parents</span></div>
+  </div>
+  <p class="live-note">From real households, updated every time you load this page. Time saved is estimated at {MINUTES_SAVED_PER_EMAIL} minutes an email.</p>
+</section>
+
+<script is:inline define:vars={{ statsUrl, publishableKey: SUPABASE_PUBLISHABLE_KEY, minutesPerEmail: MINUTES_SAVED_PER_EMAIL }}>
+  (function () {
+    var section = document.getElementById("live-stats");
+    if (!section) return;
+    // Any failure leaves the section hidden: no number beats a wrong or zero number.
+    fetch(statsUrl, { method: "POST", headers: { apikey: publishableKey, "Content-Type": "application/json" }, body: "{}" })
+      .then(function (response) { return response.ok ? response.json() : null; })
+      .then(function (rows) {
+        var stats = rows && rows[0];
+        if (!stats || !stats.emails_last_30_days) return;
+        var values = {
+          emails: stats.emails_last_30_days,
+          events: stats.events_last_30_days,
+          hours: Math.round((stats.emails_last_30_days * minutesPerEmail) / 60),
+        };
+        section.hidden = false;
+        section.querySelectorAll("[data-stat]").forEach(function (element) {
+          countUp(element, values[element.getAttribute("data-stat")] || 0);
+        });
+      })
+      .catch(function () {});
+
+    function countUp(element, target) {
+      var durationMs = 1200;
+      var startTime = performance.now();
+      function step(now) {
+        var progress = Math.min(1, (now - startTime) / durationMs);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        element.textContent = Math.round(target * eased).toLocaleString("en-US");
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+  })();
+</script>
+
+<style>
+  .live-stats{max-width:860px;margin:0 auto 34px;padding:22px 20px 18px;background:#fff;border:1.5px solid var(--line);border-radius:20px;text-align:center;box-shadow:0 12px 30px rgba(74,111,227,.08)}
+  .live-kicker{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--purple);margin:0 0 12px}
+  .live-dot{width:9px;height:9px;border-radius:50%;background:#2fbf71;box-shadow:0 0 0 0 rgba(47,191,113,.5);animation:live-pulse 1.8s infinite}
+  @keyframes live-pulse{0%{box-shadow:0 0 0 0 rgba(47,191,113,.5)}70%{box-shadow:0 0 0 9px rgba(47,191,113,0)}100%{box-shadow:0 0 0 0 rgba(47,191,113,0)}}
+  .live-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .live-stat strong{display:block;font-size:40px;line-height:1.1;font-weight:700;color:var(--navy);font-variant-numeric:tabular-nums}
+  .live-stat span{display:block;margin-top:4px;font-size:15px;color:var(--ink)}
+  .live-note{margin:14px 0 0;font-size:12.5px;color:var(--muted)}
+  @media (max-width:640px){.live-grid{grid-template-columns:1fr;gap:14px}.live-stat strong{font-size:34px}.live-stats{margin:0 16px 28px}}
+  @media (prefers-reduced-motion:reduce){.live-dot{animation:none}}
+</style>

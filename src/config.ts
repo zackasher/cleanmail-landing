@@ -38,3 +38,8 @@ export const TRACKING_BLOCKED_COUNTRY_CODES = [
 ];
 export const TRACKING_BLOCKED_TIME_ZONE_PREFIXES = ["Europe/", "Atlantic/Reykjavik", "Atlantic/Canary", "Atlantic/Madeira", "Atlantic/Azores", "Atlantic/Faroe"];
 export const VISITOR_COUNTRY_LOOKUP_PATH = "/cdn-cgi/trace";
+export const SUPABASE_PROJECT_URL = "https://cxnxjnuvbsyymhxkrmpw.supabase.co";
+export const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_SicQ5RchA4Q5YI3DevGMlQ_1XWOPRjy";
+export const LIVE_STATS_FUNCTION_PATH = "/rest/v1/rpc/site_live_stats";
+// Zack's ruling (2026-10-16): time saved is an estimate, labeled as one, at 4 minutes per email.
+export const MINUTES_SAVED_PER_EMAIL = 4;
