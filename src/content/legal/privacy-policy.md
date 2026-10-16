@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** October 13, 2026
+**Last updated:** October 16, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -34,7 +34,7 @@ We collect only the information needed to provide and improve Cleanmail.
 - App version and activity: the app and update version you are running, your device platform, and when you last opened the app or returned to it, kept with your account so we can see whether a fix has reached you and how many people use the app. It is one record per account, replaced each time, and never includes email content.
 - Referrals: if you sign up with another member's referral code, we record the link between your account and theirs so we can reward them. They are notified when a friend they invited gets a first digest and first subscribes, and receive their reward if you stay subscribed. These notifications never include your name, email, or any of your content. Each member's referral code is a random six-character code.
 
-**Our website:** Our website uses Microsoft Clarity to understand how visitors use the site. Clarity uses cookies and collects usage data such as clicks and scrolling. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement). Our website also uses the Reddit and Meta pixels to measure how our ads perform. They use cookies to note page visits and taps on the App Store button. See [Reddit's privacy policy](https://www.reddit.com/policies/privacy-policy) and [Meta's privacy policy](https://www.facebook.com/privacy/policy/). None of these three load for visitors in the European Economic Area, the United Kingdom or Switzerland, or when we cannot tell where a visitor is.
+**Our website:** Our website uses Microsoft Clarity to understand how visitors use the site. Clarity uses cookies and collects usage data such as clicks and scrolling. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement). Our website also uses the Reddit and Meta pixels to measure how our ads perform. They use cookies to note page visits and taps on the App Store button. See [Reddit's privacy policy](https://www.reddit.com/policies/privacy-policy) and [Meta's privacy policy](https://www.facebook.com/privacy/policy/). We also use Google Analytics to count visits and see which pages people read. See [Google's privacy policy](https://policies.google.com/privacy). None of these load for visitors in the European Economic Area, the United Kingdom or Switzerland, or when we cannot tell where a visitor is.
 
 ---
 
