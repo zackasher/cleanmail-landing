@@ -6,6 +6,53 @@ import CTA from "../components/CTA.astro";
 import BlogReads from "../components/BlogReads.astro";
 import { BLOG_SLUG_STOP_MISSING_EMAILS } from "../config";
 
+// The 1.0.7 onboarding: set up first, see your own first digest, then choose a plan.
+// Names and senders in these screens are invented examples, never a real family.
+const setupSteps = [
+  {
+    title: "Connect your Gmail",
+    body: "Sign in with Google and allow email and calendar access. Cleanmail only reads mail from the senders you choose, never sends or deletes anything, and never sells your information.",
+    image: "/hiw107-welcome.jpg",
+    alt: "The Cleanmail welcome screen: Inbox to calendar, automatically, with a Connect your Gmail button",
+  },
+  {
+    title: "Tell it who",
+    body: "Your kids, yourself, even the dog. Add a name and a photo for each, so everything lands in the right place.",
+    image: "/hiw107-who.jpg",
+    alt: "Choosing who to keep track of, with a child and a pet added",
+  },
+  {
+    title: "Pick their activities",
+    body: "Cleanmail suggests the activities each person gets email about: school, soccer, scouts, the vet. Tap the ones that fit, or add your own.",
+    image: "/hiw107-activities.jpg",
+    alt: "Suggested activities for each person, with school and soccer selected",
+  },
+  {
+    title: "Choose the senders",
+    body: "We find the people who email you about each activity and tag them: good senders first, quiet ones and likely junk marked so you can skip them. You check the ones that matter.",
+    image: "/hiw107-senders.jpg",
+    alt: "Senders found for each activity, tagged as good senders or possible junk",
+  },
+  {
+    title: "Watch your first digest build",
+    body: "Cleanmail reads those emails, pulls out the dates, and checks them against your Google Calendar. It usually takes under 20 seconds.",
+    image: "/hiw107-building.jpg",
+    alt: "Building your first digest, with a quick tip card about the app",
+  },
+  {
+    title: "See it before you pay",
+    body: "Your first digest is on us. You see how many emails it found and which events aren't on your calendar yet, with one card shown in full.",
+    image: "/hiw107-teaser.jpg",
+    alt: "The first digest preview: emails found, events not on the calendar yet, and one event card in full",
+  },
+  {
+    title: "Start your free trial",
+    body: "Fourteen days free, then monthly or yearly, through your Apple Account. When your trial starts, the events from your first digest land on your Google Calendar and Cleanmail keeps running on its own.",
+    image: "/hiw107-plan.jpg",
+    alt: "The plan screen: your first digest is ready, a 14-day free trial, then yearly or monthly",
+  },
+];
+
 const oldWay = [
   "Forward emails to an app, one at a time",
   "Type every date into a calendar yourself",
@@ -17,74 +64,35 @@ const oldWay = [
 const newWay = [
   "Connect Gmail once, read-only",
   "Your digest only covers the senders you pick",
-  "Works with ParentSquare and Remind email too",
+  "ParentSquare and Remind emails handled like any sender",
   "Sorted by kid and activity, shared with your household",
   "Every date on your Google Calendar, both ways",
 ];
 ---
 <BaseLayout
   title={pageTitle("How It Works")}
-  description="See how Cleanmail turns your school, camp, and sports email into one clean digest, sorted by kid, with every date on your Google Calendar."
+  description="Set up Cleanmail in a few minutes, see your first digest from your own email before you pay, then let it put every school and activity date on your Google Calendar."
 >
   <section class="hiw">
     <p class="eyebrow">How it works</p>
-    <h1>From inbox noise to one clean digest.</h1>
-    <p class="lede">Connect once, tell it who and what matters, and the inbox noise becomes one clean digest, every date already on your calendar. Four steps, then it runs on its own.</p>
+    <h1>Set it up once. See it before you pay.</h1>
+    <p class="lede">Tell Cleanmail who and what matters, pick the senders, and watch your first digest build from your own email. You see what it found before you choose a plan. Then it runs on its own.</p>
 
     <div class="steps">
-
-      <div class="step">
-        <div class="step-text">
-          <span class="step-num">Step 1</span>
-          <h2>Connect your Gmail</h2>
-          <p>Sign in with Google, read-only access only. That's the whole setup. We never sell your information, and your raw emails are never stored.</p>
+      {setupSteps.map((step, index) => (
+        <div class:list={["step", { flip: index % 2 === 1 }]}>
+          <div class="step-text">
+            <span class="step-num">Step {index + 1}</span>
+            <h2>{step.title}</h2>
+            <p>{step.body}</p>
+          </div>
+          <div class="step-visual">
+            <PhoneFrame>
+              <img class="shot" src={step.image} alt={step.alt} loading="lazy" />
+            </PhoneFrame>
+          </div>
         </div>
-        <div class="step-visual">
-          <PhoneFrame>
-            <img class="shot" src="/hiw-connect.png" alt="The Cleanmail sign-in screen, with a one-tap Google sign in." />
-          </PhoneFrame>
-        </div>
-      </div>
-
-      <div class="step flip">
-        <div class="step-text">
-          <span class="step-num">Step 2</span>
-          <h2>Start your free trial</h2>
-          <p>Fourteen days free, then monthly or yearly. One plan covers your whole household, and cancelling is easy from Settings anytime.</p>
-        </div>
-        <div class="step-visual">
-          <PhoneFrame>
-            <img class="shot" src="/hiw-plan.png" alt="The Cleanmail plan screen: a 14-day free trial timeline, then yearly or monthly" />
-          </PhoneFrame>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="step-text">
-          <span class="step-num">Step 3</span>
-          <h2>Tell it who and what matters</h2>
-          <p>Add the people you're tracking, each with their activities, then drop in the senders who email about them. Want a household member in too? Up to four people can share one digest.</p>
-        </div>
-        <div class="step-visual">
-          <PhoneFrame>
-            <img class="shot" src="/hiw-setup.png" alt="Setting up a Family section with a Dentist activity and the senders that email about it" />
-          </PhoneFrame>
-        </div>
-      </div>
-
-      <div class="step flip">
-        <div class="step-text">
-          <span class="step-num">Step 4</span>
-          <h2>Get your digest</h2>
-          <p>From then on your digest builds itself, updating as soon as an email hits your inbox, sorted by person and activity. The dates buried in those emails? Already on your Google Calendar.</p>
-        </div>
-        <div class="step-visual">
-          <PhoneFrame>
-            <img class="shot" src="/hiw-digest.png" alt="A digest sorted by person and activity, showing camp and ballet updates with upcoming events on top" />
-          </PhoneFrame>
-        </div>
-      </div>
-
+      ))}
     </div>
 
     <div class="capture">
