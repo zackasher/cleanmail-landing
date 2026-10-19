@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** October 16, 2026
+**Last updated:** October 18, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -138,7 +138,7 @@ To permanently delete your own personal data, see Section 7 (Account Deletion).
 
 Digest history is retained for the period you select in Settings (default 30 days; configurable up to 60 days). Older history is automatically deleted.
 
-You may permanently delete your account and all associated data at any time from within the app: Settings → Delete Account. Account deletion is immediate and removes:
+You may permanently delete your account and all associated data at any time from within the app: Settings → Delete Account. If you have not started a subscription or free trial yet, you can also tap Leave and delete on the plan screen. Account deletion is immediate and removes:
 - Your profile and all in-app data (people, activities, senders, digest history, events) for digests you own.
 - Profile photos from our storage.
 - Your billing records held by us. Subscriptions purchased through Apple must be canceled in your Apple Account settings; deleting your Cleanmail account does not cancel an Apple subscription.
@@ -147,6 +147,8 @@ You may permanently delete your account and all associated data at any time from
 **If you are part of a shared digest:**
 - If you are a **Household Lead** or **Household Member** (you joined someone else's digest), deleting your account removes you from that shared digest. The shared digest itself, and the content you contributed to it, remain for the Primary and the rest of the household. Your own profile and personal data are deleted, including the notes you left. Emoji reactions you left stay on the shared digest without your name.
 - If you are the **Primary** (you created the shared digest), deleting your account deletes the shared digest and all of its content for everyone in the household. Everyone else is removed and, on their next use of Cleanmail, would need to start their own digest and subscription.
+
+**If you never subscribe:** if you sign in and set up Cleanmail but never start a subscription or free trial, we may delete your account and everything set up in it after 48 hours without use. This works the same way as deleting your account yourself, including revoking our access to your Google account. So that the same Google account does not get a second free first digest, we keep a one-way scrambled copy of your email address that cannot be turned back into the address.
 
 After deletion, no recovery is possible. If you have trouble deleting your account in the app, contact support@cleanmailapp.com and we will delete it manually within 30 days.
 
@@ -204,7 +206,7 @@ We may update this Privacy Policy from time to time. Material changes will be co
 - **Your consent.** We read your Gmail and use your Google Calendar only after you allow it on Google's sign-in screen, and we send email content to Anthropic only after you agree on Cleanmail's AI screen. You can withdraw consent at any time: turn off AI in Settings, remove Cleanmail's access in your [Google account permissions](https://myaccount.google.com/permissions), or delete your account. Withdrawing consent stops future processing; it does not affect processing done before.
 - **The law.** We keep or disclose information when the law requires it (Section 11).
 
-**How long we keep it.** Digest history is kept for the period you choose in Settings, up to 60 days, and deleted automatically within a few days after that. Items you delete go to Trash and leave it after 3 days. Your profile, setup, and calendar events stay until you delete them or delete your account. Section 7 describes deletion in full.
+**How long we keep it.** Digest history is kept for the period you choose in Settings, up to 60 days, and deleted automatically within a few days after that. Items you delete go to Trash and leave it after 3 days. Your profile, setup, and calendar events stay until you delete them or delete your account. If you never start a subscription or free trial, your account may be deleted after 48 hours without use. Section 7 describes deletion in full.
 
 **Your rights.** You can ask for a copy of your data, ask us to correct or delete it, ask us to limit or stop using it, and withdraw your consent. You also have the right to complain to the data protection authority in your country.
 
