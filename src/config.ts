@@ -43,3 +43,4 @@ export const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_SicQ5RchA4Q5YI3DevGMlQ_1
 export const LIVE_STATS_FUNCTION_PATH = "/rest/v1/rpc/site_live_stats";
 // Zack's ruling (2026-10-16): time saved is an estimate, labeled as one, at 4 minutes per email.
 export const MINUTES_SAVED_PER_EMAIL = 4;
+export const BLOG_SLUG_ORGANIZE_GMAIL = "how-to-organize-school-emails-in-gmail";
