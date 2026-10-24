@@ -9,7 +9,7 @@
 ## Pages
 
 - [Features](https://cleanmailapp.com/features): digest by kid, snap a flyer, voice add and edit, cancellations, household notes and reactions, reminders
-- [How it works](https://cleanmailapp.com/how-it-works): connect Gmail, start a free trial, pick people and senders, get your digest
+- [How it works](https://cleanmailapp.com/how-it-works): connect Gmail, pick people and senders, see your first digest, then start a free trial
 - [Two-way Google Calendar sync](https://cleanmailapp.com/google-calendar-sync): what syncs back from Google and how
 - [Family calendar app](https://cleanmailapp.com/family-calendar-app): features and pricing at a glance
 - [Cleanmail vs Skylight vs Cozi](https://cleanmailapp.com/compare): side-by-side comparison with sources
