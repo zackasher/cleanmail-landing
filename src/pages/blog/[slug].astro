@@ -3,6 +3,7 @@ import { pageTitle } from "../../page-title";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { publishedPosts, formatPostDate, type BlogPost } from "../../data-blog";
+import BlogReads from "../../components/BlogReads.astro";
 import { SITE_URL, TRIAL_DAYS } from "../../config";
 import "../../styles/info-page.css";
 
@@ -13,6 +14,9 @@ export function getStaticPaths() {
 const { post } = Astro.props as { post: BlogPost };
 const { title, description, date, author, faqs = [] } = post.frontmatter;
 const { Content } = post;
+const otherPostSlugs = publishedPosts()
+  .map((publishedPost) => publishedPost.slug)
+  .filter((slug) => slug !== post.slug);
 
 const articleSchema = {
   "@context": "https://schema.org",
@@ -57,6 +61,7 @@ const faqSchema = hasFaqs ? {
       <CTA />
     </div>
   </article>
+  <BlogReads slugs={otherPostSlugs} />
   <style>
     .post .ip-eyebrow a{color:inherit;text-decoration:none}
     .post-byline{text-align:center;font-size:14px;color:var(--muted);margin:10px 0 0}
