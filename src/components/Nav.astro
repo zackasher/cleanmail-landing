@@ -7,6 +7,7 @@ const links = [
   { href: "/compare", label: "Compare" },
   { href: "/privacy", label: "Privacy" },
   { href: "/faq", label: "FAQ" },
+  { href: "/blog", label: "Blog" },
 ];
 ---
 <nav transition:persist class:list={[{ compact: !isHome }]}>
@@ -48,7 +49,7 @@ const links = [
   .mobile-menu.open{display:block}
   .mobile-menu a{display:block;padding:10px 14px;font-size:15px;color:var(--ink);text-decoration:none;border-radius:9px}
   .mobile-menu a:hover{background:var(--card);color:var(--purple)}
-  @media(max-width:860px){.seg{display:none}.burger{display:flex}}
+  @media(max-width:940px){.seg{display:none}.burger{display:flex}}
 </style>
 
 <script>
