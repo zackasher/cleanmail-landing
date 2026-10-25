@@ -64,6 +64,8 @@ Cleanmail is an iPhone app that connects to your Gmail read-only. You pick the s
 
 Setup takes a few minutes, and your first digest is ready in about a minute, before you choose a plan. Up to 4 people share one household, and household members join free. Here's more on [Cleanmail as a family calendar app](/family-calendar-app).
 
+Cleanmail is also #4 in Bragging Mommy's <a href="https://www.thebraggingmommy.com/10-best-family-calendar-apps-for-busy-parents-in-2026/" target="_blank" rel="sponsored noopener">"10 Best Family Calendar Apps for Busy Parents in 2026"</a> (sponsored).
+
 **Good for:** families whose dates show up in Gmail and who are tired of copying them by hand.
 
 **Watch out for:** it's iPhone only, and it works with Gmail and Google Calendar only. There's no free tier: it's a 14-day free trial, then $6.99 a month or $68.99 a year.
