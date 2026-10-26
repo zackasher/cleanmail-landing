@@ -192,7 +192,7 @@ No system is 100% secure. If we become aware of a data breach affecting your per
 
 ## 10. Children's Privacy
 
-Cleanmail is for parents and guardians. It is not directed at children under 13, and we do not knowingly collect personal information directly from anyone under 13.
+Cleanmail is for parents and guardians. It is not directed at children under 13, and we do not knowingly collect personal information directly from anyone under 13. You must be 16 or older to have your own Cleanmail account (or older, if the age of digital consent where you live is higher), and 18 or older to subscribe. Someone younger may use Cleanmail only with a parent's or guardian's consent, for example as a household member a parent invites.
 
 Parents add information about their children (such as names, schools, activities and photos) so Cleanmail can organize the family's email and calendar. That information comes from the parent's account, is visible only to the parent's household, and is used only to provide Cleanmail. A parent can edit or delete it at any time in the app, or delete it all by deleting the account (Section 7).
 

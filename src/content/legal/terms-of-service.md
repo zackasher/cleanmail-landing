@@ -18,7 +18,7 @@ Cleanmail is a service of Calibrate LLC, registered in the State of Illinois, Un
 
 ## 2. Eligibility
 
-You must be at least 13 years old to use Cleanmail. If you are between 13 and 18, you represent that you have your parent or legal guardian's permission to use the service and to agree to these Terms. Cleanmail is not intended for use by anyone under 13.
+You must be at least 16 years old to create your own Cleanmail account (or older, if the age of digital consent where you live is higher), and at least 18 years old to buy a subscription. Someone younger may use Cleanmail only with a parent's or legal guardian's consent, for example as a household member a parent invites, and the parent or guardian agrees to these Terms for them. Cleanmail is not intended for use by anyone under 13.
 
 You are responsible for maintaining the confidentiality of your Google account credentials and for all activity that occurs under your account.
 
