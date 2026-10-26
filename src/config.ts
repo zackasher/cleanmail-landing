@@ -60,3 +60,11 @@ export const PREVIOUS_TERMS_NOTICE_AFTER = "apply to you until you do.";
 export const ARCHIVED_TERMS_NOTICE = "These are the previous Terms of Service. They apply only to people who have not yet agreed to the";
 export const CURRENT_TERMS_LABEL = "current Terms";
 export const CURRENT_TERMS_PATH = "/terms";
+
+// Account deletion page, linked from the FAQ and footer, not the top nav (Zack, 2026-10-26). Google Play requires a web deletion link.
+export const DELETE_ACCOUNT_PATH = "/delete-account";
+export const DELETE_ACCOUNT_LINK_LABEL = "Delete account";
+export const DELETE_ACCOUNT_SUPPORT_EMAIL = "support@cleanmailapp.com";
+export const DELETE_ACCOUNT_EMAIL_SUBJECT = "Delete my Cleanmail account";
+// The section 7 text comes from the synced Privacy Policy so this page never drifts from it.
+export const PRIVACY_DELETION_SECTION_ID = "7-data-retention-and-account-deletion";

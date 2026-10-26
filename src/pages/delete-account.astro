@@ -1,0 +1,48 @@
+---
+import { pageTitle } from "../page-title";
+import LegalLayout from "../layouts/LegalLayout.astro";
+import { compiledContent } from "../content/legal/privacy-policy.md";
+import {
+  DELETE_ACCOUNT_SUPPORT_EMAIL,
+  DELETE_ACCOUNT_EMAIL_SUBJECT,
+  PRIVACY_DELETION_SECTION_ID,
+} from "../config";
+
+const privacyHtml = await compiledContent();
+const sectionHeadingStart = privacyHtml.indexOf(`<h2 id="${PRIVACY_DELETION_SECTION_ID}"`);
+if (sectionHeadingStart === -1) {
+  throw new Error(`Privacy Policy section ${PRIVACY_DELETION_SECTION_ID} not found; update PRIVACY_DELETION_SECTION_ID.`);
+}
+const sectionBodyStart = privacyHtml.indexOf("</h2>", sectionHeadingStart) + "</h2>".length;
+const nextHeadingStart = privacyHtml.indexOf("<h2", sectionBodyStart);
+const sectionBodyEnd = nextHeadingStart === -1 ? privacyHtml.length : nextHeadingStart;
+const deletionSectionHtml = privacyHtml.slice(sectionBodyStart, sectionBodyEnd);
+
+const deletionEmailHref = `mailto:${DELETE_ACCOUNT_SUPPORT_EMAIL}?subject=${encodeURIComponent(DELETE_ACCOUNT_EMAIL_SUBJECT)}`;
+---
+
+<LegalLayout title={pageTitle("Delete Your Account")}>
+  <h1>Delete your Cleanmail account</h1>
+  <p>You can delete your Cleanmail account and its data at any time, in the app or by email.</p>
+
+  <h2>In the app</h2>
+  <ol>
+    <li>Open Cleanmail.</li>
+    <li>Go to Settings.</li>
+    <li>Tap Delete Account and confirm.</li>
+  </ol>
+  <p>Deletion is immediate. If you have not started a subscription or free trial yet, you can also tap Leave and delete on the plan screen.</p>
+
+  <h2>Without the app</h2>
+  <p>Email us from the address on your account and we will delete it within 30 days.</p>
+  <p><a class="delete-email-button" href={deletionEmailHref}>Email {DELETE_ACCOUNT_SUPPORT_EMAIL}</a></p>
+
+  <h2>What deletion removes and what we keep</h2>
+  <p>From section 7 of our <a href={`/privacy#${PRIVACY_DELETION_SECTION_ID}`}>Privacy Policy</a>:</p>
+  <Fragment set:html={deletionSectionHtml} />
+</LegalLayout>
+
+<style>
+  a.delete-email-button{display:inline-block;padding:12px 20px;border-radius:999px;background:var(--purple);color:#fff;text-decoration:none;font-weight:500}
+  a.delete-email-button:hover{opacity:.9}
+</style>

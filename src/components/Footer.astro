@@ -1,6 +1,6 @@
 ---
 import AppLink from "./AppLink.astro";
-import { YOUTUBE_VIDEO_URL, COOKIE_SETTINGS_LABEL } from "../config";
+import { YOUTUBE_VIDEO_URL, COOKIE_SETTINGS_LABEL, DELETE_ACCOUNT_PATH, DELETE_ACCOUNT_LINK_LABEL } from "../config";
 ---
 <AppLink />
 <footer>
@@ -8,6 +8,7 @@ import { YOUTUBE_VIDEO_URL, COOKIE_SETTINGS_LABEL } from "../config";
     <a href="/privacy">Privacy Policy</a>
     <a href="/terms">Terms of Service</a>
     <a href="/support">Support</a>
+    <a href={DELETE_ACCOUNT_PATH}>{DELETE_ACCOUNT_LINK_LABEL}</a>
     <a href="/google-calendar-sync">Google Calendar Sync</a>
     <a href="/family-calendar-app">Family Calendar App</a>
     <a href="/compare">Compare</a>
