@@ -51,3 +51,12 @@ export const LIVE_STATS_FUNCTION_PATH = "/rest/v1/rpc/site_live_stats";
 // Zack's ruling (2026-10-16): time saved is an estimate, labeled as one, at 4 minutes per email.
 export const MINUTES_SAVED_PER_EMAIL = 4;
 export const BLOG_SLUG_ORGANIZE_GMAIL = "how-to-organize-school-emails-in-gmail";
+
+// Previous Terms stay published for people who have not yet agreed to the current ones in the app (Head Counsel, 2026-10-26).
+export const PREVIOUS_TERMS_PATH = "/terms/2026-10-09";
+export const PREVIOUS_TERMS_LABEL = "previous Terms (October 9, 2026)";
+export const PREVIOUS_TERMS_NOTICE_BEFORE = "If you have not yet agreed to these Terms in the Cleanmail app, the";
+export const PREVIOUS_TERMS_NOTICE_AFTER = "apply to you until you do.";
+export const ARCHIVED_TERMS_NOTICE = "These are the previous Terms of Service. They apply only to people who have not yet agreed to the";
+export const CURRENT_TERMS_LABEL = "current Terms";
+export const CURRENT_TERMS_PATH = "/terms";

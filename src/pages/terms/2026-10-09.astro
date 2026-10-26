@@ -1,0 +1,15 @@
+---
+import { pageTitle } from "../../page-title";
+import LegalLayout from "../../layouts/LegalLayout.astro";
+import { Content } from "../../content/legal-archive/terms-of-service-2026-10-09.md";
+import { ARCHIVED_TERMS_NOTICE, CURRENT_TERMS_LABEL, CURRENT_TERMS_PATH } from "../../config";
+---
+
+<LegalLayout title={pageTitle("Previous Terms of Service")}>
+  <p class="terms-version-notice">{ARCHIVED_TERMS_NOTICE} <a href={CURRENT_TERMS_PATH}>{CURRENT_TERMS_LABEL}</a> in the Cleanmail app.</p>
+  <Content />
+</LegalLayout>
+
+<style>
+  .terms-version-notice{padding:12px 16px;border:1px solid var(--line);border-radius:12px;background:#f7f9ff}
+</style>
