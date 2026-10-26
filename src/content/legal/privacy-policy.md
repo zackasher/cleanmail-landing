@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** October 18, 2026
+**Last updated:** October 26, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -16,6 +16,7 @@ We collect only the information needed to provide and improve Cleanmail.
 - Your name and email address, obtained from your Google account when you sign in.
 - People, activities, and sender lists you configure in onboarding.
 - Profile photos you upload for each person (optional).
+- Information about your children and other household members that you choose to add, such as their names, schools, grades, teachers, activities and photos. You add this so we can sort your digest and events by person. We use it only to provide Cleanmail to you and your household.
 - Notes and emoji reactions you leave on cards and events. Everyone in your household can see them.
 - Subscription purchases are processed by Apple through in-app purchase. We never see or store your payment card details; we receive only your subscription status from Apple.
 
@@ -26,6 +27,8 @@ We collect only the information needed to provide and improve Cleanmail.
 - Calendar event metadata for events we create, update, or delete on your behalf.
 - If someone shares a Google Calendar with you: the calendar's name, its identifier, and the sharer's email address, from Google's sharing notice. We do not store the notice itself.
 
+**Information about other people in your emails:** The emails you choose to include often mention other people, such as teachers, coaches, and other parents. That information is used only to write your digest and events, is visible only to you and your household, and is never used for any other purpose.
+
 **Information collected automatically:**
 - Your selected time zone (used to schedule digest generation in your local time).
 - Server-side diagnostic logs recording account identifiers, timestamps, and whether an operation succeeded or failed. These contain no email content. The Cleanmail app uses no third-party analytics, advertising, or crash-reporting service.
@@ -34,7 +37,7 @@ We collect only the information needed to provide and improve Cleanmail.
 - App version and activity: the app and update version you are running, your device platform, and when you last opened the app or returned to it, kept with your account so we can see whether a fix has reached you and how many people use the app. It is one record per account, replaced each time, and never includes email content.
 - Referrals: if you sign up with another member's referral code, we record the link between your account and theirs so we can reward them. They are notified when a friend they invited gets a first digest and first subscribes, and receive their reward if you stay subscribed. These notifications never include your name, email, or any of your content. Each member's referral code is a random six-character code.
 
-**Our website:** Our website uses Microsoft Clarity to understand how visitors use the site. Clarity uses cookies and collects usage data such as clicks and scrolling. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement). Our website also uses the Reddit and Meta pixels to measure how our ads perform. They use cookies to note page visits and taps on the App Store button. See [Reddit's privacy policy](https://www.reddit.com/policies/privacy-policy) and [Meta's privacy policy](https://www.facebook.com/privacy/policy/). We also use Google Analytics to count visits and see which pages people read. See [Google's privacy policy](https://policies.google.com/privacy). None of these load for visitors in the European Economic Area, the United Kingdom or Switzerland, or when we cannot tell where a visitor is.
+**Our website:** Our website can use Microsoft Clarity (to understand how visitors use the site, such as clicks and scrolling), Google Analytics (to count visits and see which pages people read), and the Reddit and Meta pixels (to measure how our ads perform, such as page visits and taps on the App Store button). None of these load unless you choose Accept on the cookie banner, and none load if your browser sends a Global Privacy Control signal. You can change your choice at any time from the Cookie settings link at the bottom of every page. None of them load for visitors in the European Economic Area, the United Kingdom or Switzerland, or when we cannot tell where a visitor is. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement), [Google's privacy policy](https://policies.google.com/privacy), [Reddit's privacy policy](https://www.reddit.com/policies/privacy-policy) and [Meta's privacy policy](https://www.facebook.com/privacy/policy/). These website tools never receive anything from the Cleanmail app, your email, or your account.
 
 ---
 
@@ -50,9 +53,11 @@ Cleanmail uses the following Google API scopes:
 
 - We use Gmail data only to provide and improve user-facing features that are prominent in Cleanmail's user interface (the email digest, the in-app email viewer, calendar sync features, and offering calendars shared with you).
 - We do not use Gmail data for serving advertisements.
-- We do not allow humans to read your Gmail data, except (a) with your explicit consent, (b) when necessary for security purposes such as investigating abuse, (c) to comply with applicable law, or (d) when the data has been aggregated and anonymized for internal operations.
+- We do not allow humans to read your Gmail data, or anything derived from it such as your digest summaries and events, except (a) with your explicit consent to view specific messages or data, (b) when necessary for security purposes, such as investigating a bug or abuse, (c) to comply with applicable law, or (d) when the data has been aggregated and anonymized for internal operations.
 - We do not transfer Gmail data to others unless necessary to provide Cleanmail's user-facing features (see Section 4 below).
 - We do not sell Gmail data.
+- We do not use Google user data, including Gmail and Google Calendar data, to develop, improve, or train generalized or non-personalized artificial intelligence or machine learning models.
+- Before we change how we use Google user data, we will tell you and ask for your consent.
 
 ---
 
@@ -90,7 +95,7 @@ Cleanmail relies on the following third parties to provide its service. Each rec
 | **Apple Push Notification service** | Delivery of push notifications | Device push token and the notification text |
 | **Trigger.dev** | Scheduled job execution for digest delivery | User ID and digest ID at scheduled times: no email content |
 
-Anthropic is the only third party that receives your email content, your scanned documents, or the text of your voice notes, and it receives them only to produce the summaries and events you asked for. We do not send any of that content to any other AI service. Supabase stores the resulting summaries and events, not the raw email. The full body of an email you open via "View Email" is retrieved from Google and rendered on your device; it is not stored on our servers (see Section 5).
+Under our agreement with Anthropic, Anthropic does not use the content we send it through its commercial API to train its models, and it keeps that content only for the limited period its commercial terms allow. We do not use AI to make decisions about you that have legal, financial, or similarly significant effects. Anthropic is the only third party that receives your email content, your scanned documents, or the text of your voice notes, and it receives them only to produce the summaries and events you asked for. We do not send any of that content to any other AI service. Supabase stores the resulting summaries and events, not the raw email. The full body of an email you open via "View Email" is retrieved from Google and rendered on your device; it is not stored on our servers (see Section 5).
 
 Every sub-processor listed above is bound by its agreement with us to protect the data it receives to a standard equal to or greater than the protections described in this policy, and to use that data only to provide the service described in its row.
 
@@ -148,9 +153,13 @@ You may permanently delete your account and all associated data at any time from
 - If you are a **Household Lead** or **Household Member** (you joined someone else's digest), deleting your account removes you from that shared digest. The shared digest itself, and the content you contributed to it, remain for the Primary and the rest of the household. Your own profile and personal data are deleted, including the notes you left. Emoji reactions you left stay on the shared digest without your name.
 - If you are the **Primary** (you created the shared digest), deleting your account deletes the shared digest and all of its content for everyone in the household. Everyone else is removed and, on their next use of Cleanmail, would need to start their own digest and subscription.
 
-**If you never subscribe:** if you sign in and set up Cleanmail but never start a subscription or free trial, we may delete your account and everything set up in it after 48 hours without use. This works the same way as deleting your account yourself, including revoking our access to your Google account. So that the same Google account does not get a second free first digest, we keep a one-way scrambled copy of your email address that cannot be turned back into the address.
+**If you never subscribe:** if you sign in and set up Cleanmail but never start a subscription or free trial, we may delete your account and everything set up in it after 30 days without use. This works the same way as deleting your account yourself, including revoking our access to your Google account.
 
-After deletion, no recovery is possible. If you have trouble deleting your account in the app, contact support@cleanmailapp.com and we will delete it manually within 30 days.
+**What we keep after deletion:**
+- If your account ever received a free first digest, we keep a hashed (one-way scrambled) copy of your Google account's email address, so the same address does not get a second free first digest. We use it for nothing else.
+- If you told us why you were leaving, or sent us feedback in the app, we keep what you sent along with the app version and build, operating system and version, device model and time zone recorded with it, but we remove its link to your account. We use it only to improve Cleanmail.
+
+After deletion, no recovery is possible. You can also ask us to delete your account without using the app: email support@cleanmailapp.com from the address on your account, and we will delete it within 30 days.
 
 ---
 
@@ -163,7 +172,13 @@ Depending on your jurisdiction, you may have the right to:
 - **Export** your data in a portable format: contact support@cleanmailapp.com.
 - **Withdraw consent** for Google API access at any time via [Google account permissions](https://myaccount.google.com/permissions). Revoking access will stop Cleanmail from generating new digests.
 
-Residents of California (CCPA) have additional rights under applicable law; contact support@cleanmailapp.com to exercise them. If you are in the European Economic Area, the United Kingdom or Switzerland, Section 13 explains your rights under the GDPR and how to use them.
+- **Remove** your information, or your child's, that appears in another Cleanmail user's account: contact support@cleanmailapp.com and we will review and act on the request.
+
+**We do not sell your personal information.** The Cleanmail app sends nothing to advertisers. The only advertising tools we use are the Reddit and Meta pixels on our website. They load only if you choose Accept (see "Our website" in Section 1), and they never receive anything from the app or your account. When they load, they tell Reddit and Meta about your visit to our website, which those companies may use for advertising; some state laws call this "sharing." You can turn it off at any time with the Cookie settings link or a Global Privacy Control signal.
+
+**U.S. state privacy rights (including California).** Depending on where you live, you may have the right to know what personal information we collect, use and disclose; to get a copy; to correct or delete it; and to opt out of any sale or sharing (we do not sell; website sharing is off unless you choose Accept, and you can turn it off with Cookie settings or a Global Privacy Control signal). To make a request, email support@cleanmailapp.com from the address on your account. We will confirm your request and respond within 45 days, and tell you if we need up to 45 more. If we decline your request, you can appeal by replying to our answer with "Appeal" in the subject line; we will respond to an appeal within 45 days. We will not treat you differently for using any of these rights.
+
+If you are in the European Economic Area, the United Kingdom or Switzerland, Section 13 explains your rights under the GDPR and how to use them.
 
 ---
 
@@ -177,7 +192,11 @@ No system is 100% secure. If we become aware of a data breach affecting your per
 
 ## 10. Children's Privacy
 
-Cleanmail is not directed at children under 13, and we do not knowingly collect personal information from anyone under 13. If you believe a child under 13 has provided personal information to us, contact support@cleanmailapp.com and we will delete it.
+Cleanmail is for parents and guardians. It is not directed at children under 13, and we do not knowingly collect personal information directly from anyone under 13.
+
+Parents add information about their children (such as names, schools, activities and photos) so Cleanmail can organize the family's email and calendar. That information comes from the parent's account, is visible only to the parent's household, and is used only to provide Cleanmail. A parent can edit or delete it at any time in the app, or delete it all by deleting the account (Section 7).
+
+If you believe a child under 13 has provided personal information to us, contact support@cleanmailapp.com and we will delete it.
 
 ---
 
@@ -189,7 +208,7 @@ We may disclose personal information when required to do so by law, such as in r
 
 ## 12. Changes to This Policy
 
-We may update this Privacy Policy from time to time. Material changes will be communicated by email and by updating the date at the top of this policy. Continued use of Cleanmail after changes take effect constitutes acceptance of the updated policy.
+We may update this Privacy Policy from time to time. Material changes will be communicated by email and by updating the date at the top of this policy. If a change affects how we use your Google user data, we will ask for your consent in the app before the change applies to that data. For other changes, continued use of Cleanmail after they take effect constitutes acceptance of the updated policy.
 
 ---
 
@@ -206,7 +225,7 @@ We may update this Privacy Policy from time to time. Material changes will be co
 - **Your consent.** We read your Gmail and use your Google Calendar only after you allow it on Google's sign-in screen, and we send email content to Anthropic only after you agree on Cleanmail's AI screen. You can withdraw consent at any time: turn off AI in Settings, remove Cleanmail's access in your [Google account permissions](https://myaccount.google.com/permissions), or delete your account. Withdrawing consent stops future processing; it does not affect processing done before.
 - **The law.** We keep or disclose information when the law requires it (Section 11).
 
-**How long we keep it.** Digest history is kept for the period you choose in Settings, up to 60 days, and deleted automatically within a few days after that. Items you delete go to Trash and leave it after 3 days. Your profile, setup, and calendar events stay until you delete them or delete your account. If you never start a subscription or free trial, your account may be deleted after 48 hours without use. Section 7 describes deletion in full.
+**How long we keep it.** Digest history is kept for the period you choose in Settings, up to 60 days, and deleted automatically within a few days after that. Items you delete go to Trash and leave it after 3 days. Your profile, setup, and calendar events stay until you delete them or delete your account. If you never start a subscription or free trial, your account may be deleted after 30 days without use. After deletion we keep only what Section 7 lists under "What we keep after deletion." Section 7 describes deletion in full.
 
 **Your rights.** You can ask for a copy of your data, ask us to correct or delete it, ask us to limit or stop using it, and withdraw your consent. You also have the right to complain to the data protection authority in your country.
 

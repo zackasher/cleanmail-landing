@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last updated:** October 9, 2026
+**Last updated:** October 26, 2026
 
 These Terms of Service ("Terms") govern your use of Cleanmail, an iOS application operated by Calibrate LLC ("we," "our," or "us"). By creating an account or using Cleanmail, you agree to these Terms.
 
@@ -22,6 +22,8 @@ You must be at least 13 years old to use Cleanmail. If you are between 13 and 18
 
 You are responsible for maintaining the confidentiality of your Google account credentials and for all activity that occurs under your account.
 
+**Information you add about others.** When you add children, other household members, or invite someone to your household, you confirm that you are their parent or legal guardian or otherwise have the right to add that information, and to share it, and the digest content it produces, with the people in your household.
+
 ---
 
 ## 3. Subscriptions and Billing
@@ -36,7 +38,7 @@ Cleanmail is offered as a subscription with two plans: monthly at $6.99 per mont
 
 **Cancellation.** You may cancel your subscription at any time in your Apple Account subscription settings, reachable from within the app. Cancellation takes effect at the end of your current billing period. You retain access until the period ends, after which your access to Cleanmail's features ends. We cannot cancel an Apple subscription on your behalf.
 
-**Pricing changes.** We may change subscription pricing with at least 30 days' notice via email and an in-app notice. Continued use after a price change takes effect constitutes acceptance.
+**Pricing changes.** If we change the price of your plan, we will tell you by email and in the app no less than 7 and no more than 30 days before the new price applies to you, along with how to cancel. Apple also notifies you of price increases and may ask you to agree before charging the new price. If you do not want to pay the new price, cancel before it takes effect.
 
 ---
 
@@ -44,12 +46,7 @@ Cleanmail is offered as a subscription with two plans: monthly at $6.99 per mont
 
 Subscriptions are billed in advance for each billing period, monthly or yearly depending on your plan. You may cancel at any time; cancellation takes effect at the end of the current billing period and prevents future charges. If you cancel during your free trial before it ends, you will not be charged. **We do not offer refunds for partial billing periods or for time elapsed before cancellation.**
 
-We may, at our sole discretion, issue refunds in cases of:
-- Billing errors or duplicate charges.
-- Service unavailability lasting more than 7 consecutive days.
-- Extenuating circumstances on a case-by-case basis.
-
-Refund requests should be sent to support@cleanmailapp.com within 30 days of the disputed charge. We aim to respond to refund requests within 5 business days.
+Because Apple processes every purchase, refunds are decided by Apple under its policies, and you can request one at [reportaproblem.apple.com](https://reportaproblem.apple.com). If you believe you were charged in error, were charged twice, or Cleanmail was unavailable for more than 7 consecutive days, email support@cleanmailapp.com within 30 days of the charge and we will help with your request to Apple. We aim to respond within 5 business days.
 
 ---
 
@@ -79,7 +76,7 @@ We reserve the right to suspend or terminate accounts found to be in violation o
 
 Cleanmail uses Anthropic's Claude API to generate digest summaries and extract event details from emails. AI-generated content may occasionally contain inaccuracies, omissions, or misinterpretations.
 
-**You are responsible for verifying important information.** Cleanmail is a productivity aid, not an authoritative source. Critical information — appointments, deadlines, legal notices — should always be confirmed against the original email.
+**You are responsible for verifying important information.** Cleanmail is a productivity aid, not an authoritative source. Critical information, such as appointments, deadlines and legal notices, should always be confirmed against the original email.
 
 We do not warrant the accuracy, completeness, or reliability of AI-generated content.
 
@@ -107,7 +104,13 @@ To the fullest extent permitted by law, Calibrate LLC and its officers, employee
 - Loss of data, revenue, or business opportunities.
 - Damages arising from third-party service outages.
 
-Our total cumulative liability to you for any claim arising out of or relating to Cleanmail shall not exceed the greater of (a) the amount you paid us in the 12 months preceding the claim, or (b) $100 USD.
+Our total cumulative liability to you for any claim arising out of or relating to Cleanmail shall not exceed the greater of (a) the amount you paid for Cleanmail, including through Apple, in the 12 months before the event that gave rise to the claim, or (b) $100 USD.
+
+---
+
+## 10A. Indemnification
+
+To the extent permitted by law, you agree to defend, indemnify, and hold harmless Calibrate LLC and its officers, employees, agents, and contractors from any third-party claims, damages, and costs (including reasonable attorneys' fees) arising from your misuse of Cleanmail, your violation of these Terms, or information you add about another person without the right to do so.
 
 ---
 
@@ -117,7 +120,7 @@ You may terminate your account at any time via Settings → Delete Account in th
 
 We reserve the right to suspend or terminate your account at our sole discretion, with or without notice, if you violate these Terms or if continued provision of the service to you would expose us to legal or operational risk.
 
-Upon termination, your right to use Cleanmail ceases immediately. Sections 9, 10, 12, 13, and 14 survive termination.
+Upon termination, your right to use Cleanmail ceases immediately. Sections 9, 10, 10A, 12, 13, and 14 survive termination.
 
 ---
 
@@ -127,11 +130,23 @@ These Terms are governed by the laws of the State of Illinois, United States, wi
 
 ---
 
-## 13. Dispute Resolution
+## 13. Dispute Resolution, Binding Arbitration, and Class Action Waiver
 
-Before filing a formal legal claim, you agree to attempt to resolve the dispute informally by contacting support@cleanmailapp.com. We will make a good-faith effort to resolve the matter within 30 days.
+**PLEASE READ THIS SECTION CAREFULLY. IT AFFECTS HOW DISPUTES ARE RESOLVED AND WAIVES YOUR RIGHT TO A JURY TRIAL AND TO A CLASS ACTION.**
 
-If informal resolution fails, any dispute arising out of or relating to these Terms or your use of Cleanmail shall be brought exclusively in the state or federal courts located in Cook County, Illinois. You consent to the personal jurisdiction of those courts.
+**Talk to us first.** Before starting any claim, you agree to send a written description of the dispute to support@cleanmailapp.com with "Legal" in the subject line, and we agree to do the same to the email on your account. Both sides will try in good faith to resolve it within 60 days.
+
+**Arbitration.** If the dispute is not resolved within 60 days, it will be resolved by binding individual arbitration administered by the American Arbitration Association (AAA) under its Consumer Arbitration Rules, instead of in court. The arbitration will take place in Cook County, Illinois, or by video or phone if you prefer, and for claims of $10,000 or less you may choose to have it decided on written submissions only. We will pay the AAA filing, administration, and arbitrator fees as the Consumer Arbitration Rules require of a business. The arbitrator may award the same individual relief a court could.
+
+**Exceptions.** Either of us may bring an individual claim in small claims court if it qualifies. Either of us may go to court to stop infringement or misuse of intellectual property.
+
+**No class actions.** You and Calibrate LLC may bring claims against each other only individually, and not as a plaintiff or class member in any class, collective, or representative proceeding. The arbitrator may not combine claims of more than one person or preside over any class or representative proceeding.
+
+**Many similar claims.** If 25 or more similar demands are filed against Calibrate LLC by or with the help of the same law firm or organization, they will be administered in batches of up to 25 under the AAA's mass arbitration procedures, and the remaining demands will wait until a batch is decided. This keeps each claim moving while preventing fees from being run up all at once.
+
+**Opting out.** You may opt out of this arbitration agreement by emailing support@cleanmailapp.com with "Arbitration opt-out" in the subject line within 30 days of first accepting these Terms. If you opt out, or if this section is found unenforceable, disputes will be brought only in the state or federal courts in Cook County, Illinois, and you consent to their jurisdiction.
+
+**If part of this is invalid.** If the class action waiver is found unenforceable for a claim, that claim will proceed in court (Cook County, Illinois), not in arbitration, and the rest of this section still applies to other claims.
 
 ---
 
@@ -139,13 +154,34 @@ If informal resolution fails, any dispute arising out of or relating to these Te
 
 Cleanmail, including its name, logo, design, and software, is the property of Calibrate LLC and is protected by intellectual property laws. These Terms do not grant you any right or license to use Calibrate LLC's trademarks or branding outside of normal use of the app.
 
-You retain all rights to the content of your emails, calendar events, and any data you provide to the service.
+You retain all rights to the content of your emails, calendar events, and any data you provide to the service ("Your Content").
+
+**License to operate the service.** You grant Calibrate LLC a limited, non-exclusive, royalty-free license to access, host, copy, process, transmit, and display Your Content only as needed to provide Cleanmail to you and your household, including sending it to the service providers listed in our Privacy Policy for that purpose. This license ends when Your Content is deleted from the service, except for copies we must keep by law or that remain in backups for a short period before they are overwritten.
+
+**Feedback.** If you send us ideas or suggestions about Cleanmail, we may use them without restriction or payment to you.
+
+---
+
+## 14A. Apple App Store
+
+If you downloaded Cleanmail from Apple's App Store, these terms also apply:
+
+- These Terms are between you and Calibrate LLC only, not Apple. Calibrate LLC, not Apple, is solely responsible for Cleanmail and its content.
+- Your license to use Cleanmail is limited to Apple-branded devices you own or control, as permitted by the Usage Rules in Apple's Media Services Terms and Conditions, except that the app may be accessed by other accounts associated with you through Family Sharing.
+- Apple has no obligation to provide any maintenance or support for Cleanmail.
+- If Cleanmail fails to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price, if any. To the maximum extent permitted by law, Apple has no other warranty obligation for Cleanmail. Any other claims, losses, liabilities, damages, costs, or expenses from a failure to conform to a warranty are Calibrate LLC's responsibility, to the extent not disclaimed in these Terms.
+- Calibrate LLC, not Apple, is responsible for addressing any claims by you or a third party relating to Cleanmail or your possession or use of it, including product liability claims, claims that the app fails to meet a legal or regulatory requirement, and claims under consumer protection, privacy, or similar laws.
+- If a third party claims that Cleanmail or your possession and use of it infringes their intellectual property rights, Calibrate LLC, not Apple, is solely responsible for the investigation, defense, settlement, and discharge of that claim.
+- You represent that you are not located in a country subject to a U.S. Government embargo or designated as a "terrorist supporting" country, and that you are not on any U.S. Government list of prohibited or restricted parties.
+- You must comply with any applicable third-party terms when using Cleanmail, such as your wireless data service agreement.
+- Questions, complaints, or claims about Cleanmail go to Calibrate LLC at support@cleanmailapp.com.
+- Apple and its subsidiaries are third-party beneficiaries of these Terms, and once you accept them, Apple has the right to enforce them against you as a third-party beneficiary.
 
 ---
 
 ## 15. Changes to These Terms
 
-We may update these Terms from time to time. Material changes will be communicated by email and by updating the date at the top of this page. Continued use of Cleanmail after changes take effect constitutes acceptance of the updated Terms.
+We may update these Terms from time to time. Material changes will be communicated by email and in the app, and by updating the date at the top of this page, at least 30 days before they take effect. A change to Section 13 applies only to disputes that arise after the change takes effect. Continued use of Cleanmail after changes take effect constitutes acceptance of the updated Terms.
 
 If you do not agree to a material change, your sole remedy is to terminate your account.
 
