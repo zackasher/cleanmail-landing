@@ -57,7 +57,7 @@ FamilyWall Premium has Magic Import. Each family Circle gets one unique email ad
 
 Cozi's Max plan lists AI Event Import, which reads invitations and calendar details from your inbox and adds them to your Cozi calendar.
 
-**Winner:** both now offer it on paid plans. FamilyWall's version means forwarding every email yourself.
+**Winner:** both now offer it on paid plans. FamilyWall's version works on emails you forward to your family's FamilyWall address ([FamilyWall help](https://support.familywall.com/en/support/solutions/articles/47001301286-add-events-to-your-calendar-by-forwarding-an-email)).
 
 ## Everything else
 

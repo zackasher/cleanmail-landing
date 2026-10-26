@@ -85,7 +85,7 @@ A few habits that help:
 Sorting email doesn't put anything on your calendar. That's still a human job. Pick one time a week (Sunday night works for a lot of families) and go label by label:
 
 1. Open each kid's label and skim anything from the past week.
-2. Every date goes on your family calendar right away: early dismissal, picture day, the game that moved to 4:30.
+2. Dates it finds go on your family calendar right away: early dismissal, picture day, the game that moved to 4:30.
 3. Every ask (sign the form, pay the field trip fee, send a box of tissues) goes on the calendar too, on the day it's due.
 4. Share the calendar with your household so you're not the only one who knows.
 
