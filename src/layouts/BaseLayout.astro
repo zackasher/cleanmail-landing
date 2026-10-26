@@ -2,7 +2,7 @@
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
-import { CLARITY_PROJECT_ID, APP_STORE_URL, APP_STORE_NAME, SOCIAL_PROFILE_URLS, GOOGLE_TAG_ID, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH } from "../config";
+import { CLARITY_PROJECT_ID, APP_STORE_URL, APP_STORE_NAME, SOCIAL_PROFILE_URLS, GOOGLE_TAG_ID, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH, COOKIE_CONSENT_STORAGE_KEY, COOKIE_CONSENT_ACCEPTED, COOKIE_CONSENT_REJECTED, COOKIE_CONSENT_MESSAGE, COOKIE_CONSENT_REGION_OFF_MESSAGE } from "../config";
 export interface Props {
   title: string;
   description?: string;
@@ -35,10 +35,63 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   <meta name="facebook-domain-verification" content="9sqy4uylfm7ujcai4ailmlpdx9iopm" />
 
   {!noTracking && (
-  <script is:inline define:vars={{ clarityProjectId: CLARITY_PROJECT_ID, googleTagId: GOOGLE_TAG_ID, blockedCountryCodes: TRACKING_BLOCKED_COUNTRY_CODES, blockedTimeZonePrefixes: TRACKING_BLOCKED_TIME_ZONE_PREFIXES, countryLookupPath: VISITOR_COUNTRY_LOOKUP_PATH }}>
-    // Ad and analytics tags load only once we know the visitor is outside the EEA, UK and Switzerland.
-    // Any doubt (European time zone, lookup failure) means no tags: a missed page view is cheaper than an unconsented cookie.
+  <script is:inline define:vars={{ clarityProjectId: CLARITY_PROJECT_ID, googleTagId: GOOGLE_TAG_ID, blockedCountryCodes: TRACKING_BLOCKED_COUNTRY_CODES, blockedTimeZonePrefixes: TRACKING_BLOCKED_TIME_ZONE_PREFIXES, countryLookupPath: VISITOR_COUNTRY_LOOKUP_PATH, consentStorageKey: COOKIE_CONSENT_STORAGE_KEY, consentAccepted: COOKIE_CONSENT_ACCEPTED, consentRejected: COOKIE_CONSENT_REJECTED, consentRegionOffMessage: COOKIE_CONSENT_REGION_OFF_MESSAGE }}>
+    // Ad and analytics tags load only for visitors outside the EEA, UK and Switzerland who tapped Accept.
+    // Any doubt (European time zone, lookup failure, Global Privacy Control, no answer yet) means no tags:
+    // a missed page view is cheaper than a tag that fired without consent.
     (function () {
+      var trackingAllowedHere = false;
+      var tagsLoaded = false;
+
+      function readConsent() {
+        try { return localStorage.getItem(consentStorageKey) || ""; } catch (error) { return ""; }
+      }
+      function saveConsent(choice) {
+        try { localStorage.setItem(consentStorageKey, choice); } catch (error) {}
+      }
+      function banner() { return document.getElementById("cookie-banner"); }
+      function showBanner(asRegionNotice) {
+        var element = banner();
+        if (!element) return;
+        element.classList.toggle("region-off", asRegionNotice);
+        if (asRegionNotice) element.querySelector("[data-cookie-message]").textContent = consentRegionOffMessage;
+        element.hidden = false;
+      }
+      function hideBanner() {
+        var element = banner();
+        if (element) element.hidden = true;
+      }
+      function startTagsIfAccepted() {
+        if (!trackingAllowedHere) return;
+        if (readConsent() !== consentAccepted) return;
+        if (tagsLoaded) return;
+        tagsLoaded = true;
+        loadTrackingTags();
+      }
+
+      document.addEventListener("click", function (event) {
+        var clicked = event.target;
+        if (!clicked || !clicked.closest) return;
+        if (clicked.closest("[data-cookie-accept]")) {
+          saveConsent(consentAccepted);
+          hideBanner();
+          startTagsIfAccepted();
+          return;
+        }
+        if (clicked.closest("[data-cookie-reject]")) {
+          var wereLoaded = tagsLoaded;
+          saveConsent(consentRejected);
+          hideBanner();
+          // Tags already running cannot be unloaded, so a reload is what actually stops them.
+          if (wereLoaded) location.reload();
+          return;
+        }
+        if (clicked.closest("[data-cookie-close]")) { hideBanner(); return; }
+        if (clicked.closest("[data-cookie-settings]")) showBanner(!trackingAllowedHere);
+      });
+
+      var globalPrivacyControlOn = navigator.globalPrivacyControl === true;
+      if (globalPrivacyControlOn) return;
       var timeZone = "";
       try { timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (error) {}
       var inBlockedTimeZone = blockedTimeZonePrefixes.some(function (prefix) { return timeZone.indexOf(prefix) === 0; });
@@ -49,7 +102,11 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
           var countryMatch = /^loc=([A-Z]{2})$/m.exec(traceText);
           if (!countryMatch) return;
           if (blockedCountryCodes.indexOf(countryMatch[1]) !== -1) return;
-          loadTrackingTags();
+          trackingAllowedHere = true;
+          var consent = readConsent();
+          if (consent === consentAccepted) { startTagsIfAccepted(); return; }
+          if (consent === consentRejected) return;
+          showBanner(false);
         })
         .catch(function () {});
 
@@ -196,6 +253,19 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
         radial-gradient(1480px 1480px at 100% 100%, rgba(232,140,48,.40) 0%, rgba(232,140,48,.16) 16%, rgba(232,140,48,0) 62%),
         #ffffff;
     }
+    .cookie-banner{position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:80;width:calc(100% - 32px);max-width:640px;display:flex;align-items:center;gap:16px;padding:14px 16px;background:#fff;border:1px solid rgba(27,34,54,.14);border-radius:16px;box-shadow:0 12px 34px rgba(27,34,54,.16);color:#1b2236;font-size:14px;line-height:1.4}
+    .cookie-banner[hidden]{display:none}
+    .cookie-banner p{margin:0;flex:1}
+    .cookie-banner a{color:#2D4BAD}
+    .cookie-actions{display:flex;gap:10px}
+    .cookie-choice{min-width:96px;padding:10px 16px;font:inherit;font-weight:600;color:#1b2236;background:#fff;border:1.5px solid #1b2236;border-radius:10px;cursor:pointer}
+    .cookie-choice:hover{background:#f2f5fe}
+    .cookie-choice:focus-visible{outline:3px solid #4A6FE3;outline-offset:2px}
+    .cookie-banner.region-off [data-cookie-accept]{display:none}
+    .cookie-banner.region-off [data-cookie-reject]{display:none}
+    .cookie-close{display:none}
+    .cookie-banner.region-off .cookie-close{display:inline-block}
+    @media(max-width:560px){.cookie-banner{flex-direction:column;align-items:stretch}.cookie-actions .cookie-choice{flex:1}}
   </style>
 </head>
 <body>
@@ -203,6 +273,14 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
     <Nav />
     <slot />
     <Footer />
+  </div>
+  <div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie choices" transition:persist hidden>
+    <p data-cookie-message>{COOKIE_CONSENT_MESSAGE} <a href="/privacy">Privacy Policy</a></p>
+    <div class="cookie-actions">
+      <button type="button" class="cookie-choice" data-cookie-reject>Reject</button>
+      <button type="button" class="cookie-choice" data-cookie-accept>Accept</button>
+      <button type="button" class="cookie-choice cookie-close" data-cookie-close>Close</button>
+    </div>
   </div>
   <script>
     function playHeroVideo() {

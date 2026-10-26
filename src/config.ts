@@ -31,13 +31,20 @@ export const SOCIAL_PROFILE_URLS = [
   "https://www.threads.com/@cleanmailapp",
   "https://www.youtube.com/@getcleanmailapp",
 ];
-// EEA, UK and Switzerland. Ad and analytics tags never load for visitors here (no cookie consent banner).
+// EEA, UK and Switzerland. Ad and analytics tags never load for visitors here, consent or not.
 export const TRACKING_BLOCKED_COUNTRY_CODES = [
   "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL",
   "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "GB", "CH",
 ];
 export const TRACKING_BLOCKED_TIME_ZONE_PREFIXES = ["Europe/", "Atlantic/Reykjavik", "Atlantic/Canary", "Atlantic/Madeira", "Atlantic/Azores", "Atlantic/Faroe"];
 export const VISITOR_COUNTRY_LOOKUP_PATH = "/cdn-cgi/trace";
+// Cookie consent (Zack, 2026-10-26). Ad and analytics tags load only after the visitor taps Accept.
+export const COOKIE_CONSENT_STORAGE_KEY = "cleanmail-cookie-consent";
+export const COOKIE_CONSENT_ACCEPTED = "accepted";
+export const COOKIE_CONSENT_REJECTED = "rejected";
+export const COOKIE_CONSENT_MESSAGE = "We use cookies to measure our ads and improve the site.";
+export const COOKIE_CONSENT_REGION_OFF_MESSAGE = "Ad and analytics cookies are off for your location or browser setting.";
+export const COOKIE_SETTINGS_LABEL = "Cookie settings";
 export const SUPABASE_PROJECT_URL = "https://cxnxjnuvbsyymhxkrmpw.supabase.co";
 export const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_SicQ5RchA4Q5YI3DevGMlQ_1XWOPRjy";
 export const LIVE_STATS_FUNCTION_PATH = "/rest/v1/rpc/site_live_stats";
