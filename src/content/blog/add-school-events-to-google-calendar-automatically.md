@@ -1,6 +1,6 @@
 ---
-title: "How to Add School Events to Google Calendar Automatically"
-description: "How to add school events to Google Calendar automatically: subscribe to the school feed, pull dates out of Gmail, and stop retyping every flyer."
+title: "How to Add a School Calendar to Google Calendar Automatically"
+description: "Add your school calendar to Google Calendar in a few steps: subscribe to the school's link, see it on your iPhone, and pull dates out of Gmail without retyping."
 date: "2026-10-12"
 author: "Zack Asher"
 keyword: "how to add school events to google calendar automatically"
