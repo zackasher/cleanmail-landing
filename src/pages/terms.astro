@@ -2,7 +2,10 @@
 import { pageTitle } from "../page-title";
 import LegalLayout from "../layouts/LegalLayout.astro";
 import { compiledContent } from "../content/legal/terms-of-service.md";
-import { PREVIOUS_TERMS_PATH, PREVIOUS_TERMS_LABEL, PREVIOUS_TERMS_NOTICE_BEFORE, PREVIOUS_TERMS_NOTICE_AFTER } from "../config";
+import { CURRENT_TERMS_NOTICE, TERMS_ARCHIVE } from "../config";
+
+const newestArchive = TERMS_ARCHIVE["2026-10-26"];
+const oldestArchive = TERMS_ARCHIVE["2026-10-09"];
 
 // The Terms file is synced from the app repo, so the notice is placed after its first paragraph (the "Last updated" line) here rather than written into the file.
 const termsHtml = await compiledContent();
@@ -13,7 +16,7 @@ const termsAfterNotice = termsHtml.slice(dateLineEnd);
 
 <LegalLayout title={pageTitle("Terms of Service")}>
   <Fragment set:html={termsBeforeNotice} />
-  <p class="terms-version-notice">{PREVIOUS_TERMS_NOTICE_BEFORE} <a href={PREVIOUS_TERMS_PATH}>{PREVIOUS_TERMS_LABEL}</a> {PREVIOUS_TERMS_NOTICE_AFTER}</p>
+  <p class="terms-version-notice">{CURRENT_TERMS_NOTICE} {newestArchive.label} (<a href={newestArchive.path}>{newestArchive.path}</a>) and {oldestArchive.label} (<a href={oldestArchive.path}>{oldestArchive.path}</a>).</p>
   <Fragment set:html={termsAfterNotice} />
 </LegalLayout>
 

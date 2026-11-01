@@ -52,14 +52,15 @@ export const LIVE_STATS_FUNCTION_PATH = "/rest/v1/rpc/site_live_stats";
 export const MINUTES_SAVED_PER_EMAIL = 4;
 export const BLOG_SLUG_ORGANIZE_GMAIL = "how-to-organize-school-emails-in-gmail";
 
-// Previous Terms stay published for people who have not yet agreed to the current ones in the app (Head Counsel, 2026-10-26).
-export const PREVIOUS_TERMS_PATH = "/terms/2026-10-09";
-export const PREVIOUS_TERMS_LABEL = "previous Terms (October 9, 2026)";
-export const PREVIOUS_TERMS_NOTICE_BEFORE = "If you have not yet agreed to these Terms in the Cleanmail app, the";
-export const PREVIOUS_TERMS_NOTICE_AFTER = "apply to you until you do.";
-export const ARCHIVED_TERMS_NOTICE = "These are the previous Terms of Service. They apply only to people who have not yet agreed to the";
-export const CURRENT_TERMS_LABEL = "current Terms";
+// Earlier Terms stay published so anyone can see what they agreed to; wording from Head Counsel, 2026-11-01.
 export const CURRENT_TERMS_PATH = "/terms";
+export const CURRENT_TERMS_NOTICE = "These Terms took effect November 1, 2026. They add Android and Google Play billing; nothing changed for iPhone subscribers. Earlier versions:";
+export const ARCHIVED_TERMS_NOTICE_BEFORE = "This is an earlier version of our Terms, in effect from";
+export const ARCHIVED_TERMS_NOTICE_AFTER = "The current Terms are at";
+export const TERMS_ARCHIVE = {
+  "2026-10-26": { path: "/terms/2026-10-26", label: "October 26, 2026", effectiveRange: "October 26 to October 31, 2026" },
+  "2026-10-09": { path: "/terms/2026-10-09", label: "October 9, 2026", effectiveRange: "October 9 to October 25, 2026" },
+};
 
 // Account deletion page, linked from the FAQ and footer, not the top nav (Zack, 2026-10-26). Google Play requires a web deletion link.
 export const DELETE_ACCOUNT_PATH = "/delete-account";
