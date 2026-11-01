@@ -1,8 +1,8 @@
 # Terms of Service
 
-**Last updated:** October 26, 2026
+**Last updated:** November 1, 2026
 
-These Terms of Service ("Terms") govern your use of Cleanmail, an iOS application operated by Calibrate LLC ("we," "our," or "us"). By creating an account or using Cleanmail, you agree to these Terms.
+These Terms of Service ("Terms") govern your use of Cleanmail, a mobile application for iPhone and Android operated by Calibrate LLC ("we," "our," or "us"). By creating an account or using Cleanmail, you agree to these Terms.
 
 If you do not agree to these Terms, do not use Cleanmail.
 
@@ -10,7 +10,7 @@ If you do not agree to these Terms, do not use Cleanmail.
 
 ## 1. The Service
 
-Cleanmail is an AI-powered email digest application currently available on iOS. It reads emails from Gmail senders you have explicitly selected, generates summary digests using Anthropic's Claude API, and adds the dates it finds to an in-app family calendar kept in two-way sync with your Google Calendar.
+Cleanmail is an AI-powered email digest application available on iOS and Android. It reads emails from Gmail senders you have explicitly selected, generates summary digests using Anthropic's Claude API, and adds the dates it finds to an in-app family calendar kept in two-way sync with your Google Calendar.
 
 Cleanmail is a service of Calibrate LLC, registered in the State of Illinois, United States.
 
@@ -30,15 +30,17 @@ You are responsible for maintaining the confidentiality of your Google account c
 
 Cleanmail is offered as a subscription with two plans: monthly at $6.99 per month, or yearly at $68.99 per year. Both plans include the same features. There is no free tier.
 
-**Free trial.** New subscribers receive a 14-day free trial. Unless you cancel at least 24 hours before the trial ends, your subscription automatically converts to a paid subscription on the plan you chose ($6.99 per month or $68.99 per year) and your Apple Account is charged at that time. You can cancel at any time during the trial in your Apple Account subscription settings; canceling before the trial ends prevents any charge.
+**Free trial.** New subscribers receive a 14-day free trial. The app store you subscribe through (Apple's App Store on iPhone, Google Play on Android) decides whether you count as a new subscriber. Unless you cancel at least 24 hours before the trial ends, your subscription automatically converts to a paid subscription on the plan you chose ($6.99 per month or $68.99 per year) and the payment method on your Apple Account or Google Play account is charged at that time. You can cancel at any time during the trial in that store's subscription settings; canceling before the trial ends prevents any charge.
 
-**Billing.** Subscriptions are billed in advance through Apple in-app purchase at the beginning of each billing period. Your subscription renews automatically at the end of each billing period (every month on the monthly plan, every year on the yearly plan) unless you cancel at least 24 hours before the end of the current period.
+**Billing.** Subscriptions are billed in advance through the store you subscribed in (Apple in-app purchase on iPhone, Google Play Billing on Android) at the beginning of each billing period. Your subscription renews automatically at the end of each billing period (every month on the monthly plan, every year on the yearly plan) unless you cancel at least 24 hours before the end of the current period.
 
-**Payment processing.** All payments are processed by Apple through in-app purchase and charged to your Apple Account. We do not store or have access to your payment card information. Purchases are also governed by Apple's [Terms of Use](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/).
+**Payment processing.** All payments are processed by Apple (charged to your Apple Account) or by Google Play (charged to your Google Play account). We do not store or have access to your payment card information. Purchases on iPhone are also governed by Apple's [Terms of Use](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/), and purchases on Android by the [Google Play Terms of Service](https://play.google.com/about/play-terms/).
 
-**Cancellation.** You may cancel your subscription at any time in your Apple Account subscription settings, reachable from within the app. Cancellation takes effect at the end of your current billing period. You retain access until the period ends, after which your access to Cleanmail's features ends. We cannot cancel an Apple subscription on your behalf.
+**One subscription per account.** Your subscription belongs to your Cleanmail account and is managed in the store where you bought it. If your account already has a subscription through the other store, or that subscription has an unresolved payment problem, you may not be able to buy a new one until the issue is resolved or the subscription has ended.
 
-**Pricing changes.** If we change the price of your plan, we will tell you by email and in the app no less than 7 and no more than 30 days before the new price applies to you, along with how to cancel. Apple also notifies you of price increases and may ask you to agree before charging the new price. If you do not want to pay the new price, cancel before it takes effect.
+**Cancellation.** You may cancel your subscription at any time in the subscription settings of the store you bought it in (your Apple Account on iPhone, Google Play on Android), reachable from within the app under Manage subscription. Cancellation takes effect at the end of your current billing period. You retain access until the period ends, after which your access to Cleanmail's features ends. We cannot cancel an Apple or Google Play subscription on your behalf, and deleting your Cleanmail account does not cancel it.
+
+**Pricing changes.** If we change the price of your plan, we will tell you by email and in the app no less than 7 and no more than 30 days before the new price applies to you, along with how to cancel. Apple and Google Play also notify you of price increases and may ask you to agree before charging the new price. If you do not want to pay the new price, cancel before it takes effect.
 
 ---
 
@@ -46,7 +48,7 @@ Cleanmail is offered as a subscription with two plans: monthly at $6.99 per mont
 
 Subscriptions are billed in advance for each billing period, monthly or yearly depending on your plan. You may cancel at any time; cancellation takes effect at the end of the current billing period and prevents future charges. If you cancel during your free trial before it ends, you will not be charged. **We do not offer refunds for partial billing periods or for time elapsed before cancellation.**
 
-Because Apple processes every purchase, refunds are decided by Apple under its policies, and you can request one at [reportaproblem.apple.com](https://reportaproblem.apple.com). If you believe you were charged in error, were charged twice, or Cleanmail was unavailable for more than 7 consecutive days, email support@cleanmailapp.com within 30 days of the charge and we will help with your request to Apple. We aim to respond within 5 business days.
+Because Apple or Google Play processes every purchase, refunds are decided by the store you bought from under its own policies. For purchases on iPhone, request a refund at [reportaproblem.apple.com](https://reportaproblem.apple.com). For purchases on Android, request one from Google Play under its refund policy. If you believe you were charged in error, were charged twice, or Cleanmail was unavailable for more than 7 consecutive days, email support@cleanmailapp.com within 30 days of the charge and we will help with your request to Apple or Google. We aim to respond within 5 business days.
 
 ---
 
@@ -116,7 +118,7 @@ To the extent permitted by law, you agree to defend, indemnify, and hold harmles
 
 ## 11. Termination
 
-You may terminate your account at any time via Settings → Delete Account in the app. Account deletion is immediate and irreversible.
+You may terminate your account at any time via Settings → Delete Account in the app. Account deletion is immediate and irreversible. Deleting your account does not cancel a subscription; cancel it in Apple or Google Play first.
 
 We reserve the right to suspend or terminate your account at our sole discretion, with or without notice, if you violate these Terms or if continued provision of the service to you would expose us to legal or operational risk.
 
@@ -176,6 +178,12 @@ If you downloaded Cleanmail from Apple's App Store, these terms also apply:
 - You must comply with any applicable third-party terms when using Cleanmail, such as your wireless data service agreement.
 - Questions, complaints, or claims about Cleanmail go to Calibrate LLC at support@cleanmailapp.com.
 - Apple and its subsidiaries are third-party beneficiaries of these Terms, and once you accept them, Apple has the right to enforce them against you as a third-party beneficiary.
+
+---
+
+## 14B. Google Play
+
+If you downloaded Cleanmail from Google Play, these Terms are between you and Calibrate LLC only, not Google. Calibrate LLC, not Google, is responsible for Cleanmail, its content and its support. Your use of Google Play, including purchases made through it, is also governed by the Google Play Terms of Service.
 
 ---
 

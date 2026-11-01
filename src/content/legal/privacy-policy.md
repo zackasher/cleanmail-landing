@@ -1,8 +1,8 @@
 # Privacy Policy
 
-**Last updated:** October 26, 2026
+**Last updated:** November 1, 2026
 
-Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
+Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS and Android. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
 This policy is hosted at https://cleanmailapp.com/privacy and is referenced from our OAuth consent screen and in-app Settings.
 
@@ -18,7 +18,8 @@ We collect only the information needed to provide and improve Cleanmail.
 - Profile photos you upload for each person (optional).
 - Information about your children and other household members that you choose to add, such as their names, schools, grades, teachers, activities and photos. You add this so we can sort your digest and events by person. We use it only to provide Cleanmail to you and your household.
 - Notes and emoji reactions you leave on cards and events. Everyone in your household can see them.
-- Subscription purchases are processed by Apple through in-app purchase. We never see or store your payment card details; we receive only your subscription status from Apple.
+- Subscription purchases are processed by Apple through in-app purchase on iPhone, or by Google Play through Google Play Billing on Android. We never see or store your payment card details. From Apple we receive your subscription status. From Google Play we receive and keep the purchase token, the Google order number, the plan and offer you chose, and your subscription's state and renewal or expiry date, so we can confirm your purchase and keep your access current. When you buy on Android, the app attaches a random Cleanmail account identifier (never your name or email) to the purchase so Google credits it to your account.
+- A log of subscription events from either store, such as a trial start, renewal, cancellation or refund, with the plan and its list price. The log never includes the Google Play purchase token.
 
 **Information collected from Google APIs (with your authorization):**
 - The email address of your Google account.
@@ -32,10 +33,10 @@ We collect only the information needed to provide and improve Cleanmail.
 **Information collected automatically:**
 - Your selected time zone (used to schedule digest generation in your local time).
 - Server-side diagnostic logs recording account identifiers, timestamps, and whether an operation succeeded or failed. These contain no email content. The Cleanmail app uses no third-party analytics, advertising, or crash-reporting service.
-- Setup progress: which setup steps you reached, whether you viewed or started a plan, whether sign-in completed (and if it did not, Apple's error code, your iOS version, and whether you are on an iPhone or iPad), and, if you choose to answer, a reason for stopping picked from a short fixed list, recorded with a random install identifier and, once you sign in, your account. It never includes email content, names, or search terms.
+- Setup progress: which setup steps you reached, whether you viewed or started a plan, whether sign-in completed (and if it did not, on iPhone, Apple's error code, your iOS version, and whether you are on an iPhone or iPad; on Android, Google's sign-in error code and your Android version number), and, if you choose to answer, a reason for stopping picked from a short fixed list, recorded with a random install identifier and, once you sign in, your account. It never includes email content, names, or search terms.
 - Error reports: when the app hits an error, a short technical description of where it happened and what went wrong in the code, the app and update version, and your device platform, recorded with a random install identifier and, once you sign in, your account. They never include email content, names, event details, or sign-in tokens. Error reports are deleted after 30 days.
 - App version and activity: the app and update version you are running, your device platform, and when you last opened the app or returned to it, kept with your account so we can see whether a fix has reached you and how many people use the app. It is one record per account, replaced each time, and never includes email content.
-- Referrals: if you sign up with another member's referral code, we record the link between your account and theirs so we can reward them. They are notified when a friend they invited gets a first digest and first subscribes, and receive their reward if you stay subscribed. These notifications never include your name, email, or any of your content. Each member's referral code is a random six-character code.
+- Referrals (iPhone only for now): if you sign up with another member's referral code, we record the link between your account and theirs so we can reward them. They are notified when a friend they invited gets a first digest and first subscribes, and receive their reward if you stay subscribed. These notifications never include your name, email, or any of your content. Each member's referral code is a random six-character code.
 
 **Our website:** Our website can use Microsoft Clarity (to understand how visitors use the site, such as clicks and scrolling), Google Analytics (to count visits and see which pages people read), and the Reddit and Meta pixels (to measure how our ads perform, such as page visits and taps on the App Store button). None of these load unless you choose Accept on the cookie banner, and none load if your browser sends a Global Privacy Control signal. You can change your choice at any time from the Cookie settings link at the bottom of every page. None of them load for visitors in the European Economic Area, the United Kingdom or Switzerland, or when we cannot tell where a visitor is. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement), [Google's privacy policy](https://policies.google.com/privacy), [Reddit's privacy policy](https://www.reddit.com/policies/privacy-policy) and [Meta's privacy policy](https://www.facebook.com/privacy/policy/). These website tools never receive anything from the Cleanmail app, your email, or your account.
 
@@ -89,10 +90,12 @@ Cleanmail relies on the following third parties to provide its service. Each rec
 | **Supabase** (Supabase Inc., hosted in US East, Ohio) | Database and serverless functions | Your profile, digest content, events, subscription state |
 | **Anthropic** (Anthropic PBC) | AI summarization and event extraction via the Claude API | (a) the subject line and message body of emails from senders you have selected; (b) photos and PDFs you choose to scan; (c) the text of voice notes you record, which your device transcribes before anything is sent; (d) images and PDF attachments inside emails from senders you have selected, read to find dates and events; not stored. Sent at the time of the request and not used to train Anthropic's models. |
 | **Google** (Google LLC) | Sign-in, Gmail access, Calendar sync | OAuth tokens; Gmail messages from selected senders; the individual message you open via "View Email"; Calendar event metadata |
-| **Apple** (Apple Inc.) | Subscription billing via in-app purchase | Purchase and subscription status (we never see card numbers or your Apple Account details) |
-| **Resend** (Resend, Inc.) | Transactional email delivery (household invitations) | The recipient email address you enter when inviting a household member, and the inviter's display name |
-| **Expo** (650 Industries, Inc.) | Push notification relay to Apple | Your device push token and the notification text, such as an event title in a reminder |
-| **Apple Push Notification service** | Delivery of push notifications | Device push token and the notification text |
+| **Apple** (Apple Inc.) | Subscription billing via in-app purchase on iPhone | Purchase and subscription status (we never see card numbers or your Apple Account details) |
+| **Google Play** (Google LLC) | Subscription billing on Android via Google Play Billing, real-time subscription notifications (Google Cloud Pub/Sub) and subscription status checks (Google Play Developer API) | Purchase token, order number, plan, offer and subscription status, and a random Cleanmail account identifier attached to your purchase (never your name, email or content). We never see card numbers or your Google payment details. |
+| **Resend** (Resend, Inc.) | Transactional email delivery (household invitations and required subscription renewal notices) | The recipient email address you enter when inviting a household member, the inviter's display name, and your account email address for renewal notices |
+| **Expo** (650 Industries, Inc.) | Push notification relay to Apple and Google | Your device push token and the notification text, such as an event title in a reminder |
+| **Apple Push Notification service** | Delivery of push notifications on iPhone | Device push token and the notification text |
+| **Firebase Cloud Messaging** (Google LLC) | Delivery of push notifications on Android | Device push token and the notification text |
 | **Trigger.dev** | Scheduled job execution for digest delivery | User ID and digest ID at scheduled times: no email content |
 
 Under our agreement with Anthropic, Anthropic does not use the content we send it through its commercial API to train its models, and it keeps that content only for the limited period its commercial terms allow. We do not use AI to make decisions about you that have legal, financial, or similarly significant effects. Anthropic is the only third party that receives your email content, your scanned documents, or the text of your voice notes, and it receives them only to produce the summaries and events you asked for. We do not send any of that content to any other AI service. Supabase stores the resulting summaries and events, not the raw email. The full body of an email you open via "View Email" is retrieved from Google and rendered on your device; it is not stored on our servers (see Section 5).
@@ -146,7 +149,7 @@ Digest history is retained for the period you select in Settings (default 30 day
 You may permanently delete your account and all associated data at any time from within the app: Settings → Delete Account. If you have not started a subscription or free trial yet, you can also tap Leave and delete on the plan screen. Account deletion is immediate and removes:
 - Your profile and all in-app data (people, activities, senders, digest history, events) for digests you own.
 - Profile photos from our storage.
-- Your billing records held by us. Subscriptions purchased through Apple must be canceled in your Apple Account settings; deleting your Cleanmail account does not cancel an Apple subscription.
+- Your billing records held by us, including your Google Play purchase records and your subscription event log. Deleting your Cleanmail account does not cancel a subscription: cancel it first in your Apple Account settings (iPhone) or in Google Play subscriptions (Android).
 - Your stored Google refresh token (revoked with Google), and the credentials for any additional inboxes you have linked (each revoked with Google and deleted).
 
 **If you are part of a shared digest:**
@@ -216,7 +219,7 @@ We may update this Privacy Policy from time to time. Material changes will be co
 
 **Who is responsible for your data.** Calibrate LLC, a United States company, is the controller of the personal data described in this policy.
 
-**Who processes it for us.** The main companies that process your data on our behalf are Google (Gmail and Google Calendar), Supabase (storage and our servers), Anthropic (reading the emails from senders you pick, and the photos, PDFs and voice notes you send, to write your digest and find events) and Apple (payments and push notifications). Section 4 lists every company we use and exactly what each one receives.
+**Who processes it for us.** The main companies that process your data on our behalf are Google (Gmail and Google Calendar, and on Android, Google Play payments and push notifications), Supabase (storage and our servers), Anthropic (reading the emails from senders you pick, and the photos, PDFs and voice notes you send, to write your digest and find events) and Apple (payments and push notifications on iPhone). Section 4 lists every company we use and exactly what each one receives.
 
 **Where your data is stored and processed.** In the United States. Our database runs in Supabase's US East (Ohio) region, and the companies above process data in the United States. Your data is transferred to the United States because that is where the service you signed up for runs.
 
