@@ -1,0 +1,11 @@
+---
+import { PLAY_STORE_URL, PLAY_BADGE_IMAGE_PATH, PLAY_BADGE_ALT } from "../config";
+---
+<a class="play-badge" href={PLAY_STORE_URL}>
+  <img src={PLAY_BADGE_IMAGE_PATH} alt={PLAY_BADGE_ALT} />
+</a>
+<style>
+  .play-badge{display:inline-flex;align-items:center;transition:transform .15s}
+  .play-badge:hover{transform:translateY(-1px)}
+  .play-badge img{height:60px;width:auto;display:block}
+</style>

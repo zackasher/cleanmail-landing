@@ -1,0 +1,43 @@
+---
+import { pageTitle } from "../page-title";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import StoreBadge from "../components/StoreBadge.astro";
+import PlayStoreBadge from "../components/PlayStoreBadge.astro";
+import { APP_STORE_URL, PLAY_STORE_URL, STORE_BADGE_LABEL } from "../config";
+
+const HEADLINE = "Get Cleanmail on your phone";
+const PITCH = "Cleanmail turns school and activity email into a family calendar that builds itself.";
+const PICK_HINT = "Pick your phone's store to download it.";
+---
+<BaseLayout title={pageTitle("Get the app")} description={PITCH} noindex={true} noTracking={true}>
+  <script is:inline define:vars={{ appStoreUrl: APP_STORE_URL, playStoreUrl: PLAY_STORE_URL }}>
+    (function () {
+      var userAgent = navigator.userAgent || "";
+      var isIpadOnDesktopMode = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
+      if (/iPhone|iPad|iPod/.test(userAgent) || isIpadOnDesktopMode) { location.replace(appStoreUrl); return; }
+      if (/Android/.test(userAgent)) { location.replace(playStoreUrl); }
+    })();
+  </script>
+  <section class="get">
+    <div class="get-card">
+      <img class="get-logo" src="/logo.png" alt="Cleanmail" />
+      <h1>{HEADLINE}</h1>
+      <p class="pitch">{PITCH}</p>
+      <p class="hint">{PICK_HINT}</p>
+      <div class="badges">
+        <StoreBadge href={APP_STORE_URL} label={STORE_BADGE_LABEL} />
+        <PlayStoreBadge />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .get{display:flex;justify-content:center;padding:48px 16px 64px}
+  .get-card{max-width:520px;width:100%;text-align:center;background:#fff;border:1px solid var(--line);border-radius:24px;padding:36px 24px;box-shadow:0 18px 40px rgba(30,40,90,.08)}
+  .get-logo{width:64px;height:64px;margin:0 auto 16px;display:block}
+  h1{font-size:28px;font-weight:600;color:var(--navy);margin:0 0 12px;letter-spacing:-.4px}
+  .pitch{color:var(--navy);line-height:1.6;margin:0 0 8px}
+  .hint{color:var(--muted);font-size:14px;margin:0 0 24px}
+  .badges{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+</style>

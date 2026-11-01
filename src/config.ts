@@ -68,3 +68,9 @@ export const DELETE_ACCOUNT_SUPPORT_EMAIL = "support@cleanmailapp.com";
 export const DELETE_ACCOUNT_EMAIL_SUBJECT = "Delete my Cleanmail account";
 // The section 7 text comes from the synced Privacy Policy so this page never drifts from it.
 export const PRIVACY_DELETION_SECTION_ID = "7-data-retention-and-account-deletion";
+
+// One link for both stores, used by the household invite email (Senior Versions Designer, 2026-11-01). Phones go straight to their store.
+export const GET_APP_PATH = "/get";
+export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.zackasher.cleanmail";
+export const PLAY_BADGE_IMAGE_PATH = "/google-play-badge.png";
+export const PLAY_BADGE_ALT = "Get it on Google Play";
