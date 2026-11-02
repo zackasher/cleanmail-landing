@@ -78,4 +78,9 @@ export const PLAY_BADGE_IMAGE_PATH = "/google-play-badge.png?v=2";
 export const PLAY_BADGE_ALT = "Get it on Google Play";
 // Flip to true the day Google Play approves the Android app; until then /get never sends anyone to the Play link, which would be a dead page.
 export const ANDROID_STORE_LIVE = false;
+// App Store campaign links: App Analytics counts installs by ct only when the provider token (pt) is present.
+export const APP_STORE_CAMPAIGN_BASE_URL = "https://apps.apple.com/app/apple-store/id6777857105";
+export const APP_STORE_PROVIDER_TOKEN = "128971225";
+export const CAMPAIGN_SOURCE_PARAM = "src";
+export const CAMPAIGN_SOURCE_PATTERN = "^[a-z0-9-]{1,40}$";
 export const ANDROID_COMING_SOON_MESSAGE = "Cleanmail for Android is coming soon. On an iPhone? You can get it today on the App Store.";

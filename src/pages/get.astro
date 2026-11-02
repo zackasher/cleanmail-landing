@@ -3,15 +3,24 @@ import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import StoreBadge from "../components/StoreBadge.astro";
 import PlayStoreBadge from "../components/PlayStoreBadge.astro";
-import { APP_STORE_URL, PLAY_STORE_URL, STORE_BADGE_LABEL, ANDROID_STORE_LIVE, ANDROID_COMING_SOON_MESSAGE } from "../config";
+import { APP_STORE_URL, PLAY_STORE_URL, STORE_BADGE_LABEL, ANDROID_STORE_LIVE, ANDROID_COMING_SOON_MESSAGE, APP_STORE_CAMPAIGN_BASE_URL, APP_STORE_PROVIDER_TOKEN, CAMPAIGN_SOURCE_PARAM, CAMPAIGN_SOURCE_PATTERN } from "../config";
 
 const HEADLINE = "Get Cleanmail on your phone";
 const PITCH = "Cleanmail turns school and activity email into a family calendar that builds itself.";
 const PICK_HINT = "Pick your phone's store to download it.";
 ---
 <BaseLayout title={pageTitle("Get the app")} description={PITCH} noindex={true} noTracking={true}>
-  <script is:inline define:vars={{ appStoreUrl: APP_STORE_URL, playStoreUrl: PLAY_STORE_URL, androidStoreLive: ANDROID_STORE_LIVE }}>
+  <script is:inline define:vars={{ defaultAppStoreUrl: APP_STORE_URL, playStoreUrl: PLAY_STORE_URL, androidStoreLive: ANDROID_STORE_LIVE, campaignBaseUrl: APP_STORE_CAMPAIGN_BASE_URL, providerToken: APP_STORE_PROVIDER_TOKEN, sourceParam: CAMPAIGN_SOURCE_PARAM, sourcePattern: CAMPAIGN_SOURCE_PATTERN }}>
     (function () {
+      var campaignSource = new URLSearchParams(location.search).get(sourceParam) || "";
+      var hasCampaign = new RegExp(sourcePattern).test(campaignSource);
+      var appStoreUrl = hasCampaign ? campaignBaseUrl + "?pt=" + providerToken + "&ct=" + campaignSource + "&mt=8" : defaultAppStoreUrl;
+      if (hasCampaign) {
+        document.addEventListener("DOMContentLoaded", function () {
+          var badge = document.querySelector(".get .store-badge");
+          if (badge) badge.href = appStoreUrl;
+        });
+      }
       var userAgent = navigator.userAgent || "";
       var isIpadOnDesktopMode = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
       if (/iPhone|iPad|iPod/.test(userAgent) || isIpadOnDesktopMode) { location.replace(appStoreUrl); return; }
