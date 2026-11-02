@@ -60,7 +60,7 @@ Premium adds Google and Outlook Calendar sync and "Magic Import": forward an ema
 
 This is the one I built, so take my enthusiasm with a grain of salt. For a lot of families, the calendar isn't the hard part. The emails are. Dates arrive from the school, the coach, camp and the dance studio, mixed in with everything else, and someone has to find them and type them in.
 
-Cleanmail is an iPhone app that connects to your Gmail read-only. You pick the senders that matter for each person and activity. Your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by person, and it puts every date it finds on your Google Calendar with two-way sync, so a change in Google Calendar shows up in Cleanmail too.
+Cleanmail is an app for iPhone, with Android coming soon, that connects to your Gmail read-only. You pick the senders that matter for each person and activity. Your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by person, and it puts every date it finds on your Google Calendar with two-way sync, so a change in Google Calendar shows up in Cleanmail too.
 
 Setup takes a few minutes, and your first digest is ready in about a minute, before you choose a plan. Up to 4 people share one household, and household members join free. Here's more on [Cleanmail as a family calendar app](/family-calendar-app).
 
@@ -68,7 +68,7 @@ Cleanmail is also #4 in Bragging Mommy's <a href="https://www.thebraggingmommy.c
 
 **Good for:** families whose dates show up in Gmail and who are tired of copying them by hand.
 
-**Watch out for:** it's iPhone only, and it works with Gmail and Google Calendar only. There's no free tier: it's a 14-day free trial, then $6.99 a month or $68.99 a year.
+**Watch out for:** it's on iPhone only until Android launches (coming soon), and it works with Gmail and Google Calendar only. There's no free tier: it's a 14-day free trial, then $6.99 a month or $68.99 a year.
 
 ## Which family calendar app should you pick?
 

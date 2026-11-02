@@ -8,7 +8,7 @@ faqs:
   - q: "Why do I keep missing school emails?"
     a: "School email comes from many senders at random times, and the one line that matters is often buried inside a long newsletter. Knowing every sender, labeling school mail, and putting dates on a calendar right away all help."
   - q: "How do I get school emails onto my Google Calendar automatically?"
-    a: "Cleanmail turns the school, camp, and sports email you pick into a digest sorted by kid and puts every date on a family calendar with two-way Google Calendar sync. It's free for 14 days on iPhone."
+    a: "Cleanmail turns the school, camp, and sports email you pick into a digest sorted by kid and puts every date on a family calendar with two-way Google Calendar sync. It's free for 14 days on iPhone, and Android is coming soon."
   - q: "Can I get ParentSquare and Remind messages by email?"
     a: "Yes. Both apps let you turn on email notifications in their settings, which gives you a searchable record instead of a push notification that disappears."
 ---

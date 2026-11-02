@@ -72,8 +72,8 @@ Then you cancel during the trial and go back to what you had, which you never tu
 
 This is the part where I tell you what I built, so take my enthusiasm with a grain of salt.
 
-For my family, the hard part was never the calendar. It was the emails. So I built Cleanmail, an iPhone app that connects to your Gmail read-only. You pick the senders that matter for each person and activity, and your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by person and puts every date it finds on your Google Calendar, with two-way sync.
+For my family, the hard part was never the calendar. It was the emails. So I built Cleanmail, an app for iPhone (Android is coming soon) that connects to your Gmail read-only. You pick the senders that matter for each person and activity, and your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by person and puts every date it finds on your Google Calendar, with two-way sync.
 
-It fits the one-week test well: setup takes a few minutes, and your first digest is ready in about a minute, before you choose a plan. After that there's a 14-day free trial, then $6.99 a month or $68.99 a year, for a household of up to 4 people. It's iPhone only, with Gmail and Google Calendar. If you want to compare options first, here's my roundup of the [best family calendar apps](/blog/best-family-calendar-app), or see [how Cleanmail works](/how-it-works).
+It fits the one-week test well: setup takes a few minutes, and your first digest is ready in about a minute, before you choose a plan. After that there's a 14-day free trial, then $6.99 a month or $68.99 a year, for a household of up to 4 people. It's on iPhone now, with Android coming soon, and works with Gmail and Google Calendar. If you want to compare options first, here's my roundup of the [best family calendar apps](/blog/best-family-calendar-app), or see [how Cleanmail works](/how-it-works).
 
 Whatever you test, give it one honest week. The worst case is a few minutes. The best case is getting your Sunday nights back.

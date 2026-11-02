@@ -10,7 +10,7 @@ faqs:
   - q: "How do I add my school calendar to Google Calendar?"
     a: "Ask the school for its public calendar link. Then open Google Calendar on a computer, click the plus next to Other calendars, choose From URL, paste the link, and click Add calendar. Google only lets you subscribe this way from a computer browser, not the phone app."
   - q: "Is there an app that puts dates from school emails on Google Calendar?"
-    a: "Yes. Cleanmail is an iPhone app that connects to Gmail read-only, sums up mail from the school, camp, and sports senders you pick in a digest sorted by kid, and puts every date it finds on your Google Calendar."
+    a: "Yes. Cleanmail is an app for iPhone, with Android coming soon, that connects to Gmail read-only, sums up mail from the school, camp, and sports senders you pick in a digest sorted by kid, and puts every date it finds on your Google Calendar."
 ---
 
 It's Sunday night. I'm on the couch with my phone, scrolling through the week's school mail. The newsletter has picture day buried in paragraph four. The soccer coach moved Thursday's practice. The PTA sent a flyer as a PDF, and somewhere inside it is a date I definitely need. I open Google Calendar, then Gmail, then Google Calendar again. My thumb is tired and I have learned nothing about picture day.
@@ -80,7 +80,7 @@ That's the whole free system. It works. It's also a second part-time job, which 
 
 This is the part I built Cleanmail for: a way to turn school emails into calendar events without touching each one. I'm a dad of two, and I was tired of being the family's human copy-and-paste machine.
 
-Cleanmail is an iPhone app that connects to your Gmail read-only. You pick the senders that matter for each kid and activity: the school, the coach, camp, even the ParentSquare or Remind notification emails your school sends. Your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by kid, and it puts every date it finds on your Google Calendar. No forwarding, no retyping, no Sunday night thumb workout.
+Cleanmail is an app for iPhone, with Android coming soon, that connects to your Gmail read-only. You pick the senders that matter for each kid and activity: the school, the coach, camp, even the ParentSquare or Remind notification emails your school sends. Your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by kid, and it puts every date it finds on your Google Calendar. No forwarding, no retyping, no Sunday night thumb workout.
 
 A few things that make it work for a real family:
 
@@ -88,6 +88,6 @@ A few things that make it work for a real family:
 - **One shared view for the household.** Up to 4 people share one household. One parent pays, and household members join free.
 - **Everything else, too.** Snap a photo of a paper flyer and the dates land on your calendar, or add an event by voice.
 
-It's for iPhone with Gmail and Google Calendar, and it comes with a 14-day free trial. If you want the full picture first, here's [how Cleanmail works](/how-it-works).
+It's on iPhone now (Android is coming soon), works with Gmail and Google Calendar, and comes with a 14-day free trial. If you want the full picture first, here's [how Cleanmail works](/how-it-works).
 
 Either way, subscribe to that school calendar tonight. Picture day deserves better than paragraph four.
