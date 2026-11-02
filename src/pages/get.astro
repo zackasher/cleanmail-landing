@@ -3,19 +3,19 @@ import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import StoreBadge from "../components/StoreBadge.astro";
 import PlayStoreBadge from "../components/PlayStoreBadge.astro";
-import { APP_STORE_URL, PLAY_STORE_URL, STORE_BADGE_LABEL } from "../config";
+import { APP_STORE_URL, PLAY_STORE_URL, STORE_BADGE_LABEL, ANDROID_STORE_LIVE, ANDROID_COMING_SOON_MESSAGE } from "../config";
 
 const HEADLINE = "Get Cleanmail on your phone";
 const PITCH = "Cleanmail turns school and activity email into a family calendar that builds itself.";
 const PICK_HINT = "Pick your phone's store to download it.";
 ---
 <BaseLayout title={pageTitle("Get the app")} description={PITCH} noindex={true} noTracking={true}>
-  <script is:inline define:vars={{ appStoreUrl: APP_STORE_URL, playStoreUrl: PLAY_STORE_URL }}>
+  <script is:inline define:vars={{ appStoreUrl: APP_STORE_URL, playStoreUrl: PLAY_STORE_URL, androidStoreLive: ANDROID_STORE_LIVE }}>
     (function () {
       var userAgent = navigator.userAgent || "";
       var isIpadOnDesktopMode = navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1;
       if (/iPhone|iPad|iPod/.test(userAgent) || isIpadOnDesktopMode) { location.replace(appStoreUrl); return; }
-      if (/Android/.test(userAgent)) { location.replace(playStoreUrl); }
+      if (/Android/.test(userAgent) && androidStoreLive) { location.replace(playStoreUrl); }
     })();
   </script>
   <section class="get">
@@ -26,8 +26,9 @@ const PICK_HINT = "Pick your phone's store to download it.";
       <p class="hint">{PICK_HINT}</p>
       <div class="badges">
         <StoreBadge href={APP_STORE_URL} label={STORE_BADGE_LABEL} />
-        <PlayStoreBadge />
+        {ANDROID_STORE_LIVE && <PlayStoreBadge />}
       </div>
+      {!ANDROID_STORE_LIVE && <p class="android-soon">{ANDROID_COMING_SOON_MESSAGE}</p>}
     </div>
   </section>
 </BaseLayout>
@@ -40,4 +41,5 @@ const PICK_HINT = "Pick your phone's store to download it.";
   .pitch{color:var(--navy);line-height:1.6;margin:0 0 8px}
   .hint{color:var(--muted);font-size:14px;margin:0 0 24px}
   .badges{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .android-soon{color:var(--muted);font-size:14px;margin:20px 0 0}
 </style>

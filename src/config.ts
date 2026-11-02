@@ -76,3 +76,6 @@ export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com
 // The query string makes browsers fetch the trimmed badge instead of the untrimmed one they cached.
 export const PLAY_BADGE_IMAGE_PATH = "/google-play-badge.png?v=2";
 export const PLAY_BADGE_ALT = "Get it on Google Play";
+// Flip to true the day Google Play approves the Android app; until then /get never sends anyone to the Play link, which would be a dead page.
+export const ANDROID_STORE_LIVE = false;
+export const ANDROID_COMING_SOON_MESSAGE = "Cleanmail for Android is coming soon. On an iPhone? You can get it today on the App Store.";
