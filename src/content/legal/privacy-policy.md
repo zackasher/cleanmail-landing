@@ -1,8 +1,8 @@
 # Privacy Policy
 
-**Last updated:** November 1, 2026
+**Last updated:** November 3, 2026
 
-Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS and Android. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
+Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS and Android, and on the web at app.cleanmailapp.com. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
 This policy is hosted at https://cleanmailapp.com/privacy and is referenced from our OAuth consent screen and in-app Settings.
 
@@ -37,6 +37,8 @@ We collect only the information needed to provide and improve Cleanmail.
 - Error reports: when the app hits an error, a short technical description of where it happened and what went wrong in the code, the app and update version, and your device platform, recorded with a random install identifier and, once you sign in, your account. They never include email content, names, event details, or sign-in tokens. Error reports are deleted after 30 days.
 - App version and activity: the app and update version you are running, your device platform, and when you last opened the app or returned to it, kept with your account so we can see whether a fix has reached you and how many people use the app. It is one record per account, replaced each time, and never includes email content.
 - Referrals (iPhone only for now): if you sign up with another member's referral code, we record the link between your account and theirs so we can reward them. They are notified when a friend they invited gets a first digest and first subscribes, and receive their reward if you stay subscribed. These notifications never include your name, email, or any of your content. Each member's referral code is a random six-character code.
+
+**Cleanmail on the web (app.cleanmailapp.com):** your browser keeps your Cleanmail session and a few app settings (such as "don't ask again" choices) in its local storage, so you stay signed in on that browser until you sign out. Cleanmail sets no cookies of its own on the web app and runs no advertising or analytics tools there. You sign in with Google's own sign-in button, which Google loads from its servers and which sets Google's own cookies under [Google's privacy policy](https://policies.google.com/privacy). When you sign in, we record the time and whether the sign-in was allowed, never your password; we never see your Google password on any platform. Sign-in and error diagnostics go to our own servers, the same as in the app.
 
 **Our website:** Our website can use Microsoft Clarity (to understand how visitors use the site, such as clicks and scrolling), Google Analytics (to count visits and see which pages people read), and the Reddit and Meta pixels (to measure how our ads perform, such as page visits and taps on the App Store button). None of these load unless you choose Accept on the cookie banner, and none load if your browser sends a Global Privacy Control signal. You can change your choice at any time from the Cookie settings link at the bottom of every page. None of them load for visitors in the European Economic Area, the United Kingdom or Switzerland, or when we cannot tell where a visitor is. See [Microsoft's privacy statement](https://privacy.microsoft.com/privacystatement), [Google's privacy policy](https://policies.google.com/privacy), [Reddit's privacy policy](https://www.reddit.com/policies/privacy-policy) and [Meta's privacy policy](https://www.facebook.com/privacy/policy/). These website tools never receive anything from the Cleanmail app, your email, or your account.
 
@@ -96,6 +98,7 @@ Cleanmail relies on the following third parties to provide its service. Each rec
 | **Expo** (650 Industries, Inc.) | Push notification relay to Apple and Google | Your device push token and the notification text, such as an event title in a reminder |
 | **Apple Push Notification service** | Delivery of push notifications on iPhone | Device push token and the notification text |
 | **Firebase Cloud Messaging** (Google LLC) | Delivery of push notifications on Android | Device push token and the notification text |
+| **Cloudflare** (Cloudflare, Inc.) | Hosting for our website and the Cleanmail web app | Your IP address and browser details when you visit, as with any website host; no email content |
 | **Trigger.dev** | Scheduled job execution for digest delivery | User ID and digest ID at scheduled times: no email content |
 
 Under our agreement with Anthropic, Anthropic does not use the content we send it through its commercial API to train its models, and it keeps that content only for the limited period its commercial terms allow. We do not use AI to make decisions about you that have legal, financial, or similarly significant effects. Anthropic is the only third party that receives your email content, your scanned documents, or the text of your voice notes, and it receives them only to produce the summaries and events you asked for. We do not send any of that content to any other AI service. Supabase stores the resulting summaries and events, not the raw email. The full body of an email you open via "View Email" is retrieved from Google and rendered on your device; it is not stored on our servers (see Section 5).

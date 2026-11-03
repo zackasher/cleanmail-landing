@@ -1,8 +1,8 @@
 # Terms of Service
 
-**Last updated:** November 1, 2026
+**Last updated:** November 3, 2026
 
-These Terms of Service ("Terms") govern your use of Cleanmail, a mobile application for iPhone and Android operated by Calibrate LLC ("we," "our," or "us"). By creating an account or using Cleanmail, you agree to these Terms.
+These Terms of Service ("Terms") govern your use of Cleanmail, an application for iPhone, Android and the web operated by Calibrate LLC ("we," "our," or "us"). By creating an account or using Cleanmail, you agree to these Terms.
 
 If you do not agree to these Terms, do not use Cleanmail.
 
@@ -10,7 +10,7 @@ If you do not agree to these Terms, do not use Cleanmail.
 
 ## 1. The Service
 
-Cleanmail is an AI-powered email digest application available on iOS and Android. It reads emails from Gmail senders you have explicitly selected, generates summary digests using Anthropic's Claude API, and adds the dates it finds to an in-app family calendar kept in two-way sync with your Google Calendar.
+Cleanmail is an AI-powered email digest application available on iOS and Android, and on the web at app.cleanmailapp.com. It reads emails from Gmail senders you have explicitly selected, generates summary digests using Anthropic's Claude API, and adds the dates it finds to an in-app family calendar kept in two-way sync with your Google Calendar.
 
 Cleanmail is a service of Calibrate LLC, registered in the State of Illinois, United States.
 
@@ -28,7 +28,7 @@ You are responsible for maintaining the confidentiality of your Google account c
 
 ## 3. Subscriptions and Billing
 
-Cleanmail is offered as a subscription with two plans: monthly at $6.99 per month, or yearly at $68.99 per year. Both plans include the same features. There is no free tier.
+Cleanmail is offered as a subscription with two plans: monthly at $6.99 per month, or yearly at $68.99 per year. Both plans include the same features. There is no free tier. Subscriptions are bought in the iPhone or Android app; the web version of Cleanmail uses the subscription already on your account and does not sell one.
 
 **Free trial.** New subscribers receive a 14-day free trial. The app store you subscribe through (Apple's App Store on iPhone, Google Play on Android) decides whether you count as a new subscriber. Unless you cancel at least 24 hours before the trial ends, your subscription automatically converts to a paid subscription on the plan you chose ($6.99 per month or $68.99 per year) and the payment method on your Apple Account or Google Play account is charged at that time. You can cancel at any time during the trial in that store's subscription settings; canceling before the trial ends prevents any charge.
 
