@@ -3,7 +3,7 @@ import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import BlogReads from "../components/BlogReads.astro";
-import { BLOG_SLUG_SCHOOL_EVENTS_CALENDAR } from "../config";
+import { BLOG_SLUG_SCHOOL_EVENTS_CALENDAR, BLOG_SLUG_SPORTS_SCHEDULE_CALENDAR } from "../config";
 import Mark from "../components/Mark.astro";
 import SyncDiagram from "../components/SyncDiagram.astro";
 import { ICON_PATHS } from "../data-icons";
@@ -94,7 +94,7 @@ const faqSchema = {
       </div>
     </div>
 
-    <BlogReads slugs={[BLOG_SLUG_SCHOOL_EVENTS_CALENDAR]} />
+    <BlogReads slugs={[BLOG_SLUG_SCHOOL_EVENTS_CALENDAR, BLOG_SLUG_SPORTS_SCHEDULE_CALENDAR]} />
 
     <div class="ip-final">
       <h2>Let your calendar keep itself</h2>

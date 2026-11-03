@@ -24,6 +24,7 @@ export const GOOGLE_TAG_ID = "G-26T2RXTR56";
 export const BLOG_READS_HEADING = "From the blog";
 export const BLOG_SLUG_SCHOOL_EVENTS_CALENDAR = "add-school-events-to-google-calendar-automatically";
 export const BLOG_SLUG_STOP_MISSING_EMAILS = "how-to-stop-missing-school-emails";
+export const BLOG_SLUG_SPORTS_SCHEDULE_CALENDAR = "kids-sports-schedule-to-google-calendar";
 export const APP_STORE_NAME = "Cleanmail: Family Inbox";
 export const SOCIAL_PROFILE_URLS = [
   "https://www.instagram.com/cleanmailapp/",
