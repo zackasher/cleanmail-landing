@@ -1,4 +1,5 @@
 ---
+import { WEB_APP_URL, WEB_APP_SIGN_IN_LABEL } from "../config";
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
 const isHome = path === "/";
 const links = [
@@ -20,12 +21,14 @@ const links = [
         <a href={l.href} class={`chip${path === l.href ? " active" : ""}`}>{l.label}</a>
       ))}
     </div>
+    <a class="signin" href={WEB_APP_URL}>{WEB_APP_SIGN_IN_LABEL}</a>
     <button class="burger" id="menu-btn" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
     {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    <a href={WEB_APP_URL}>{WEB_APP_SIGN_IN_LABEL}</a>
   </div>
 </nav>
 
@@ -40,6 +43,8 @@ const links = [
   .chip{font-size:14px;font-weight:400;color:var(--ink);background:rgba(255,255,255,.82);border:1px solid rgba(74,111,227,.16);padding:8px 15px;border-radius:999px;text-decoration:none;transition:all .15s;white-space:nowrap}
   .chip:hover{border-color:rgba(74,111,227,.5);color:var(--purple);background:#fff}
   .chip.active{background:var(--purple);color:#fff;border-color:var(--purple);box-shadow:0 5px 14px rgba(74,111,227,.28)}
+  .signin{font-size:14px;font-weight:500;color:var(--purple);background:#fff;border:1.5px solid var(--purple);padding:7px 16px;border-radius:999px;text-decoration:none;transition:all .15s;white-space:nowrap}
+  .signin:hover{background:var(--purple);color:#fff;box-shadow:0 5px 14px rgba(74,111,227,.28)}
   .burger{display:none;flex-direction:column;align-items:center;justify-content:center;gap:5px;width:42px;height:42px;padding:0;background:rgba(255,255,255,.82);border:1px solid rgba(74,111,227,.16);border-radius:12px;cursor:pointer}
   .burger span{display:block;width:24px;height:2.5px;border-radius:2px}
   .burger span:nth-child(1){background:#4A6FE3}
@@ -49,7 +54,7 @@ const links = [
   .mobile-menu.open{display:block}
   .mobile-menu a{display:block;padding:10px 14px;font-size:15px;color:var(--ink);text-decoration:none;border-radius:9px}
   .mobile-menu a:hover{background:var(--card);color:var(--purple)}
-  @media(max-width:940px){.seg{display:none}.burger{display:flex}}
+  @media(max-width:940px){.seg{display:none}.signin{display:none}.burger{display:flex}}
 </style>
 
 <script>

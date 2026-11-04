@@ -85,3 +85,8 @@ export const APP_STORE_PROVIDER_TOKEN = "128971225";
 export const CAMPAIGN_SOURCE_PARAM = "src";
 export const CAMPAIGN_SOURCE_PATTERN = "^[a-z0-9-]{1,40}$";
 export const ANDROID_COMING_SOON_MESSAGE = "Cleanmail for Android is coming soon. On an iPhone? You can get it today on the App Store.";
+
+// The signed-in web app. A parent who already set up on the phone signs in here on a computer.
+export const WEB_APP_URL = "https://app.cleanmailapp.com";
+export const WEB_APP_SIGN_IN_LABEL = "Sign in";
+export const WEB_APP_FOOTER_LABEL = "Cleanmail on the web";
