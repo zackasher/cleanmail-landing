@@ -1,0 +1,56 @@
+---
+import { pageTitle } from "../page-title";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTA from "../components/CTA.astro";
+import TrustLine from "../components/TrustLine.astro";
+import { PRICE_MONTHLY, PRICE_YEARLY, PRICE_YEARLY_PER_MONTH, TRIAL_DAYS, HOUSEHOLD_SIZE } from "../config";
+import "../styles/info-page.css";
+---
+<BaseLayout
+  title={pageTitle("Pricing")}
+  description={`Cleanmail is ${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year. One parent pays and up to ${HOUSEHOLD_SIZE} people in your household join free. See your first digest before you choose a plan, then ${TRIAL_DAYS} days free.`}
+>
+  <section class="ip">
+    <p class="ip-eyebrow">Pricing</p>
+    <h1>One plan for your whole household.</h1>
+    <p class="ip-lede">{PRICE_MONTHLY} a month or {PRICE_YEARLY} a year, billed through the App Store or Google Play.</p>
+
+    <div class="price">
+      <div class="price-card best">
+        <span class="price-tag">{TRIAL_DAYS} days free</span>
+        <span class="price-name">Monthly</span>
+        <span class="price-num">{PRICE_MONTHLY}<small>/month</small></span>
+        <span class="price-per">Cancel anytime</span>
+      </div>
+      <div class="price-card best">
+        <span class="price-tag">2 months free</span>
+        <span class="price-name">Yearly</span>
+        <span class="price-num">{PRICE_YEARLY}<small>/year</small></span>
+        <span class="price-per">{PRICE_YEARLY_PER_MONTH}/month</span>
+      </div>
+    </div>
+
+    <ul class="price-points">
+      <li>One parent pays. Up to {HOUSEHOLD_SIZE} people in your household join free.</li>
+      <li>Set up in about a minute and see your first digest before you choose a plan. Then {TRIAL_DAYS} days free.</li>
+    </ul>
+
+    <div class="price-actions">
+      <CTA />
+      <TrustLine />
+    </div>
+  </section>
+
+  <style>
+    .price{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:44px}
+    .price-card{position:relative;width:240px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 22px;text-align:center;display:flex;flex-direction:column;gap:6px;box-shadow:0 8px 22px rgba(27,34,54,.05)}
+    .price-card.best{border:2px solid var(--purple)}
+    .price-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:999px;white-space:nowrap}
+    .price-name{font-size:15px;color:var(--muted);font-weight:600}
+    .price-num{font-size:36px;font-weight:500;color:var(--navy);letter-spacing:-1px}
+    .price-num small{font-size:15px;color:var(--muted);letter-spacing:0;margin-left:2px}
+    .price-per{font-size:14px;color:var(--muted)}
+    .price-points{list-style:none;max-width:560px;margin:36px auto 0;padding:0;display:flex;flex-direction:column;gap:12px;text-align:center;font-size:17px;line-height:1.5;color:var(--ink)}
+    .price-actions{margin-top:36px;text-align:center}
+  </style>
+</BaseLayout>

@@ -1,3 +1,4 @@
 /subscriptions /features 301
 /coming-soon / 301
 /r/* /r 200
+/sitemap.xml /sitemap-index.xml 200

@@ -1,6 +1,7 @@
 ---
 import CTA from "./CTA.astro";
-import { BRAND_SUBTITLE } from "../config";
+import TrustLine from "./TrustLine.astro";
+import { BRAND_SUBTITLE, TRIAL_DAYS } from "../config";
 ---
 <section class="hero">
   <div class="hero-inner">
@@ -14,7 +15,8 @@ import { BRAND_SUBTITLE } from "../config";
     <div class="actions">
       <CTA />
     </div>
-    <p class="trust"><b>Only the senders you choose.</b><span class="dot"></span>Read-only.<span class="dot"></span>Your information is never sold.<span class="dot"></span>No ads.<span class="dot"></span>No hidden fees.</p>
+    <p class="trial">Set up in about a minute. See your first digest before you pay, then {TRIAL_DAYS} days free.</p>
+    <TrustLine />
   </div>
 </section>
 
@@ -37,7 +39,5 @@ import { BRAND_SUBTITLE } from "../config";
   .actions{margin-top:32px}
   .see-how{display:inline-flex;align-items:center;gap:7px;margin-top:22px;font-size:15px;font-weight:500;color:var(--purple);text-decoration:none}
   .see-how:hover{opacity:.85}
-  .trust{margin:26px 0 0 50%;transform:translateX(-50%);width:max-content;max-width:calc(100vw - 32px);font-size:13px;color:var(--muted);letter-spacing:.1px}
-  .trust b{color:var(--ink);font-weight:500}
-  .dot{display:inline-block;width:4px;height:4px;border-radius:50%;background:#cfd6e6;margin:0 9px;vertical-align:middle}
+  .trial{margin:22px auto 0;font-size:15px;line-height:1.5;color:var(--navy);font-weight:500}
 </style>
