@@ -10,7 +10,7 @@ faqs:
   - q: "Should I make a separate Gmail account just for school emails?"
     a: "You can, but most parents end up checking two inboxes and missing things in both. One inbox with a label for each kid and a few filters is usually easier to keep up with."
   - q: "Is there an app that organizes school emails automatically?"
-    a: "Cleanmail is an app for iPhone, with Android coming soon, that connects to Gmail read-only, sums up mail from the school, camp, and sports senders you pick in a digest sorted by kid, and puts every date on your family calendar with two-way Google Calendar sync."
+    a: "Cleanmail is an app for iPhone and Android that connects to Gmail read-only, sums up mail from the school, camp, and sports senders you pick in a digest sorted by kid, and puts every date on your family calendar with two-way Google Calendar sync."
 ---
 
 It's 9:40 on a Tuesday night. You're brushing your teeth when a thought arrives uninvited: wasn't there something about pajama day? You open Gmail, scroll past a coupon, a shipping update, two newsletters, and a PTA reminder, and find it. Pajama day was today. Your kid wore jeans. Your kid will mention this at Thanksgiving for the next eleven years.
@@ -97,7 +97,7 @@ Labels and filters are a solid free system. Their limits show up as your family 
 
 ## How Cleanmail organizes school email automatically
 
-This is the part I got tired of doing myself, so I built Cleanmail. It's an app for iPhone, with Android coming soon, that connects to your Gmail with read-only access. You name your kids, their activities, and the school, camp, and sports senders that matter, and your digest only covers the senders you pick. Cleanmail never changes your inbox.
+This is the part I got tired of doing myself, so I built Cleanmail. It's an app for iPhone and Android that connects to your Gmail with read-only access. You name your kids, their activities, and the school, camp, and sports senders that matter, and your digest only covers the senders you pick. Cleanmail never changes your inbox.
 
 Instead of a label you have to remember to open, you get a short digest sorted by kid and activity, with each update summed up in plain words. Every date it finds lands on your family calendar, which syncs both ways with Google Calendar, so a change you make in Google shows up in Cleanmail too. If your school app sends email notifications, pick that sender like any other and its updates show up in your digest, tagged with where they came from.
 

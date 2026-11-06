@@ -10,7 +10,7 @@ faqs:
   - q: "How long does a team schedule change take to show up in Google Calendar?"
     a: "It can take up to 24 hours. GameChanger and SportsEngine both say so in their help pages, so check the team app itself on game day."
   - q: "Is there an app that puts dates from a coach's email on Google Calendar?"
-    a: "Yes. Cleanmail connects to Gmail read-only (iPhone only, Android coming soon). You pick the coach and league senders, your digest is sorted by kid, and the dates it finds go on your family calendar with two-way Google Calendar sync."
+    a: "Yes. Cleanmail connects to Gmail read-only, on iPhone and Android. You pick the coach and league senders, your digest is sorted by kid, and the dates it finds go on your family calendar with two-way Google Calendar sync."
 ---
 
 It's 5:40 on a Tuesday. Cleats are on, the water bottle is full, and one kid is already in the car. Then you spot this morning's email from the coach: practice moved to the other field, and it starts at 6:30 now. You have 50 extra minutes, a child in shin guards, and strong feelings about email.
@@ -87,7 +87,7 @@ Then there's everything that never makes it to a team calendar at all: the snack
 
 This is the part I built, so take my enthusiasm with a grain of salt.
 
-Cleanmail connects to your Gmail read-only. It's iPhone only, Android coming soon. You pick the senders that matter for each kid and activity: the coach, the league, and any team app that sends you email, which Cleanmail handles like any other sender you pick. It doesn't connect to the team apps themselves. Your digest only covers the senders you pick.
+Cleanmail connects to your Gmail read-only, on iPhone and Android. You pick the senders that matter for each kid and activity: the coach, the league, and any team app that sends you email, which Cleanmail handles like any other sender you pick. It doesn't connect to the team apps themselves. Your digest only covers the senders you pick.
 
 You get a digest sorted by kid, and the dates it finds go on your family calendar, with [two-way Google Calendar sync](/google-calendar-sync). When a correction arrives as a reply on the same email thread, the event updates and the old time stays crossed out underneath. A cancellation email marks the event cancelled in Cleanmail and in Google Calendar.
 
