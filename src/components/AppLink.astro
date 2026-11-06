@@ -1,6 +1,7 @@
 ---
 import StoreBadge from "./StoreBadge.astro";
-import { SITE_STAGE, APP_STORE_URL, STORE_BADGE_LABEL } from "../config";
+import PlayStoreBadge from "./PlayStoreBadge.astro";
+import { SITE_STAGE, APP_STORE_URL, STORE_BADGE_LABEL, ANDROID_STORE_LIVE } from "../config";
 const launched = SITE_STAGE === "launched";
 const target = launched ? APP_STORE_URL : "/coming-soon";
 const top = launched ? STORE_BADGE_LABEL : "Coming soon to the";
@@ -8,6 +9,7 @@ const cap = launched ? "Scan to download" : "Scan to learn more";
 ---
 <section class="applink">
   <StoreBadge href={target} label={top} />
+  {launched && ANDROID_STORE_LIVE && <PlayStoreBadge />}
   <a class="qr-wrap" href={target} tabindex="-1">
     <img src="/app-qr.png" alt="" width="96" height="96" />
     <span class="qr-cap">{cap}</span>

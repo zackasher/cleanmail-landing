@@ -77,8 +77,8 @@ export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com
 // The query string makes browsers fetch the trimmed badge instead of the untrimmed one they cached.
 export const PLAY_BADGE_IMAGE_PATH = "/google-play-badge.png?v=2";
 export const PLAY_BADGE_ALT = "Get it on Google Play";
-// Flip to true the day Google Play approves the Android app; until then /get never sends anyone to the Play link, which would be a dead page.
-export const ANDROID_STORE_LIVE = false;
+// True since Google Play approved the Android app (11/6/2026): /get sends Android phones to Play, and the store badges show both stores.
+export const ANDROID_STORE_LIVE = true;
 // App Store campaign links: App Analytics counts installs by ct only when the provider token (pt) is present.
 export const APP_STORE_CAMPAIGN_BASE_URL = "https://apps.apple.com/app/apple-store/id6777857105";
 export const APP_STORE_PROVIDER_TOKEN = "128971225";
