@@ -2,7 +2,7 @@
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
-import { CLARITY_PROJECT_ID, APP_STORE_URL, PLAY_STORE_URL, APP_STORE_NAME, SOCIAL_PROFILE_URLS, GOOGLE_TAG_ID, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH, COOKIE_CONSENT_STORAGE_KEY, COOKIE_CONSENT_ACCEPTED, COOKIE_CONSENT_REJECTED, COOKIE_CONSENT_MESSAGE, COOKIE_CONSENT_REGION_OFF_MESSAGE } from "../config";
+import { CLARITY_PROJECT_ID, APP_STORE_URL, PLAY_STORE_URL, SITE_DESCRIPTION_SHORT, SITE_DESCRIPTION_LONG, APP_STORE_NAME, SOCIAL_PROFILE_URLS, GOOGLE_TAG_ID, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH, COOKIE_CONSENT_STORAGE_KEY, COOKIE_CONSENT_ACCEPTED, COOKIE_CONSENT_REJECTED, COOKIE_CONSENT_MESSAGE, COOKIE_CONSENT_REGION_OFF_MESSAGE } from "../config";
 export interface Props {
   title: string;
   description?: string;
@@ -13,7 +13,7 @@ export interface Props {
 }
 const {
   title,
-  description = "Cleanmail turns school, camp, and sports email into one digest sorted by kid, with every date on a family calendar that syncs with Google.",
+  description = SITE_DESCRIPTION_SHORT,
   image = "/og.png",
   faqSchema,
   noindex = false,
@@ -185,7 +185,7 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
     "logo": "https://cleanmailapp.com/logo.png",
     "sameAs": [...SOCIAL_PROFILE_URLS, APP_STORE_URL, PLAY_STORE_URL],
     "founder": { "@type": "Person", "name": "Zachary Asher" },
-    "description": "Cleanmail turns school, camp, and sports emails into one AI-powered digest organized by person and activity, with every date it finds synced to your calendar."
+    "description": SITE_DESCRIPTION_LONG
   })} />
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
@@ -203,7 +203,7 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
     "screenshot": "https://cleanmailapp.com/Digest_Sample.png",
     "author": { "@type": "Organization", "name": "Calibrate LLC" },
     "publisher": { "@type": "Organization", "name": "Calibrate LLC" },
-    "description": "Cleanmail connects directly to Gmail and turns school, camp, and sports emails into one AI-powered digest organized by person and activity. It extracts the important dates and syncs them to your Google Calendar automatically, so your calendar writes itself. Read-only access. Your digest only covers the senders you pick.",
+    "description": SITE_DESCRIPTION_LONG,
     "offers": [
       {
         "@type": "Offer",

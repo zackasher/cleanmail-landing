@@ -1,5 +1,6 @@
 ---
-import { APP_STORE_NAME } from "../config";
+import { APP_STORE_NAME, SITE_DESCRIPTION_SHORT } from "../config";
+import BrandTagline from "../components/BrandTagline.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
@@ -14,7 +15,7 @@ const explore = [
   { href: "/family-calendar-app", icon: ICON_PATHS.calendarHeart, color: "var(--teal)", title: "The family calendar that writes itself", body: "Every feature and the price, at a glance." },
 ];
 ---
-<BaseLayout title={`${APP_STORE_NAME} | Your family calendar, on autopilot`} description="Cleanmail reads the school, camp and sports email in your Gmail, builds your family calendar and syncs it with Google Calendar. 14-day free trial.">
+<BaseLayout title={`${APP_STORE_NAME} | Your family calendar, on autopilot`} description={SITE_DESCRIPTION_SHORT}>
   <Hero />
 
   <a class="gift-banner" href="/share">
@@ -24,6 +25,21 @@ const explore = [
   </a>
 
   <LiveStats />
+
+  <section class="relief" aria-label="What Cleanmail takes off your plate">
+    <div class="relief-card">
+      <h2>Take back your week.</h2>
+      <p>No more 7 AM scramble for the permission slip. Cleanmail reads the school and sports emails you pick, sums them up by kid, and puts every date on your calendar, so you already know what tomorrow needs.</p>
+    </div>
+    <div class="relief-card">
+      <h2>Share the mental load.</h2>
+      <p>Invite up to 4 people in your home. Everyone sees the same digest and calendar, so the schedule stops living in one person's head. They join free.</p>
+    </div>
+    <div class="relief-card">
+      <h2>Be there for the busy years.</h2>
+      <p>Get the calendar out of your head. When the dates take care of themselves, you can stop wondering what tomorrow will bring and spend the busy years being there for your kids.</p>
+    </div>
+  </section>
 
   <section class="film">
     <div class="film-wrap">
@@ -66,10 +82,10 @@ const explore = [
         <div class="story-bubble">
           <p class="story-eyebrow">From the founder</p>
           <p class="story-lead">Hi. I'm Zack, and I kept missing things.</p>
-          <p class="story-copy">I'm a dad of two, and for a long time I was juggling three calendars and pages-long emails from nine different schools and apps. I still kept missing things that mattered to my kids.</p>
-          <p class="story-copy">So one night I'd had enough. I wrote a quick script that turned all that email into one simple digest I could actually read, and dropped every date straight onto my calendar.</p>
-          <p class="story-copy">Then the craziest thing happened. I became the expert on my own family's schedule. Every event, every appointment, a brief of my kids' days I could read in seconds instead of hours.</p>
-          <p class="story-copy">Every parent I showed asked the same thing: which app is that? So I built the one they already thought it was. Now my email notifications are off, and I just swipe through Cleanmail every day.</p>
+          <p class="story-copy">I'm a dad of two. Every new season brought another activity, another app and another stack of emails to keep track of. We had five different school apps, three inboxes, and fifty messages a day. Picture day was at the end of a long email, at the end of a long workday. I missed it.</p>
+          <p class="story-copy">So one night I'd had enough. I wrote a quick script that turned all that email into one short digest and dropped every date straight onto our calendar.</p>
+          <p class="story-copy">Then something better happened. I stopped carrying the calendar around in my head. Everyone at home saw the same week, I stopped asking myself "wait, is soccer tomorrow?" I got my evenings back and was ready for the mornings.</p>
+          <p class="story-copy">Every parent I showed asked the same thing: which app is that? So I built the one they already thought it was.</p>
           <p class="story-sig">Zack, founder of Cleanmail</p>
         </div>
       </div>
@@ -78,6 +94,8 @@ const explore = [
   </section>
 
   <TrustDeal />
+
+  <p class="home-tagline"><BrandTagline /></p>
 </BaseLayout>
 
 <script>
@@ -103,6 +121,12 @@ const explore = [
 </script>
 
 <style>
+  .relief{max-width:1010px;margin:0 auto 36px;padding:0 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .relief-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 30px}
+  .relief-card h2{margin:0 0 12px;font-size:clamp(22px,2.6vw,28px);font-weight:500;letter-spacing:-.5px;color:var(--purple)}
+  .relief-card p{margin:0;font-size:16px;line-height:1.62;color:var(--ink)}
+  @media (max-width:860px){ .relief{grid-template-columns:1fr;padding:0 16px} }
+  .home-tagline{margin:8px auto 36px;padding:0 24px;text-align:center;font-size:clamp(20px,2.4vw,26px);font-weight:500;letter-spacing:-.4px;color:var(--navy)}
   .film{max-width:1010px;margin:0 auto 8px;padding:0 24px}
   .film-wrap{position:relative;line-height:0}
   .film-video{width:100%;height:auto;display:block;border-radius:20px;border:1px solid var(--line);box-shadow:0 18px 44px rgba(27,34,54,.12);background:#eef2fb}

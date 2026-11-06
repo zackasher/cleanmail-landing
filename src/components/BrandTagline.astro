@@ -1,0 +1,9 @@
+---
+import { BRAND_SUBTITLE, SITE_TAGLINE_PROMISE } from "../config";
+
+// "Cleanmail: Family Inbox." in the logo's dark navy-purple, then the promise in brand orange.
+const BRAND_NAME = "Cleanmail";
+const BRAND_DARK_PURPLE = "#304469";
+const PROMISE_ORANGE = "var(--orange)";
+---
+<span class="brand-tagline"><span style={`color:${BRAND_DARK_PURPLE}`}>{BRAND_NAME}: {BRAND_SUBTITLE}.</span> <span style={`color:${PROMISE_ORANGE}`}>{SITE_TAGLINE_PROMISE}</span></span>

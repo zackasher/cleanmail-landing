@@ -1,27 +1,38 @@
 ---
 import CTA from "./CTA.astro";
+import { BRAND_SUBTITLE } from "../config";
 ---
 <section class="hero">
   <div class="hero-inner">
     <span class="logo-lock"><img class="logo" src="/logo.png" alt="Cleanmail" /><sup class="tm">™</sup></span>
-    <h1>Your family calendar,<br /><span class="accent">on autopilot.</span></h1>
-    <p class="sub">School email in. Family calendar out.<br />Works with Gmail, syncs with Google Calendar.</p>
+    <p class="brand-sub">{BRAND_SUBTITLE}</p>
+    <span class="hero-rule" aria-hidden="true"></span>
+    <div class="headline">
+      <h1>Get the schedule <span class="accent">out of your head.</span></h1>
+      <p class="sub">Parents today have five different apps, three inboxes, and fifty messages a day. Cleanmail turns that email into one short digest, sorted by kid, and puts every date on a calendar automatically for your household to share.</p>
+    </div>
     <div class="actions">
       <CTA />
     </div>
-    <p class="trust"><b>Your digest only covers the senders you pick.</b><span class="dot"></span>We never change your inbox.<span class="dot"></span>We never sell your info, you mean too much to us.</p>
+    <p class="trust"><b>Only the senders you choose.</b><span class="dot"></span>Read-only.<span class="dot"></span>Your information is never sold.<span class="dot"></span>No ads.<span class="dot"></span>No hidden fees.</p>
   </div>
 </section>
 
 <style>
   .hero{position:relative;text-align:center;min-height:52vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:58px 24px 40px}
-  .hero-inner{position:relative;z-index:1;max-width:760px;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero-inner{position:relative;z-index:1;max-width:920px;animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
   @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-  .logo{width:clamp(220px,30vw,310px);height:auto;display:block}
-  .logo-lock{position:relative;display:inline-block;margin-bottom:28px}
+  .logo{width:var(--logo-width);height:auto;display:block}
+  .logo-lock{position:relative;display:inline-block;vertical-align:top}
+  /* Sized from the logo so it scales with it; 8 px under the wordmark, since the logo's last 53/900 is empty. Normal letter spacing. */
+  .hero-inner{--logo-width:clamp(220px,30vw,310px)}
+  .brand-sub{margin:calc(8px - var(--logo-width) * 53 / 900) 0 22px;font-size:calc(var(--logo-width) * 0.11);line-height:1.15;font-weight:300;color:#a9afbd}
+  .hero-rule{position:relative;z-index:5;display:block;width:72px;height:2px;margin:0 auto 24px;border-radius:1px;background:var(--orange)}
   .tm{position:absolute;top:5%;left:100%;margin-left:3px;font-size:clamp(12px,1.5vw,17px);color:var(--muted);font-weight:400;line-height:1}
   h1{font-size:clamp(30px,4.6vw,50px);font-weight:400;line-height:1.1;letter-spacing:-1.2px;color:var(--navy)}
   h1 .accent{color:var(--purple)}
+  /* The paragraph matches the one-line headline's width: width 0 keeps it from sizing the box, min-width 100% fills it. */
+  @media (min-width:720px){ h1{white-space:nowrap} .headline{width:max-content;margin:0 auto} .headline .sub{width:0;min-width:100%;max-width:none} }
   .sub{margin:20px auto 0;max-width:560px;font-size:clamp(15px,1.7vw,18px);line-height:1.6;color:var(--muted);font-weight:400}
   .actions{margin-top:32px}
   .see-how{display:inline-flex;align-items:center;gap:7px;margin-top:22px;font-size:15px;font-weight:500;color:var(--purple);text-decoration:none}
