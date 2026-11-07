@@ -5,5 +5,7 @@ import { BRAND_SUBTITLE, SITE_TAGLINE_PROMISE } from "../config";
 const BRAND_NAME = "Cleanmail";
 const BRAND_DARK_PURPLE = "#304469";
 const PROMISE_ORANGE = "var(--orange)";
+interface Props { promiseColor?: string }
+const { promiseColor = PROMISE_ORANGE } = Astro.props;
 ---
-<span class="brand-tagline"><span style={`color:${BRAND_DARK_PURPLE}`}>{BRAND_NAME}: {BRAND_SUBTITLE}.</span> <span style={`color:${PROMISE_ORANGE}`}>{SITE_TAGLINE_PROMISE}</span></span>
+<span class="brand-tagline"><span style={`color:${BRAND_DARK_PURPLE}`}>{BRAND_NAME}: {BRAND_SUBTITLE}.</span> <span style={`color:${promiseColor}`}>{SITE_TAGLINE_PROMISE}</span></span>

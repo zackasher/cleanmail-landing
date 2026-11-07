@@ -50,6 +50,14 @@ const explore = [
     </div>
   </section>
 
+  <section class="spotlight" aria-labelledby="spotlight-heading">
+    <div class="spotlight-text">
+      <h2 id="spotlight-heading">No more driving to a cancelled practice.</h2>
+      <p>When the coach emails that it's off, it comes off the calendar everyone at home shares. Nobody's waiting in an empty parking lot.</p>
+    </div>
+    <img class="spotlight-shot" src="/feat-cancel-1018.jpg" alt="Soccer practice marked cancelled by a household member, in the Upcoming Events list" width="520" height="1127" loading="lazy" />
+  </section>
+
   <section class="film">
     <div class="film-wrap">
       <video class="hero-video film-video" autoplay muted playsinline preload="auto" poster="/hero-film-poster.jpg">
@@ -135,6 +143,12 @@ const explore = [
   .relief-card h2{margin:0 0 12px;font-size:clamp(22px,2.6vw,28px);font-weight:500;letter-spacing:-.5px;color:var(--purple)}
   .relief-card p{margin:0;font-size:16px;line-height:1.62;color:var(--ink)}
   @media (max-width:860px){ .relief{grid-template-columns:1fr;padding:0 16px} }
+  .spotlight{max-width:1010px;margin:0 auto 36px;padding:0 24px;display:flex;align-items:center;gap:36px}
+  .spotlight-text{flex:1;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 34px}
+  .spotlight-text h2{margin:0 0 12px;font-size:clamp(22px,2.6vw,28px);font-weight:500;letter-spacing:-.5px;color:var(--purple)}
+  .spotlight-text p{margin:0;font-size:16px;line-height:1.62;color:var(--ink)}
+  .spotlight-shot{flex:0 0 auto;width:240px;height:320px;object-fit:cover;object-position:top;border-radius:18px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(27,34,54,.12)}
+  @media (max-width:720px){ .spotlight{flex-direction:column;padding:0 16px;gap:20px} .spotlight-text{width:100%} }
   .home-tagline{margin:8px auto 36px;padding:0 24px;text-align:center;font-size:clamp(20px,2.4vw,26px);font-weight:500;letter-spacing:-.4px;color:var(--navy)}
   .film{max-width:1010px;margin:0 auto 8px;padding:0 24px}
   .film-wrap{position:relative;line-height:0}

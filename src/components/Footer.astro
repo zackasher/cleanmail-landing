@@ -1,6 +1,6 @@
 ---
 import AppLink from "./AppLink.astro";
-import { YOUTUBE_VIDEO_URL, COOKIE_SETTINGS_LABEL, DELETE_ACCOUNT_PATH, DELETE_ACCOUNT_LINK_LABEL, WEB_APP_URL, WEB_APP_FOOTER_LABEL } from "../config";
+import { YOUTUBE_VIDEO_URL, COOKIE_SETTINGS_LABEL, DELETE_ACCOUNT_PATH, DELETE_ACCOUNT_LINK_LABEL, WEB_APP_URL, WEB_APP_FOOTER_LABEL, PROMISE_ORANGE_SMALL_TEXT } from "../config";
 import BrandTagline from "./BrandTagline.astro";
 ---
 <AppLink />
@@ -21,7 +21,7 @@ import BrandTagline from "./BrandTagline.astro";
     <a href={YOUTUBE_VIDEO_URL} rel="noopener" target="_blank">Watch on YouTube</a>
     <button type="button" class="cookie-settings-link" data-cookie-settings>{COOKIE_SETTINGS_LABEL}</button>
   </div>
-  <p class="footer-tagline"><BrandTagline /></p>
+  <p class="footer-tagline"><BrandTagline promiseColor={PROMISE_ORANGE_SMALL_TEXT} /></p>
   <p class="footer-copy">© 2026 Calibrate LLC. All rights reserved.</p>
 </footer>
 

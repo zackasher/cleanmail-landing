@@ -15,8 +15,9 @@ import { BRAND_SUBTITLE, TRIAL_DAYS } from "../config";
     <div class="actions">
       <CTA />
     </div>
-    <p class="trial">Set up in about a minute. See your first digest before you pay, then {TRIAL_DAYS} days free.</p>
+    <p class="trial">Setup is quick and easy. See your first digest before you pay, then {TRIAL_DAYS} days free.</p>
     <TrustLine />
+    <p class="proof"><span class="proof-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M8.5 12l2.4 2.4 4.6-4.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Passed Google's CASA security assessment.</span><span class="proof-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8-4.3-4.1 5.9-.9z" fill="currentColor"/></svg>5.0 stars on the App Store.</span></p>
   </div>
 </section>
 
@@ -39,5 +40,8 @@ import { BRAND_SUBTITLE, TRIAL_DAYS } from "../config";
   .actions{margin-top:32px}
   .see-how{display:inline-flex;align-items:center;gap:7px;margin-top:22px;font-size:15px;font-weight:500;color:var(--purple);text-decoration:none}
   .see-how:hover{opacity:.85}
+  .proof{margin:12px auto 0;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 20px;font-size:13px;font-weight:500;color:var(--ink)}
+  .proof-item{display:inline-flex;align-items:center;gap:6px}
+  .proof-item svg{width:16px;height:16px;color:var(--orange)}
   .trial{margin:22px auto 0;font-size:15px;line-height:1.5;color:var(--navy);font-weight:500}
 </style>
