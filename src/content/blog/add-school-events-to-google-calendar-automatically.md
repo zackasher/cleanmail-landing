@@ -80,7 +80,7 @@ That's the whole free system. It works. It's also a second part-time job, which 
 
 This is the part I built Cleanmail for: a way to turn school emails into calendar events without touching each one. I'm a dad of two, and I was tired of being the family's human copy-and-paste machine.
 
-Cleanmail is an app for iPhone and Android that connects to your Gmail read-only. You pick the senders that matter for each kid and activity: the school, the coach, camp, even the ParentSquare or Remind notification emails your school sends. Your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by kid, and it puts every date it finds on your Google Calendar. No forwarding, no retyping, no Sunday night thumb workout.
+Cleanmail is an app for iPhone and Android that connects to your Gmail read-only. You pick the senders that matter for each kid and activity: the school, the coach, camp, even the ParentSquare or Remind notification emails your school sends. Your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by kid, and it puts the dates it finds on your Google Calendar. No forwarding, no retyping, no Sunday night thumb workout.
 
 A few things that make it work for a real family:
 

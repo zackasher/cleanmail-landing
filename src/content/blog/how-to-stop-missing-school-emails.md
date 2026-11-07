@@ -8,7 +8,7 @@ faqs:
   - q: "Why do I keep missing school emails?"
     a: "School email comes from many senders at random times, and the one line that matters is often buried inside a long newsletter. Knowing every sender, labeling school mail, and putting dates on a calendar right away all help."
   - q: "How do I get school emails onto my Google Calendar automatically?"
-    a: "Cleanmail turns the school, camp, and sports email you pick into a digest sorted by kid and puts every date on a family calendar with two-way Google Calendar sync. It's free for 14 days on iPhone and Android."
+    a: "Cleanmail turns the school, camp, and sports email you pick into a digest sorted by kid and puts the dates on a family calendar with two-way Google Calendar sync. It's free for 14 days on iPhone and Android."
   - q: "Can I get ParentSquare and Remind messages by email?"
     a: "Yes. Both apps let you turn on email notifications in their settings, which gives you a searchable record instead of a push notification that disappears."
 ---
@@ -45,6 +45,6 @@ Once a week, open your School label and skim anything from the past seven days. 
 
 ## Or let it happen automatically
 
-These steps work, but they take time every single week. That's why I built [Cleanmail](/how-it-works). You pick your school, camp, and sports senders once. Cleanmail sums up what matters from each one in a short digest sorted by kid, and puts every date on a family calendar with [two-way Google Calendar sync](/google-calendar-sync). Your digest only covers the senders you pick, and Cleanmail never sends, deletes, or changes your email.
+These steps work, but they take time every single week. That's why I built [Cleanmail](/how-it-works). You pick your school, camp, and sports senders once. Cleanmail sums up what matters from each one in a short digest sorted by kid, and puts the dates on a family calendar with [two-way Google Calendar sync](/google-calendar-sync). Your digest only covers the senders you pick, and Cleanmail never sends, deletes, or changes your email.
 
 However you do it, the goal is the same: the costume day email should reach you before the costume day does.

@@ -31,7 +31,7 @@ const steps = [
 const faqs = [
   { q: "When is Maple shutting down?", a: `Maple's own site says it will sunset on ${MAPLE_SHUTDOWN_DATE}, and that data is deleted after that date. Checked ${MAPLE_FACTS_CHECKED_ON}.` },
   { q: "What happens to my Maple subscription?", a: "Maple says annual plans won't renew and monthly plans stay active until the shutdown date." },
-  { q: "Does Cleanmail do everything Maple did?", a: "No. Cleanmail does one job: it turns school and activity email into a digest sorted by kid and puts every date on a family calendar with two-way Google sync. It doesn't do meal planning or lists." },
+  { q: "Does Cleanmail do everything Maple did?", a: "No. Cleanmail does one job: it turns school and activity email into a digest sorted by kid and puts the dates on a family calendar with two-way Google sync. It doesn't do meal planning or lists." },
   { q: "What do I need to use Cleanmail?", a: "An iPhone or Android phone and a Gmail account. Cleanmail connects to Gmail read-only, and your digest only covers the senders you pick." },
   { q: "How much is Cleanmail?", a: `${TRIAL_DAYS} days free, then ${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year. One plan covers your whole household.` },
 ];
@@ -44,7 +44,7 @@ const faqSchema = {
 ---
 <BaseLayout
   title={pageTitle("Maple Alternative for School Email")}
-  description={`Maple closes ${MAPLE_SHUTDOWN_DATE}. Cleanmail turns school email into a digest sorted by kid, with every date on a calendar that syncs with Google.`}
+  description={`Maple closes ${MAPLE_SHUTDOWN_DATE}. Cleanmail turns school email into a digest sorted by kid, with the dates on a calendar that syncs with Google.`}
   faqSchema={faqSchema}
 >
   <section class="ip">

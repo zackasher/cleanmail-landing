@@ -1,6 +1,6 @@
 ---
 title: "How to Organize School Emails in Gmail (A Parent's Guide)"
-description: "How to organize school emails in Gmail with one label per kid, filters that sort mail as it lands, and a 10-minute weekly routine that catches every date."
+description: "How to organize school emails in Gmail with one label per kid, filters that sort mail as it lands, and a 10-minute weekly routine that catches the dates."
 date: "2026-10-19"
 author: "Zack Asher"
 keyword: "how to organize school emails in gmail"
@@ -10,12 +10,12 @@ faqs:
   - q: "Should I make a separate Gmail account just for school emails?"
     a: "You can, but most parents end up checking two inboxes and missing things in both. One inbox with a label for each kid and a few filters is usually easier to keep up with."
   - q: "Is there an app that organizes school emails automatically?"
-    a: "Cleanmail is an app for iPhone and Android that connects to Gmail read-only, sums up mail from the school, camp, and sports senders you pick in a digest sorted by kid, and puts every date on your family calendar with two-way Google Calendar sync."
+    a: "Cleanmail is an app for iPhone and Android that connects to Gmail read-only, sums up mail from the school, camp, and sports senders you pick in a digest sorted by kid, and puts the dates on your family calendar with two-way Google Calendar sync."
 ---
 
 It's 9:40 on a Tuesday night. You're brushing your teeth when a thought arrives uninvited: wasn't there something about pajama day? You open Gmail, scroll past a coupon, a shipping update, two newsletters, and a PTA reminder, and find it. Pajama day was today. Your kid wore jeans. Your kid will mention this at Thanksgiving for the next eleven years.
 
-If you want to know how to organize school emails in Gmail, here's the short answer: give each kid a label, set up filters so school senders get that label automatically, and spend ten minutes once a week pulling every date onto your calendar. Gmail already has every tool you need. It just won't set them up for you.
+If you want to know how to organize school emails in Gmail, here's the short answer: give each kid a label, set up filters so school senders get that label automatically, and spend ten minutes once a week pulling the dates onto your calendar. Gmail already has every tool you need. It just won't set them up for you.
 
 I'm a dad of two. At one point I had email coming from nine different schools and apps, and three calendars that never agreed with each other. Here's the system I used before I got fed up and built something.
 

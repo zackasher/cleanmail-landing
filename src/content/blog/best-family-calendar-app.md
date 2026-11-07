@@ -10,7 +10,7 @@ faqs:
   - q: "Which family calendar apps sync with Google Calendar?"
     a: "Cozi shares read-only feeds with Google, Outlook and Apple Calendar. FamilyWall offers Google and Outlook Calendar sync in its paid Premium plan. Cleanmail syncs both ways with Google Calendar, so an edit in either place shows up in the other."
   - q: "Is there a family calendar app that adds events from email?"
-    a: "Yes. Cleanmail connects to Gmail read-only, reads mail only from the senders you pick, and puts every date it finds on your family calendar. FamilyWall Premium can create events from emails you forward, and Cozi's top plan, Max, lists an AI event import from your inbox."
+    a: "Yes. Cleanmail connects to Gmail read-only, reads mail only from the senders you pick, and puts the dates it finds on your family calendar. FamilyWall Premium can create events from emails you forward, and Cozi's top plan, Max, lists an AI event import from your inbox."
 ---
 
 It's Sunday night and you're trying to plan the week. The soccer schedule is in a PDF the coach sent in August. The dentist is on your phone. The class party is in an email you skimmed on Thursday. And your household is looking at you like you're the calendar. Because you are.
@@ -60,7 +60,7 @@ Premium adds Google and Outlook Calendar sync and "Magic Import": forward an ema
 
 This is the one I built, so take my enthusiasm with a grain of salt. For a lot of families, the calendar isn't the hard part. The emails are. Dates arrive from the school, the coach, camp and the dance studio, mixed in with everything else, and someone has to find them and type them in.
 
-Cleanmail is an app for iPhone and Android that connects to your Gmail read-only. You pick the senders that matter for each person and activity. Your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by person, and it puts every date it finds on your Google Calendar with two-way sync, so a change in Google Calendar shows up in Cleanmail too.
+Cleanmail is an app for iPhone and Android that connects to your Gmail read-only. You pick the senders that matter for each person and activity. Your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by person, and it puts the dates it finds on your Google Calendar with two-way sync, so a change in Google Calendar shows up in Cleanmail too.
 
 Setup takes a few minutes, and you see a preview of your digest before you choose a plan. Up to 4 people share one household, and household members join free. Here's more on [Cleanmail as a family calendar app](/family-calendar-app).
 
