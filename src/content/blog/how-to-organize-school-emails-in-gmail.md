@@ -99,7 +99,7 @@ Labels and filters are a solid free system. Their limits show up as your family 
 
 This is the part I got tired of doing myself, so I built Cleanmail. It's an app for iPhone and Android that connects to your Gmail with read-only access. You name your kids, their activities, and the school, camp, and sports senders that matter, and your digest only covers the senders you pick. Cleanmail never changes your inbox.
 
-Instead of a label you have to remember to open, you get a short digest sorted by kid and activity, with each update summed up in plain words. Every date it finds lands on your family calendar, which syncs both ways with Google Calendar, so a change you make in Google shows up in Cleanmail too. If your school app sends email notifications, pick that sender like any other and its updates show up in your digest, tagged with where they came from.
+Instead of a label you have to remember to open, you get a short digest sorted by kid and activity, with each update summed up in plain words. The dates it finds land on your family calendar, which syncs both ways with Google Calendar, so a change you make in Google shows up in Cleanmail too. If your school app sends email notifications, pick that sender like any other and its updates show up in your digest, tagged with where they came from.
 
 Here's [how Cleanmail works](/how-it-works), step by step, and how the [two-way Google Calendar sync](/google-calendar-sync) keeps one schedule for the whole household. It's free for 14 days.
 
