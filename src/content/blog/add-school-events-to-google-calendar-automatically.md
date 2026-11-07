@@ -1,6 +1,6 @@
 ---
 title: "How to Add a School Calendar to Google Calendar Automatically"
-description: "Add your school calendar to Google Calendar in a few steps: subscribe to the school's link, see it on your iPhone, and pull dates out of Gmail without retyping."
+description: "Get your school calendar onto Google Calendar tonight. Subscribe to the school's link, then catch the picture days and moved practices that only come by email."
 date: "2026-10-12"
 author: "Zack Asher"
 keyword: "how to add school events to google calendar automatically"
@@ -10,7 +10,7 @@ faqs:
   - q: "How do I add my school calendar to Google Calendar?"
     a: "Ask the school for its public calendar link. Then open Google Calendar on a computer, click the plus next to Other calendars, choose From URL, paste the link, and click Add calendar. Google only lets you subscribe this way from a computer browser, not the phone app."
   - q: "Is there an app that puts dates from school emails on Google Calendar?"
-    a: "Yes. Cleanmail is an app for iPhone and Android that connects to Gmail read-only, sums up mail from the school, camp, and sports senders you pick in a digest sorted by kid, and puts every date it finds on your Google Calendar."
+    a: "Yes. Cleanmail is an app for iPhone and Android that connects to Gmail read-only, sums up mail from the school, camp, and sports senders you pick in a digest sorted by kid, and puts the dates it finds on your Google Calendar."
 ---
 
 It's Sunday night. I'm on the couch with my phone, scrolling through the week's school mail. The newsletter has picture day buried in paragraph four. The soccer coach moved Thursday's practice. The PTA sent a flyer as a PDF, and somewhere inside it is a date I definitely need. I open Google Calendar, then Gmail, then Google Calendar again. My thumb is tired and I have learned nothing about picture day.

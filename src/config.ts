@@ -31,6 +31,7 @@ export const SOCIAL_PROFILE_URLS = [
   "https://www.facebook.com/cleanmailapp",
   "https://www.threads.com/@cleanmailapp",
   "https://www.youtube.com/@getcleanmailapp",
+  "https://www.tiktok.com/@cleanmailapp",
 ];
 // EEA, UK and Switzerland. Ad and analytics tags never load for visitors here, consent or not.
 export const TRACKING_BLOCKED_COUNTRY_CODES = [
