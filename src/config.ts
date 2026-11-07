@@ -102,7 +102,7 @@ export const SITE_TAGLINE_PROMISE = "Know what tomorrow brings.";
 // orange measures 4.6:1 on the footer's warm background (Marketing 11/6).
 export const PROMISE_ORANGE_SMALL_TEXT = "#A85A0F";
 export const SITE_DESCRIPTION_SHORT = "Get the schedule out of your head. Cleanmail turns school and activity email into one short digest sorted by kid, on a calendar your household shares.";
-export const SITE_DESCRIPTION_LONG = "Cleanmail turns school, sports and activity emails into one short digest sorted by kid, and puts every date on a calendar your whole household shares. Get the schedule out of your head, and be there for the busy years. Reads only the senders you choose.";
+export const SITE_DESCRIPTION_LONG = "Cleanmail: Family Inbox reads only the school, sports and activity senders a parent picks in Gmail, turns them into one short digest sorted by kid, and puts the dates on a calendar the household shares, with Google Calendar sync. Up to 4 people at home join free.";
 
 // The signed-in web app. A parent who already set up on the phone signs in here on a computer.
 export const WEB_APP_URL = "https://app.cleanmailapp.com";
