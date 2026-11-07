@@ -12,6 +12,7 @@ import { ICON_PATHS } from "../data-icons";
 const explore = [
   { href: "/compare", icon: ICON_PATHS.compare, color: "var(--purple)", title: "Cleanmail vs Skylight vs Cozi", body: "See how we stack up, side by side." },
   { href: "/google-calendar-sync", icon: ICON_PATHS.sync, color: "var(--orange)", title: "Two-way Google Calendar sync", body: "Edit anywhere, it changes everywhere." },
+  { href: "/maple-alternative", icon: ICON_PATHS.calendarImport, color: "var(--navy)", title: "Leaving another family app?", body: "Bring your senders, keep your calendar." },
   { href: "/family-calendar-app", icon: ICON_PATHS.calendarHeart, color: "var(--teal)", title: "The family calendar that writes itself", body: "Every feature and the price, at a glance." },
 ];
 ---
@@ -43,6 +44,10 @@ const explore = [
     <div class="relief-card">
       <h2>Share the mental load.</h2>
       <p>Invite up to 4 people in your home. Everyone sees the same digest and calendar, so the schedule stops living in one person's head. They join free.</p>
+    </div>
+    <div class="relief-card">
+      <h2>Stop copying school dates by hand.</h2>
+      <p>The field trip, the early pickup, the practice that moved: they land on the calendar everyone at home shares.</p>
     </div>
     <div class="relief-card">
       <h2>Be there for the busy years.</h2>
@@ -97,13 +102,14 @@ const explore = [
 
       <div class="story-text">
         <div class="story-bubble">
+          <img class="story-photo" src="/founder-bedtime.webp" alt="Zack Asher, Cleanmail's founder, reading a bedtime story with his two kids." width="1060" height="795" loading="lazy" />
           <p class="story-eyebrow">From the founder</p>
           <p class="story-lead">Hi. I'm Zack, and I kept missing things.</p>
           <p class="story-copy">I'm a dad of two. Every new season brought another activity, another app and another stack of emails to keep track of. We had five different school apps, three inboxes, and fifty messages a day. Picture day was at the end of a long email, at the end of a long workday. I missed it.</p>
           <p class="story-copy">So one night I'd had enough. I wrote a quick script that turned all that email into one short digest and dropped every date straight onto our calendar.</p>
           <p class="story-copy">Then something better happened. I stopped carrying the calendar around in my head. Everyone at home saw the same week, I stopped asking myself "wait, is soccer tomorrow?" I got my evenings back and was ready for the mornings.</p>
           <p class="story-copy">Every parent I showed asked the same thing: which app is that? So I built the one they already thought it was.</p>
-          <p class="story-sig">Zack, founder of Cleanmail</p>
+          <p class="story-sig">Zack Asher, founder. Say hi.</p>
         </div>
       </div>
     </div>
@@ -138,7 +144,7 @@ const explore = [
 </script>
 
 <style>
-  .relief{max-width:1010px;margin:0 auto 36px;padding:0 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .relief{max-width:1010px;margin:0 auto 36px;padding:0 24px;display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
   .relief-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 30px}
   .relief-card h2{margin:0 0 12px;font-size:clamp(22px,2.6vw,28px);font-weight:500;letter-spacing:-.5px;color:var(--purple)}
   .relief-card p{margin:0;font-size:16px;line-height:1.62;color:var(--ink)}
@@ -168,6 +174,7 @@ const explore = [
   .story-lead{font-size:20px;font-weight:500;line-height:1.35;color:var(--navy);margin-bottom:20px}
   .story-copy{font-size:16px;line-height:1.62;color:var(--ink);margin-bottom:20px}
   .story-sig{margin-top:6px;font-size:14px;font-weight:500;color:var(--muted)}
+  .story-photo{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:22px}
   .hero-video{width:100%;height:100%;object-fit:cover;display:block}
   .story-rule{height:1px;border:0;width:calc(100% - 48px);max-width:860px;margin:24px auto;background:linear-gradient(90deg, transparent, rgba(74,111,227,.5) 22%, rgba(74,111,227,.5) 78%, transparent)}
   .story-rule:first-of-type{margin-bottom:40px}
@@ -178,7 +185,7 @@ const explore = [
     .story-grid{flex-direction:column;align-items:center;gap:30px}
     .story-text{max-width:530px;width:100%}
   }
-  .explore{max-width:1000px;margin:40px auto 10px;padding:0 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .explore{max-width:1000px;margin:40px auto 10px;padding:0 24px;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
   /* Only a short label is the link (search engines flag sentence-long link text); its ::after covers the card so the whole card still clicks. */
   .card-link{text-decoration:none}
   .card-link::after{content:"";position:absolute;inset:0;border-radius:inherit}
