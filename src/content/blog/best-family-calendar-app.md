@@ -62,7 +62,7 @@ This is the one I built, so take my enthusiasm with a grain of salt. For a lot o
 
 Cleanmail is an app for iPhone and Android that connects to your Gmail read-only. You pick the senders that matter for each person and activity. Your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by person, and it puts every date it finds on your Google Calendar with two-way sync, so a change in Google Calendar shows up in Cleanmail too.
 
-Setup takes a few minutes, and your first digest is ready in about a minute, before you choose a plan. Up to 4 people share one household, and household members join free. Here's more on [Cleanmail as a family calendar app](/family-calendar-app).
+Setup takes a few minutes, and you see your first digest before you choose a plan. Up to 4 people share one household, and household members join free. Here's more on [Cleanmail as a family calendar app](/family-calendar-app).
 
 Cleanmail is also #4 in Bragging Mommy's <a href="https://www.thebraggingmommy.com/10-best-family-calendar-apps-for-busy-parents-in-2026/" target="_blank" rel="sponsored noopener">"10 Best Family Calendar Apps for Busy Parents in 2026"</a> (sponsored).
 
