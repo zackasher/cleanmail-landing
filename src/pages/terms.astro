@@ -14,7 +14,7 @@ const termsBeforeNotice = termsHtml.slice(0, dateLineEnd);
 const termsAfterNotice = termsHtml.slice(dateLineEnd);
 ---
 
-<LegalLayout title={pageTitle("Terms of Service")}>
+<LegalLayout title={pageTitle("Terms of Service")} description="The terms of service for Cleanmail: Family Inbox on iPhone, Android and the web, including subscriptions, the free trial and your household.">
   <Fragment set:html={termsBeforeNotice} />
   <p class="terms-version-notice">{CURRENT_TERMS_NOTICE} {newestArchive.label} (<a href={newestArchive.path}>{newestArchive.path}</a>) and {oldestArchive.label} (<a href={oldestArchive.path}>{oldestArchive.path}</a>).</p>
   <Fragment set:html={termsAfterNotice} />

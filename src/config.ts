@@ -101,7 +101,7 @@ export const SITE_TAGLINE_PROMISE = "Know what tomorrow brings.";
 // The footer's 13 px tagline needs 4.5:1 contrast and brand orange is about 2.6:1 there; this darker
 // orange measures 4.6:1 on the footer's warm background (Marketing 11/6).
 export const PROMISE_ORANGE_SMALL_TEXT = "#A85A0F";
-export const SITE_DESCRIPTION_SHORT = "Get the schedule out of your head. One digest sorted by kid, every date on a shared family calendar. Reads only the senders you choose.";
+export const SITE_DESCRIPTION_SHORT = "Get the schedule out of your head. Cleanmail turns school and activity email into one short digest sorted by kid, on a calendar your household shares.";
 export const SITE_DESCRIPTION_LONG = "Cleanmail turns school, sports and activity emails into one short digest sorted by kid, and puts every date on a calendar your whole household shares. Get the schedule out of your head, and be there for the busy years. Reads only the senders you choose.";
 
 // The signed-in web app. A parent who already set up on the phone signs in here on a computer.
