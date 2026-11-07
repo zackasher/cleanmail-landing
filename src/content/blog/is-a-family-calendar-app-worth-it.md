@@ -73,7 +73,7 @@ I built Cleanmail after my own family hit option 2's wall. We had five different
 
 Cleanmail reads only the school, sports and activity senders you pick in Gmail. It turns them into one short digest, sorted by kid, and puts the dates on a calendar everyone at home shares. It's read-only, and your information is never sold.
 
-Setup is quick and easy, and you see your first digest before you choose a plan. Then it's 14 days free. After that, one parent pays $6.99 a month or $68.99 a year, and up to 4 people in your household join free. It works on iPhone and Android, with Gmail and Google Calendar.
+Setup is quick and easy, and you see a preview of your digest before you choose a plan. Then it's 14 days free. After that, one parent pays $6.99 a month or $68.99 a year, and up to 4 people in your household join free. It works on iPhone and Android, with Gmail and Google Calendar.
 
 If your Sunday nights look like mine did, [see how it works](/how-it-works).
 
