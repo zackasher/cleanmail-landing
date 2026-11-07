@@ -2,7 +2,7 @@
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
-import { CLARITY_PROJECT_ID, APP_STORE_URL, PLAY_STORE_URL, SITE_DESCRIPTION_SHORT, SITE_DESCRIPTION_LONG, APP_STORE_NAME, SOCIAL_PROFILE_URLS, GOOGLE_TAG_ID, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH, COOKIE_CONSENT_STORAGE_KEY, COOKIE_CONSENT_ACCEPTED, COOKIE_CONSENT_REJECTED, COOKIE_CONSENT_MESSAGE, COOKIE_CONSENT_REGION_OFF_MESSAGE } from "../config";
+import { CLARITY_PROJECT_ID, APP_STORE_URL, PLAY_STORE_URL, SITE_DESCRIPTION_SHORT, SITE_DESCRIPTION_LONG, APP_STORE_NAME, SOCIAL_PROFILE_URLS, GOOGLE_TAG_ID, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH, COOKIE_CONSENT_STORAGE_KEY, COOKIE_CONSENT_ACCEPTED, COOKIE_CONSENT_REJECTED, COOKIE_CONSENT_MESSAGE, COOKIE_CONSENT_REGION_OFF_MESSAGE, TRACKING_TAGS_ACCEPTED_EVENT, TRACKING_TAGS_ACCEPTED_FLAG } from "../config";
 export interface Props {
   title: string;
   description?: string;
@@ -35,7 +35,7 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   <meta name="facebook-domain-verification" content="9sqy4uylfm7ujcai4ailmlpdx9iopm" />
 
   {!noTracking && (
-  <script is:inline define:vars={{ clarityProjectId: CLARITY_PROJECT_ID, googleTagId: GOOGLE_TAG_ID, blockedCountryCodes: TRACKING_BLOCKED_COUNTRY_CODES, blockedTimeZonePrefixes: TRACKING_BLOCKED_TIME_ZONE_PREFIXES, countryLookupPath: VISITOR_COUNTRY_LOOKUP_PATH, consentStorageKey: COOKIE_CONSENT_STORAGE_KEY, consentAccepted: COOKIE_CONSENT_ACCEPTED, consentRejected: COOKIE_CONSENT_REJECTED, consentRegionOffMessage: COOKIE_CONSENT_REGION_OFF_MESSAGE }}>
+  <script is:inline define:vars={{ clarityProjectId: CLARITY_PROJECT_ID, googleTagId: GOOGLE_TAG_ID, blockedCountryCodes: TRACKING_BLOCKED_COUNTRY_CODES, blockedTimeZonePrefixes: TRACKING_BLOCKED_TIME_ZONE_PREFIXES, countryLookupPath: VISITOR_COUNTRY_LOOKUP_PATH, consentStorageKey: COOKIE_CONSENT_STORAGE_KEY, consentAccepted: COOKIE_CONSENT_ACCEPTED, consentRejected: COOKIE_CONSENT_REJECTED, consentRegionOffMessage: COOKIE_CONSENT_REGION_OFF_MESSAGE, trackingAcceptedEvent: TRACKING_TAGS_ACCEPTED_EVENT, trackingAcceptedFlag: TRACKING_TAGS_ACCEPTED_FLAG }}>
     // Ad and analytics tags load only for visitors outside the EEA, UK and Switzerland who tapped Accept.
     // Any doubt (European time zone, lookup failure, Global Privacy Control, no answer yet) means no tags:
     // a missed page view is cheaper than a tag that fired without consent.
@@ -113,6 +113,9 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
       function isReferralPage() { return /^\/r(\/|$)/.test(location.pathname); }
 
       function loadTrackingTags() {
+        // HeyCatch (src/scripts/heycatch-after-consent.ts) waits for this signal.
+        window[trackingAcceptedFlag] = true;
+        window.dispatchEvent(new Event(trackingAcceptedEvent));
         // Microsoft Clarity
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -158,6 +161,11 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
         });
       }
     })();
+  </script>
+  )}
+  {!noTracking && (
+  <script>
+    import "../scripts/heycatch-after-consent";
   </script>
   )}
   {noindex && <meta name="robots" content="noindex" />}

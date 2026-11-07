@@ -46,6 +46,13 @@ export const COOKIE_CONSENT_REJECTED = "rejected";
 export const COOKIE_CONSENT_MESSAGE = "We use cookies to measure our ads and improve the site.";
 export const COOKIE_CONSENT_REGION_OFF_MESSAGE = "Ad and analytics cookies are off for your location or browser setting.";
 export const COOKIE_SETTINGS_LABEL = "Cookie settings";
+// HeyCatch website analytics (Zack approved the trial, 2026-11-06). Website only, never the app.
+// The key is publishable by design. The SDK starts only after the consent gate above lets tags load.
+export const HEYCATCH_PROJECT_KEY = "hck_pk_7QAPXF37JCDa_kl_U-LZB_MIkrGn-J9i";
+export const HEYCATCH_FRAMEWORK = "astro";
+export const HEYCATCH_FRAMEWORK_MAJOR_VERSION = "6";
+export const TRACKING_TAGS_ACCEPTED_EVENT = "cleanmail:tracking-accepted";
+export const TRACKING_TAGS_ACCEPTED_FLAG = "cleanmailTrackingAccepted";
 export const SUPABASE_PROJECT_URL = "https://cxnxjnuvbsyymhxkrmpw.supabase.co";
 export const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_SicQ5RchA4Q5YI3DevGMlQ_1XWOPRjy";
 export const LIVE_STATS_FUNCTION_PATH = "/rest/v1/rpc/site_live_stats";
