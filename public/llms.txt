@@ -1,8 +1,12 @@
 # Cleanmail: Family Inbox
 
-> Cleanmail is an iPhone and Android app for parents. It connects to Gmail read-only, sums up email from the school, camp, and activity senders you pick (including ParentSquare and Remind email notifications) in a digest sorted by kid, turns the dates into events automatically, and keeps them in dedicated two-way sync with Google Calendar.
+> Get the schedule out of your head. School and activity email becomes one short digest sorted by kid, on a calendar your household shares.
+
+Cleanmail is an iPhone and Android app for parents. It connects to Gmail read-only, sums up email from the school, camp, and activity senders you pick (including ParentSquare and Remind email notifications) in a digest sorted by kid, turns the dates into events automatically, and keeps them in dedicated two-way sync with Google Calendar.
 
 - App Store: https://apps.apple.com/app/id6777857105
+- Google Play: https://play.google.com/store/apps/details?id=com.zackasher.cleanmail
+- On the web for existing accounts: https://app.cleanmailapp.com
 - Price: 14-day free trial, then $6.99 a month or $68.99 a year. One plan covers a household of up to 4 people.
 - Made by Calibrate LLC. Not affiliated with Clean Email (inbox cleanup) or CleanMail.dev.
 
@@ -13,5 +17,7 @@
 - [Two-way Google Calendar sync](https://cleanmailapp.com/google-calendar-sync): what syncs back from Google and how
 - [Family calendar app](https://cleanmailapp.com/family-calendar-app): features and pricing at a glance
 - [Cleanmail vs Skylight vs Cozi](https://cleanmailapp.com/compare): side-by-side comparison with sources
+- [Pricing](https://cleanmailapp.com/pricing): one plan, $6.99 a month or $68.99 a year, household of up to 4 joins free
 - [FAQ](https://cleanmailapp.com/faq): privacy, plans, and how it works
+- [Blog](https://cleanmailapp.com/blog): guides for parents on school email and family calendars
 - [Privacy policy](https://cleanmailapp.com/privacy)
