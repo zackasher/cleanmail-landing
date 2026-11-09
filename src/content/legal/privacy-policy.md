@@ -220,7 +220,7 @@ We may disclose personal information when required to do so by law, such as in r
 
 ## 12. Changes to This Policy
 
-We may update this Privacy Policy from time to time. Material changes will be communicated by email and by updating the date at the top of this policy. If a change affects how we use your Google user data, we will ask for your consent in the app before the change applies to that data. For other changes, continued use of Cleanmail after they take effect constitutes acceptance of the updated policy.
+We may update this Privacy Policy from time to time. When we make a material change, we show it in the app and ask you to agree before you continue, and we update the date at the top of this policy. If a change affects how we use your Google user data, we will ask for your consent in the app before the change applies to that data. For other changes, continued use of Cleanmail after they take effect constitutes acceptance of the updated policy.
 
 ---
 
