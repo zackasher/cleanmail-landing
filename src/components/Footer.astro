@@ -1,6 +1,6 @@
 ---
 import AppLink from "./AppLink.astro";
-import { YOUTUBE_VIDEO_URL, COOKIE_SETTINGS_LABEL, DELETE_ACCOUNT_PATH, DELETE_ACCOUNT_LINK_LABEL, WEB_APP_URL, WEB_APP_FOOTER_LABEL, PROMISE_ORANGE_SMALL_TEXT } from "../config";
+import { YOUTUBE_VIDEO_URL, COOKIE_SETTINGS_LABEL, DELETE_ACCOUNT_PATH, DELETE_ACCOUNT_LINK_LABEL, HEALTH_DATA_PATH, HEALTH_DATA_LINK_LABEL, WEB_APP_URL, WEB_APP_FOOTER_LABEL, PROMISE_ORANGE_SMALL_TEXT } from "../config";
 import BrandTagline from "./BrandTagline.astro";
 ---
 <AppLink />
@@ -8,6 +8,7 @@ import BrandTagline from "./BrandTagline.astro";
   <div class="footer-links">
     <a href="/privacy">Privacy Policy</a>
     <a href="/terms">Terms of Service</a>
+    <a href={HEALTH_DATA_PATH}>{HEALTH_DATA_LINK_LABEL}</a>
     <a href="/pricing">Pricing</a>
     <a href="/support">Support</a>
     <a href={WEB_APP_URL}>{WEB_APP_FOOTER_LABEL}</a>

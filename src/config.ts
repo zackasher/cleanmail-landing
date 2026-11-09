@@ -74,6 +74,8 @@ export const TERMS_ARCHIVE = {
 };
 
 // Account deletion page, linked from the FAQ and footer, not the top nav (Zack, 2026-10-26). Google Play requires a web deletion link.
+export const HEALTH_DATA_PATH = "/health-data";
+export const HEALTH_DATA_LINK_LABEL = "Consumer Health Data Privacy Policy";
 export const DELETE_ACCOUNT_PATH = "/delete-account";
 export const DELETE_ACCOUNT_LINK_LABEL = "Delete account";
 export const DELETE_ACCOUNT_SUPPORT_EMAIL = "support@cleanmailapp.com";

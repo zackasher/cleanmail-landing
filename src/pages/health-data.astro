@@ -1,0 +1,9 @@
+---
+import { pageTitle } from "../page-title";
+import LegalLayout from "../layouts/LegalLayout.astro";
+import { HEALTH_DATA_LINK_LABEL } from "../config";
+import { Content } from "../content/legal/consumer-health-data-policy.md";
+---
+<LegalLayout title={pageTitle(HEALTH_DATA_LINK_LABEL)} description="How Cleanmail handles consumer health data under Washington's My Health My Data Act: what can reach us, how it is used, never sold, and your rights.">
+  <Content />
+</LegalLayout>
