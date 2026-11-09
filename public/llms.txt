@@ -7,13 +7,13 @@ Cleanmail is an iPhone and Android app for parents. It connects to Gmail read-on
 - App Store: https://apps.apple.com/app/id6777857105
 - Google Play: https://play.google.com/store/apps/details?id=com.zackasher.cleanmail
 - On the web for existing accounts: https://app.cleanmailapp.com
-- Price: 14-day free trial, then $6.99 a month or $68.99 a year. One plan covers a household of up to 4 people.
+- Price: 14 days free, then $6.99 a month or $68.99 a year. Renews automatically until you cancel. One plan covers a household of up to 4 people.
 - Made by Calibrate LLC. Not affiliated with Clean Email (inbox cleanup) or CleanMail.dev.
 
 ## Pages
 
 - [Features](https://cleanmailapp.com/features): digest by kid, snap a flyer, voice add and edit, cancellations, household notes and reactions, reminders
-- [How it works](https://cleanmailapp.com/how-it-works): connect Gmail, pick people and senders, see your first digest, then start a free trial
+- [How it works](https://cleanmailapp.com/how-it-works): connect Gmail, pick people and senders, see your first digest, then start a free trial (14 days free, then $6.99 a month or $68.99 a year; renews automatically until you cancel)
 - [Two-way Google Calendar sync](https://cleanmailapp.com/google-calendar-sync): what syncs back from Google and how
 - [Family calendar app](https://cleanmailapp.com/family-calendar-app): features and pricing at a glance
 - [Cleanmail vs Skylight vs Cozi](https://cleanmailapp.com/compare): side-by-side comparison with sources

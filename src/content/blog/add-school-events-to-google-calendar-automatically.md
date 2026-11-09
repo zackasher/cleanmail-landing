@@ -88,6 +88,6 @@ A few things that make it work for a real family:
 - **One shared view for the household.** Up to 4 people share one household. One parent pays, and household members join free.
 - **Everything else, too.** Snap a photo of a paper flyer and the dates land on your calendar, or add an event by voice.
 
-It's on iPhone and Android, works with Gmail and Google Calendar, and comes with a 14-day free trial. If you want the full picture first, here's [how Cleanmail works](/how-it-works).
+It's on iPhone and Android, works with Gmail and Google Calendar, and comes with 14 days free, then $6.99 a month or $68.99 a year. It renews automatically until you cancel. If you want the full picture first, here's [how Cleanmail works](/how-it-works).
 
 Either way, subscribe to that school calendar tonight. Picture day deserves better than paragraph four.

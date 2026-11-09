@@ -3,12 +3,12 @@ import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import TrustLine from "../components/TrustLine.astro";
-import { PRICE_MONTHLY, PRICE_YEARLY, PRICE_YEARLY_PER_MONTH, TRIAL_DAYS, HOUSEHOLD_SIZE } from "../config";
+import { PRICE_MONTHLY, PRICE_YEARLY, PRICE_YEARLY_PER_MONTH, TRIAL_DAYS, TRIAL_TERMS, HOUSEHOLD_SIZE } from "../config";
 import "../styles/info-page.css";
 ---
 <BaseLayout
   title={pageTitle("Pricing")}
-  description={`${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year. One parent pays and up to ${HOUSEHOLD_SIZE} people at home join free. Preview your digest before you choose a plan, then ${TRIAL_DAYS} days free.`}
+  description={`${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year. One parent pays and up to ${HOUSEHOLD_SIZE} people at home join free. Preview your digest first, then ${TRIAL_DAYS} days free. Renews until you cancel.`}
 >
   <section class="ip">
     <p class="ip-eyebrow">Pricing</p>
@@ -20,7 +20,7 @@ import "../styles/info-page.css";
         <span class="price-tag">{TRIAL_DAYS} days free</span>
         <span class="price-name">Monthly</span>
         <span class="price-num">{PRICE_MONTHLY}<small>/month</small></span>
-        <span class="price-per">Cancel anytime</span>
+        <span class="price-per">Renews monthly until you cancel</span>
       </div>
       <div class="price-card best">
         <span class="price-tag">2 months free</span>
@@ -32,7 +32,7 @@ import "../styles/info-page.css";
 
     <ul class="price-points">
       <li>One parent pays. Up to {HOUSEHOLD_SIZE} people in your household join free.</li>
-      <li>Setup is quick and easy, and you see a preview of your digest before you choose a plan. Then {TRIAL_DAYS} days free.</li>
+      <li>Setup is quick and easy, and you see a preview of your digest before you choose a plan. {TRIAL_TERMS}</li>
     </ul>
 
     <div class="price-actions">

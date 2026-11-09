@@ -10,7 +10,7 @@ faqs:
   - q: "Do I need a paid family organizer app?"
     a: "Not to share a calendar. Google Calendar and iCloud both do that for free. Paid apps make sense when you want lists and meal planning in the same place, or when getting dates out of email is what is eating your time."
   - q: "How do I get school events from my email onto our calendar?"
-    a: "You can type them in, or use an app that reads school email for you. Cleanmail reads only the senders you pick in Gmail, sorts what matters by kid and puts the dates on a calendar your household shares, with Google Calendar sync. If you get one or two school emails a week, typing them in works fine."
+    a: "You can type them in, or use an app that reads school email for you. Cleanmail's digest summarizes only the senders you pick in Gmail, sorts what matters by kid and puts the dates on a calendar your household shares, with Google Calendar sync. If you get one or two school emails a week, typing them in works fine."
   - q: "Why am I not getting alerts when my partner adds an event?"
     a: "On iPhone, check Settings, Notifications, Calendar and make sure alerts for shared calendar changes are on. In Google Calendar, check that calendar's notification settings on each person's phone. Sync can also take a few minutes, so a missing event may just be delayed."
 ---
@@ -94,7 +94,7 @@ Paid organizers add structure on top: lists, meal planning, a simpler family vie
 
 A shared calendar only works after the events are in it. Your family's schedule doesn't start in a calendar app. It starts in the school newsletter, the coach's email, the PTA reminder and the dance studio update. Somebody reads all of it, finds the dates and types them in. Usually it is the same parent every time, and that parent becomes the person everyone asks.
 
-That is the gap Cleanmail was built for. You pick the school, sports and activity senders in Gmail. Cleanmail reads only those, turns them into one short digest sorted by kid, and puts the dates on a calendar everyone at home shares. It also syncs to Google Calendar, so nobody has to learn a new place to look. Up to 4 people in a household join free, and it works on iPhone and Android with Gmail.
+That is the gap Cleanmail was built for. You pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest sorted by kid that summarizes only those senders, and puts the dates on a calendar everyone at home shares. It also syncs to Google Calendar, so nobody has to learn a new place to look. Up to 4 people in a household join free, and it works on iPhone and Android with Gmail.
 
 ### When you don't need a new tool
 

@@ -7,6 +7,8 @@ export const PRICE_YEARLY = "$68.99";
 export const PRICE_YEARLY_PER_MONTH = "$5.75";
 export const TRIAL_DAYS = 14;
 export const HOUSEHOLD_SIZE = 4;
+// Counsel 11/9: every free-trial claim carries the length, the price after it, and automatic renewal.
+export const TRIAL_TERMS = `${TRIAL_DAYS} days free, then ${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year. Renews automatically until you cancel.`;
 export const COMPETITOR_FACTS_CHECKED_ON = "October 2, 2026";
 export const FOUNDER_NAME = "Zack Asher";
 
@@ -103,7 +105,7 @@ export const SITE_TAGLINE_PROMISE = "Know what tomorrow brings.";
 // orange measures 4.6:1 on the footer's warm background (Marketing 11/6).
 export const PROMISE_ORANGE_SMALL_TEXT = "#A85A0F";
 export const SITE_DESCRIPTION_SHORT = "Get the schedule out of your head. Cleanmail turns school and activity email into one short digest sorted by kid, on a calendar your household shares.";
-export const SITE_DESCRIPTION_LONG = "Cleanmail: Family Inbox reads only the school, sports and activity senders a parent picks in Gmail, turns them into one short digest sorted by kid, and puts the dates on a calendar the household shares, with Google Calendar sync. Up to 4 people at home join free.";
+export const SITE_DESCRIPTION_LONG = "Cleanmail: Family Inbox turns email from the school, sports and activity senders a parent picks in Gmail into one short digest sorted by kid (the digest summarizes only those senders), and puts the dates on a calendar the household shares, with Google Calendar sync. Up to 4 people at home join free.";
 
 // The signed-in web app. A parent who already set up on the phone signs in here on a computer.
 export const WEB_APP_URL = "https://app.cleanmailapp.com";

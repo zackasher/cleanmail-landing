@@ -61,7 +61,7 @@ If you answered "a lot," "always me," and "it stung," you're the family these ap
 
 If you try one, check these before you hand over anything:
 
-- **It only reads the senders you pick.** You should choose the school, the coach and the activity, not hand over your whole inbox.
+- **Its digest covers only the senders you pick.** You should choose the school, the coach and the activity, not hand over your whole inbox.
 - **It's read-only.** It shouldn't send, delete or change your email.
 - **Everyone at home sees the same calendar.** The point is to get the schedule out of one person's head.
 - **You can glance at what landed and fix a date.** Any app can misread an email now and then, so a quick look is still worth it.
@@ -71,9 +71,9 @@ If you try one, check these before you hand over anything:
 
 I built Cleanmail after my own family hit option 2's wall. We had five different school apps, three inboxes and fifty messages a day, and I missed picture day anyway.
 
-Cleanmail reads only the school, sports and activity senders you pick in Gmail. It turns them into one short digest, sorted by kid, and puts the dates on a calendar everyone at home shares. It's read-only, and your information is never sold.
+You pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest, sorted by kid, that summarizes only those senders, and puts the dates on a calendar everyone at home shares. It's read-only, and your information is never sold.
 
-Setup is quick and easy, and you see a preview of your digest before you choose a plan. Then it's 14 days free. After that, one parent pays $6.99 a month or $68.99 a year, and up to 4 people in your household join free. It works on iPhone and Android, with Gmail and Google Calendar.
+Setup is quick and easy, and you see a preview of your digest before you choose a plan. Then it's 14 days free. After that, one parent pays $6.99 a month or $68.99 a year, renewing automatically until you cancel, and up to 4 people in your household join free. It works on iPhone and Android, with Gmail and Google Calendar.
 
 If your Sunday nights look like mine did, [see how it works](/how-it-works).
 

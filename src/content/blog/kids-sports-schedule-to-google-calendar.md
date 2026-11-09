@@ -93,6 +93,6 @@ You get a digest sorted by kid, and the dates it finds go on your family calenda
 
 I'd keep your team calendars and add this for the email they don't cover. One heads-up: a subscribed calendar and Cleanmail's events are separate, so a game listed in both can show up twice. If that bugs you, uncheck the team calendar next to its name in Google Calendar.
 
-You see a preview of your digest before you choose a plan. After that, it's a 14-day free trial, then $6.99 a month or $68.99 a year. Up to 4 people share one household, and household members join free. It works with Gmail and Google Calendar only. Here's [how Cleanmail works](/how-it-works) if you want the full tour.
+You see a preview of your digest before you choose a plan. After that, it's 14 days free, then $6.99 a month or $68.99 a year. It renews automatically until you cancel. Up to 4 people share one household, and household members join free. It works with Gmail and Google Calendar only. Here's [how Cleanmail works](/how-it-works) if you want the full tour.
 
 Either way, go add that team link tonight. Your kid's shin guards deserve accurate information.

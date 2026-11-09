@@ -10,7 +10,7 @@ faqs:
   - q: "Which family calendar apps sync with Google Calendar?"
     a: "Cozi shares read-only feeds with Google, Outlook and Apple Calendar. FamilyWall offers Google and Outlook Calendar sync in its paid Premium plan. Cleanmail syncs both ways with Google Calendar, so an edit in either place shows up in the other."
   - q: "Is there a family calendar app that adds events from email?"
-    a: "Yes. Cleanmail connects to Gmail read-only, reads mail only from the senders you pick, and puts the dates it finds on your family calendar. FamilyWall Premium can create events from emails you forward, and Cozi's top plan, Max, lists an AI event import from your inbox."
+    a: "Yes. Cleanmail connects to Gmail read-only, summarizes only the senders you pick in your digest, and puts the dates it finds on your family calendar. FamilyWall Premium can create events from emails you forward, and Cozi's top plan, Max, lists an AI event import from your inbox."
 ---
 
 It's Sunday night and you're trying to plan the week. The soccer schedule is in a PDF the coach sent in August. The dentist is on your phone. The class party is in an email you skimmed on Thursday. And your household is looking at you like you're the calendar. Because you are.
@@ -68,7 +68,7 @@ Cleanmail is also #4 in Bragging Mommy's <a href="https://www.thebraggingmommy.c
 
 **Good for:** families whose dates show up in Gmail and who are tired of copying them by hand.
 
-**Watch out for:** it works with Gmail and Google Calendar only. There's no free tier: it's a 14-day free trial, then $6.99 a month or $68.99 a year.
+**Watch out for:** it works with Gmail and Google Calendar only. There's no free tier: it's 14 days free, then $6.99 a month or $68.99 a year, renewing automatically until you cancel.
 
 ## Which family calendar app should you pick?
 

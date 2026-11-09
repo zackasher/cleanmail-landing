@@ -3,7 +3,7 @@ import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import Mark from "../components/Mark.astro";
-import { PRICE_MONTHLY, PRICE_YEARLY, TRIAL_DAYS, COMPETITOR_FACTS_CHECKED_ON, FOUNDER_NAME, FAMBOT_FACTS_CHECKED_ON } from "../config";
+import { PRICE_MONTHLY, PRICE_YEARLY, TRIAL_DAYS, TRIAL_TERMS, COMPETITOR_FACTS_CHECKED_ON, FOUNDER_NAME, FAMBOT_FACTS_CHECKED_ON } from "../config";
 import PhoneFrame from "../components/PhoneFrame.astro";
 import { ICON_PATHS } from "../data-icons";
 import "../styles/info-page.css";
@@ -84,7 +84,7 @@ const faqs = [
   { q: "Which family calendar apps have two-way Google Calendar sync?", a: `As of ${COMPETITOR_FACTS_CHECKED_ON}, Cleanmail has dedicated two-way Google Calendar sync, Skylight offers two-way sync once you turn it on, and Cozi connects with read-only feeds. Cleanmail is the one that builds events straight from your Gmail, with nothing to forward.` },
   { q: "How is Cleanmail different from Skylight?", a: "Skylight turns email into events when you forward each email to a Skylight address. Cleanmail connects to Gmail read-only, picks up the senders you choose on its own, and sorts everything into one digest by kid, across up to three inboxes." },
   { q: "How is Cleanmail different from Cozi?", a: "Cozi's Google Calendar connection is read-only feeds, and its email import works by forwarding on the Max plan. Cleanmail syncs with Google Calendar both ways and reads the school email you pick for you." },
-  { q: "How much do these apps cost?", a: `Cleanmail is ${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year after a ${TRIAL_DAYS}-day free trial. Skylight Calendar Plus, which adds email import, is $79 a year. Cozi Max, which adds email import, is $79 a year.` },
+  { q: "How much do these apps cost?", a: `Cleanmail is ${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year after a ${TRIAL_DAYS}-day free trial, and renews automatically until you cancel. Skylight Calendar Plus, which adds email import, is $79 a year. Cozi Max, which adds email import, is $79 a year.` },
 ];
 
 const faqSchema = {
@@ -213,7 +213,7 @@ const faqSchema = {
 
     <div class="ip-final">
       <h2>Try Cleanmail free for {TRIAL_DAYS} days</h2>
-      <p>Connect Gmail and Google Calendar once, and the dates take care of themselves.</p>
+      <p>{TRIAL_TERMS} Connect Gmail and Google Calendar once, and the dates take care of themselves.</p>
       <CTA />
     </div>
 
