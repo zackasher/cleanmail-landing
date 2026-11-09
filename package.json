@@ -12,8 +12,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/sitemap": "^3.7.4",
     "@heycatch/sdk": "0.8.5",
-    "astro": "^6.3.8"
+    "astro": "^7.4.7"
   }
 }
