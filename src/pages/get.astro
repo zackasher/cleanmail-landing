@@ -9,7 +9,7 @@ const HEADLINE = "Get Cleanmail on your phone";
 const PITCH = "Cleanmail turns school and activity email into a family calendar that builds itself.";
 const PICK_HINT = "Pick your phone's store to download it.";
 ---
-<BaseLayout title={pageTitle("Get the app")} description={PITCH} noindex={true} noTracking={true}>
+<BaseLayout title={pageTitle("Get the app")} description={PITCH} noindex={true} noTracking={true} hideFooterAppLink={true}>
   <script is:inline define:vars={{ defaultAppStoreUrl: APP_STORE_URL, playStoreUrl: PLAY_STORE_URL, androidStoreLive: ANDROID_STORE_LIVE, campaignBaseUrl: APP_STORE_CAMPAIGN_BASE_URL, providerToken: APP_STORE_PROVIDER_TOKEN, sourceParam: CAMPAIGN_SOURCE_PARAM, sourcePattern: CAMPAIGN_SOURCE_PATTERN }}>
     (function () {
       var campaignSource = new URLSearchParams(location.search).get(sourceParam) || "";

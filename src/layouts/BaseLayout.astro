@@ -10,6 +10,8 @@ export interface Props {
   faqSchema?: unknown;
   noindex?: boolean;
   noTracking?: boolean;
+  // Pages whose main content is already the store badges skip the footer copy of them.
+  hideFooterAppLink?: boolean;
 }
 const {
   title,
@@ -18,6 +20,7 @@ const {
   faqSchema,
   noindex = false,
   noTracking = false,
+  hideFooterAppLink = false,
 } = Astro.props;
 
 const canonicalPath = Astro.url.pathname
@@ -281,7 +284,7 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   <div class="page">
     <Nav />
     <slot />
-    <Footer />
+    <Footer hideAppLink={hideFooterAppLink} />
   </div>
   <div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie choices" transition:persist hidden>
     <p data-cookie-message>{COOKIE_CONSENT_MESSAGE} <a href="/privacy">Privacy Policy</a></p>
