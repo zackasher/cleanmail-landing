@@ -20,11 +20,11 @@ When you first open Cleanmail, you'll be asked to sign in with Google and grant 
 
 ### How does billing work?
 
-Cleanmail is a subscription, monthly or yearly, purchased through the App Store and billed by Apple to your Apple Account. New accounts start with a 14-day free trial; if you don't cancel before the trial ends, it converts automatically to a paid subscription. Your payment method, billing details, and receipts all live in your Apple subscription settings.
+Cleanmail is a subscription, monthly or yearly. On iPhone you buy it through the App Store and Apple bills your Apple Account; on Android you buy it through Google Play and Google bills your Google account. New accounts start with a 14-day free trial; if you don't cancel before the trial ends, it converts automatically to a paid subscription. Your payment method, billing details, and receipts live in your Apple or Google Play subscription settings.
 
 ### How do I cancel my subscription?
 
-Cancellation is handled by Apple, not by us. On your iPhone, open Settings, tap your name at the top, tap Subscriptions, choose Cleanmail, and tap Cancel Subscription. If you cancel during your trial, you won't be charged. You'll keep access until the end of the period you've already paid for.
+Cancellation is handled by Apple or Google, not by us. On your iPhone, open Settings, tap your name at the top, tap Subscriptions, choose Cleanmail, and tap Cancel Subscription. On Android, open the Google Play app, tap your profile, then Payments and subscriptions, then Subscriptions, choose Cleanmail, and tap Cancel subscription. If you cancel during your trial, you won't be charged. You'll keep access until the end of the period you've already paid for.
 
 ### How do I delete my account and my data?
 

@@ -1,25 +1,63 @@
 ---
 import CTA from "./CTA.astro";
 import TrustLine from "./TrustLine.astro";
-import { BRAND_SUBTITLE, TRIAL_TERMS } from "../config";
+import PhoneCarousel from "./PhoneCarousel.astro";
+import { HERO_BOX_HEADING_START, HERO_BOX_HEADING_END, HERO_BOX_POINTS, HERO_TRIAL_LEAD, HERO_PREVIEW_SLIDES, HERO_HEADING_SWAP_EVENT, HERO_HEADING_FADE_MS } from "../data/hero-copy";
+
+const initialHeadingWord = HERO_PREVIEW_SLIDES[HERO_PREVIEW_SLIDES.length - 1].headingWord;
+
+const CHECK_ICON_PATH = "M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z";
+import { BRAND_SUBTITLE, TRIAL_PRICE_LINE, TRIAL_RENEWAL_LINE } from "../config";
 ---
 <section class="hero">
   <div class="hero-inner">
     <span class="logo-lock"><img class="logo" src="/logo.png" alt="Cleanmail" /><sup class="tm">™</sup></span>
     <p class="brand-sub">{BRAND_SUBTITLE}</p>
     <span class="hero-rule" aria-hidden="true"></span>
-    <div class="headline">
-      <h1>Get the schedule <span class="accent">out of your head.</span></h1>
-      <p class="sub">Parents today have five different apps, three inboxes, and fifty messages a day. Cleanmail turns that email into one short digest, sorted by kid, and puts the dates on a calendar automatically for your household to share.</p>
-    </div>
+    <h1>Get the schedule <span class="accent">out of your head.</span></h1>
+    <div class="hero-split">
+    <div class="hero-copy">
+      <div class="box-intro">
+      <p class="box-head" data-swap-event={HERO_HEADING_SWAP_EVENT} data-fade-ms={HERO_HEADING_FADE_MS}>{HERO_BOX_HEADING_START} <span class="swap-word" data-swap-word aria-live="polite">{initialHeadingWord}</span> {HERO_BOX_HEADING_END}</p>
+      <ul class="box-points">
+        {HERO_BOX_POINTS.map((point) => (
+          <li><span class="point-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d={CHECK_ICON_PATH} fill="currentColor" /></svg></span>{point.text}</li>
+        ))}
+      </ul>
+      </div>
     <div class="actions">
       <CTA />
     </div>
-    <p class="trial">Setup is quick and easy. See a preview of your digest before you pay. {TRIAL_TERMS}</p>
-    <TrustLine />
+    <p class="trial">{HERO_TRIAL_LEAD}<br />{TRIAL_PRICE_LINE}<br />{TRIAL_RENEWAL_LINE}</p>
+    <div class="box-foot">
+    <TrustLine showDigestScope={false} />
     <p class="proof"><span class="proof-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"/><path d="M8.5 12l2.4 2.4 4.6-4.8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>Completed an independent CASA security assessment required by Google.</span></p>
+    </div>
+    </div>
+    <div class="hero-preview"><PhoneCarousel /></div>
+    </div>
   </div>
 </section>
+
+<script>
+  // Swaps the heading's middle word to match the phone screen: fade out, change, fade in.
+  const heading = document.querySelector<HTMLElement>(".box-head[data-swap-event]");
+  const word = heading?.querySelector<HTMLElement>("[data-swap-word]");
+  if (heading && word) {
+    const fadeMs = Number(heading.dataset.fadeMs);
+    let pending: number | undefined;
+    document.addEventListener(heading.dataset.swapEvent ?? "", (event) => {
+      const nextWord = (event as CustomEvent<{ headingWord: string }>).detail.headingWord;
+      if (!nextWord || nextWord === word.textContent) return;
+      window.clearTimeout(pending);
+      word.classList.add("is-fading");
+      pending = window.setTimeout(() => {
+        word.textContent = nextWord;
+        word.classList.remove("is-fading");
+      }, fadeMs);
+    });
+  }
+</script>
 
 <style>
   .hero{position:relative;text-align:center;min-height:52vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:58px 24px 40px}
@@ -28,20 +66,43 @@ import { BRAND_SUBTITLE, TRIAL_TERMS } from "../config";
   .logo{width:var(--logo-width);height:auto;display:block}
   .logo-lock{position:relative;display:inline-block;vertical-align:top}
   /* Sized from the logo so it scales with it; 8 px under the wordmark, since the logo's last 53/900 is empty. Normal letter spacing. */
-  .hero-inner{--logo-width:clamp(220px,30vw,310px)}
+  .hero-inner{--logo-width:clamp(165px,22.5vw,232px)}
   .brand-sub{margin:calc(8px - var(--logo-width) * 53 / 900) 0 22px;font-size:calc(var(--logo-width) * 0.11);line-height:1.15;font-weight:300;color:#a9afbd}
   .hero-rule{position:relative;z-index:5;display:block;width:72px;height:2px;margin:0 auto 24px;border-radius:1px;background:var(--orange)}
   .tm{position:absolute;top:5%;left:100%;margin-left:3px;font-size:clamp(12px,1.5vw,17px);color:var(--muted);font-weight:400;line-height:1}
   h1{font-size:clamp(30px,4.6vw,50px);font-weight:400;line-height:1.1;letter-spacing:-1.2px;color:var(--navy)}
   h1 .accent{color:var(--purple)}
-  /* The paragraph matches the one-line headline's width: width 0 keeps it from sizing the box, min-width 100% fills it. */
-  @media (min-width:720px){ h1{white-space:nowrap} .headline{width:max-content;margin:0 auto} .headline .sub{width:0;min-width:100%;max-width:none} }
-  .sub{margin:20px auto 0;max-width:560px;font-size:clamp(15px,1.7vw,18px);line-height:1.6;color:var(--muted);font-weight:400}
+  @media (min-width:720px){ h1{white-space:nowrap} }
+  .box-head{margin:20px 0 0;font-size:clamp(18px,2vw,22px);font-weight:600;color:var(--navy)}
+  .box-points{list-style:none;margin:14px auto 0;padding:0;display:inline-flex;flex-direction:column;gap:10px;text-align:left;font-size:clamp(15px,1.6vw,17px);line-height:1.45;color:var(--ink)}
+  .box-points li{display:flex;align-items:center;gap:14px}
+  .point-icon{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:33px;height:33px;border-radius:50%;background:var(--teal);color:#fff}
+  .point-icon svg{width:16.5px;height:16.5px}
   .actions{margin-top:32px}
   .see-how{display:inline-flex;align-items:center;gap:7px;margin-top:22px;font-size:15px;font-weight:500;color:var(--purple);text-decoration:none}
   .see-how:hover{opacity:.85}
   .proof{margin:12px auto 0;display:flex;justify-content:center;flex-wrap:wrap;gap:6px 20px;font-size:13px;font-weight:500;color:var(--ink)}
   .proof-item{display:inline-flex;align-items:center;gap:6px}
-  .proof-item svg{width:16px;height:16px;color:var(--orange)}
+  .proof-item svg{width:16px;height:16px;color:var(--purple)}
+  /* Laptop and wider (Zack 11/10): headline centered on one line under the logo, then a copy box left and the sample digest right. Phones keep the centered stack and no card. */
+  .hero-preview{display:none}
+  .swap-word{color:var(--orange);transition:opacity .22s ease}
+  .swap-word.is-fading{opacity:0}
+  @media (min-width:1100px){
+    .hero-inner{max-width:1120px}
+    /* Zack 11/10: one wide card holds the centered copy on the left and the phone on the right. */
+    .hero-split{display:flex;align-items:center;justify-content:space-between;gap:40px;margin-top:36px;padding:36px 56px 36px 48px;background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:0 24px 56px rgba(48,68,105,.18)}
+    .hero-copy{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center}
+    .hero-copy > *{margin:0}
+    /* Heading and check rows share one left edge (Zack 11/10). */
+    .hero-copy .box-intro{display:flex;flex-direction:column;align-items:flex-start;gap:22px;text-align:left}
+    .hero-copy .box-head{margin:0;font-size:34px;line-height:1.15;font-weight:700;letter-spacing:-.5px;color:var(--navy)}
+    .hero-copy .box-points{margin:0}
+    .hero-copy .box-points{display:flex;gap:22px;font-size:18px;color:var(--ink)}
+    .hero-copy .box-foot{display:flex;flex-direction:column;align-items:center;gap:6px}
+    .hero-copy .box-foot :global(.trust){width:auto;max-width:none;margin:0;transform:none;text-align:center;font-size:12px}
+    .hero-copy .proof{margin:0;font-size:12px;font-weight:400;color:var(--muted)}
+    .hero-preview{display:flex;align-items:center;flex:0 0 auto;filter:drop-shadow(0 24px 40px rgba(48,68,105,.22))}
+  }
   .trial{margin:22px auto 0;font-size:15px;line-height:1.5;color:var(--navy);font-weight:500}
 </style>

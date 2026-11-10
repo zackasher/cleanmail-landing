@@ -1,0 +1,112 @@
+---
+import PhoneFrame from "./PhoneFrame.astro";
+import { HERO_PREVIEW_SLIDES, HERO_HEADING_SWAP_EVENT, HERO_PREVIEW_AUTO_ADVANCE_MS, HERO_PREVIEW_PEEK_DELAY_MS, HERO_PREVIEW_SWIPE_THRESHOLD_PX } from "../data/hero-copy";
+---
+<div class="phone-carousel" data-phone-carousel data-swap-event={HERO_HEADING_SWAP_EVENT} data-heading-words={JSON.stringify(HERO_PREVIEW_SLIDES.map((slide) => slide.headingWord))} data-advance-ms={HERO_PREVIEW_AUTO_ADVANCE_MS} data-peek-ms={HERO_PREVIEW_PEEK_DELAY_MS} data-swipe-px={HERO_PREVIEW_SWIPE_THRESHOLD_PX}>
+  <PhoneFrame>
+    <div class="carousel-viewport" data-carousel-viewport>
+      <div class="carousel-track" data-carousel-track style={`transform:translateX(-${(HERO_PREVIEW_SLIDES.length - 1) * 100}%)`}>
+        {HERO_PREVIEW_SLIDES.map((slide, index) => (
+          <div class="carousel-slide" data-collapsible={"collapsedSrc" in slide ? "true" : undefined}>
+            <img class="carousel-shot expanded-shot" src={slide.src} alt={slide.alt} width={slide.width} height={slide.height} loading={index === HERO_PREVIEW_SLIDES.length - 1 ? "eager" : "lazy"} draggable="false" />
+            {"collapsedSrc" in slide && (
+              <img class="carousel-shot collapsed-shot" src={slide.collapsedSrc} alt={slide.collapsedAlt} width={slide.width} height={slide.height} loading="lazy" draggable="false" />
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  </PhoneFrame>
+  <div class="carousel-tabs" role="tablist" aria-label="App screens">
+    {HERO_PREVIEW_SLIDES.map((slide, index) => (
+      <button type="button" role="tab" class="carousel-tab" data-carousel-tab={index} aria-selected={index === HERO_PREVIEW_SLIDES.length - 1 ? "true" : "false"}>{slide.label}</button>
+    ))}
+  </div>
+</div>
+
+<script>
+  const PEEK_OFFSET_PERCENT = 14;
+
+  function setupCarousel(root: HTMLElement) {
+    const track = root.querySelector<HTMLElement>("[data-carousel-track]");
+    const viewport = root.querySelector<HTMLElement>("[data-carousel-viewport]");
+    const tabs = Array.from(root.querySelectorAll<HTMLButtonElement>("[data-carousel-tab]"));
+    if (!track || !viewport || tabs.length === 0) return;
+
+    const slideCount = tabs.length;
+    const advanceMs = Number(root.dataset.advanceMs);
+    const peekMs = Number(root.dataset.peekMs);
+    const swipePx = Number(root.dataset.swipePx);
+    const swapEvent = root.dataset.swapEvent ?? "";
+    const headingWords: string[] = JSON.parse(root.dataset.headingWords ?? "[]");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Starts on the last slide (the digest) and moves left, toward Events, like swiping in the app.
+    let current = slideCount - 1;
+    let timer: number | undefined;
+    let userTookOver = false;
+    const slides = Array.from(track.children) as HTMLElement[];
+
+    const show = (index: number) => {
+      current = (index + slideCount) % slideCount;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      tabs.forEach((tab, tabIndex) => tab.setAttribute("aria-selected", tabIndex === current ? "true" : "false"));
+      document.dispatchEvent(new CustomEvent(swapEvent, { detail: { headingWord: headingWords[current] } }));
+    };
+    const stopAuto = () => window.clearInterval(timer);
+    const startAuto = () => {
+      if (reducedMotion || userTookOver) return;
+      stopAuto();
+      timer = window.setInterval(() => show(current - 1), advanceMs);
+    };
+    const peek = () => {
+      if (reducedMotion) return;
+      track.style.transform = `translateX(-${current * 100 - PEEK_OFFSET_PERCENT}%)`;
+      window.setTimeout(() => show(current), peekMs / 2);
+    };
+
+    // Once a visitor clicks, drags or picks a tab, the phone stops moving on its own.
+    const takeOver = () => { userTookOver = true; stopAuto(); };
+    const toggleCollapse = () => {
+      const slide = slides[current];
+      if (slide?.dataset.collapsible !== "true") return;
+      slide.classList.toggle("is-collapsed");
+    };
+
+    tabs.forEach((tab, index) => tab.addEventListener("click", () => { takeOver(); show(index); }));
+    root.addEventListener("mouseenter", stopAuto);
+    root.addEventListener("mouseleave", startAuto);
+
+    let dragStartX: number | null = null;
+    viewport.addEventListener("pointerdown", (event) => { dragStartX = event.clientX; takeOver(); });
+    viewport.addEventListener("pointerup", (event) => {
+      if (dragStartX === null) return;
+      const distance = event.clientX - dragStartX;
+      dragStartX = null;
+      const isSwipe = Math.abs(distance) >= swipePx;
+      if (!isSwipe) { toggleCollapse(); return; }
+      const next = current + (distance < 0 ? 1 : -1);
+      if (next < 0 || next >= slideCount) return;
+      show(next);
+    });
+
+    show(current);
+    window.setTimeout(() => { peek(); startAuto(); }, peekMs);
+  }
+
+  document.querySelectorAll<HTMLElement>("[data-phone-carousel]").forEach(setupCarousel);
+</script>
+
+<style>
+  .phone-carousel{display:flex;flex-direction:column;align-items:center;gap:18px}
+  .carousel-viewport{width:100%;height:100%;overflow:hidden;cursor:pointer;touch-action:pan-y;user-select:none}
+  .carousel-track{display:flex;width:100%;height:100%;transition:transform .55s cubic-bezier(.3,.7,.2,1)}
+  .carousel-slide{position:relative;flex:0 0 100%;width:100%;height:100%}
+  .carousel-shot{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:top;pointer-events:none;transition:opacity .3s ease}
+  .collapsed-shot{opacity:0}
+  .carousel-slide.is-collapsed .collapsed-shot{opacity:1}
+  .carousel-slide.is-collapsed .expanded-shot{opacity:0}
+  .carousel-tabs{display:flex;gap:6px;padding:4px;background:#eef1fa;border-radius:999px}
+  .carousel-tab{font:inherit;font-size:13px;font-weight:600;color:var(--muted);background:none;border:0;border-radius:999px;padding:6px 14px;cursor:pointer}
+  .carousel-tab[aria-selected="true"]{background:#fff;color:var(--purple);box-shadow:0 2px 6px rgba(48,68,105,.14)}
+  @media (prefers-reduced-motion:reduce){ .carousel-track{transition:none} }
+</style>

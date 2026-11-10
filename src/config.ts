@@ -8,7 +8,9 @@ export const PRICE_YEARLY_PER_MONTH = "$5.75";
 export const TRIAL_DAYS = 14;
 export const HOUSEHOLD_SIZE = 4;
 // Counsel 11/9: every free-trial claim carries the length, the price after it, and automatic renewal.
-export const TRIAL_TERMS = `${TRIAL_DAYS} days free, then ${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year. Renews automatically until you cancel.`;
+export const TRIAL_PRICE_LINE = `${TRIAL_DAYS} days free, then ${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year.`;
+export const TRIAL_RENEWAL_LINE = "Renews automatically until you cancel.";
+export const TRIAL_TERMS = `${TRIAL_PRICE_LINE} ${TRIAL_RENEWAL_LINE}`;
 export const COMPETITOR_FACTS_CHECKED_ON = "October 2, 2026";
 export const FOUNDER_NAME = "Zack Asher";
 
