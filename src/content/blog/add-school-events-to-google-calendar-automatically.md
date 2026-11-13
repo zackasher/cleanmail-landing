@@ -1,7 +1,9 @@
 ---
 title: "How to Add a School Calendar to Google Calendar Automatically"
+seoTitle: "Add school events to Google Calendar automatically"
 description: "Get your school calendar onto Google Calendar tonight. Subscribe to the school's link, then catch the picture days and moved practices that only come by email."
 date: "2026-10-12"
+updated: "2026-11-09"
 author: "Zack Asher"
 keyword: "how to add school events to google calendar automatically"
 faqs:

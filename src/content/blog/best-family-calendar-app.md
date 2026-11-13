@@ -2,6 +2,7 @@
 title: "Best Family Calendar App: 4 Picks for Busy Parents (2026)"
 description: "The best family calendar app depends on where your schedule starts. We compare Google Calendar, Cozi, FamilyWall and Cleanmail on price, sync and setup."
 date: "2026-10-25"
+updated: "2026-11-09"
 author: "Zack Asher"
 keyword: "best family calendar app"
 faqs:

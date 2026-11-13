@@ -1,5 +1,6 @@
 ---
 title: "Weekly Activity Schedule Template for Families (Free, Copy and Use)"
+seoTitle: "Free weekly activity schedule template for families"
 description: "A free weekly activity schedule template for families: one grid for school, practices and pickups, with an owner on every line. Copy it and fill it in."
 date: "2026-11-09"
 author: "Zack Asher"

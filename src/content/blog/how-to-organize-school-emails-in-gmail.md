@@ -2,6 +2,7 @@
 title: "How to Organize School Emails in Gmail (A Parent's Guide)"
 description: "How to organize school emails in Gmail with one label per kid, filters that sort mail as it lands, and a 10-minute weekly routine that catches the dates."
 date: "2026-10-19"
+updated: "2026-11-06"
 author: "Zack Asher"
 keyword: "how to organize school emails in gmail"
 faqs:

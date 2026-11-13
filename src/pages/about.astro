@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { ABOUT_BIO, ABOUT_DESCRIPTION, ABOUT_EYEBROW, ABOUT_HEADING, ABOUT_PAGE_TITLE } from "../data/about-copy";
+import { FOUNDER_PERSON } from "../data/founder-schema";
+import "../styles/info-page.css";
+
+const profileSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": FOUNDER_PERSON,
+};
+---
+<BaseLayout title={ABOUT_PAGE_TITLE} description={ABOUT_DESCRIPTION}>
+  <script type="application/ld+json" set:html={JSON.stringify(profileSchema)} />
+  <section class="ip">
+    <p class="ip-eyebrow">{ABOUT_EYEBROW}</p>
+    <h1>{ABOUT_HEADING}</h1>
+    <p class="ip-lede">{ABOUT_BIO}</p>
+  </section>
+</BaseLayout>

@@ -2,6 +2,7 @@
 title: "Best App for Shared Family Calendar, by Device Mix"
 description: "The best shared family calendar app for all-iPhone, all-Android and mixed households, how to set each one up, and what a shared calendar still won't do."
 date: "2026-11-06"
+updated: "2026-11-09"
 author: "Zack Asher"
 keyword: "best app for shared family calendar"
 faqs:

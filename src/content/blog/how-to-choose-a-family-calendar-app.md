@@ -2,6 +2,7 @@
 title: "How to Choose a Family Calendar App (and Actually Switch)"
 description: "How to choose a family calendar app without a big leap: a one-week test with one kid and one activity, plus honest answers on setup, buy-in and privacy."
 date: "2026-10-26"
+updated: "2026-11-10"
 author: "Zack Asher"
 keyword: "how to choose a family calendar app"
 faqs:

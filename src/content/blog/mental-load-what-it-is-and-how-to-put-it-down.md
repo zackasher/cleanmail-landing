@@ -2,6 +2,7 @@
 title: "Mental Load: What It Is and How to Put It Down"
 description: "What mental load is, what belongs on the list, why it lands on one parent, and how to actually share it, including the school email part."
 date: "2026-11-06"
+updated: "2026-11-09"
 author: "Zack Asher"
 keyword: "mental load"
 faqs:

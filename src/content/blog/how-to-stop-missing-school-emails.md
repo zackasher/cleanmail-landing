@@ -2,6 +2,7 @@
 title: "How to Stop Missing School Emails"
 description: "Why school email is so easy to miss, and five practical ways to make sure the permission slip, the early dismissal, and the picture day reminder actually reach you."
 date: "2026-10-09"
+updated: "2026-11-06"
 author: "Zack Asher"
 keyword: "how to stop missing school emails"
 faqs:

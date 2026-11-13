@@ -1,7 +1,9 @@
 ---
 title: "Is a Family Calendar App Worth It? An Honest Answer for Busy Parents"
+seoTitle: "Is a family calendar app worth it?"
 description: "Is a family calendar app worth it? When a free shared calendar is enough, when it isn't, and how to stop copying school dates by hand every Sunday night."
 date: "2026-11-06"
+updated: "2026-11-09"
 author: "Zack Asher"
 keyword: "is a family calendar app worth it"
 faqs:

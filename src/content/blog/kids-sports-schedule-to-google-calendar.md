@@ -2,6 +2,7 @@
 title: "How to Add a Kids Sports Schedule to Google Calendar"
 description: "How to add a kids sports schedule to Google Calendar from TeamSnap, GameChanger or a paper list, plus the 24-hour catch most guides leave out."
 date: "2026-11-03"
+updated: "2026-11-09"
 author: "Zack Asher"
 keyword: "kids sports schedule to google calendar"
 faqs:

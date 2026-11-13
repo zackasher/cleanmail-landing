@@ -4,7 +4,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { publishedPosts, formatPostDate, type BlogPost } from "../../data-blog";
 import BlogReads from "../../components/BlogReads.astro";
-import { SITE_URL, TRIAL_DAYS, TRIAL_TERMS } from "../../config";
+import { ABOUT_PATH, FOUNDER_NAME, SITE_URL, TRIAL_DAYS, TRIAL_TERMS } from "../../config";
+import { FOUNDER_PERSON } from "../../data/founder-schema";
 import "../../styles/info-page.css";
 
 export function getStaticPaths() {
@@ -12,7 +13,8 @@ export function getStaticPaths() {
 }
 
 const { post } = Astro.props as { post: BlogPost };
-const { title, description, date, author, faqs = [] } = post.frontmatter;
+const { title, seoTitle, description, date, updated, author, faqs = [] } = post.frontmatter;
+const isFounderPost = author === FOUNDER_NAME;
 const { Content } = post;
 const otherPostSlugs = publishedPosts()
   .map((publishedPost) => publishedPost.slug)
@@ -24,7 +26,8 @@ const articleSchema = {
   "headline": title,
   "description": description,
   "datePublished": date,
-  "author": { "@type": "Person", "name": author },
+  "dateModified": updated ?? date,
+  "author": isFounderPost ? FOUNDER_PERSON : { "@type": "Person", "name": author },
   "publisher": { "@type": "Organization", "name": "Cleanmail", "url": SITE_URL },
   "mainEntityOfPage": `${SITE_URL}/blog/${post.slug}`,
 };
@@ -35,12 +38,12 @@ const faqSchema = hasFaqs ? {
   "mainEntity": faqs.map((item) => ({ "@type": "Question", "name": item.q, "acceptedAnswer": { "@type": "Answer", "text": item.a } })),
 } : undefined;
 ---
-<BaseLayout title={pageTitle(title)} description={description} faqSchema={faqSchema}>
+<BaseLayout title={pageTitle(seoTitle ?? title)} description={description} faqSchema={faqSchema}>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <article class="ip post">
     <p class="ip-eyebrow"><a href="/blog">Blog</a></p>
     <h1>{title}</h1>
-    <p class="post-byline">By {author} · {formatPostDate(date)}</p>
+    <p class="post-byline">By {isFounderPost ? <a href={ABOUT_PATH}>{author}</a> : author} · {formatPostDate(date)}</p>
     <div class="post-body"><Content /></div>
     {hasFaqs && (
       <div class="ip-section">
@@ -64,6 +67,7 @@ const faqSchema = hasFaqs ? {
   <BlogReads slugs={otherPostSlugs} />
   <style>
     .post .ip-eyebrow a{color:inherit;text-decoration:none}
+    .post-byline a{color:inherit}
     .post-byline{text-align:center;font-size:14px;color:var(--muted);margin:10px 0 0}
     .post-body{max-width:680px;margin:40px auto 0;font-size:17.5px;line-height:1.7;color:var(--ink)}
     .post-body :global(h2){font-size:25px;font-weight:600;color:var(--navy);margin:38px 0 10px;letter-spacing:-.3px;text-align:left}

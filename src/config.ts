@@ -115,3 +115,8 @@ export const SITE_DESCRIPTION_LONG = "Cleanmail: Family Inbox turns email from t
 export const WEB_APP_URL = "https://app.cleanmailapp.com";
 export const WEB_APP_SIGN_IN_LABEL = "Sign in";
 export const WEB_APP_FOOTER_LABEL = "Cleanmail on the web";
+
+export const ABOUT_PATH = "/about";
+export const FOUNDER_LEGAL_NAME = "Zachary Asher";
+export const FOUNDER_JOB_TITLE = "Founder";
+export const FAQ_PAGE_TITLE = "Cleanmail FAQ: setup, pricing and privacy";
