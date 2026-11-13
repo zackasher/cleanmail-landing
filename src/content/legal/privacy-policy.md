@@ -152,10 +152,12 @@ To permanently delete your own personal data, see Section 7 (Account Deletion).
 Digest history is retained for the period you select in Settings (default 30 days; configurable up to 60 days). Older history is automatically deleted.
 
 You may permanently delete your account and all associated data at any time from within the app: Settings → Delete Account. If you have not started a subscription or free trial yet, you can also tap Leave and delete on the plan screen. Account deletion is immediate and removes:
-- Your profile and all in-app data (people, activities, senders, digest history, events) for digests you own.
+- Your profile and all in-app data (people, activities, senders, digest history, and our records of your events) for digests you own.
 - Profile photos from our storage.
 - Your billing records held by us, including your Google Play purchase records and your subscription event log. Deleting your Cleanmail account does not cancel a subscription: cancel it first in your Apple Account settings (iPhone) or in Google Play subscriptions (Android).
 - Your stored Google refresh token (revoked with Google), and the credentials for any additional inboxes you have linked (each revoked with Google and deleted).
+
+**Events on your Google Calendar stay.** The events Cleanmail added to your Google Calendar are real events on your calendar, so deleting your account does not remove them; delete them in Google Calendar if you no longer want them. Each one carries a hidden Cleanmail tag that holds only that event's Cleanmail ID. If you sign in again with the same Google account, Cleanmail uses that tag to pick those events back up instead of adding copies. Nothing else of ours stays in your Google account.
 
 **If you are part of a shared digest:**
 - If you are a **Household Lead** or **Household Member** (you joined someone else's digest), deleting your account removes you from that shared digest. The shared digest itself, and the content you contributed to it, remain for the Primary and the rest of the household. Your own profile and personal data are deleted, including the notes you left. Emoji reactions you left stay on the shared digest without your name.
@@ -237,7 +239,7 @@ We may update this Privacy Policy from time to time. When we make a material cha
 - **Your consent.** We read your Gmail and use your Google Calendar only after you allow it on Google's sign-in screen, and we send email content to Anthropic only after you agree on Cleanmail's AI screen. You can withdraw consent at any time: turn off AI in Settings, remove Cleanmail's access in your [Google account permissions](https://myaccount.google.com/permissions), or delete your account. Withdrawing consent stops future processing; it does not affect processing done before.
 - **The law.** We keep or disclose information when the law requires it (Section 11).
 
-**How long we keep it.** Digest history is kept for the period you choose in Settings, up to 60 days, and deleted automatically within a few days after that. Items you delete go to Trash and leave it after 3 days. Your profile, setup, and calendar events stay until you delete them or delete your account. If you never start a subscription or free trial, your account may be deleted after 30 days without use. After deletion we keep only what Section 7 lists under "What we keep after deletion." Section 7 describes deletion in full.
+**How long we keep it.** Digest history is kept for the period you choose in Settings, up to 60 days, and deleted automatically within a few days after that. Items you delete go to Trash and leave it after 3 days. Your profile, setup, and our records of your calendar events stay until you delete them or delete your account. If you never start a subscription or free trial, your account may be deleted after 30 days without use. After deletion we keep only what Section 7 lists under "What we keep after deletion." Section 7 describes deletion in full.
 
 **Your rights.** You can ask for a copy of your data, ask us to correct or delete it, ask us to limit or stop using it, and withdraw your consent. You also have the right to complain to the data protection authority in your country.
 
