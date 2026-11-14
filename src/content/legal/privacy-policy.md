@@ -151,7 +151,7 @@ To permanently delete your own personal data, see Section 7 (Account Deletion).
 
 Digest history is retained for the period you select in Settings (default 30 days; configurable up to 60 days). Older history is automatically deleted.
 
-You may permanently delete your account and all associated data at any time from within the app: Settings → Delete Account. If you have not started a subscription or free trial yet, you can also tap Leave and delete on the plan screen. Account deletion is immediate and removes:
+You may permanently delete your account and all associated data at any time from within the app: Settings → Delete Account. If you have not started a subscription or free trial yet, you can also tap Leave and delete on the plan screen. When you delete your account, you choose between two equal options: **delete everything now**, or **keep my setup for 3 days** in case you come back. Either way, at the moment you delete, Cleanmail revokes its access to your Google account and to any other inboxes you linked (you link them again if you come back), stops reading your Gmail and stops writing to your calendar, and cancels a Google Play subscription's renewal. While it waits, Cleanmail does nothing with your account except record subscription updates from Apple or Google, so your plan is right if you come back. During those 3 days your data is held only so it can be restored to you; it is not used for anything else. If you joined someone else's shared digest, you have no setup of your own to keep, so your deletion is always immediate. If you sign in again with the same Google account within 3 days, your setup comes back. If you don't, or you chose to delete everything now, deletion removes:
 - Your profile and all in-app data (people, activities, senders, digest history, and our records of your events) for digests you own.
 - Profile photos from our storage.
 - Your billing records held by us, including your Google Play purchase records and your subscription event log. What happens to a subscription depends on where you bought it. **Google Play (Android):** deleting your account turns off your subscription's renewal; you keep access until the end of the period you paid for. **Apple (iPhone):** deleting your account does not cancel it, because only you can cancel an Apple subscription; the app opens Apple's subscription page before your account is deleted so you can cancel there. **Our website (earliest subscribers only):** deleting your account cancels that subscription right away.
@@ -161,9 +161,9 @@ You may permanently delete your account and all associated data at any time from
 
 **If you are part of a shared digest:**
 - If you are a **Household Lead** or **Household Member** (you joined someone else's digest), deleting your account removes you from that shared digest. The shared digest itself, and the content you contributed to it, remain for the Primary and the rest of the household. Your own profile and personal data are deleted, including the notes you left. Emoji reactions you left stay on the shared digest without your name.
-- If you are the **Primary** (you created the shared digest), deleting your account deletes the shared digest and all of its content for everyone in the household. Everyone else is removed and, on their next use of Cleanmail, would need to start their own digest and subscription.
+- If you are the **Primary** (you created the shared digest), deleting your account deletes the shared digest and all of its content for everyone in the household. Everyone else is removed at the moment you delete, even if you keep your setup for 3 days, and, on their next use of Cleanmail, would need to start their own digest and subscription. If you come back within 3 days, you can invite them again.
 
-**If you never subscribe:** if you sign in and set up Cleanmail but never start a subscription or free trial, we may delete your account and everything set up in it after 30 days without use. This works the same way as deleting your account yourself, including revoking our access to your Google account.
+**If you never subscribe:** if you sign in and set up Cleanmail but never start a subscription or free trial, we may delete your account and everything set up in it after 30 days without use. This works the same way as deleting everything now yourself, including revoking our access to your Google account; there is no 3-day hold.
 
 **What we keep after deletion:**
 - If your account ever received a free first digest, we keep a hashed (one-way scrambled) copy of your Google account's email address, so the same address does not get a second free first digest. We use it for nothing else.
@@ -171,7 +171,7 @@ You may permanently delete your account and all associated data at any time from
 - A deletion record: your former account ID, a hashed copy of the email address on the account, and your Stripe customer reference if you had one. We keep it for three years so we can confirm the deletion happened and answer a billing question, then delete it. If you had an App Store or Google Play subscription, the record also keeps the store's identifier for it (Apple's original transaction ID or Google Play's purchase token), so that if you sign in again with the same Google account while that subscription is still paid, we can restore it to your new account. We delete those identifiers once the subscription is restored to a new account, or when it ends.
 - If you told us why you were leaving, or sent us feedback in the app, we keep what you sent along with the app version and build, operating system and version, device model and time zone recorded with it, but we remove its link to your account. We use it only to improve Cleanmail.
 
-After deletion, no recovery is possible. You can also ask us to delete your account without using the app: email support@cleanmailapp.com from the address on your account, and we will delete it within 30 days.
+Once deletion is complete, no recovery is possible. You can also ask us to delete your account without using the app: email support@cleanmailapp.com from the address on your account, and we will delete it within 30 days.
 
 ---
 
@@ -244,7 +244,7 @@ We may update this Privacy Policy from time to time. When we make a material cha
 **Your rights.** You can ask for a copy of your data, ask us to correct or delete it, ask us to limit or stop using it, and withdraw your consent. You also have the right to complain to the data protection authority in your country.
 
 **How to get a copy of your data or delete it.**
-- **Delete:** open Cleanmail, go to Settings, then Delete Account. Deletion is immediate and covers everything listed in Section 7.
+- **Delete:** open Cleanmail, go to Settings, then Delete Account. You can delete everything now or keep your setup for 3 days in case you come back; Section 7 explains both.
 - **Get a copy, or anything else:** email support@cleanmailapp.com from the address on your account. We reply within one month.
 
 ---
