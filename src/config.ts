@@ -75,6 +75,11 @@ export const TERMS_ARCHIVE = {
   "2026-11-03": { path: "/terms/2026-11-03", label: "November 3, 2026", effectiveRange: "November 3 to November 8, 2026" },
   "2026-11-01": { path: "/terms/2026-11-01", label: "November 1, 2026", effectiveRange: "November 1 to November 2, 2026" },
   "2026-10-26": { path: "/terms/2026-10-26", label: "October 26, 2026", effectiveRange: "October 26 to October 31, 2026" },
+  "2026-10-26-early": {
+    path: "/terms/2026-10-26-early",
+    label: "October 26, 2026, earlier that day",
+    fullNotice: "These Terms were in effect on October 26, 2026, from 11:01 AM to 4:32 PM Central Time, and were replaced the same day.",
+  },
   "2026-10-09": { path: "/terms/2026-10-09", label: "October 9, 2026", effectiveRange: "October 9 to October 25, 2026" },
 };
 
