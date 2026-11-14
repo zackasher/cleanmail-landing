@@ -1,6 +1,6 @@
 # Terms of Service
 
-**Last updated:** November 9, 2026
+**Last updated:** November 13, 2026
 
 These Terms of Service ("Terms") govern your use of Cleanmail, an application for iPhone, Android and the web operated by Calibrate LLC ("we," "our," or "us"). By creating an account or using Cleanmail, you agree to these Terms.
 
@@ -38,7 +38,7 @@ Cleanmail is offered as a subscription with two plans: monthly at $6.99 per mont
 
 **One subscription per account.** Your subscription belongs to your Cleanmail account and is managed in the store where you bought it. If your account already has a subscription through the other store, or that subscription has an unresolved payment problem, you may not be able to buy a new one until the issue is resolved or the subscription has ended.
 
-**Cancellation.** You may cancel your subscription at any time in the subscription settings of the store you bought it in (your Apple Account on iPhone, Google Play on Android), reachable from within the app under Manage subscription. Cancellation takes effect at the end of your current billing period. You retain access until the period ends, after which your access to Cleanmail's features ends. We cannot cancel an Apple or Google Play subscription on your behalf, and deleting your Cleanmail account does not cancel it.
+**Cancellation.** You may cancel your subscription at any time in the subscription settings of the store you bought it in (your Apple Account on iPhone, Google Play on Android), reachable from within the app under Manage subscription. Cancellation takes effect at the end of your current billing period. You retain access until the period ends, after which your access to Cleanmail's features ends. We cannot cancel an Apple subscription on your behalf, and deleting your Cleanmail account does not cancel it. Deleting your Cleanmail account does turn off the renewal of a Google Play subscription (you keep access until the end of the period you paid for) and cancels a subscription bought on our website right away.
 
 **Pricing changes.** If we change the price of your plan, we will tell you by email and in the app no less than 7 and no more than 30 days before the new price applies to you, along with how to cancel. Apple and Google Play also notify you of price increases and may ask you to agree before charging the new price. If you do not want to pay the new price, cancel before it takes effect.
 
@@ -118,7 +118,7 @@ To the extent permitted by law, you agree to defend, indemnify, and hold harmles
 
 ## 11. Termination
 
-You may terminate your account at any time via Settings → Delete Account in the app. Account deletion is immediate and irreversible. Deleting your account does not cancel a subscription; cancel it in Apple or Google Play first.
+You may terminate your account at any time via Settings → Delete Account in the app. Once deletion is complete it cannot be undone; Section 7 of our Privacy Policy explains how deletion works. Deleting your account does not cancel an Apple subscription, so cancel it in your Apple Account settings; it does turn off a Google Play subscription's renewal and cancels a subscription bought on our website, as Section 3 explains.
 
 We reserve the right to suspend or terminate your account at our sole discretion, with or without notice, if you violate these Terms or if continued provision of the service to you would expose us to legal or operational risk.
 
