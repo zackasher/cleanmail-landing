@@ -65,12 +65,15 @@ export const LIVE_STATS_FUNCTION_PATH = "/rest/v1/rpc/site_live_stats";
 export const MINUTES_SAVED_PER_EMAIL = 4;
 export const BLOG_SLUG_ORGANIZE_GMAIL = "how-to-organize-school-emails-in-gmail";
 
-// Earlier Terms stay published so anyone can see what they agreed to; wording from Head Counsel, 2026-11-01.
+// Earlier Terms stay published so anyone can see what they agreed to; wording from Head Counsel, 2026-11-01; every Terms text that was ever live gets an archive, because a dispute turns on the exact text the parent agreed to (Counsel, 2026-11-13).
 export const CURRENT_TERMS_PATH = "/terms";
-export const CURRENT_TERMS_NOTICE = "These Terms took effect November 1, 2026. They add Android and Google Play billing; nothing changed for iPhone subscribers. Earlier versions:";
+export const CURRENT_TERMS_NOTICE = "These Terms took effect November 13, 2026. They say that deleting your account turns off a Google Play subscription's renewal and cancels a subscription bought on our website; it still does not cancel an Apple subscription. Earlier versions:";
 export const ARCHIVED_TERMS_NOTICE_BEFORE = "This is an earlier version of our Terms, in effect from";
 export const ARCHIVED_TERMS_NOTICE_AFTER = "The current Terms are at";
 export const TERMS_ARCHIVE = {
+  "2026-11-09": { path: "/terms/2026-11-09", label: "November 9, 2026", effectiveRange: "November 9 to November 12, 2026" },
+  "2026-11-03": { path: "/terms/2026-11-03", label: "November 3, 2026", effectiveRange: "November 3 to November 8, 2026" },
+  "2026-11-01": { path: "/terms/2026-11-01", label: "November 1, 2026", effectiveRange: "November 1 to November 2, 2026" },
   "2026-10-26": { path: "/terms/2026-10-26", label: "October 26, 2026", effectiveRange: "October 26 to October 31, 2026" },
   "2026-10-09": { path: "/terms/2026-10-09", label: "October 9, 2026", effectiveRange: "October 9 to October 25, 2026" },
 };

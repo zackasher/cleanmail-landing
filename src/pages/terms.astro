@@ -4,8 +4,8 @@ import LegalLayout from "../layouts/LegalLayout.astro";
 import { compiledContent } from "../content/legal/terms-of-service.md";
 import { CURRENT_TERMS_NOTICE, TERMS_ARCHIVE } from "../config";
 
-const newestArchive = TERMS_ARCHIVE["2026-10-26"];
-const oldestArchive = TERMS_ARCHIVE["2026-10-09"];
+const archivesNewestFirst = Object.values(TERMS_ARCHIVE);
+const lastArchiveIndex = archivesNewestFirst.length - 1;
 
 // The Terms file is synced from the app repo, so the notice is placed after its first paragraph (the "Last updated" line) here rather than written into the file.
 const termsHtml = await compiledContent();
@@ -16,7 +16,7 @@ const termsAfterNotice = termsHtml.slice(dateLineEnd);
 
 <LegalLayout title={pageTitle("Terms of Service")} description="The terms of service for Cleanmail: Family Inbox on iPhone, Android and the web, including subscriptions, the free trial and your household.">
   <Fragment set:html={termsBeforeNotice} />
-  <p class="terms-version-notice">{CURRENT_TERMS_NOTICE} {newestArchive.label} (<a href={newestArchive.path}>{newestArchive.path}</a>) and {oldestArchive.label} (<a href={oldestArchive.path}>{oldestArchive.path}</a>).</p>
+  <p class="terms-version-notice">{CURRENT_TERMS_NOTICE}{archivesNewestFirst.map((archive, index) => <>{index === 0 ? " " : index === lastArchiveIndex ? " and " : ", "}{archive.label} (<a href={archive.path}>{archive.path}</a>)</>)}.</p>
   <Fragment set:html={termsAfterNotice} />
 </LegalLayout>
 

@@ -1,0 +1,12 @@
+---
+import { pageTitle } from "../../page-title";
+import LegalLayout from "../../layouts/LegalLayout.astro";
+import ArchivedTermsNotice from "../../components/ArchivedTermsNotice.astro";
+import { Content } from "../../content/legal-archive/terms-of-service-2026-11-09.md";
+import { TERMS_ARCHIVE } from "../../config";
+---
+
+<LegalLayout title={pageTitle("Previous Terms of Service")} noindex>
+  <ArchivedTermsNotice effectiveRange={TERMS_ARCHIVE["2026-11-09"].effectiveRange} />
+  <Content />
+</LegalLayout>
