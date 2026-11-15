@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated:** November 14, 2026
+**Last updated:** November 15, 2026
 
 Calibrate LLC ("we," "our," or "us") operates Cleanmail, an AI-powered email digest service available on iOS and Android, and on the web at app.cleanmailapp.com. This Privacy Policy explains what information we collect, how we use it, and the choices you have. By using Cleanmail, you agree to the practices described here.
 
@@ -110,7 +110,7 @@ Every sub-processor listed above is bound by its agreement with us to protect th
 
 ## 5. Data Storage and Location
 
-All data is stored in the Supabase region US East (Ohio). Raw email content is not stored at rest: emails are fetched from Gmail at digest-generation time, sent to Anthropic's API for summarization, and discarded after the AI-generated summary is written to our database. Likewise, when you open an email via "View Email," its full body is fetched from Gmail and rendered on your device for that viewing session only; it is not written to our database. Images and PDF attachments inside emails from your selected senders are fetched at digest-generation time only so they can be read for dates and events, and are never saved.
+All data is stored in the Supabase region US East (Ohio). Raw email content is not stored at rest: emails are fetched from Gmail at digest-generation time, sent to Anthropic's API for summarization, and discarded after the AI-generated summary is written to our database. Likewise, when you open an email via "View Email," its full body is fetched from Gmail and rendered on your device for that viewing session only; it is not written to our database. Images and PDF attachments inside emails from your selected senders are fetched at digest-generation time only so they can be read for dates and events, and are never saved. If an image is too large to read during the digest, it is read in a separate step a few minutes later; the image itself is still never saved, and the text read from it (dates, times and places) is kept only until your digest uses it, and never longer than 24 hours.
 
 Photos and PDFs you scan are uploaded to a private storage area on our servers only for as long as it takes to read them, then deleted as the final step of the scan, whether it succeeded or failed. If a scan is interrupted, for example because the app closes, a cleanup deletes what was left behind within 24 hours, and deleting your account deletes any scan still waiting; any scan it cannot reach is deleted by the 24-hour cleanup. How voice notes become text: on iPhone, and on Android 13 or newer, your phone turns speech into text itself, and the audio never leaves the phone. On Android 7 to 12, the app uses your phone's built-in speech service, usually Google's, which may send the audio to that company's servers to turn it into text, under its own privacy policy. On the web, your browser's built-in speech recognition does it, which may send the audio to your browser maker's speech service under that company's privacy policy (for example, Google for Chrome, Apple for Safari, Microsoft for Edge). In every case Cleanmail receives only the text; we never receive or store the audio.
 
