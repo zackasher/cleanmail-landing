@@ -38,7 +38,7 @@ You handle them differently, so let's take them one at a time.
 
 ## Step 1: Subscribe to the school calendar in Google Calendar
 
-This is the closest thing to "set it and forget it" for the official dates.
+Subscribing to the school calendar is the closest thing to "set it and forget it" for the official dates.
 
 1. Find your school's calendar link. Check the school or district website for "subscribe", "iCal", or "add to Google Calendar", or ask the front office.
 2. Open Google Calendar **on a computer**. Google says you have to use a web browser for this; the iPhone app can't subscribe.
@@ -66,7 +66,7 @@ For the dates that come by email, Gmail has a built-in shortcut on the computer:
 3. Google Calendar opens with a new event. Check the date and time, since it often needs fixing.
 4. Click **Save**.
 
-This beats copying and pasting, but it's still one email at a time, and it only works on a computer. When the newsletter has six dates in it, you're making six events.
+Gmail's Create event beats copying and pasting, but it's still one email at a time, and it only works on a computer. When the newsletter has six dates in it, you're making six events.
 
 ## Step 4: Make the calendar events easy to use
 
@@ -78,11 +78,11 @@ Getting the date on the calendar is half the job. A few small habits make the ev
 
 If school email is piling up before you even get to the dates, I wrote up a simple label-and-weekly-sweep system in [how to stop missing school emails](/blog/how-to-stop-missing-school-emails).
 
-That's the whole free system. It works. It's also a second part-time job, which is roughly where I landed before I built something else.
+Those four steps are the whole free system. It works. It's also a second part-time job, which is roughly where I landed before I built something else.
 
 ## Can school events go on Google Calendar automatically, straight from email?
 
-This is the part I built Cleanmail for: a way to turn school emails into calendar events without touching each one. I'm a dad of two, and I was tired of being the family's human copy-and-paste machine.
+I built Cleanmail for exactly this part: a way to turn school emails into calendar events without touching each one. I'm a dad of two, and I was tired of being the family's human copy-and-paste machine.
 
 Cleanmail is an app for iPhone and Android that connects to your Gmail read-only. You pick the senders that matter for each kid and activity: the school, the coach, camp, even the ParentSquare or Remind notification emails your school sends. Your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by kid, and it puts the dates it finds on your Google Calendar. No forwarding, no retyping, no Sunday night thumb workout.
 
@@ -92,6 +92,6 @@ A few things that make it work for a real family:
 - **One shared view for the household.** Up to 4 people share one household. One parent pays, and household members join free.
 - **Everything else, too.** Snap a photo of a paper flyer and the dates land on your calendar, or add an event by voice.
 
-It's on iPhone and Android, works with Gmail and Google Calendar, and comes with 14 days free, then $6.99 a month or $68.99 a year. It renews automatically until you cancel. If you want the full picture first, here's [how Cleanmail works](/how-it-works).
+Cleanmail is on iPhone and Android, works with Gmail and Google Calendar, and comes with 14 days free, then $6.99 a month or $68.99 a year. It renews automatically until you cancel. If you want the full picture first, here's [how Cleanmail works](/how-it-works).
 
 Either way, subscribe to that school calendar tonight. Picture day deserves better than paragraph four.

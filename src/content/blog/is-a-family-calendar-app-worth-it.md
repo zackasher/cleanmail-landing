@@ -25,7 +25,7 @@ Here's how to tell which family you are.
 
 ### 1. One parent keeps it all in their head
 
-This is the default, and it's free. One parent reads the emails, remembers the dates and reminds everyone else. It works until it doesn't: a busy week, a long email skimmed at the end of a long workday, and picture day slips by.
+Keeping the schedule in one parent's head is the default, and it's free. One parent reads the emails, remembers the dates and reminds everyone else. It works until it doesn't: a busy week, a long email skimmed at the end of a long workday, and picture day slips by.
 
 **Good fit if:** one kid, one school, not many activities.
 
@@ -73,7 +73,7 @@ If you try one, check these before you hand over anything:
 
 I built Cleanmail after my own family hit option 2's wall. We had five different school apps, three inboxes and fifty messages a day, and I missed picture day anyway.
 
-You pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest, sorted by kid, that summarizes only those senders, and puts the dates on a calendar everyone at home shares. It's read-only, and your information is never sold.
+With Cleanmail, you pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest, sorted by kid, that summarizes only those senders, and puts the dates on a calendar everyone at home shares. It's read-only, and your information is never sold.
 
 Setup is quick and easy, and you see a preview of your digest before you choose a plan. Then it's 14 days free. After that, one parent pays $6.99 a month or $68.99 a year, renewing automatically until you cancel, and up to 4 people in your household join free. It works on iPhone and Android, with Gmail and Google Calendar.
 

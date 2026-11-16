@@ -9,7 +9,7 @@ import { TRUST_HEADING, TRUST_ROWS, TRUST_SCENE_ALT } from "../data-trust";
       {TRUST_ROWS.map((row) => (
         <li>
           <span class="deal-ic"><svg viewBox="0 0 24 24" aria-hidden="true">{row.paths.map((path) => <path d={path} fill="currentColor" />)}</svg></span>
-          <span>{row.text}</span>
+          <p class="deal-text">{row.text}</p>
         </li>
       ))}
     </ul>
@@ -24,6 +24,7 @@ import { TRUST_HEADING, TRUST_ROWS, TRUST_SCENE_ALT } from "../data-trust";
   .deal-card h2{margin:0 0 20px;font-size:clamp(26px,3.4vw,34px);font-weight:500;letter-spacing:-.6px;color:var(--navy)}
   .deal-card ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:18px}
   .deal-card li{display:flex;align-items:center;gap:16px;font-size:17px;line-height:1.45;color:var(--navy)}
+  .deal-text{margin:0}
   .deal-ic{flex:0 0 48px;width:48px;height:48px;border-radius:50%;background:rgba(232,238,252,.95);color:var(--purple);display:flex;align-items:center;justify-content:center}
   .deal-ic svg{width:24px;height:24px}
   @media (max-width:720px){

@@ -36,7 +36,7 @@ import "../styles/info-page.css";
         <p class="best"><span>{BEST_FOR_LABEL}</span> {CLEANMAIL_APP.bestFor}</p>
         <ul class="facts">
           {CLEANMAIL_APP.facts.map((fact) => (
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d={fact.icon} fill="currentColor" /></svg>{fact.text}</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d={fact.icon} fill="currentColor" /></svg><p>{fact.text}</p></li>
           ))}
         </ul>
         <a class="try-button" href={GET_APP_PATH}>{SCHOOL_EMAIL_APPS_CTA_LABEL}</a>
@@ -53,7 +53,7 @@ import "../styles/info-page.css";
           <p class="best"><span>{BEST_FOR_LABEL}</span> {app.bestFor}</p>
           <ul class="facts">
             {app.facts.map((fact) => (
-              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d={fact.icon} fill="currentColor" /></svg>{fact.text}</li>
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d={fact.icon} fill="currentColor" /></svg><p>{fact.text}</p></li>
             ))}
           </ul>
         </article>
@@ -79,6 +79,7 @@ import "../styles/info-page.css";
   .best{margin:12px 0 14px;font-size:15px;color:var(--ink)}
   .best span{display:inline-block;margin-right:6px;padding:3px 10px;border-radius:999px;background:rgba(232,140,48,.14);color:#b8661d;font-size:12.5px;font-weight:600;letter-spacing:.3px;text-transform:uppercase}
   .facts{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .facts li p{margin:0}
   .facts li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:var(--ink)}
   .facts svg{width:20px;height:20px;flex-shrink:0;color:var(--purple);margin-top:1px}
   .others{max-width:900px;margin:22px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}

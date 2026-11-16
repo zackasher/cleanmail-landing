@@ -11,7 +11,7 @@ const stars = "★".repeat(STAR_COUNT);
       <figure class="review">
         <span class="review-stars" aria-label={`${STAR_COUNT} out of ${STAR_COUNT} stars`}>{stars}</span>
         <h3>{review.title}</h3>
-        <blockquote>{review.quote}</blockquote>
+        <blockquote><p>{review.quote}</p></blockquote>
         <figcaption>{review.author}</figcaption>
       </figure>
     ))}
@@ -27,6 +27,7 @@ const stars = "★".repeat(STAR_COUNT);
   .review-stars{display:block;font-size:15px;letter-spacing:2px;color:var(--orange)}
   .review h3{margin:8px 0 8px;font-size:17px;font-weight:600;color:var(--navy)}
   .review blockquote{margin:0;font-size:15.5px;line-height:1.55;color:var(--ink)}
+  .review blockquote p{margin:0}
   .review figcaption{margin-top:12px;font-size:13.5px;color:var(--muted)}
   .reviews-link{display:inline-block;margin-top:10px;font-size:15px;font-weight:600;color:var(--purple);text-decoration:none}
   .reviews-link:hover{text-decoration:underline}

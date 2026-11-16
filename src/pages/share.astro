@@ -82,7 +82,7 @@ const finePrint = [
         <div class="fp-group">
           <h3>{group.title}</h3>
           {group.lead && <p>{group.lead}</p>}
-          <ul>{group.items.map((item) => <li>{item}</li>)}</ul>
+          <ul>{group.items.map((item) => <li><p>{item}</p></li>)}</ul>
         </div>
       ))}
     </details>
@@ -116,6 +116,7 @@ const finePrint = [
     .fp-group{margin-top:18px}
     .fp-group h3{font-size:15px;font-weight:600;color:var(--navy);margin:0 0 6px}
     .fp-group p{font-size:14.5px;color:var(--ink);margin:0 0 4px}
+    .fp-group li p{margin:0}
     .fp-group ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-size:14.5px;line-height:1.5;color:var(--ink)}
     @media (max-width:720px){
       .flow{flex-direction:column;align-items:center;gap:16px;margin-top:40px}

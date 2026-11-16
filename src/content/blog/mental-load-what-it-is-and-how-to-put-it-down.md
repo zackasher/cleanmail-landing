@@ -38,13 +38,13 @@ Mental load is the thinking work of running a household: noticing what needs to 
 
 Sociologist Allison Daminger studied how couples split this work (published in the American Sociological Review as "The Cognitive Dimension of Household Labor"). She describes four stages: anticipating a need, identifying the options, deciding, and monitoring how it went. The physical doing is separate. In many couples, one person holds most of the anticipating and monitoring, even when the doing is shared.
 
-That's why "just ask me" doesn't fix anything. If your partner has to ask what needs doing, the noticing is still yours, and the noticing is the work.
+"Just ask me" doesn't fix the mental load. If your partner has to ask what needs doing, the noticing is still yours, and the noticing is the work.
 
 ## How is mental load different from physical chores?
 
 Chores are visible and finite: pack the lunch, drive to practice, sign the form. Mental load is the invisible work that makes those chores happen: spotting the picture day email, deciding who handles it, remembering the deadline, checking it got done. The chore takes ten minutes. The noticing runs in the background for weeks.
 
-That's why school email is a mental-load problem, not a typing problem. Copying dates into the calendar is the visible tip. The real cost is being the only person who knows the schedule exists.
+School email is a mental-load problem, not a typing problem. Copying dates into the calendar is the visible tip. The real cost is being the only person who knows the schedule exists.
 
 ### Why "just ask me for help" misses the point
 
@@ -76,7 +76,7 @@ Each of you fills in who currently holds each item, separately, then compare. Th
 
 ## Why does mental load so often fall on one parent?
 
-Because the work starts before anyone else knows there's work. In most two-parent homes, one parent reads the school newsletter, the class updates and the coach's emails. That parent becomes the default parent, and research on household labor finds the default parent is usually the mother. It doesn't have to be.
+The mental load lands on one parent because the work starts before anyone else knows there's work. In most two-parent homes, one parent reads the school newsletter, the class updates and the coach's emails. That parent becomes the default parent, and research on household labor finds the default parent is usually the mother. It doesn't have to be.
 
 The mechanism is simple: whoever reads the email becomes the schedule-keeper. Once the calendar lives in your head, every question routes through you. Your partner isn't lazy. They just never got the noticing step, so the deciding and tracking never reached them either.
 
@@ -102,12 +102,12 @@ The difference matters. If you argue about who does more and only count chores, 
 
 You can't split what lives only in your head. Write down everything you notice, decide, and chase in a week, walk your partner through it, and hand over named areas. Naming it "mental load" helps too: it turns an accusation into a problem you solve together.
 
-Then keep one shared place for the schedule, one you both actually check, so the answer to "did you see that email?" stops depending on one person.
+Keep one shared place for the family schedule, one you both actually check, so the answer to "did you see that email?" stops depending on one person.
 
 ## What helps with the school email part?
 
 Look for four things: it pulls dates out of school and activity email, it sorts what matters by kid, it shows up somewhere your family already looks, and your partner can see it without being forwarded anything.
 
-That is what Cleanmail does. You pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest sorted by kid that summarizes only those senders, and puts the dates on a calendar everyone at home shares, with Google Calendar sync. Up to 4 people in a household join free, so your partner sees the same schedule you do without you passing it along. It works with Gmail today, on iPhone and Android.
+Cleanmail does exactly that. You pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest sorted by kid that summarizes only those senders, and puts the dates on a calendar everyone at home shares, with Google Calendar sync. Up to 4 people in a household join free, so your partner sees the same schedule you do without you passing it along. It works with Gmail today, on iPhone and Android.
 
 If school email is light in your house, a shared calendar you fill in yourself may be all you need. The point is that the schedule lives somewhere other than one person's head.
