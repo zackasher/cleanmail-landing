@@ -4,8 +4,9 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { publishedPosts, formatPostDate, type BlogPost } from "../../data-blog";
 import BlogReads from "../../components/BlogReads.astro";
-import { ABOUT_PATH, FOUNDER_NAME, SITE_URL, TRIAL_DAYS, TRIAL_TERMS } from "../../config";
+import { ABOUT_PATH, BLOG_SHARE_IMAGE_DIRECTORY, FOUNDER_NAME, SITE_URL, TRIAL_DAYS, TRIAL_TERMS } from "../../config";
 import { FOUNDER_PERSON } from "../../data/founder-schema";
+import { existsSync } from "node:fs";
 import "../../styles/info-page.css";
 
 export function getStaticPaths() {
@@ -15,6 +16,9 @@ export function getStaticPaths() {
 const { post } = Astro.props as { post: BlogPost };
 const { title, seoTitle, description, date, updated, author, faqs = [] } = post.frontmatter;
 const isFounderPost = author === FOUNDER_NAME;
+const shareImagePath = `${BLOG_SHARE_IMAGE_DIRECTORY}/${post.slug}.png`;
+// ponytail: a post without a generated card falls back to the site-wide /og.png instead of failing the build.
+const shareImage = existsSync(`public${shareImagePath}`) ? shareImagePath : undefined;
 const { Content } = post;
 const otherPostSlugs = publishedPosts()
   .map((publishedPost) => publishedPost.slug)
@@ -30,6 +34,7 @@ const articleSchema = {
   "author": isFounderPost ? FOUNDER_PERSON : { "@type": "Person", "name": author },
   "publisher": { "@type": "Organization", "name": "Cleanmail", "url": SITE_URL },
   "mainEntityOfPage": `${SITE_URL}/blog/${post.slug}`,
+  ...(shareImage && { "image": `${SITE_URL}${shareImage}` }),
 };
 const hasFaqs = faqs.length > 0;
 const faqSchema = hasFaqs ? {
@@ -38,7 +43,7 @@ const faqSchema = hasFaqs ? {
   "mainEntity": faqs.map((item) => ({ "@type": "Question", "name": item.q, "acceptedAnswer": { "@type": "Answer", "text": item.a } })),
 } : undefined;
 ---
-<BaseLayout title={pageTitle(seoTitle ?? title)} description={description} faqSchema={faqSchema}>
+<BaseLayout title={pageTitle(seoTitle ?? title)} description={description} faqSchema={faqSchema} image={shareImage} imageAlt={shareImage && title}>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <article class="ip post">
     <p class="ip-eyebrow"><a href="/blog">Blog</a></p>

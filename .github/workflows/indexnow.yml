@@ -1,0 +1,47 @@
+name: Tell Bing about changed pages (IndexNow)
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  SITE_URL: https://cleanmailapp.com
+  INDEXNOW_KEY: 6c5900bc6cede3e1837b97734b83e904
+  DEPLOY_WAIT_SECONDS: 900
+  DEPLOY_POLL_SECONDS: 20
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 2
+
+      - name: List the files this push changed
+        run: git diff --name-only HEAD~1 HEAD > changed-files.txt && cat changed-files.txt
+
+      - name: Wait for Cloudflare to serve this commit
+        run: |
+          deadline=$((SECONDS + DEPLOY_WAIT_SECONDS))
+          until [ "$(curl -fsS "$SITE_URL/build-id.txt?v=$RANDOM" || true)" = "$GITHUB_SHA" ]; do
+            if [ $SECONDS -ge $deadline ]; then echo "Deploy not live after $DEPLOY_WAIT_SECONDS s; skipping IndexNow."; exit 0; fi
+            sleep "$DEPLOY_POLL_SECONDS"
+          done
+          echo "deploy_live=true" >> "$GITHUB_ENV"
+
+      - name: Work out which live URLs changed
+        if: env.deploy_live == 'true'
+        run: |
+          curl -fsS "$SITE_URL/sitemap-0.xml" > live-sitemap.xml
+          node scripts/indexnow-changed-urls.mjs changed-files.txt live-sitemap.xml > changed-urls.txt
+          cat changed-urls.txt
+
+      - name: Send them to IndexNow
+        if: env.deploy_live == 'true'
+        run: |
+          if [ ! -s changed-urls.txt ]; then echo "No public page changed."; exit 0; fi
+          url_list=$(jq -R . changed-urls.txt | jq -s .)
+          body=$(jq -n --arg host "${SITE_URL#https://}" --arg key "$INDEXNOW_KEY" --arg keyLocation "$SITE_URL/$INDEXNOW_KEY.txt" --argjson urlList "$url_list" '{host:$host,key:$key,keyLocation:$keyLocation,urlList:$urlList}')
+          curl -fsS -X POST https://api.indexnow.org/indexnow -H "Content-Type: application/json; charset=utf-8" -d "$body" -w "IndexNow HTTP %{http_code}\n"

@@ -128,3 +128,5 @@ export const ABOUT_PATH = "/about";
 export const FOUNDER_LEGAL_NAME = "Zachary Asher";
 export const FOUNDER_JOB_TITLE = "Founder";
 export const FAQ_PAGE_TITLE = "Cleanmail FAQ: setup, pricing and privacy";
+export const DEFAULT_SHARE_IMAGE_ALT = "Cleanmail. Stop reading every email, just read the words that matter.";
+export const BLOG_SHARE_IMAGE_DIRECTORY = "/og/blog";
