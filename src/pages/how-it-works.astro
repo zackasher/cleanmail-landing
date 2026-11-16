@@ -1,4 +1,5 @@
 ---
+import { imageSize } from "../data/image-sizes";
 import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
@@ -12,43 +13,43 @@ const setupSteps = [
   {
     title: "Connect your Gmail",
     body: "Sign in with Google and allow email and calendar access. Your digest summarizes only the senders you choose. Cleanmail never sends or deletes anything, and never sells your information.",
-    image: "/hiw109-welcome.jpg",
+    image: "/hiw109-welcome.webp",
     alt: "The Cleanmail welcome screen: Inbox to Calendar, automatically, with a Connect your Gmail button",
   },
   {
     title: "Tell it who",
     body: "Your kids, yourself, even the dog. Add a name and a photo for each, so everything lands in the right place.",
-    image: "/hiw107-who.jpg",
+    image: "/hiw107-who.webp",
     alt: "Choosing who to keep track of, with a child and a pet added",
   },
   {
     title: "Pick their activities",
     body: "Cleanmail suggests the activities each person gets email about: school, soccer, scouts, the vet. Tap the ones that fit, or add your own.",
-    image: "/hiw107-activities.jpg",
+    image: "/hiw107-activities.webp",
     alt: "Suggested activities for each person, with school and soccer selected",
   },
   {
     title: "Choose the senders",
     body: "We find the people who email you about each activity and tag them: good senders first, quiet ones and likely junk marked so you can skip them. You check the ones that matter.",
-    image: "/hiw107-senders.jpg",
+    image: "/hiw107-senders.webp",
     alt: "Senders found for each activity, tagged as good senders or possible junk",
   },
   {
     title: "Watch your digest preview build",
     body: "Cleanmail reads those emails, pulls out the dates, and checks them against your Google Calendar. Your digest preview appears quickly.",
-    image: "/hiw107-building.jpg",
+    image: "/hiw107-building.webp",
     alt: "Building your first digest, with a quick tip card about the app",
   },
   {
     title: "See it before you pay",
     body: "Your digest preview is on us. You see how many emails it found and which events aren't on your calendar yet, with one card shown in full.",
-    image: "/hiw107-teaser.jpg",
+    image: "/hiw107-teaser.webp",
     alt: "The first digest preview: emails found, events not on the calendar yet, and one event card in full",
   },
   {
     title: "Start your free trial",
     body: "14 days free, then $6.99 a month or $68.99 a year, through the App Store or Google Play. Renews automatically until you cancel. When your trial starts, the events from your digest preview land on your Google Calendar and Cleanmail keeps running on its own.",
-    image: "/hiw107-plan.jpg",
+    image: "/hiw107-plan.webp",
     alt: "The plan screen: your first digest is ready, a 14-day free trial, then yearly or monthly",
   },
 ];
@@ -88,7 +89,7 @@ const newWay = [
           </div>
           <div class="step-visual">
             <PhoneFrame>
-              <img class="shot" src={step.image} alt={step.alt} loading="lazy" />
+              <img class="shot" src={step.image} {...imageSize(step.image)} alt={step.alt} loading="lazy" />
             </PhoneFrame>
           </div>
         </div>

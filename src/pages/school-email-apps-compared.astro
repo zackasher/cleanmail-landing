@@ -1,4 +1,5 @@
 ---
+import { imageSize } from "../data/image-sizes";
 import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
@@ -41,7 +42,7 @@ import "../styles/info-page.css";
         <a class="try-button" href={GET_APP_PATH}>{SCHOOL_EMAIL_APPS_CTA_LABEL}</a>
       </div>
       <div class="ours-phone">
-        <PhoneFrame><img class="shot" src={CLEANMAIL_SCREEN} alt={CLEANMAIL_SCREEN_ALT} loading="lazy" /></PhoneFrame>
+        <PhoneFrame><img class="shot" src={CLEANMAIL_SCREEN} {...imageSize(CLEANMAIL_SCREEN)} alt={CLEANMAIL_SCREEN_ALT} loading="lazy" /></PhoneFrame>
       </div>
     </article>
 

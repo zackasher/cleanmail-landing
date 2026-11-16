@@ -1,4 +1,5 @@
 ---
+import { imageSize } from "../data/image-sizes";
 import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
@@ -21,7 +22,7 @@ const COPIED_LABEL = "Copied";
   </script>
   <section class="invite">
     <div class="invite-card">
-      <img class="invite-logo" src="/logo.png" alt="Cleanmail" />
+      <img class="invite-logo" src="/logo.webp" {...imageSize("/logo.webp")} alt="Cleanmail" />
       <h1>{HEADLINE}</h1>
       <p class="pitch">{PITCH}</p>
       <div class="code-block" id="referral-code-block" hidden>

@@ -1,4 +1,5 @@
 ---
+import { imageSize } from "../data/image-sizes";
 import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import StoreBadge from "../components/StoreBadge.astro";
@@ -29,7 +30,7 @@ const PICK_HINT = "Pick your phone's store to download it.";
   </script>
   <section class="get">
     <div class="get-card">
-      <img class="get-logo" src="/logo.png" alt="Cleanmail" />
+      <img class="get-logo" src="/logo.webp" {...imageSize("/logo.webp")} alt="Cleanmail" />
       <h1>{HEADLINE}</h1>
       <p class="pitch">{PITCH}</p>
       <p class="hint">{PICK_HINT}</p>

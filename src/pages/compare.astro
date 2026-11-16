@@ -1,4 +1,5 @@
 ---
+import { imageSize } from "../data/image-sizes";
 import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
@@ -13,7 +14,7 @@ type Cell = { kind: Verdict; text: string };
 type Row = { label: string; icon: string; cells: Cell[] };
 
 const apps = [
-  { name: "Cleanmail", initial: "C", us: true, icon: "/icon.png" },
+  { name: "Cleanmail", initial: "C", us: true, icon: "/icon.webp" },
   { name: "Skylight", initial: "S", us: false },
   { name: "Cozi", initial: "C", us: false },
 ];
@@ -113,7 +114,7 @@ import { SCHOOL_EMAIL_APPS_LINK_LEAD, SCHOOL_EMAIL_APPS_LINK_LABEL } from "../da
         <div class="t-row t-head" role="row">
           <span role="columnheader"></span>
           {apps.map((app) => (
-            <span role="columnheader" class:list={[{ us: app.us }]}>{app.icon ? <img class="badge-img" src={app.icon} alt="" /> : <span class="badge">{app.initial}</span>}{app.name}</span>
+            <span role="columnheader" class:list={[{ us: app.us }]}>{app.icon ? <img class="badge-img" src={app.icon} {...imageSize(app.icon)} alt="" /> : <span class="badge">{app.initial}</span>}{app.name}</span>
           ))}
         </div>
         {rows.map((row) => (
@@ -132,7 +133,7 @@ import { SCHOOL_EMAIL_APPS_LINK_LEAD, SCHOOL_EMAIL_APPS_LINK_LABEL } from "../da
       <h2>Why families switch to Cleanmail</h2>
       <p class="ip-sub">The family calendar app that writes itself from school email.</p>
       <div class="why">
-      <div class="why-shot"><PhoneFrame><img class="shot" src="/mq-digest-1018.jpg" alt="A Cleanmail digest sorted by kid, with school events and updates" loading="lazy" /></PhoneFrame></div>
+      <div class="why-shot"><PhoneFrame><img class="shot" src="/mq-digest-1018.webp" {...imageSize("/mq-digest-1018.webp")} alt="A Cleanmail digest sorted by kid, with school events and updates" loading="lazy" /></PhoneFrame></div>
       <div class="why-tiles">
         {reasons.map((item) => (
           <div class="ip-tile strength">
@@ -153,7 +154,7 @@ import { SCHOOL_EMAIL_APPS_LINK_LEAD, SCHOOL_EMAIL_APPS_LINK_LABEL } from "../da
           <div class={`ip-tile dir ${item.kind}`}>
             <span class="dir-name">{item.name}</span>
             <div class="dir-visual" aria-hidden="true">
-              {item.kind === "both" ? <img class="dir-node app-img" src="/icon.png" alt="" /> : <span class="dir-node app">{item.name.charAt(0)}</span>}
+              {item.kind === "both" ? <img class="dir-node app-img" src="/icon.webp" {...imageSize("/icon.webp")} alt="" /> : <span class="dir-node app">{item.name.charAt(0)}</span>}
               <svg viewBox="0 0 120 40" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                 {item.kind === "both" && (<>
                   <path d="M10 13h96M100 7l7 6-7 6" stroke="var(--purple)" />

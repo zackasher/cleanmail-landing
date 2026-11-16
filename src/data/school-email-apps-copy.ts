@@ -11,7 +11,7 @@ export const SCHOOL_EMAIL_APPS_INTRO =
 export const BEST_FOR_LABEL = "Best for";
 
 // Only Cleanmail shows a logo: Counsel's standing rule is that other apps are named in plain text, never with their logos.
-export const CLEANMAIL_APP_ICON = "/icon.png";
+export const CLEANMAIL_APP_ICON = "/icon.webp";
 export const CLEANMAIL_APP_ICON_SIZE = 40;
 export const CLEANMAIL_SCREEN = "/Digest_Sample.webp";
 export const CLEANMAIL_SCREEN_ALT = "A Cleanmail digest sorted by kid, with school events";

@@ -1,4 +1,5 @@
 ---
+import { imageSize } from "../data/image-sizes";
 import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
@@ -7,9 +8,9 @@ import { PRICE_MONTHLY, PRICE_YEARLY, PRICE_YEARLY_PER_MONTH, TRIAL_DAYS, TRIAL_
 import "../styles/info-page.css";
 
 const phones = [
-  { src: "/hiw-digest.png", caption: "School email, sorted by kid", alt: "A Cleanmail digest sorted by person and activity" },
-  { src: "/feat-weekly-1018.jpg", caption: "Your dates on one calendar", alt: "Cleanmail's month calendar with events on each day" },
-  { src: "/feat-add-1018.jpg", caption: "Add a flyer, a PDF, or say it", alt: "The add menu open on Home: add event, photos, camera, and voice" },
+  { src: "/hiw-digest.webp", caption: "School email, sorted by kid", alt: "A Cleanmail digest sorted by person and activity" },
+  { src: "/feat-weekly-1018.webp", caption: "Your dates on one calendar", alt: "Cleanmail's month calendar with events on each day" },
+  { src: "/feat-add-1018.webp", caption: "Add a flyer, a PDF, or say it", alt: "The add menu open on Home: add event, photos, camera, and voice" },
 ];
 
 const features = [
@@ -34,7 +35,7 @@ const features = [
     <div class="phones">
       {phones.map((item) => (
         <figure>
-          <PhoneFrame><img class="shot" src={item.src} alt={item.alt} loading="lazy" /></PhoneFrame>
+          <PhoneFrame><img class="shot" src={item.src} {...imageSize(item.src)} alt={item.alt} loading="lazy" /></PhoneFrame>
           <figcaption>{item.caption}</figcaption>
         </figure>
       ))}

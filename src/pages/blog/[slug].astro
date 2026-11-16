@@ -48,7 +48,7 @@ const faqSchema = hasFaqs ? {
   <article class="ip post">
     <p class="ip-eyebrow"><a href="/blog">Blog</a></p>
     <h1>{title}</h1>
-    <p class="post-byline">By {isFounderPost ? <a href={ABOUT_PATH}>{author}</a> : author} · {formatPostDate(date)}</p>
+    <p class="post-byline">By {isFounderPost ? <a href={ABOUT_PATH} rel="author">{author}</a> : author} · {formatPostDate(date)}</p>
     <div class="post-body"><Content /></div>
     {hasFaqs && (
       <div class="ip-section">
