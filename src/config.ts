@@ -17,6 +17,10 @@ export const FOUNDER_NAME = "Zack Asher";
 
 export const REFERRAL_CODE_PATTERN = "^[ABCDEFGHJKMNPQRSTUVWXYZ23456789]{6}$";
 export const REFERRAL_PATH_PREFIX = "/r/";
+// The inviting parent's first name rides in this query parameter; it must leave the address bar before any outside script can read the URL (Counsel 11/15).
+export const INVITE_SENDER_NAME_PARAM = "n";
+export const INVITE_SHARE_IMAGE = "/og/invite.png";
+export const INVITE_SHARE_IMAGE_ALT = "A friend invited you to Cleanmail: get the schedule out of your head. 14 days free on iPhone and Android.";
 export const STORE_BADGE_LABEL = "Download on the";
 export const MAPLE_FACTS_CHECKED_ON = "October 9, 2026";
 export const MAPLE_SHUTDOWN_DATE = "December 31, 2026";

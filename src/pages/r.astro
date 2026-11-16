@@ -2,7 +2,7 @@
 import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
-import { REFERRAL_CODE_PATTERN, REFERRAL_PATH_PREFIX } from "../config";
+import { REFERRAL_CODE_PATTERN, REFERRAL_PATH_PREFIX, INVITE_SENDER_NAME_PARAM, INVITE_SHARE_IMAGE, INVITE_SHARE_IMAGE_ALT } from "../config";
 
 const HEADLINE = "A friend invited you to Cleanmail";
 const PITCH = "Cleanmail turns school and activity email into a family calendar that builds itself. 14 days free, then $6.99 a month or $68.99 a year. Renews automatically until you cancel.";
@@ -10,7 +10,15 @@ const REDEEM_HINT = "After you sign in, tap 'Have a code?' on the plan screen an
 const COPY_LABEL = "Copy";
 const COPIED_LABEL = "Copied";
 ---
-<BaseLayout title={pageTitle("You're invited")} description={PITCH} noindex={true} noTracking={true} hideSmartAppBanner={true}>
+<BaseLayout title={pageTitle("You're invited")} description={PITCH} noindex={true} noTracking={true} hideSmartAppBanner={true} image={INVITE_SHARE_IMAGE} imageAlt={INVITE_SHARE_IMAGE_ALT}>
+  <script is:inline define:vars={{ senderNameParam: INVITE_SENDER_NAME_PARAM }}>
+    (function () {
+      var url = new URL(window.location.href);
+      if (!url.searchParams.has(senderNameParam)) return;
+      url.searchParams.delete(senderNameParam);
+      window.history.replaceState(window.history.state, "", url.pathname + url.search + url.hash);
+    })();
+  </script>
   <section class="invite">
     <div class="invite-card">
       <img class="invite-logo" src="/logo.png" alt="Cleanmail" />

@@ -4,3 +4,9 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+# Invite pages carry a parent's first name in ?n=; no-transform stops Cloudflare from injecting its analytics beacon here (Counsel 11/15).
+/r
+  Cache-Control: public, no-transform
+/r/*
+  Cache-Control: public, no-transform
