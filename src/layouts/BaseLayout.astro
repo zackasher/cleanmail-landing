@@ -289,7 +289,9 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
 <body>
   <div class="page">
     <Nav />
-    <slot />
+    <main>
+      <slot />
+    </main>
     <Footer hideAppLink={hideFooterAppLink} />
   </div>
   <div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie choices" transition:persist hidden>

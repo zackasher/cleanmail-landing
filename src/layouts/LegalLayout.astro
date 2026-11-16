@@ -11,9 +11,9 @@ const { title, description, noindex = false } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} noindex={noindex}>
-  <main class="legal-content">
+  <div class="legal-content">
     <slot />
-  </main>
+  </div>
 
   <style>
     .legal-content {
@@ -24,6 +24,10 @@ const { title, description, noindex = false } = Astro.props;
       line-height: 1.7;
     }
 
+    /* Long Google scope URLs in the privacy policy pushed /privacy 87 px wider than a phone. */
+    .legal-content :global(code) {
+      overflow-wrap: anywhere;
+    }
     .legal-content :global(h1) {
       font-size: 28px;
       font-weight: 500;
