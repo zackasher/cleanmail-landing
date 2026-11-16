@@ -44,7 +44,7 @@ If your household shares a Google Calendar, add it there so everyone sees it.
 
 Once a week, open your School label and skim anything from the past seven days. Look for three things: dates, things to bring, and things to sign. Add the dates to the calendar, put the rest on a list, and archive the email.
 
-## Or let it happen automatically
+## Can it happen automatically?
 
 These steps work, but they take time every single week. That's why I built [Cleanmail](/how-it-works). You pick your school, camp, and sports senders once. Cleanmail sums up what matters from each one in a short digest sorted by kid, and puts the dates on a family calendar with [two-way Google Calendar sync](/google-calendar-sync). Your digest only covers the senders you pick, and Cleanmail never sends, deletes, or changes your email.
 

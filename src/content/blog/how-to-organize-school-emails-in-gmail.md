@@ -20,13 +20,13 @@ If you want to know how to organize school emails in Gmail, here's the short ans
 
 I'm a dad of two. At one point I had email coming from nine different schools and apps, and three calendars that never agreed with each other. Here's the system I used before I got fed up and built something.
 
-## Why school emails get lost in Gmail
+## Why do school emails get lost in Gmail?
 
 School email is hard for three reasons. It comes from a lot of senders: the district, the principal, each teacher, the PTA, the coach, the camp, plus the notification emails from whatever school apps your district uses. The important part is often buried in paragraph four of a newsletter. And the ask usually has a date attached, which means reading it isn't enough. You still have to get it onto a calendar.
 
 So the goal isn't a tidy inbox. The goal is that every date and every ask ends up somewhere you'll actually see it.
 
-## How to organize school emails in Gmail in 5 steps
+## How do I organize school emails in Gmail?
 
 You'll need a computer for step 3 and about 30 minutes total. After that, the system mostly runs itself.
 
@@ -92,11 +92,11 @@ Sorting email doesn't put anything on your calendar. That's still a human job. P
 
 This is the boring part, and it's also the part that keeps you from finding out about spirit day from your kid's teacher.
 
-## When Gmail labels aren't enough
+## What if Gmail labels aren't enough?
 
 Labels and filters are a solid free system. Their limits show up as your family grows. New teachers and coaches appear every season, so your filter list goes stale. The labels sort the email, but you still have to read every newsletter to find the one line that matters. And the weekly sweep still depends on you remembering to do it during the busiest week of the month.
 
-## How Cleanmail organizes school email automatically
+## How does Cleanmail organize school email automatically?
 
 This is the part I got tired of doing myself, so I built Cleanmail. It's an app for iPhone and Android that connects to your Gmail with read-only access. You name your kids, their activities, and the school, camp, and sports senders that matter, and your digest only covers the senders you pick. Cleanmail never changes your inbox.
 

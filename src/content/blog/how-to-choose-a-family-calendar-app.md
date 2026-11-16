@@ -20,7 +20,7 @@ If you're wondering how to choose a family calendar app, here's the short answer
 
 I'm a dad of two. I stuck with a system that didn't work for way too long, mostly because switching felt like more work than suffering. Here's what finally got me to try something new, and the test I'd use on any app, including mine.
 
-## Your current system isn't free
+## Is your current system really free?
 
 Most families run on some mix of a paper calendar, a group text, one parent's memory and a Gmail search bar. It feels free because nobody sends you a bill.
 
@@ -28,7 +28,7 @@ But it does cost something. It costs Sunday nights spent hunting through email. 
 
 Before you choose anything new, write down what your system costs you in a normal week. Be specific: how many minutes, how many near misses, how many "wait, when is that?" texts. That list is what a new app has to beat.
 
-## How to choose a family calendar app: start with where your dates come from
+## How do I choose a family calendar app?
 
 Every family calendar app is good at something. The question is whether it's good at your problem.
 
@@ -51,7 +51,7 @@ Here's the test I'd run on any new app. It takes about 20 minutes to set up and 
 
 The point is to make "trying something" cheap. A two-week trial with a one-week test is a lot less scary than "reorganize the whole family."
 
-## The real worries about switching (and how to handle them)
+## What if switching family calendar apps goes wrong?
 
 ### "Setup will take forever"
 

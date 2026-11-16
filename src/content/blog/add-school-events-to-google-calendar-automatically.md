@@ -15,13 +15,15 @@ faqs:
     a: "Yes. Cleanmail is an app for iPhone and Android that connects to Gmail read-only, sums up mail from the school, camp, and sports senders you pick in a digest sorted by kid, and puts the dates it finds on your Google Calendar."
 ---
 
-It's Sunday night. I'm on the couch with my phone, scrolling through the week's school mail. The newsletter has picture day buried in paragraph four. The soccer coach moved Thursday's practice. The PTA sent a flyer as a PDF, and somewhere inside it is a date I definitely need. I open Google Calendar, then Gmail, then Google Calendar again. My thumb is tired and I have learned nothing about picture day.
+It's Sunday night. I'm on the couch with my phone, scrolling through the week's school mail. The newsletter has picture day buried in paragraph four. The soccer coach moved Thursday's practice. The PTA sent a flyer as a PDF, and somewhere inside it is a date I definitely need.
+
+I open Google Calendar, then Gmail, then Google Calendar again. My thumb is tired and I have learned nothing about picture day.
 
 If you're searching for how to add school events to Google Calendar automatically, here's the short answer. **Subscribe to your school's public calendar link in Google Calendar on a computer (Other calendars, then From URL). That covers the official district dates. The dates that arrive by email, like picture day, early dismissal, or a moved practice, don't come through that feed, so you either add them from Gmail one at a time or use an app that turns those emails into calendar events for you.**
 
 Below is how to do each piece, most of it free and built into Google, plus the part I eventually stopped doing by hand.
 
-## Why school events don't show up on Google Calendar on their own
+## Why don't school events show up on Google Calendar on their own?
 
 A lot of parents assume Gmail already does this. It does, sort of, for a narrow list. Google's own help page says Gmail adds events from emails like flight, train, and bus reservations, hotel and restaurant bookings, and tickets for things like movies and shows.
 
@@ -78,7 +80,7 @@ If school email is piling up before you even get to the dates, I wrote up a simp
 
 That's the whole free system. It works. It's also a second part-time job, which is roughly where I landed before I built something else.
 
-## How to add school events to Google Calendar automatically, straight from email
+## Can school events go on Google Calendar automatically, straight from email?
 
 This is the part I built Cleanmail for: a way to turn school emails into calendar events without touching each one. I'm a dad of two, and I was tired of being the family's human copy-and-paste machine.
 

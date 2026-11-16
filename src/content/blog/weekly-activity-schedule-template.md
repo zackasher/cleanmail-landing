@@ -30,7 +30,7 @@ A weekly activity schedule is one grid that holds every school day, practice, pi
 
 Copy it into a shared Google Calendar, a spreadsheet, or print it for the fridge. The format matters less than everyone being able to see it.
 
-## How to fill it in
+## How do I fill in the template?
 
 1. **Start with what never moves.** School start and pickup, weekly practices, lessons. These are the frame of the week.
 2. **Add the one-off events.** Picture day, field trips, games, early release days. Put a question mark on anything not confirmed yet.
@@ -44,7 +44,7 @@ Pick the same time each week and spend fifteen minutes on it: go through the sch
 
 When something changes, decide first whether it is cancelled, moved or still unknown, then make one edit. The rule that stops the "did you see that email?" loop is simple: whoever sees the change first updates the schedule.
 
-## Where the dates come from
+## Where do the dates come from?
 
 Most of a family's week arrives by email: the school newsletter, the coach's update, the camp reminder, the class app's weekly summary. The district calendar covers holidays and early release days, but picture day and permission slips come from your child's school and teachers.
 

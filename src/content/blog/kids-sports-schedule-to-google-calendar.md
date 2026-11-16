@@ -73,7 +73,9 @@ For a schedule that lives on paper, make one calendar for sports so it doesn't g
 
 ## The catch: team calendars lag, and they don't read email
 
-Here's what most guides leave out. A subscribed calendar is not live. GameChanger says Google can take up to 24 hours to show a change. SportsEngine says the same about web calendars. TeamSnap says a new subscription can take up to 24 hours to fill in. So a field change at 7 a.m. may not reach your calendar before a 5 p.m. practice.
+Here's what most guides leave out. A subscribed calendar is not live.
+
+GameChanger says Google can take up to 24 hours to show a change. SportsEngine says the same about web calendars. TeamSnap says a new subscription can take up to 24 hours to fill in. So a field change at 7 a.m. may not reach your calendar before a 5 p.m. practice.
 
 A few habits fix most of this:
 

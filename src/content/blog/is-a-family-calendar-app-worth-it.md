@@ -21,7 +21,7 @@ It's Sunday night. The kids are finally asleep, and you're sitting with your lap
 
 Here's how to tell which family you are.
 
-## Three ways families keep the schedule
+## How do families keep the schedule today?
 
 ### 1. One parent keeps it all in their head
 
@@ -49,7 +49,7 @@ The newest option. Instead of you reading every email and typing in the dates, a
 
 **Real cost:** a subscription, and a few minutes of setup.
 
-## How to decide in five minutes
+## How do I decide if I need one?
 
 Ask yourself three questions:
 
@@ -59,7 +59,7 @@ Ask yourself three questions:
 
 If you answered "a lot," "always me," and "it stung," you're the family these apps are built for.
 
-## What to look for in an app that reads school email
+## What should an app that reads school email do?
 
 If you try one, check these before you hand over anything:
 
@@ -69,13 +69,15 @@ If you try one, check these before you hand over anything:
 - **You can glance at what landed and fix a date.** Any app can misread an email now and then, so a quick look is still worth it.
 - **You see it work before you pay.** A real trial, on your real email.
 
-## Where Cleanmail fits
+## Where does Cleanmail fit?
 
 I built Cleanmail after my own family hit option 2's wall. We had five different school apps, three inboxes and fifty messages a day, and I missed picture day anyway.
 
 You pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest, sorted by kid, that summarizes only those senders, and puts the dates on a calendar everyone at home shares. It's read-only, and your information is never sold.
 
 Setup is quick and easy, and you see a preview of your digest before you choose a plan. Then it's 14 days free. After that, one parent pays $6.99 a month or $68.99 a year, renewing automatically until you cancel, and up to 4 people in your household join free. It works on iPhone and Android, with Gmail and Google Calendar.
+
+You can see [what Cleanmail does](/features), [what it costs](/pricing) and [answers to common questions](/faq) before you download.
 
 If your Sunday nights look like mine did, [see how it works](/how-it-works).
 

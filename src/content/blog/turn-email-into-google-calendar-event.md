@@ -21,7 +21,7 @@ So I did what every parent does. I tried to turn the email into a Google Calenda
 
 That works great for one email. School email is rarely one email. Below are all the ways to do it, why Gmail doesn't do it for you with school stuff, and how to stop typing dates altogether.
 
-## How to turn an email into a Google Calendar event on a computer
+## How do I turn an email into a Google Calendar event on a computer?
 
 This is Gmail's built-in way, and it takes about 20 seconds once you know where it hides.
 
@@ -35,7 +35,7 @@ This is Gmail's built-in way, and it takes about 20 seconds once you know where 
 
 Dad tip: paste the one sentence that matters into the event description, like "Pickup at the side door, bring the blue folder." Future you won't want to dig the email back up.
 
-## How to add an email to Google Calendar from your phone
+## How do I add an email to Google Calendar from my phone?
 
 Most school email gets read on a phone, in a parking lot, with a kid asking for a snack. Google's help page for **Create event** only gives computer steps, so here's what works on the go.
 
@@ -43,7 +43,7 @@ Most school email gets read on a phone, in a parking lot, with a kid asking for 
 - **Use Gemini's "Add to calendar" button, if you have it.** Google has added an "Add to calendar" button to Gmail that spots dates in an email and adds the event for you, on the web and in the Gmail app. It's limited to certain paid Google plans and to emails in English, so check whether it shows up for your account. If an email lists several events, it can offer to add them all.
 - **Star it and do it tonight.** If you truly can't stop, star the email and give yourself one standing calendar slot, say 8 PM, to turn starred emails into events. Starring is not the same as doing, so the standing slot is the important part.
 
-## Why Gmail doesn't add school events to your calendar automatically
+## Why doesn't Gmail add school events to my calendar automatically?
 
 Gmail does have a feature called **events from Gmail**. It reads certain emails and puts them on your Google Calendar without you lifting a finger. So why didn't it catch early dismissal?
 
