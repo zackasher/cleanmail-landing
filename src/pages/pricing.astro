@@ -3,7 +3,7 @@ import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import TrustLine from "../components/TrustLine.astro";
-import { PRICE_MONTHLY, PRICE_YEARLY, PRICE_YEARLY_PER_MONTH, TRIAL_DAYS, TRIAL_TERMS, TRIAL_FIRST_TIME_NOTE, TRIAL_BADGE, YEARLY_SAVINGS_BADGE, HOUSEHOLD_SIZE } from "../config";
+import { PRICE_MONTHLY, PRICE_YEARLY, PRICE_YEARLY_PER_MONTH, TRIAL_DAYS, TRIAL_TERMS, TRIAL_FIRST_TIME_NOTE, TRIAL_BADGE, YEARLY_SAVINGS_NOTE, HOUSEHOLD_SIZE } from "../config";
 import "../styles/info-page.css";
 ---
 <BaseLayout
@@ -28,10 +28,10 @@ import "../styles/info-page.css";
         <span class="price-per">Renews monthly until you cancel</span>
       </div>
       <div class="price-card best">
-        <div class="price-tags"><span class="price-tag price-tag-savings">{YEARLY_SAVINGS_BADGE}</span><span class="price-tag">{TRIAL_BADGE}</span></div>
+        <div class="price-tags"><span class="price-tag">{TRIAL_BADGE}</span></div>
         <span class="price-name">Yearly</span>
         <span class="price-num">{PRICE_YEARLY}<small>/year</small></span>
-        <span class="price-per">{PRICE_YEARLY_PER_MONTH}/month</span>
+        <span class="price-per">{PRICE_YEARLY_PER_MONTH}/month, <span class="price-savings">{YEARLY_SAVINGS_NOTE}</span></span>
       </div>
     </div>
 
@@ -55,11 +55,11 @@ import "../styles/info-page.css";
     .price-card.best{border:2px solid var(--purple)}
     .price-tags{position:absolute;top:-13px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
     .price-tag{background:var(--teal);color:#fff;font-size:12.5px;font-weight:600;padding:5px 12px;border-radius:999px;white-space:nowrap}
-    .price-tag-savings{background:#2B8C86}
     .price-name{font-size:15px;color:var(--muted);font-weight:600}
     .price-num{font-size:36px;font-weight:500;color:var(--navy);letter-spacing:-1px}
     .price-num small{font-size:15px;color:var(--muted);letter-spacing:0;margin-left:2px}
     .price-per{font-size:14px;color:var(--muted)}
+    .price-savings{color:var(--teal);font-weight:600}
     .price-points{list-style:none;max-width:560px;margin:36px auto 0;padding:0;display:flex;flex-direction:column;gap:12px;text-align:center;font-size:17px;line-height:1.5;color:var(--ink)}
     .price-actions{margin-top:36px;text-align:center}
   </style>

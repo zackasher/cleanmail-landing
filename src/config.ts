@@ -15,8 +15,8 @@ export const TRIAL_TERMS = `${TRIAL_PRICE_LINE} ${TRIAL_RENEWAL_LINE}`;
 // Counsel 11/15: a reused Apple ID or Google account gets no trial, so the pricing band qualifies its "14 days free" heading.
 export const TRIAL_FIRST_TIME_NOTE = "Free trial for first-time subscribers.";
 export const TRIAL_BADGE = "2 weeks free";
-// The yearly price saves about two months against paying monthly, separate from the trial.
-export const YEARLY_SAVINGS_BADGE = "2 months free";
+// The yearly price saves about two months against paying monthly. It sits under the price, not in a badge, so it is not read as a second trial.
+export const YEARLY_SAVINGS_NOTE = "2 months free";
 export const COMPETITOR_FACTS_CHECKED_ON = "October 2, 2026";
 export const FOUNDER_NAME = "Zack Asher";
 
