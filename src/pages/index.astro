@@ -66,9 +66,9 @@ const explore = [
 
   <section class="film">
     <div class="film-wrap">
-      <video class="hero-video film-video" autoplay muted playsinline preload="auto" poster="/hero-film-poster.jpg">
-        <source src="/hero-film.webm" type="video/webm" />
-        <source src="/hero-film.mp4" type="video/mp4" />
+      <video class="hero-video film-video" data-play-when-visible muted playsinline preload="none" poster="/hero-film-poster.jpg">
+        <source data-src="/hero-film.webm" type="video/webm" />
+        <source data-src="/hero-film.mp4" type="video/mp4" />
       </video>
       <button class="film-sound" type="button" aria-label="Unmute video" aria-pressed="false">
         <svg class="off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6.5 9H3v6h3.5L11 19V5z"/><path d="M16.5 9.5l5 5M21.5 9.5l-5 5"/></svg>
@@ -95,8 +95,8 @@ const explore = [
     <div class="story-grid">
       <div class="story-visual">
         <PhoneFrame>
-          <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="/hero-preview-poster.jpg">
-            <source src="/hero-preview.mp4" type="video/mp4" />
+          <video class="hero-video" data-play-when-visible muted loop playsinline preload="none" poster="/hero-preview-poster.jpg">
+            <source data-src="/hero-preview.mp4" type="video/mp4" />
           </video>
         </PhoneFrame>
       </div>
@@ -142,6 +142,39 @@ const explore = [
   }
   document.addEventListener("astro:page-load", initFilmSound);
   if (document.readyState !== "loading") initFilmSound();
+
+  // ponytail: the two home videos are about 6 MB together, so they download only when scrolled near, and the film starts from the top when seen.
+  const VIDEO_LOAD_MARGIN = "300px";
+  function startVideo(video){
+    video.querySelectorAll("source[data-src]").forEach((source) => {
+      source.setAttribute("src", source.getAttribute("data-src") || "");
+      source.removeAttribute("data-src");
+    });
+    video.load();
+    const played = video.play();
+    if (played && played.catch) played.catch(() => {});
+  }
+  function initVisibleVideos(){
+    const videos = document.querySelectorAll("video[data-play-when-visible]:not([data-bound])");
+    if (!videos.length) return;
+    if (!("IntersectionObserver" in window)) {
+      videos.forEach(startVideo);
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        observer.unobserve(entry.target);
+        startVideo(entry.target);
+      });
+    }, { rootMargin: VIDEO_LOAD_MARGIN });
+    videos.forEach((video) => {
+      video.setAttribute("data-bound", "1");
+      observer.observe(video);
+    });
+  }
+  document.addEventListener("astro:page-load", initVisibleVideos);
+  if (document.readyState !== "loading") initVisibleVideos();
 </script>
 
 <style>

@@ -2,7 +2,7 @@
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
-import { CLARITY_PROJECT_ID, APP_STORE_URL, PLAY_STORE_URL, SITE_DESCRIPTION_SHORT, SITE_DESCRIPTION_LONG, APP_STORE_NAME, SOCIAL_PROFILE_URLS, GOOGLE_TAG_ID, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH, COOKIE_CONSENT_STORAGE_KEY, COOKIE_CONSENT_ACCEPTED, COOKIE_CONSENT_REJECTED, COOKIE_CONSENT_MESSAGE, COOKIE_CONSENT_REGION_OFF_MESSAGE, TRACKING_TAGS_ACCEPTED_EVENT, TRACKING_TAGS_ACCEPTED_FLAG, DEFAULT_SHARE_IMAGE_ALT } from "../config";
+import { CLARITY_PROJECT_ID, APP_STORE_URL, PLAY_STORE_URL, SITE_DESCRIPTION_SHORT, SITE_DESCRIPTION_LONG, APP_STORE_NAME, SOCIAL_PROFILE_URLS, GOOGLE_TAG_ID, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH, COOKIE_CONSENT_STORAGE_KEY, COOKIE_CONSENT_ACCEPTED, COOKIE_CONSENT_REJECTED, COOKIE_CONSENT_MESSAGE, COOKIE_CONSENT_REGION_OFF_MESSAGE, TRACKING_TAGS_ACCEPTED_EVENT, TRACKING_TAGS_ACCEPTED_FLAG, DEFAULT_SHARE_IMAGE_ALT, APP_STORE_APP_ID } from "../config";
 export interface Props {
   title: string;
   description?: string;
@@ -13,6 +13,8 @@ export interface Props {
   noTracking?: boolean;
   // Pages whose main content is already the store badges skip the footer copy of them.
   hideFooterAppLink?: boolean;
+  // The invite page keeps its own store button so the code instructions stay next to it.
+  hideSmartAppBanner?: boolean;
 }
 const {
   title,
@@ -23,6 +25,7 @@ const {
   noindex = false,
   noTracking = false,
   hideFooterAppLink = false,
+  hideSmartAppBanner = false,
 } = Astro.props;
 
 const canonicalPath = Astro.url.pathname
@@ -176,6 +179,7 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   {noindex && <meta name="robots" content="noindex" />}
   <title>{title}</title>
   <link rel="canonical" href={canonicalURL} />
+  {!hideSmartAppBanner && <meta name="apple-itunes-app" content={`app-id=${APP_STORE_APP_ID}`} />}
   <meta name="description" content={description} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />

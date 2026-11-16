@@ -1,6 +1,7 @@
 export type SiteStage = "waitlist" | "beta" | "launched";
 export const SITE_STAGE: SiteStage = "launched";
-export const APP_STORE_URL = "https://apps.apple.com/app/id6777857105";
+export const APP_STORE_APP_ID = "6777857105";
+export const APP_STORE_URL = `https://apps.apple.com/app/id${APP_STORE_APP_ID}`;
 
 export const PRICE_MONTHLY = "$6.99";
 export const PRICE_YEARLY = "$68.99";
@@ -98,6 +99,8 @@ export const GET_APP_PATH = "/get";
 export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.zackasher.cleanmail";
 // The query string makes browsers fetch the trimmed badge instead of the untrimmed one they cached.
 export const PLAY_BADGE_IMAGE_PATH = "/google-play-badge.png?v=2";
+export const PLAY_BADGE_IMAGE_WIDTH = 812;
+export const PLAY_BADGE_IMAGE_HEIGHT = 242;
 export const PLAY_BADGE_ALT = "Get it on Google Play";
 // True since Google Play approved the Android app (11/6/2026): /get sends Android phones to Play, and the store badges show both stores.
 export const ANDROID_STORE_LIVE = true;
