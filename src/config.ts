@@ -101,6 +101,8 @@ export const PRIVACY_DELETION_SECTION_ID = "7-data-retention-and-account-deletio
 
 // One link for both stores, used by the household invite email (Senior Versions Designer, 2026-11-01). Phones go straight to their store.
 export const GET_APP_PATH = "/get";
+export const COMPARE_PATH = "/compare";
+export const SCHOOL_EMAIL_APPS_PATH = "/school-email-apps-compared";
 export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.zackasher.cleanmail";
 // The query string makes browsers fetch the trimmed badge instead of the untrimmed one they cached.
 export const PLAY_BADGE_IMAGE_PATH = "/google-play-badge.png?v=2";

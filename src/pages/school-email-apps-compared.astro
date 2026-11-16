@@ -2,7 +2,7 @@
 import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
-import { GET_APP_PATH, TRIAL_TERMS } from "../config";
+import { GET_APP_PATH, TRIAL_TERMS, COMPARE_PATH } from "../config";
 import {
   SCHOOL_EMAIL_APPS_TITLE,
   SCHOOL_EMAIL_APPS_HEADING,
@@ -18,6 +18,8 @@ import {
   SCHOOL_EMAIL_APPS_CLOSE,
   SCHOOL_EMAIL_APPS_CTA_LABEL,
   COMPETITOR_TRADEMARK_NOTICE,
+  COMPARE_TABLE_LINK_LEAD,
+  COMPARE_TABLE_LINK_LABEL,
 } from "../data/school-email-apps-copy";
 import "../styles/info-page.css";
 ---
@@ -56,6 +58,7 @@ import "../styles/info-page.css";
         </article>
       ))}
     </div>
+    <p class="cross-link">{COMPARE_TABLE_LINK_LEAD} <a href={COMPARE_PATH}>{COMPARE_TABLE_LINK_LABEL}</a></p>
     <p class="trademarks">{COMPETITOR_TRADEMARK_NOTICE}</p>
 
     <div class="ip-callout close">
@@ -86,6 +89,8 @@ import "../styles/info-page.css";
   .close-line{font-size:18px;font-weight:500;color:var(--navy)}
   .close .try-button{margin-top:16px}
   .trial{margin-top:14px}
+  .cross-link{max-width:900px;margin:22px auto 0;text-align:center;font-size:16px;color:var(--ink)}
+  .cross-link a{color:var(--purple);font-weight:600}
   .trademarks{max-width:900px;margin:14px auto 0;text-align:center;font-size:12.5px;color:var(--muted)}
   @media (max-width:760px){
     .ours{grid-template-columns:1fr;padding:24px 20px}

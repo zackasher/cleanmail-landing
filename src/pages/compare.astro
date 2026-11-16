@@ -96,6 +96,8 @@ const faqSchema = {
     "acceptedAnswer": { "@type": "Answer", "text": item.a },
   })),
 };
+import { SCHOOL_EMAIL_APPS_PATH } from "../config";
+import { SCHOOL_EMAIL_APPS_LINK_LEAD, SCHOOL_EMAIL_APPS_LINK_LABEL } from "../data/school-email-apps-copy";
 ---
 <BaseLayout
   title={pageTitle("Cleanmail vs Skylight vs Cozi")}
@@ -107,6 +109,7 @@ const faqSchema = {
     <h1 class="title">Cleanmail vs Skylight vs Cozi</h1>
     <p class="ip-lede lede-lines wide"><span>Three family calendar apps, side by side.</span><span>If your family's schedule lives in school email, Cleanmail is the only one of the three that reads Gmail for you.</span></p>
     <p class="byline">By {FOUNDER_NAME}, founder of Cleanmail · Updated {COMPETITOR_FACTS_CHECKED_ON}</p>
+    <p class="cross-link">{SCHOOL_EMAIL_APPS_LINK_LEAD} <a href={SCHOOL_EMAIL_APPS_PATH}>{SCHOOL_EMAIL_APPS_LINK_LABEL}</a></p>
 
     <div class="ip-section">
       <h2>Side by side</h2>
@@ -285,5 +288,7 @@ const faqSchema = {
       .t-app{display:inline-block;width:84px;flex-shrink:0;font-size:12.5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
       .t-cell.us .t-app{color:var(--purple)}
     }
-  </style>
+    .cross-link{text-align:center;margin-top:10px;font-size:15.5px;color:var(--ink)}
+  .cross-link a{color:var(--purple);font-weight:600}
+</style>
 </BaseLayout>

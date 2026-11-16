@@ -73,5 +73,11 @@ export const OTHER_APPS: ComparedApp[] = [
 export const COMPETITOR_TRADEMARK_NOTICE =
   "Cozi, Skylight and TimeTree are trademarks of their respective owners. Cleanmail is not affiliated with or endorsed by them.";
 
+// The two comparison pages link to each other so search engines read them as related, not competing.
+export const COMPARE_TABLE_LINK_LEAD = "Want the feature-by-feature table?";
+export const COMPARE_TABLE_LINK_LABEL = "See Cleanmail vs Skylight vs Cozi";
+export const SCHOOL_EMAIL_APPS_LINK_LEAD = "Want the quick version?";
+export const SCHOOL_EMAIL_APPS_LINK_LABEL = "See which app fits your family";
+
 export const SCHOOL_EMAIL_APPS_CLOSE = "Your week lives in Gmail? Know what tomorrow brings, with nothing to forward.";
 export const SCHOOL_EMAIL_APPS_CTA_LABEL = "Try Cleanmail free";
