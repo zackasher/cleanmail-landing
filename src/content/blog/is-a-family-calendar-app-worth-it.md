@@ -33,9 +33,9 @@ Keeping the schedule in one parent's head is the default, and it's free. One par
 
 ### 2. A free shared calendar, filled in by hand
 
-Most families move here next. Everyone at home can see the same week, and that alone ends a lot of "wait, is soccer tomorrow?" conversations.
+A free shared calendar is where most families move next. Everyone at home can see the same week, and that alone ends a lot of "wait, is soccer tomorrow?" conversations.
 
-The catch is the input. A shared calendar is only as current as the person typing into it. Somebody still has to read the newsletter, find the date in the third paragraph and create the event. Usually that's the same parent who was carrying it all in their head.
+The catch with a shared calendar is the input. A shared calendar is only as current as the person typing into it. Somebody still has to read the newsletter, find the date in the third paragraph and create the event. Usually that's the same parent who was carrying it all in their head.
 
 **Good fit if:** your schedule changes slowly and a few minutes of entry a week doesn't bother you.
 
@@ -43,7 +43,7 @@ The catch is the input. A shared calendar is only as current as the person typin
 
 ### 3. A calendar that fills itself from school email
 
-The newest option. Instead of you reading every email and typing in the dates, an app reads the senders you choose and puts the dates on the calendar for you.
+A calendar that fills itself from school email is the newest option. Instead of you reading every email and typing in the dates, an app reads the senders you choose and puts the dates on the calendar for you.
 
 **Good fit if:** you have two or more kids, several schools or teams, and more email than anyone has time to read.
 
@@ -61,10 +61,10 @@ If you answered "a lot," "always me," and "it stung," you're the family these ap
 
 ## What should an app that reads school email do?
 
-If you try one, check these before you hand over anything:
+If you try an app that reads school email, check these before you hand over anything:
 
 - **Its digest covers only the senders you pick.** You should choose the school, the coach and the activity, not hand over your whole inbox.
-- **It's read-only.** It shouldn't send, delete or change your email.
+- **The app is read-only.** It shouldn't send, delete or change your email.
 - **Everyone at home sees the same calendar.** The point is to get the schedule out of one person's head.
 - **You can glance at what landed and fix a date.** Any app can misread an email now and then, so a quick look is still worth it.
 - **You see it work before you pay.** A real trial, on your real email.
