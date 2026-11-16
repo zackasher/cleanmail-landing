@@ -10,7 +10,7 @@ const REDEEM_HINT = "After you sign in, tap 'Have a code?' on the plan screen an
 const COPY_LABEL = "Copy";
 const COPIED_LABEL = "Copied";
 ---
-<BaseLayout title={pageTitle("You're invited")} description={PITCH} noindex={true} noTracking={true} hideSmartAppBanner={true} image={INVITE_SHARE_IMAGE} imageAlt={INVITE_SHARE_IMAGE_ALT}>
+<BaseLayout title={pageTitle("You're invited")} description={PITCH} noindex={true} noTracking={true} hideSmartAppBanner={true} image={INVITE_SHARE_IMAGE} imageAlt={INVITE_SHARE_IMAGE_ALT} hideFooterAppLink={true}>
   <script is:inline define:vars={{ senderNameParam: INVITE_SENDER_NAME_PARAM }}>
     (function () {
       var url = new URL(window.location.href);

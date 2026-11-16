@@ -26,6 +26,11 @@ const posts = publishedPosts();
     .post-list{max-width:720px;margin:48px auto 0;display:flex;flex-direction:column;gap:16px}
     .post-card{display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px 24px;box-shadow:0 8px 22px rgba(27,34,54,.05);transition:transform .15s}
     .post-card:hover{transform:translateY(-2px)}
+    /* Cards cycle the three brand colors as a band down the left edge with a matching wash, so the list scans instead of reading as one block. */
+    .post-card{position:relative;overflow:hidden;padding-left:32px;--band:var(--purple);background:linear-gradient(90deg,color-mix(in srgb,var(--band) 9%,#fff),#fff 55%)}
+    .post-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;background:var(--band)}
+    .post-card:nth-child(3n+2){--band:var(--orange)}
+    .post-card:nth-child(3n){--band:var(--teal)}
     .post-date{font-size:13px;color:var(--muted)}
     .post-card h2{margin:6px 0 6px;font-size:21px;font-weight:600;color:var(--navy);letter-spacing:-.3px}
     .post-card p{margin:0;font-size:15.5px;line-height:1.5;color:var(--ink)}
