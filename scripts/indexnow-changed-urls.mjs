@@ -40,4 +40,5 @@ const isSubmittable = (url) => sitemapUrlSet.has(url) || url.endsWith("/llms.txt
 const changedUrls = new Set(
   changedFiles.flatMap(pathsForFile).map((path) => (path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`)).filter(isSubmittable),
 );
-console.log([...changedUrls].join("\n"));
+// An empty print would still write a newline, and the workflow would then send IndexNow a blank URL.
+if (changedUrls.size > 0) console.log([...changedUrls].join("\n"));
