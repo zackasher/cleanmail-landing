@@ -36,6 +36,13 @@ export const GOOGLE_TAG_ID = "G-26T2RXTR56";
 
 export const BLOG_READS_HEADING = "From the blog";
 export const RELATED_POSTS_COUNT = 3;
+// Schema.org page types for the per-page JSON-LD block. NONE is for pages that already describe themselves (blog posts, /about).
+export const SCHEMA_PAGE_TYPE_WEB_PAGE = "WebPage";
+export const SCHEMA_PAGE_TYPE_COLLECTION = "CollectionPage";
+export const SCHEMA_PAGE_TYPE_NONE = "none";
+export const SITE_ORIGIN = "https://cleanmailapp.com";
+export const SCHEMA_ORGANIZATION_ID = `${SITE_ORIGIN}/#organization`;
+export const SCHEMA_WEBSITE_ID = `${SITE_ORIGIN}/#website`;
 export const BLOG_SLUG_SCHOOL_EVENTS_CALENDAR = "add-school-events-to-google-calendar-automatically";
 export const BLOG_SLUG_STOP_MISSING_EMAILS = "how-to-stop-missing-school-emails";
 export const BLOG_SLUG_SPORTS_SCHEDULE_CALENDAR = "kids-sports-schedule-to-google-calendar";

@@ -2,7 +2,7 @@
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
-import { CLARITY_PROJECT_ID, APP_STORE_URL, PLAY_STORE_URL, SITE_DESCRIPTION_SHORT, SITE_DESCRIPTION_LONG, APP_STORE_NAME, SOCIAL_PROFILE_URLS, GOOGLE_TAG_ID, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH, COOKIE_CONSENT_STORAGE_KEY, COOKIE_CONSENT_ACCEPTED, COOKIE_CONSENT_REJECTED, COOKIE_CONSENT_MESSAGE, COOKIE_CONSENT_REGION_OFF_MESSAGE, TRACKING_TAGS_ACCEPTED_EVENT, TRACKING_TAGS_ACCEPTED_FLAG, DEFAULT_SHARE_IMAGE_ALT, APP_STORE_APP_ID } from "../config";
+import { CLARITY_PROJECT_ID, APP_STORE_URL, PLAY_STORE_URL, SITE_DESCRIPTION_SHORT, SITE_DESCRIPTION_LONG, APP_STORE_NAME, SOCIAL_PROFILE_URLS, GOOGLE_TAG_ID, TRACKING_BLOCKED_COUNTRY_CODES, TRACKING_BLOCKED_TIME_ZONE_PREFIXES, VISITOR_COUNTRY_LOOKUP_PATH, COOKIE_CONSENT_STORAGE_KEY, COOKIE_CONSENT_ACCEPTED, COOKIE_CONSENT_REJECTED, COOKIE_CONSENT_MESSAGE, COOKIE_CONSENT_REGION_OFF_MESSAGE, TRACKING_TAGS_ACCEPTED_EVENT, TRACKING_TAGS_ACCEPTED_FLAG, DEFAULT_SHARE_IMAGE_ALT, APP_STORE_APP_ID, SCHEMA_PAGE_TYPE_WEB_PAGE, SCHEMA_PAGE_TYPE_NONE, SCHEMA_ORGANIZATION_ID, SCHEMA_WEBSITE_ID, SITE_ORIGIN } from "../config";
 export interface Props {
   title: string;
   description?: string;
@@ -15,6 +15,8 @@ export interface Props {
   hideFooterAppLink?: boolean;
   // The invite page keeps its own store button so the code instructions stay next to it.
   hideSmartAppBanner?: boolean;
+  // The page's own schema.org type; pages that already carry their own page schema pass SCHEMA_PAGE_TYPE_NONE.
+  schemaPageType?: string;
 }
 const {
   title,
@@ -26,6 +28,7 @@ const {
   noTracking = false,
   hideFooterAppLink = false,
   hideSmartAppBanner = false,
+  schemaPageType = SCHEMA_PAGE_TYPE_WEB_PAGE,
 } = Astro.props;
 
 const canonicalPath = Astro.url.pathname
@@ -33,6 +36,19 @@ const canonicalPath = Astro.url.pathname
   .replace(/\.html$/, "")
   .replace(/(.+)\/$/, "$1");
 const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").href;
+const hasOwnPageSchema = schemaPageType === SCHEMA_PAGE_TYPE_NONE;
+const pageSchema = hasOwnPageSchema ? undefined : {
+  "@context": "https://schema.org",
+  "@type": schemaPageType,
+  "@id": `${canonicalURL}#webpage`,
+  "url": canonicalURL,
+  "name": title,
+  "headline": title,
+  "description": description,
+  "image": new URL(image, SITE_ORIGIN).href,
+  "isPartOf": { "@id": SCHEMA_WEBSITE_ID },
+  "publisher": { "@id": SCHEMA_ORGANIZATION_ID },
+};
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -196,7 +212,17 @@ const canonicalURL = new URL(canonicalPath || "/", "https://cleanmailapp.com").h
   {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
   <script type="application/ld+json" set:html={JSON.stringify({
     "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": SCHEMA_WEBSITE_ID,
+    "url": SITE_ORIGIN,
+    "name": "Cleanmail",
+    "publisher": { "@id": SCHEMA_ORGANIZATION_ID }
+  })} />
+  {pageSchema && <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />}
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": SCHEMA_ORGANIZATION_ID,
     "name": "Cleanmail",
     "legalName": "Calibrate LLC",
     "url": "https://cleanmailapp.com",
