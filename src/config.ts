@@ -148,6 +148,8 @@ export const WEB_APP_FOOTER_LABEL = "Cleanmail on the web";
 
 // The author page bylines link to; the SEO checker wants a dedicated author URL listing every piece.
 export const AUTHOR_PATH = "/author/zack-asher";
+export const ABOUT_PATH = "/about";
+export const ABOUT_FOOTER_LABEL = "About Zack";
 export const FOUNDER_LEGAL_NAME = "Zachary Asher";
 export const FOUNDER_JOB_TITLE = "Founder";
 export const FAQ_PAGE_TITLE = "Cleanmail FAQ: setup, pricing and privacy";

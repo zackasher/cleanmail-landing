@@ -279,6 +279,9 @@ const pageSchema = hasOwnPageSchema ? undefined : {
 
   <ClientRouter />
   <style is:global>
+    /* Short lines break evenly and paragraphs never end on one stranded word (Marketing 11/16 mobile pass). */
+    h1,h2,h3,.box-head,.price-per,.trial-terms{text-wrap:balance}
+    p,li{text-wrap:pretty}
     :root{
       --purple:#4A6FE3; --orange:#E88C30; --green:#66EE78; --teal:#5dc4b8;
       --navy:#1b2236; --ink:#3a4156; --muted:#7a8196;

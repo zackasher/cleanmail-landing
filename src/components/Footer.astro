@@ -1,6 +1,6 @@
 ---
 import AppLink from "./AppLink.astro";
-import { YOUTUBE_VIDEO_URL, COOKIE_SETTINGS_LABEL, DELETE_ACCOUNT_PATH, DELETE_ACCOUNT_LINK_LABEL, HEALTH_DATA_PATH, HEALTH_DATA_LINK_LABEL, WEB_APP_URL, WEB_APP_FOOTER_LABEL, PROMISE_ORANGE_SMALL_TEXT } from "../config";
+import { YOUTUBE_VIDEO_URL, COOKIE_SETTINGS_LABEL, DELETE_ACCOUNT_PATH, DELETE_ACCOUNT_LINK_LABEL, HEALTH_DATA_PATH, HEALTH_DATA_LINK_LABEL, WEB_APP_URL, WEB_APP_FOOTER_LABEL, PROMISE_ORANGE_SMALL_TEXT, ABOUT_PATH, ABOUT_FOOTER_LABEL } from "../config";
 import BrandTagline from "./BrandTagline.astro";
 
 const { hideAppLink = false } = Astro.props;
@@ -20,6 +20,7 @@ const { hideAppLink = false } = Astro.props;
     <a href="/compare">Compare</a>
     <a href="/share">Share, get 2 weeks free</a>
     <a href="/blog">Blog</a>
+    <a href={ABOUT_PATH}>{ABOUT_FOOTER_LABEL}</a>
     <a href="/maple-alternative">Leaving Maple?</a>
     <a href={YOUTUBE_VIDEO_URL} rel="noopener" target="_blank">Watch on YouTube</a>
     <button type="button" class="cookie-settings-link" data-cookie-settings>{COOKIE_SETTINGS_LABEL}</button>

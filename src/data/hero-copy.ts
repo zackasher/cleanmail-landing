@@ -1,7 +1,7 @@
 // Laptop hero copy box (Marketing 11/10, held for Zack's OK).
 // The middle word follows the phone screen (Zack 11/10): digest, schedule, calendar.
 export const HERO_BOX_HEADING_START = "One";
-export const HERO_BOX_HEADING_END = "for the whole family.";
+export const HERO_BOX_HEADING_END = "for everyone at home.";
 export const HERO_BOX_POINTS = [
   { text: "School and activity email, sorted by kid." },
   { text: "Dates land on your shared Google Calendar automatically." },

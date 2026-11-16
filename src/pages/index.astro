@@ -1,5 +1,5 @@
 ---
-import { APP_STORE_NAME, SITE_DESCRIPTION_SHORT, GET_APP_PATH, WEB_APP_URL } from "../config";
+import { APP_STORE_NAME, SITE_DESCRIPTION_SHORT, GET_APP_PATH, WEB_APP_URL, ABOUT_PATH } from "../config";
 import BrandTagline from "../components/BrandTagline.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
@@ -110,7 +110,7 @@ const explore = [
           <p class="story-copy">So one night I'd had enough. I wrote a quick script that turned all that email into one short digest and dropped every date straight onto our calendar.</p>
           <p class="story-copy">Then something better happened. I stopped carrying the calendar around in my head. Everyone at home saw the same week, I stopped asking myself "wait, is soccer tomorrow?" I got my evenings back and was ready for the mornings.</p>
           <p class="story-copy">Every parent I showed asked the same thing: which app is that? So I built the one they already thought it was.</p>
-          <p class="story-sig">Zack Asher, founder. Say hi.</p>
+          <p class="story-sig"><a href={ABOUT_PATH}>Zack Asher, founder. Say hi.</a></p>
         </div>
       </div>
     </div>
@@ -208,6 +208,8 @@ const explore = [
   .story-lead{font-size:20px;font-weight:500;line-height:1.35;color:var(--navy);margin-bottom:20px}
   .story-copy{font-size:16px;line-height:1.62;color:var(--ink);margin-bottom:20px}
   .story-sig{margin-top:6px;font-size:14px;font-weight:500;color:var(--muted)}
+  .story-sig a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+  .story-sig a:hover{color:var(--purple)}
   .story-photo{display:block;width:100%;height:auto;border-radius:12px;margin-bottom:22px}
   .hero-video{width:100%;height:100%;object-fit:cover;display:block}
   .story-rule{height:1px;border:0;width:calc(100% - 48px);max-width:860px;margin:24px auto;background:linear-gradient(90deg, transparent, rgba(74,111,227,.5) 22%, rgba(74,111,227,.5) 78%, transparent)}
