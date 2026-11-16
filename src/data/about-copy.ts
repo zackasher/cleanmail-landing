@@ -1,5 +1,7 @@
 export const ABOUT_EYEBROW = "About";
 export const ABOUT_ARTICLES_HEADING = "Articles by Zack";
+export const AUTHOR_ARTICLES_HEADING = "Written by Zack Asher";
+export const AUTHOR_PAGE_TITLE = "Zack Asher, founder of Cleanmail";
 export const ABOUT_HEADING = "About Cleanmail's founder";
 export const ABOUT_PAGE_TITLE = "About Zack Asher, founder of Cleanmail";
 export const ABOUT_DESCRIPTION =

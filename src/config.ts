@@ -117,7 +117,7 @@ export const COMPARE_PATH = "/compare";
 export const SCHOOL_EMAIL_APPS_PATH = "/school-email-apps-compared";
 export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.zackasher.cleanmail";
 // The query string makes browsers fetch the trimmed badge instead of the untrimmed one they cached.
-export const PLAY_BADGE_IMAGE_PATH = "/google-play-badge.png?v=2";
+export const PLAY_BADGE_IMAGE_PATH = "/google-play-badge.webp";
 export const PLAY_BADGE_IMAGE_WIDTH = 812;
 export const PLAY_BADGE_IMAGE_HEIGHT = 242;
 export const PLAY_BADGE_ALT = "Get it on Google Play";
@@ -146,7 +146,8 @@ export const WEB_APP_URL = "https://app.cleanmailapp.com";
 export const WEB_APP_SIGN_IN_LABEL = "Sign in";
 export const WEB_APP_FOOTER_LABEL = "Cleanmail on the web";
 
-export const ABOUT_PATH = "/about";
+// The author page bylines link to; the SEO checker wants a dedicated author URL listing every piece.
+export const AUTHOR_PATH = "/author/zack-asher";
 export const FOUNDER_LEGAL_NAME = "Zachary Asher";
 export const FOUNDER_JOB_TITLE = "Founder";
 export const FAQ_PAGE_TITLE = "Cleanmail FAQ: setup, pricing and privacy";

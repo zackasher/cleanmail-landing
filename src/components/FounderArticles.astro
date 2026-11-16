@@ -1,0 +1,28 @@
+---
+import { FOUNDER_NAME } from "../config";
+import { publishedPosts, formatPostDate } from "../data-blog";
+
+interface Props {
+  heading: string;
+}
+
+const { heading } = Astro.props;
+const founderPosts = publishedPosts().filter((post) => post.frontmatter.author === FOUNDER_NAME);
+---
+<section class="ip founder-articles">
+  <h2>{heading}</h2>
+  <ul>
+    {founderPosts.map((post) => (
+      <li><a href={`/blog/${post.slug}`}>{post.frontmatter.title}</a> <span>{formatPostDate(post.frontmatter.date)}</span></li>
+    ))}
+  </ul>
+</section>
+
+<style>
+  .ip.founder-articles{padding-top:0}
+  .founder-articles h2{text-align:center}
+  .founder-articles ul{max-width:680px;margin:18px auto 0;padding:0;list-style:none;text-align:left}
+  .founder-articles li{padding:10px 0;border-bottom:1px solid var(--line)}
+  .founder-articles a{color:var(--purple);font-weight:600}
+  .founder-articles span{display:block;font-size:13px;color:var(--muted)}
+</style>

@@ -4,7 +4,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import CTA from "../../components/CTA.astro";
 import { publishedPosts, relatedPosts, formatPostDate, type BlogPost } from "../../data-blog";
 import BlogReads from "../../components/BlogReads.astro";
-import { ABOUT_PATH, BLOG_SHARE_IMAGE_DIRECTORY, FOUNDER_NAME, RELATED_POSTS_COUNT, SCHEMA_PAGE_TYPE_NONE, SITE_URL, TRIAL_DAYS, TRIAL_TERMS } from "../../config";
+import { AUTHOR_PATH, BLOG_SHARE_IMAGE_DIRECTORY, FOUNDER_NAME, RELATED_POSTS_COUNT, SCHEMA_PAGE_TYPE_NONE, SITE_URL, TRIAL_DAYS, TRIAL_TERMS } from "../../config";
 import { FOUNDER_PERSON } from "../../data/founder-schema";
 import { existsSync } from "node:fs";
 import "../../styles/info-page.css";
@@ -46,7 +46,7 @@ const faqSchema = hasFaqs ? {
   <article class="ip post">
     <p class="ip-eyebrow"><a href="/blog">Blog</a></p>
     <h1>{title}</h1>
-    <p class="post-byline">By {isFounderPost ? <a href={ABOUT_PATH} rel="author">{author}</a> : author} · {formatPostDate(date)}</p>
+    <p class="post-byline">By {isFounderPost ? <a href={AUTHOR_PATH} rel="author">{author}</a> : author} · {formatPostDate(date)}</p>
     <div class="post-body"><Content /></div>
     {hasFaqs && (
       <div class="ip-section">
