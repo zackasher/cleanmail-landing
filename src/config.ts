@@ -17,6 +17,9 @@ export const TRIAL_FIRST_TIME_NOTE = "Free trial for first-time subscribers.";
 export const TRIAL_BADGE = "2 weeks free";
 // The yearly price saves about two months against paying monthly. It sits under the price, not in a badge, so it is not read as a second trial.
 export const YEARLY_SAVINGS_NOTE = "2 months free";
+// Zack 11/16 5:27 PM ET: Yearly is the plan we point parents to. The anchor must stay true: PRICE_YEARLY / 12 is $5.75, under $6.
+export const BEST_VALUE_BADGE = "Best value";
+export const YEARLY_VALUE_ANCHOR = "Less than $6 a month, for everyone at home.";
 export const COMPETITOR_FACTS_CHECKED_ON = "October 2, 2026";
 export const FOUNDER_NAME = "Zack Asher";
 
