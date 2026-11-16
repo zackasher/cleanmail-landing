@@ -1,8 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { ABOUT_BIO, ABOUT_DESCRIPTION, ABOUT_EYEBROW, ABOUT_HEADING, ABOUT_PAGE_TITLE } from "../data/about-copy";
+import { ABOUT_ARTICLES_HEADING, ABOUT_BIO, ABOUT_DESCRIPTION, ABOUT_EYEBROW, ABOUT_HEADING, ABOUT_PAGE_TITLE } from "../data/about-copy";
 import { FOUNDER_PERSON } from "../data/founder-schema";
+import { FOUNDER_NAME } from "../config";
+import { publishedPosts, formatPostDate } from "../data-blog";
 import "../styles/info-page.css";
+
+const founderPosts = publishedPosts().filter((post) => post.frontmatter.author === FOUNDER_NAME);
 
 const profileSchema = {
   "@context": "https://schema.org",
@@ -17,4 +21,20 @@ const profileSchema = {
     <h1>{ABOUT_HEADING}</h1>
     <p class="ip-lede">{ABOUT_BIO}</p>
   </section>
+  <section class="ip about-articles">
+    <h2>{ABOUT_ARTICLES_HEADING}</h2>
+    <ul>
+      {founderPosts.map((post) => (
+        <li><a href={`/blog/${post.slug}`}>{post.frontmatter.title}</a> <span>{formatPostDate(post.frontmatter.date)}</span></li>
+      ))}
+    </ul>
+  </section>
+  <style>
+    .ip.about-articles{padding-top:0}
+    .about-articles h2{text-align:center}
+    .about-articles ul{max-width:680px;margin:18px auto 0;padding:0;list-style:none;text-align:left}
+    .about-articles li{padding:10px 0;border-bottom:1px solid var(--line)}
+    .about-articles a{color:var(--purple);font-weight:600}
+    .about-articles span{display:block;font-size:13px;color:var(--muted)}
+  </style>
 </BaseLayout>
