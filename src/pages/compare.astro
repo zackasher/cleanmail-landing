@@ -3,7 +3,7 @@ import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import Mark from "../components/Mark.astro";
-import { PRICE_MONTHLY, PRICE_YEARLY, TRIAL_DAYS, TRIAL_TERMS, COMPETITOR_FACTS_CHECKED_ON, FOUNDER_NAME, FAMBOT_FACTS_CHECKED_ON } from "../config";
+import { PRICE_MONTHLY, PRICE_YEARLY, TRIAL_DAYS, TRIAL_TERMS, COMPETITOR_FACTS_CHECKED_ON, FOUNDER_NAME } from "../config";
 import PhoneFrame from "../components/PhoneFrame.astro";
 import { ICON_PATHS } from "../data-icons";
 import "../styles/info-page.css";
@@ -61,13 +61,8 @@ const reasons = [
 ];
 
 
-const focusCards = [
-  { name: "All-in-one assistants, like Fambot", us: false, body: "An AI assistant for the whole family's logistics. Fambot reads email, calendar invites, and group chats, sends daily summaries by text, and lets parents assign to-dos to each other. On iOS and Android, free while in beta." },
-  { name: "Cleanmail", us: true, body: "One job, done well. School and activity email becomes a digest sorted by kid, and the dates land on a family calendar with two-way Google sync. No to-do lists or chores to keep up with." },
-];
 
 const sources = [
-  { label: "Fambot: launch announcement", url: "https://fambot.com/press-releases/fambot-launches-ai-chief-of-staff-for-families" },
   { label: "Skylight: two-way sync with Google", url: "https://skylight.zendesk.com/hc/en-us/articles/19197773155995-Skylight-Calendar-Two-Way-Sync-with-Google-Calendar" },
   { label: "Skylight: Magic Import", url: "https://skylight.zendesk.com/hc/en-us/articles/18039340445211-How-To-Use-Skylight-Magic-Import" },
   { label: "Skylight: Sidekick", url: "https://skylight.zendesk.com/hc/en-us/articles/39335273393947-Sidekick" },
@@ -185,19 +180,6 @@ import { SCHOOL_EMAIL_APPS_LINK_LEAD, SCHOOL_EMAIL_APPS_LINK_LABEL } from "../da
     </div>
 
     <div class="ip-section">
-      <h2>Focused vs. all-in-one</h2>
-      <p class="ip-sub">Fambot facts checked {FAMBOT_FACTS_CHECKED_ON}, from Fambot's own launch page.</p>
-      <div class="ip-grid two">
-        {focusCards.map((card) => (
-          <div class={`ip-tile focus-card${card.us ? " us" : ""}`}>
-            <h3>{card.name}</h3>
-            <p>{card.body}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-
-    <div class="ip-section">
       <h2>Quick answers</h2>
       <div class="ip-faq">
         {faqs.map((item) => (
@@ -221,14 +203,13 @@ import { SCHOOL_EMAIL_APPS_LINK_LEAD, SCHOOL_EMAIL_APPS_LINK_LABEL } from "../da
     </div>
 
     <div class="sources">
-      <p>We make Cleanmail. Every fact about Skylight, Cozi, and Fambot comes from their own pages, linked below.</p>
-      <p>Sources, checked {COMPETITOR_FACTS_CHECKED_ON}. Prices in US dollars, before tax. Skylight displays start at $149.99; Calendar Plus is $79 a year. Skylight, Cozi, and Fambot are trademarks of their owners.</p>
+      <p>We make Cleanmail. Every fact about Skylight and Cozi comes from their own pages, linked below.</p>
+      <p>Sources, checked {COMPETITOR_FACTS_CHECKED_ON}. Prices in US dollars, before tax. Skylight displays start at $149.99; Calendar Plus is $79 a year. Skylight and Cozi are trademarks of their owners.</p>
       <ul>{sources.map((item) => <li><a href={item.url} rel="nofollow noopener" target="_blank">{item.label}</a></li>)}</ul>
     </div>
   </section>
 
   <style>
-    .focus-card.us{border:2px solid var(--purple)}
     .title{max-width:none;font-size:clamp(28px,3.7vw,42px)}
     .lede-lines span{display:block}
     .byline{text-align:center;font-size:13.5px;color:var(--muted);margin:14px 0 0}
