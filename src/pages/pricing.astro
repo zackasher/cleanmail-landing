@@ -3,7 +3,7 @@ import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import TrustLine from "../components/TrustLine.astro";
-import { PRICE_MONTHLY, PRICE_YEARLY, PRICE_YEARLY_PER_MONTH, TRIAL_DAYS, TRIAL_TERMS, HOUSEHOLD_SIZE } from "../config";
+import { PRICE_MONTHLY, PRICE_YEARLY, PRICE_YEARLY_PER_MONTH, TRIAL_DAYS, TRIAL_TERMS, TRIAL_FIRST_TIME_NOTE, HOUSEHOLD_SIZE } from "../config";
 import "../styles/info-page.css";
 ---
 <BaseLayout
@@ -17,7 +17,7 @@ import "../styles/info-page.css";
 
     <div class="trial-band">
       <p class="trial-head">Start with {TRIAL_DAYS} days free, on either plan</p>
-      <p class="trial-terms">{TRIAL_TERMS}</p>
+      <p class="trial-terms">{TRIAL_TERMS} {TRIAL_FIRST_TIME_NOTE}</p>
     </div>
 
     <div class="price">

@@ -12,6 +12,8 @@ export const HOUSEHOLD_SIZE = 4;
 export const TRIAL_PRICE_LINE = `${TRIAL_DAYS} days free, then ${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year.`;
 export const TRIAL_RENEWAL_LINE = "Renews automatically until you cancel.";
 export const TRIAL_TERMS = `${TRIAL_PRICE_LINE} ${TRIAL_RENEWAL_LINE}`;
+// Counsel 11/15: a reused Apple ID or Google account gets no trial, so the pricing band qualifies its "14 days free" heading.
+export const TRIAL_FIRST_TIME_NOTE = "Free trial for first-time subscribers.";
 export const COMPETITOR_FACTS_CHECKED_ON = "October 2, 2026";
 export const FOUNDER_NAME = "Zack Asher";
 
