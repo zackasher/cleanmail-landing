@@ -1,0 +1,95 @@
+---
+import { pageTitle } from "../page-title";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PhoneFrame from "../components/PhoneFrame.astro";
+import { GET_APP_PATH, TRIAL_TERMS } from "../config";
+import {
+  SCHOOL_EMAIL_APPS_TITLE,
+  SCHOOL_EMAIL_APPS_HEADING,
+  SCHOOL_EMAIL_APPS_DESCRIPTION,
+  SCHOOL_EMAIL_APPS_INTRO,
+  BEST_FOR_LABEL,
+  CLEANMAIL_APP,
+  CLEANMAIL_APP_ICON,
+  CLEANMAIL_APP_ICON_SIZE,
+  CLEANMAIL_SCREEN,
+  CLEANMAIL_SCREEN_ALT,
+  OTHER_APPS,
+  SCHOOL_EMAIL_APPS_CLOSE,
+  SCHOOL_EMAIL_APPS_CTA_LABEL,
+  COMPETITOR_TRADEMARK_NOTICE,
+} from "../data/school-email-apps-copy";
+import "../styles/info-page.css";
+---
+<BaseLayout title={pageTitle(SCHOOL_EMAIL_APPS_TITLE)} description={SCHOOL_EMAIL_APPS_DESCRIPTION}>
+  <section class="ip">
+    <p class="ip-eyebrow">{SCHOOL_EMAIL_APPS_TITLE}</p>
+    <h1>{SCHOOL_EMAIL_APPS_HEADING}</h1>
+    <p class="ip-lede">{SCHOOL_EMAIL_APPS_INTRO}</p>
+
+    <article class="ours">
+      <div class="ours-text">
+        <h2><img class="app-icon" src={CLEANMAIL_APP_ICON} alt="" width={CLEANMAIL_APP_ICON_SIZE} height={CLEANMAIL_APP_ICON_SIZE} />{CLEANMAIL_APP.name}</h2>
+        <p class="best"><span>{BEST_FOR_LABEL}</span> {CLEANMAIL_APP.bestFor}</p>
+        <ul class="facts">
+          {CLEANMAIL_APP.facts.map((fact) => (
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d={fact.icon} fill="currentColor" /></svg>{fact.text}</li>
+          ))}
+        </ul>
+        <a class="try-button" href={GET_APP_PATH}>{SCHOOL_EMAIL_APPS_CTA_LABEL}</a>
+      </div>
+      <div class="ours-phone">
+        <PhoneFrame><img class="shot" src={CLEANMAIL_SCREEN} alt={CLEANMAIL_SCREEN_ALT} loading="lazy" /></PhoneFrame>
+      </div>
+    </article>
+
+    <div class="others">
+      {OTHER_APPS.map((app) => (
+        <article class="other">
+          <h2>{app.name}</h2>
+          <p class="best"><span>{BEST_FOR_LABEL}</span> {app.bestFor}</p>
+          <ul class="facts">
+            {app.facts.map((fact) => (
+              <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d={fact.icon} fill="currentColor" /></svg>{fact.text}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+    <p class="trademarks">{COMPETITOR_TRADEMARK_NOTICE}</p>
+
+    <div class="ip-callout close">
+      <p class="close-line">{SCHOOL_EMAIL_APPS_CLOSE}</p>
+      <a class="try-button" href={GET_APP_PATH}>{SCHOOL_EMAIL_APPS_CTA_LABEL}</a>
+      <p class="ip-sub trial">{TRIAL_TERMS}</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .ours{max-width:900px;margin:36px auto 0;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center;background:#fff;border:1.5px solid rgba(74,111,227,.45);border-radius:22px;padding:30px 34px;box-shadow:0 14px 34px rgba(27,34,54,.08)}
+  .ours h2,.other h2{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:600;color:var(--navy)}
+  .app-icon{width:40px;height:40px;border-radius:10px;flex-shrink:0}
+  .ours-phone :global(.phone-wrap){width:200px}
+  .shot{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+  .best{margin:12px 0 14px;font-size:15px;color:var(--ink)}
+  .best span{display:inline-block;margin-right:6px;padding:3px 10px;border-radius:999px;background:rgba(232,140,48,.14);color:#b8661d;font-size:12.5px;font-weight:600;letter-spacing:.3px;text-transform:uppercase}
+  .facts{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .facts li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.45;color:var(--ink)}
+  .facts svg{width:20px;height:20px;flex-shrink:0;color:var(--purple);margin-top:1px}
+  .others{max-width:900px;margin:22px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:900px){ .others{grid-template-columns:1fr} }
+  .other{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px}
+  .other .facts svg{color:var(--muted)}
+  .try-button{display:inline-block;margin-top:20px;padding:13px 26px;border-radius:999px;background:var(--purple);color:#fff;font-weight:600;font-size:16px;text-decoration:none}
+  .close{max-width:900px;margin:36px auto 0;text-align:center}
+  .close-line{font-size:18px;font-weight:500;color:var(--navy)}
+  .close .try-button{margin-top:16px}
+  .trial{margin-top:14px}
+  .trademarks{max-width:900px;margin:14px auto 0;text-align:center;font-size:12.5px;color:var(--muted)}
+  @media (max-width:760px){
+    .ours{grid-template-columns:1fr;padding:24px 20px}
+    .ours-phone{justify-self:center}
+    .others{grid-template-columns:1fr}
+  }
+</style>
