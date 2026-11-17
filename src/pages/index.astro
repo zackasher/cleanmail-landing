@@ -5,6 +5,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
 import Reviews from "../components/Reviews.astro";
+import PressFeature from "../components/PressFeature.astro";
 import TrustDeal from "../components/TrustDeal.astro";
 import LiveStats from "../components/LiveStats.astro";
 import { ICON_PATHS } from "../data-icons";
@@ -78,6 +79,7 @@ const explore = [
   </section>
 
   <Reviews />
+  <PressFeature />
 
   <section class="explore" aria-label="Explore Cleanmail">
     {explore.map((item) => (

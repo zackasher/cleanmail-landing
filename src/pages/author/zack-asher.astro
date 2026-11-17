@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import PressFeature from "../../components/PressFeature.astro";
 import FounderArticles from "../../components/FounderArticles.astro";
 import { ABOUT_BIO, ABOUT_DESCRIPTION, AUTHOR_ARTICLES_HEADING, AUTHOR_PAGE_TITLE } from "../../data/about-copy";
 import { FOUNDER_PERSON } from "../../data/founder-schema";
@@ -18,5 +19,6 @@ const profileSchema = {
     <h1>{FOUNDER_NAME}</h1>
     <p class="ip-lede">{ABOUT_BIO}</p>
   </section>
+  <PressFeature />
   <FounderArticles heading={AUTHOR_ARTICLES_HEADING} />
 </BaseLayout>
