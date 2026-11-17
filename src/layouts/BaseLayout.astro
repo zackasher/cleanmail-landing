@@ -49,6 +49,7 @@ const pageSchema = hasOwnPageSchema ? undefined : {
   "isPartOf": { "@id": SCHEMA_WEBSITE_ID },
   "publisher": { "@id": SCHEMA_ORGANIZATION_ID },
 };
+import { PRESS_NEWS_ARTICLE } from "../data/press";
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -229,6 +230,7 @@ const pageSchema = hasOwnPageSchema ? undefined : {
     "logo": "https://cleanmailapp.com/logo.png",
     "sameAs": [...SOCIAL_PROFILE_URLS, APP_STORE_URL, PLAY_STORE_URL],
     "founder": { "@type": "Person", "name": "Zachary Asher" },
+    "subjectOf": PRESS_NEWS_ARTICLE,
     "description": SITE_DESCRIPTION_LONG
   })} />
   <script type="application/ld+json" set:html={JSON.stringify({
