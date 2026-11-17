@@ -147,7 +147,7 @@ export const SITE_DESCRIPTION_LONG = "Cleanmail: Family Inbox turns email from t
 // The signed-in web app. A parent who already set up on the phone signs in here on a computer.
 export const WEB_APP_URL = "https://app.cleanmailapp.com";
 export const WEB_APP_SIGN_IN_LABEL = "Sign in";
-export const WEB_APP_FOOTER_LABEL = "Cleanmail on the web";
+export const WEB_APP_FOOTER_LABEL = "Sign in on the web";
 
 // The author page bylines link to; the SEO checker wants a dedicated author URL listing every piece.
 export const AUTHOR_PATH = "/author/zack-asher";
