@@ -20,6 +20,8 @@ const explore = [
 <BaseLayout title={`${APP_STORE_NAME} | Get the schedule out of your head`} description={SITE_DESCRIPTION_SHORT}>
   <Hero />
 
+  <PressFeature />
+
   <section class="launch-banner" aria-label="New">
     <span class="launch-tag">New</span>
     <p class="launch-text"><strong>Start on your phone, then see your digest on the web too.</strong></p>
@@ -79,7 +81,6 @@ const explore = [
   </section>
 
   <Reviews />
-  <PressFeature />
 
   <section class="explore" aria-label="Explore Cleanmail">
     {explore.map((item) => (
