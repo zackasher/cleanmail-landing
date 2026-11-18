@@ -117,6 +117,8 @@ export const FEATURE_PAGES: FeaturePage[] = [
     // the full posts and is read, but comes in the evening, so same-day notices can arrive late.
     // Counsel 11/18 6 PM CT: no "Digest comes once a day" line. On Digest, ParentSquare still emails other
     // messages all day, so that line read as if everything waits a day.
+    // Timing line is Counsel's, word for word (counsel-to-web-1795043000000): CA measured ~2 s median processing
+    // but there is no guaranteed worst case, so never "instantly", "in real time", "immediately" or a number.
     // Settings path verified on Zack's own ParentSquare app 11/16 (claude/research/email-setup-steps_recheck_2026-11-16.md);
     // sources in claude/marketing/parentsquare-page-sources_2026-11-18.md, re-check every 90 days (Counsel).
     slug: "parentsquare-to-google-calendar",
@@ -133,7 +135,7 @@ export const FEATURE_PAGES: FeaturePage[] = [
     ],
     steps: [
       { title: "Turn on email in ParentSquare", body: "In the app: Menu, Account, Notifications. Under Posts, turn on Email Notifications." },
-      { title: "Choose Instant", body: "Cleanmail sees each post when it is sent." },
+      { title: "Choose Instant", body: "Cleanmail sees each post when it is sent. They show up in Cleanmail within minutes of reaching your inbox." },
       { title: "Pick them in Cleanmail", body: "Your school and each teacher, by name." },
     ],
     screenshot: SENDERS_SCREENSHOT,
