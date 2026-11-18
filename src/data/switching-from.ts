@@ -18,7 +18,7 @@ export type SwitchingPage = {
 
 export const SWITCHING_FORWARDING_CLEANMAIL = "Not needed. Cleanmail reads the senders you choose in your Gmail.";
 export const SWITCHING_GOOGLE_CLEANMAIL = "Two-way sync of the events Cleanmail adds.";
-export const SWITCHING_OPENER_TAIL = "Cleanmail does the school and activity email.";
+export const SWITCHING_OPENER_TAIL = "Cleanmail does the school and activity emails.";
 export const SWITCHING_TRADEMARK_LINE = "TimeTree, Cozi and Skylight are trademarks of their owners. Cleanmail is not affiliated with them.";
 
 // Real app screenshots of the test account (invented family), already public on the site.
