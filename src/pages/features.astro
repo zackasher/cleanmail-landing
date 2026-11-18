@@ -4,18 +4,8 @@ import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
 import CTA from "../components/CTA.astro";
+import VoiceBars from "../components/VoiceBars.astro";
 
-const voiceBars = [
-  { left: 26.12, top: 46.17, height: 5.67, color: "#E5C2A1" },
-  { left: 31.72, top: 45.07, height: 7.86, color: "#E6AE72" },
-  { left: 37.32, top: 44.21, height: 9.59, color: "#DC9044" },
-  { left: 42.92, top: 43.23, height: 11.54, color: "#586CAF" },
-  { left: 48.52, top: 42.18, height: 13.65, color: "#526EDB" },
-  { left: 54.11, top: 43.19, height: 11.62, color: "#586CAF" },
-  { left: 59.71, top: 44.29, height: 9.43, color: "#DC9044" },
-  { left: 65.31, top: 45.38, height: 7.24, color: "#E6AE72" },
-  { left: 70.91, top: 46.79, height: 4.42, color: "#E5C2A1" },
-];
 ---
 <BaseLayout title={pageTitle("Features")} description="See what Cleanmail does: a short digest sorted by kid, dates on a shared calendar, Google Calendar sync, pinned items and adding events by voice." hideFooterAppLink={true}>
   <section class="features-show">
@@ -72,7 +62,7 @@ const voiceBars = [
       <div class="feat"><h3>Household &amp; inboxes</h3><p>Share one digest with up to four people, and pull up to three Gmail inboxes into it. Everyone and everything in one place.</p><img class="feat-shot" src="/feat-household.webp" {...imageSize("/feat-household.webp")} alt="A household of up to four people, plus linked inboxes, feeding one digest" /></div>
       <div class="feat"><h3>Notes &amp; reactions</h3><p>Leave a quick note or a reaction on any card, and the whole household sees it.</p><img class="feat-shot" src="/feat-notes-1018.webp" {...imageSize("/feat-notes-1018.webp")} alt="A Halloween Parade card with a household note asking for a ride" /></div>
       <div class="feat"><h3>Reminders</h3><p>A nudge before each event, so nothing ever sneaks up on you.</p><img class="feat-shot" src="/feat-reminders.webp" {...imageSize("/feat-reminders.webp")} alt="Choosing a reminder: the day before, the morning of, or an hour before" /></div>
-      <div class="feat"><h3>Voice edits</h3><p>Change any event's time out loud. Cleanmail hears you and updates it.</p><div class="voice-shot"><img class="feat-shot" src="/feat-voice.webp" {...imageSize("/feat-voice.webp")} alt="Adding an event by voice, with a live waveform" /><div class="voice-bars" aria-hidden="true">{voiceBars.map((bar, index) => <span style={`left:${bar.left}%;top:${bar.top}%;height:${bar.height}%;background:${bar.color};animation-delay:${-index * 0.13}s`} />)}</div></div></div>
+      <div class="feat"><h3>Voice edits</h3><p>Change any event's time out loud. Cleanmail hears you and updates it.</p><div class="voice-shot"><img class="feat-shot" src="/feat-voice.webp" {...imageSize("/feat-voice.webp")} alt="Adding an event by voice, with a live waveform" /><VoiceBars /></div></div>
       </div>
       <button class="scroll-btn next" type="button" aria-label="Next features">›</button>
     </div>
@@ -158,11 +148,6 @@ const voiceBars = [
   .feat p{font-size:14px;line-height:1.55;color:var(--muted);margin:0 0 16px}
   .feat-shot{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);margin-top:auto}
   .voice-shot{position:relative;margin-top:auto}
-  .voice-bars span{position:absolute;width:3.05%;border-radius:999px;transform-origin:center;animation:voice-pulse 1.1s ease-in-out infinite alternate}
-  .voice-bars span:nth-child(odd){animation-duration:.9s}
-  .voice-bars span:nth-child(3n){animation-duration:1.3s}
-  @keyframes voice-pulse{0%{transform:scaleY(.45)}50%{transform:scaleY(1.05)}100%{transform:scaleY(.7)}}
-  @media (prefers-reduced-motion:reduce){.voice-bars span{animation:none}}
   .scroll-btn{display:none}
   @media (min-width:821px){
     .scroll-btn{display:flex;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);z-index:5;width:44px;height:44px;border-radius:50%;background:var(--purple);border:none;box-shadow:0 6px 18px rgba(74,111,227,.4);color:#fff;font-size:24px;cursor:pointer;line-height:0;padding-bottom:3px}

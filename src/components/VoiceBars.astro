@@ -1,0 +1,45 @@
+---
+// The live waveform drawn over /feat-voice.webp. Positions are percentages of that screenshot.
+const VOICE_BARS = [
+  { left: 26.12, top: 46.17, height: 5.67, color: "#E5C2A1" },
+  { left: 31.72, top: 45.07, height: 7.86, color: "#E6AE72" },
+  { left: 37.32, top: 44.21, height: 9.59, color: "#DC9044" },
+  { left: 42.92, top: 43.23, height: 11.54, color: "#586CAF" },
+  { left: 48.52, top: 42.18, height: 13.65, color: "#526EDB" },
+  { left: 54.11, top: 43.19, height: 11.62, color: "#586CAF" },
+  { left: 59.71, top: 44.29, height: 9.43, color: "#DC9044" },
+  { left: 65.31, top: 45.38, height: 7.24, color: "#E6AE72" },
+  { left: 70.91, top: 46.79, height: 4.42, color: "#E5C2A1" },
+];
+// Speech is uneven: each bar runs the same burst-and-pause pattern at its own length and offset,
+// so the shape never repeats in step the way a single pulse does.
+const BAR_DURATIONS_SECONDS = [2.3, 1.9, 2.6, 2.1, 2.4, 2.0, 2.7, 1.8, 2.2];
+const BAR_DELAY_STEP_SECONDS = 0.37;
+---
+<div class="voice-bars" aria-hidden="true">
+  {VOICE_BARS.map((bar, index) => <span style={`left:${bar.left}%;top:${bar.top}%;height:${bar.height}%;background:${bar.color};animation-duration:${BAR_DURATIONS_SECONDS[index]}s;animation-delay:${-index * BAR_DELAY_STEP_SECONDS}s`} />)}
+</div>
+
+<style>
+  .voice-bars{position:absolute;inset:0;pointer-events:none}
+  .voice-bars span{position:absolute;width:3.05%;border-radius:999px;transform-origin:center;animation:voice-speak 2.2s ease-in-out infinite}
+  @keyframes voice-speak{
+    0%{transform:scaleY(.35)}
+    7%{transform:scaleY(.95)}
+    13%{transform:scaleY(.55)}
+    19%{transform:scaleY(1.1)}
+    25%{transform:scaleY(.4)}
+    31%{transform:scaleY(.8)}
+    37%{transform:scaleY(.3)}
+    46%{transform:scaleY(.25)}
+    52%{transform:scaleY(.7)}
+    58%{transform:scaleY(1)}
+    63%{transform:scaleY(.45)}
+    70%{transform:scaleY(.9)}
+    76%{transform:scaleY(.35)}
+    86%{transform:scaleY(.22)}
+    93%{transform:scaleY(.6)}
+    100%{transform:scaleY(.35)}
+  }
+  @media (prefers-reduced-motion:reduce){.voice-bars span{animation:none}}
+</style>
