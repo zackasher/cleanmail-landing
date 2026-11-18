@@ -18,10 +18,11 @@ export type SwitchingPage = {
 
 export const SWITCHING_FORWARDING_CLEANMAIL = "Not needed. Cleanmail reads the senders you choose in your Gmail.";
 export const SWITCHING_GOOGLE_CLEANMAIL = "Two-way sync of the events Cleanmail adds.";
+export const SWITCHING_OPENER_TAIL = "Cleanmail does the school and activity email.";
 export const SWITCHING_TRADEMARK_LINE = "TimeTree, Cozi and Skylight are trademarks of their owners. Cleanmail is not affiliated with them.";
 
 // Real app screenshots of the test account (invented family), already public on the site.
-const DIGEST_SCREENSHOT: SwitchingScreenshot = { src: "/Digest_Sample.webp", width: 886, height: 1920, alt: "A Cleanmail digest sorted by kid, with school events" };
+const DIGEST_SCREENSHOT: SwitchingScreenshot = { src: "/Digest_Sample.webp", width: 886, height: 1920, alt: "A Cleanmail digest sorted by kid, with school and activity events" };
 const CALENDAR_SCREENSHOT: SwitchingScreenshot = { src: "/feat-weekly-1018.webp", width: 520, height: 1127, alt: "The Cleanmail Events tab in Month view, with event dots on the calendar" };
 
 export const SWITCHING_PAGES: SwitchingPage[] = [
@@ -31,7 +32,7 @@ export const SWITCHING_PAGES: SwitchingPage[] = [
     lede: "Stop forwarding school and activity emails to another app. Cleanmail finds them in your Gmail.",
     doesWell: "Cozi is great for lists, meals and a shared calendar.",
     rows: [
-      { label: "School email to calendar", cleanmail: SWITCHING_FORWARDING_CLEANMAIL, rival: "Forward each email to your AI Event Import address (Cozi Max)." },
+      { label: "School and activity email to calendar", cleanmail: SWITCHING_FORWARDING_CLEANMAIL, rival: "Forward each email to your AI Event Import address (Cozi Max)." },
       { label: "Google Calendar", cleanmail: SWITCHING_GOOGLE_CLEANMAIL, rival: "Shows Google events in Cozi, and Cozi events in Google, read-only." },
     ],
     keepNote: "Events you keep only in Cozi stay in Cozi.",
@@ -47,7 +48,7 @@ export const SWITCHING_PAGES: SwitchingPage[] = [
     lede: "Stop forwarding school and activity emails to another app. Cleanmail finds them in your Gmail.",
     doesWell: "Skylight is great for a family calendar on the wall.",
     rows: [
-      { label: "School email to calendar", cleanmail: SWITCHING_FORWARDING_CLEANMAIL, rival: "Forward each email to your @ourskylight.com address (Calendar Plus)." },
+      { label: "School and activity email to calendar", cleanmail: SWITCHING_FORWARDING_CLEANMAIL, rival: "Forward each email to your @ourskylight.com address (Calendar Plus)." },
       { label: "Google Calendar", cleanmail: SWITCHING_GOOGLE_CLEANMAIL, rival: "Two-way sync." },
     ],
     keepNote: "Events you keep only in Skylight stay in Skylight.",

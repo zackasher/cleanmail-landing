@@ -5,7 +5,7 @@ import CTA from "../../components/CTA.astro";
 import PhoneFrame from "../../components/PhoneFrame.astro";
 import { ICON_PATHS } from "../../data-icons";
 import { PRICE_MONTHLY, TRIAL_DAYS, TRIAL_RENEWAL_LINE, HOUSEHOLD_SIZE, SWITCHING_FACTS_CHECKED_ON } from "../../config";
-import { SWITCHING_PAGES, SWITCHING_TRADEMARK_LINE, type SwitchingPage } from "../../data/switching-from";
+import { SWITCHING_PAGES, SWITCHING_TRADEMARK_LINE, SWITCHING_OPENER_TAIL, type SwitchingPage } from "../../data/switching-from";
 import "../../styles/info-page.css";
 
 export function getStaticPaths() {
@@ -18,9 +18,9 @@ const { page } = Astro.props as { page: SwitchingPage };
 const trialLine = `${TRIAL_DAYS} days free, then ${PRICE_MONTHLY} a month. ${TRIAL_RENEWAL_LINE}`;
 
 const steps = [
-  { icon: ICON_PATHS.email, tone: "", title: "Sign in with Google", body: "Use the Gmail your school emails." },
+  { icon: ICON_PATHS.email, tone: "", title: "Sign in with Google", body: "Use the Gmail your school and activities email." },
   { icon: ICON_PATHS.inboxes, tone: "teal", title: "Pick your senders", body: "School and activities, once." },
-  { icon: ICON_PATHS.sync, tone: "orange", title: "Turn on Sync", body: "Your Google events show next to the school dates." },
+  { icon: ICON_PATHS.sync, tone: "orange", title: "Turn on Sync", body: "Your Google events show next to the school and activity dates." },
   { icon: ICON_PATHS.household, tone: "", title: "Invite your household", body: `Up to ${HOUSEHOLD_SIZE} people, you included.` },
 ];
 const rowIcons = [ICON_PATHS.emailFast, ICON_PATHS.calendarCheck];
@@ -34,7 +34,7 @@ const rowIcons = [ICON_PATHS.emailFast, ICON_PATHS.calendarCheck];
       <div class="sw-hero-text">
         <p class="ip-eyebrow">Switching from {page.name}</p>
         <h1>{page.lede}</h1>
-        <p class="ip-lede">{page.doesWell} Cleanmail does the school email.</p>
+        <p class="ip-lede">{page.doesWell} {SWITCHING_OPENER_TAIL}</p>
         <CTA />
       </div>
       <div class="sw-hero-phone">
