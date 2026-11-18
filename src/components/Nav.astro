@@ -1,8 +1,17 @@
 ---
 import { imageSize } from "../data/image-sizes";
 import { WEB_APP_URL, WEB_APP_SIGN_IN_LABEL } from "../config";
+import { SWITCHING_PAGES } from "../data/switching-from";
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
 const isHome = path === "/";
+const COMPARE_PATH = "/compare";
+const SWITCHING_PATH_PREFIX = "/switching-from/";
+// Later comparison pages (school platforms, email, flyers) join this list when they ship.
+const compareMenu = [
+  { href: COMPARE_PATH, label: "All comparisons" },
+  ...SWITCHING_PAGES.map((page) => ({ href: `${SWITCHING_PATH_PREFIX}${page.slug}`, label: `Switching from ${page.name}` })),
+];
+const compareActive = path === COMPARE_PATH || path.startsWith(SWITCHING_PATH_PREFIX);
 const links = [
   { href: "/how-it-works", label: "How It Works" },
   { href: "/features", label: "Features" },
@@ -19,7 +28,25 @@ const links = [
   </a>
   <div class="navright">
     <div class="seg">
-      {links.map((l) => (
+      {links.map((l) => l.href === COMPARE_PATH ? (
+        <div class="drop">
+          <a href={l.href} class={`chip drop-chip${compareActive ? " active" : ""}`}>{l.label}</a>
+          <button class="drop-btn" type="button" aria-expanded="false" aria-controls="compare-menu" aria-label="Show comparison pages">
+            <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <div class="drop-menu" id="compare-menu">
+            <div class="drop-panel">
+              <a class="drop-all" href={compareMenu[0].href}>{compareMenu[0].label}<span aria-hidden="true">→</span></a>
+              <p class="drop-eyebrow">Switching from</p>
+              {SWITCHING_PAGES.map((page) => (
+                <a class="drop-item" href={`${SWITCHING_PATH_PREFIX}${page.slug}`} aria-label={`Switching from ${page.name}`}>
+                  <span class="drop-dot" aria-hidden="true"></span>{page.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : (
         <a href={l.href} class={`chip${path === l.href ? " active" : ""}`}>{l.label}</a>
       ))}
     </div>
@@ -29,13 +56,24 @@ const links = [
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
-    {links.map((l) => <a href={l.href}>{l.label}</a>)}
+    {links.map((l) => l.href === COMPARE_PATH ? (
+      <>
+        <a href={l.href}>{l.label}</a>
+        <div class="mobile-sub">
+          {compareMenu.slice(1).map((item) => <a href={item.href}>{item.label}</a>)}
+        </div>
+      </>
+    ) : (
+      <a href={l.href}>{l.label}</a>
+    ))}
     <a href={WEB_APP_URL}>{WEB_APP_SIGN_IN_LABEL}</a>
   </div>
 </nav>
 
 <style>
-  nav{position:sticky;top:14px;z-index:50;width:calc(100% - 40px);max-width:2200px;margin:14px auto 0;display:flex;align-items:center;justify-content:space-between;padding:11px 26px;background:linear-gradient(135deg, rgba(255,255,255,.34), rgba(255,255,255,.20));backdrop-filter:blur(8px) saturate(1.2);-webkit-backdrop-filter:blur(8px) saturate(1.2);;-webkit-backdrop-filter:blur(22px) saturate(1.7);border:1px solid rgba(255,255,255,.55);border-radius:22px;box-shadow:0 12px 34px rgba(27,34,54,.10), inset 0 1px 0 rgba(255,255,255,.7)}
+  /* The glass lives on ::before, not on nav itself: a backdrop-filter on nav would stop the Compare panel's own blur from reaching the page. */
+  nav{position:sticky;top:14px;z-index:50;width:calc(100% - 40px);max-width:2200px;margin:14px auto 0;display:flex;align-items:center;justify-content:space-between;padding:11px 26px;border:1px solid rgba(255,255,255,.55);border-radius:22px;box-shadow:0 12px 34px rgba(27,34,54,.10), inset 0 1px 0 rgba(255,255,255,.7)}
+  nav::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:linear-gradient(135deg, rgba(255,255,255,.34), rgba(255,255,255,.20));backdrop-filter:blur(8px) saturate(1.2)}
   nav{transition:width .55s cubic-bezier(.2,.7,.2,1)}
   nav.compact{width:66%}
   .wordmark{position:relative;z-index:2;display:inline-flex;align-items:center;text-decoration:none}
@@ -56,18 +94,65 @@ const links = [
   .mobile-menu.open{display:block}
   .mobile-menu a{display:block;padding:10px 14px;font-size:15px;color:var(--ink);text-decoration:none;border-radius:9px}
   .mobile-menu a:hover{background:var(--card);color:var(--purple)}
+  .drop{position:relative;display:flex;align-items:center}
+  .drop-chip{padding-right:32px}
+  .drop-btn{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:24px;height:24px;display:flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:50%;background:transparent;color:inherit;cursor:pointer}
+  .drop-btn svg{width:12px;height:12px;transition:transform .15s}
+  .drop-chip.active + .drop-btn{color:#fff}
+  .drop-menu{display:none;position:absolute;top:100%;left:0;padding-top:8px;min-width:230px;z-index:60}
+  .drop-panel{position:relative;overflow:hidden;background:linear-gradient(150deg, rgba(255,255,255,.62), rgba(240,244,255,.48));backdrop-filter:blur(18px) saturate(1.6);border:1px solid rgba(255,255,255,.75);border-radius:20px;box-shadow:0 18px 44px rgba(27,34,54,.16), inset 0 1px 0 rgba(255,255,255,.9);padding:10px}
+  .drop-panel::before{content:"";position:absolute;inset:0 0 auto 0;height:45%;background:linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,0));pointer-events:none}
+  .drop-panel a{position:relative;display:flex;align-items:center;gap:10px;padding:10px 14px;font-size:14px;color:var(--ink);text-decoration:none;border-radius:999px;white-space:nowrap;transition:background .15s,color .15s,transform .15s}
+  .drop-panel a:hover,.drop-panel a:focus-visible{background:rgba(74,111,227,.10);color:var(--purple);transform:translateX(2px)}
+  .drop-all{justify-content:space-between;font-weight:500;color:var(--navy)}
+  .drop-all span{color:var(--purple);transition:transform .15s}
+  .drop-all:hover span{transform:translateX(3px)}
+  .drop-eyebrow{position:relative;margin:8px 14px 4px;padding-top:10px;border-top:1px solid rgba(74,111,227,.14);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .drop-dot{width:8px;height:8px;border-radius:50%;background:var(--purple);box-shadow:0 0 0 3px rgba(74,111,227,.14)}
+  .drop-menu .drop-panel{animation:dropIn .16s ease-out}
+  @keyframes dropIn{from{opacity:0;transform:translateY(-4px) scale(.98)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.drop-menu .drop-panel{animation:none}.drop-panel a{transition:none}}
+  .drop:hover .drop-menu,.drop.open .drop-menu{display:block}
+  .drop:hover .drop-btn svg,.drop.open .drop-btn svg{transform:rotate(180deg)}
+  .mobile-sub{margin:-4px 0 4px 14px;border-left:2px solid var(--line);padding-left:4px}
+  .mobile-sub a{font-size:14px;padding:8px 12px;color:var(--muted)}
   @media(max-width:940px){.seg{display:none}.signin{display:none}.burger{display:flex}}
 </style>
 
 <script>
+  function initCompareMenu() {
+    const drop = document.querySelector<HTMLElement>(".drop");
+    const button = drop?.querySelector<HTMLButtonElement>(".drop-btn");
+    if (!drop || !button || button.dataset.bound) return;
+    button.dataset.bound = "1";
+    const setOpen = (open: boolean) => {
+      drop.classList.toggle("open", open);
+      button.setAttribute("aria-expanded", String(open));
+    };
+    button.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setOpen(!drop.classList.contains("open"));
+    });
+    drop.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape") return;
+      setOpen(false);
+      button.focus();
+    });
+    drop.addEventListener("focusout", (event) => {
+      if (!drop.contains(event.relatedTarget as Node | null)) setOpen(false);
+    });
+    document.addEventListener("click", () => setOpen(false));
+  }
   function syncNav() {
     const nav = document.querySelector("nav");
     if (!nav) return;
     const p = location.pathname.replace(/\/$/, "") || "/";
     nav.classList.toggle("compact", p !== "/");
-    nav.querySelectorAll(".chip").forEach((c) =>
-      c.classList.toggle("active", c.getAttribute("href") === p)
-    );
+    nav.querySelectorAll(".chip").forEach((c) => {
+      const href = c.getAttribute("href");
+      const compareActive = href === "/compare" && p.startsWith("/switching-from/");
+      c.classList.toggle("active", href === p || compareActive);
+    });
   }
   function initBurger() {
     const btn = document.getElementById("menu-btn");
@@ -82,9 +167,11 @@ const links = [
     document.addEventListener("click", () => menu.classList.remove("open"));
   }
   initBurger();
+  initCompareMenu();
   syncNav();
   document.addEventListener("astro:page-load", () => {
     initBurger();
+    initCompareMenu();
     syncNav();
   });
 </script>
