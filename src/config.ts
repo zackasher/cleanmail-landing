@@ -30,6 +30,8 @@ export const INVITE_SENDER_NAME_PARAM = "n";
 export const INVITE_SHARE_IMAGE = "/og/invite.png";
 export const INVITE_SHARE_IMAGE_ALT = "A friend invited you to Cleanmail: get the schedule out of your head. 14 days free on iPhone and Android.";
 export const STORE_BADGE_LABEL = "Download on the";
+// The Switching-from pages carry their own date: re-dating COMPETITOR_FACTS_CHECKED_ON would also re-date /compare, whose facts were not re-read.
+export const SWITCHING_FACTS_CHECKED_ON = "November 18, 2026";
 export const MAPLE_FACTS_CHECKED_ON = "October 9, 2026";
 export const MAPLE_SHUTDOWN_DATE = "December 31, 2026";
 export const YOUTUBE_VIDEO_URL = "https://www.youtube.com/watch?v=WnpRfSZfQ8o";

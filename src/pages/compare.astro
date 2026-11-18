@@ -94,6 +94,7 @@ const faqSchema = {
 };
 import { SCHOOL_EMAIL_APPS_PATH } from "../config";
 import { SCHOOL_EMAIL_APPS_LINK_LEAD, SCHOOL_EMAIL_APPS_LINK_LABEL } from "../data/school-email-apps-copy";
+import { SWITCHING_PAGES } from "../data/switching-from";
 ---
 <BaseLayout
   title={pageTitle("Cleanmail vs Skylight vs Cozi")}
@@ -195,6 +196,7 @@ import { SCHOOL_EMAIL_APPS_LINK_LEAD, SCHOOL_EMAIL_APPS_LINK_LABEL } from "../da
         <a href="/family-calendar-app">Everything in the app</a>
         <a href="/maple-alternative">Leaving Maple?</a>
       </div>
+      <p class="ip-sub sw-from">Switching from {SWITCHING_PAGES.map((page, index) => (<>{index > 0 && (index === SWITCHING_PAGES.length - 1 ? " or " : ", ")}<a href={`/switching-from/${page.slug}`}>{page.name}</a></>))}?</p>
     </div>
 
     <div class="ip-final">
