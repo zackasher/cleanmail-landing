@@ -19,7 +19,7 @@ So I did what every parent does. I tried to turn the email into a Google Calenda
 
 **Here's the quick answer.** To turn an email into a Google Calendar event in Gmail, open the email on a computer, click **More** above the message, and choose **Create event**. Google Calendar opens with the email's subject and text filled in. Fix the date and time, check the guest list, and save. On a phone, the fastest move is adding the event by hand in the Google Calendar app.
 
-That works great for one email. School email is rarely one email. Below are all the ways to do it, why Gmail doesn't do it for you with school stuff, and how to stop typing dates altogether.
+That works great for one email. School and activity email is rarely one email. Below are all the ways to do it, why Gmail doesn't do it for you with school stuff, and how to stop typing dates altogether.
 
 ## How do I turn an email into a Google Calendar event on a computer?
 
@@ -37,7 +37,7 @@ Dad tip: paste the one sentence that matters into the event description, like "P
 
 ## How do I add an email to Google Calendar from my phone?
 
-Most school email gets read on a phone, in a parking lot, with a kid asking for a snack. Google's help page for **Create event** only gives computer steps, so here's what works on the go.
+Most school and activity email gets read on a phone, in a parking lot, with a kid asking for a snack. Google's help page for **Create event** only gives computer steps, so here's what works on the go.
 
 - **Add it by hand.** Open the Google Calendar app on your iPhone or Android, tap **Create**, then **Event**. Type a short title, set the date, and save. Thirty seconds, no clicking around in Gmail.
 - **Use Gemini's "Add to calendar" button, if you have it.** Google has added an "Add to calendar" button to Gmail that spots dates in an email and adds the event for you, on the web and in the Gmail app. It's limited to certain paid Google plans and to emails in English, so check whether it shows up for your account. If an email lists several events, it can offer to add them all.

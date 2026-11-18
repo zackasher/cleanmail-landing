@@ -145,7 +145,7 @@ Everything above assumes the event is already in Google Calendar. For most paren
 
 ### Tools that turn email into calendar events
 
-A handful of products now work on this part, turning school email into calendar events automatically. Judge any of them against the same questions you just read: who can see details, who can make changes, and what happens when access is removed.
+A handful of products now work on this part, turning school and activity email into calendar events automatically. Judge any of them against the same questions you just read: who can see details, who can make changes, and what happens when access is removed.
 
 ### Where Cleanmail fits, and where it doesn't
 

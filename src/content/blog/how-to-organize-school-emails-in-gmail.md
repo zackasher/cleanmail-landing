@@ -16,13 +16,13 @@ faqs:
 
 It's 9:40 on a Tuesday night. You're brushing your teeth when a thought arrives uninvited: wasn't there something about pajama day? You open Gmail, scroll past a coupon, a shipping update, two newsletters, and a PTA reminder, and find it. Pajama day was today. Your kid wore jeans. Your kid will mention this at Thanksgiving for the next eleven years.
 
-If you want to know how to organize school emails in Gmail, here's the short answer: give each kid a label, set up filters so school senders get that label automatically, and spend ten minutes once a week pulling the dates onto your calendar. Gmail already has every tool you need. It just won't set them up for you.
+If you want to know how to organize school and activity emails in Gmail, here's the short answer: give each kid a label, set up filters so school and activity senders get that label automatically, and spend ten minutes once a week pulling the dates onto your calendar. Gmail already has every tool you need. It just won't set them up for you.
 
 I'm a dad of two. At one point I had email coming from nine different schools and apps, and three calendars that never agreed with each other. Here's the system I used before I got fed up and built something.
 
 ## Why do school emails get lost in Gmail?
 
-School email is hard for three reasons. It comes from a lot of senders: the district, the principal, each teacher, the PTA, the coach, the camp, plus the notification emails from whatever school apps your district uses. The important part is often buried in paragraph four of a newsletter. And the ask usually has a date attached, which means reading it isn't enough. You still have to get it onto a calendar.
+School and activity email is hard for three reasons. It comes from a lot of senders: the district, the principal, each teacher, the PTA, the coach, the camp, plus the notification emails from whatever school apps your district uses. The important part is often buried in paragraph four of a newsletter. And the ask usually has a date attached, which means reading it isn't enough. You still have to get it onto a calendar.
 
 So the goal isn't a tidy inbox. The goal is that every date and every ask ends up somewhere you'll actually see it.
 
@@ -57,17 +57,17 @@ Resist the urge to make a label for every activity on day one. Start with one la
 
 ### Step 3: Set up Gmail filters for school emails
 
-This is the step that does the work. A filter tells Gmail, "every time an email matches this, do that," so new school email lands already sorted.
+This is the step that does the work. A filter tells Gmail, "every time an email matches this, do that," so new school and activity email lands already sorted.
 
 On a computer:
 
 1. Click the search options icon at the right end of the Gmail search bar.
 2. In the From field, paste one or more sender addresses from your list. Separate several with OR.
 3. Click Create filter.
-4. Choose Apply the label and pick the kid's label. Tick Star it too if you want school mail to stand out.
+4. Choose Apply the label and pick the kid's label. Tick Star it too if you want school and activity mail to stand out.
 5. Click Create filter again to save.
 
-Shortcut: open any email from a school sender, click the three dots, and choose Filter messages like these. Gmail fills in the sender for you.
+Shortcut: open any email from a school or activity sender, click the three dots, and choose Filter messages like these. Gmail fills in the sender for you.
 
 Two things to know. Set filters up on a computer, since Google's filter instructions are for Gmail on the web, not the iPhone app. And once you have a good set, Gmail lets you export your filters as a file, which is a nice backup if you ever switch accounts.
 
@@ -77,8 +77,8 @@ Here's where most Gmail systems quietly fail. The email is labeled, but nobody o
 
 A few habits that help:
 
-- **Skip archiving at first.** Let labeled school mail stay in your inbox too, so you still see it arrive. Once you trust your filters, you can decide whether to move it out.
-- **Watch your notification level.** In the Gmail app, go to Menu, then Settings, then Email notifications. If you've chosen High priority only, check that school mail is still reaching you.
+- **Skip archiving at first.** Let labeled school and activity mail stay in your inbox too, so you still see it arrive. Once you trust your filters, you can decide whether to move it out.
+- **Watch your notification level.** In the Gmail app, go to Menu, then Settings, then Email notifications. If you've chosen High priority only, check that school and activity mail is still reaching you.
 - **Check the label on purpose.** Tap Kids/Maya once a day. It takes less time than finding your car keys.
 
 ### Step 5: Do a 10-minute weekly sweep for dates

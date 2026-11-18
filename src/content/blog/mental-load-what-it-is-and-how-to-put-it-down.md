@@ -26,7 +26,7 @@ Mental load is the invisible work of noticing what needs to happen, deciding how
 - Sociologist Allison Daminger describes four stages of this thinking work: anticipate, identify options, decide, and monitor. The doing is a separate job.
 - "Just ask me for help" fails because it hands off the doing and leaves the noticing, which is the real work, with one person.
 - Sharing it means handing over whole areas, start to finish, and agreeing that mistakes belong to the new owner.
-- One shared place for the schedule, one that fills in from school email, takes the biggest single piece off the person carrying it.
+- One shared place for the schedule, one that fills in from school and activity email, takes the biggest single piece off the person carrying it.
 
 ## What is mental load in a relationship?
 
@@ -44,7 +44,7 @@ Sociologist Allison Daminger studied how couples split this work (published in t
 
 Chores are visible and finite: pack the lunch, drive to practice, sign the form. Mental load is the invisible work that makes those chores happen: spotting the picture day email, deciding who handles it, remembering the deadline, checking it got done. The chore takes ten minutes. The noticing runs in the background for weeks.
 
-School email is a mental-load problem, not a typing problem. Copying dates into the calendar is the visible tip. The real cost is being the only person who knows the schedule exists.
+School and activity email is a mental-load problem, not a typing problem. Copying dates into the calendar is the visible tip. The real cost is being the only person who knows the schedule exists.
 
 ### Why "just ask me for help" misses the point
 
@@ -84,7 +84,7 @@ The mechanism is simple: whoever reads the email becomes the schedule-keeper. On
 
 Tiredness that rest doesn't fix, growing resentment about tasks you used to handle without thinking, and a sense that you're failing at a job you never signed up for. The World Health Organization describes burnout in workplace terms, as chronic stress that hasn't been managed, and the same pattern shows up in the unpaid job of keeping the family schedule.
 
-For school-heavy households the signs are specific: dreading the next school email, a flash of irritation when someone asks "did you see that email?", lying awake running through tomorrow's pickups and forms. That's the signal to get the schedule out of your head, not to push harder.
+For school-heavy households the signs are specific: dreading the next school and activity email, a flash of irritation when someone asks "did you see that email?", lying awake running through tomorrow's pickups and forms. That's the signal to get the schedule out of your head, not to push harder.
 
 ## Are there other words for mental load?
 
@@ -110,4 +110,4 @@ Look for four things: it pulls dates out of school and activity email, it sorts 
 
 Cleanmail does exactly that. You pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest sorted by kid that summarizes only those senders, and puts the dates on a calendar everyone at home shares, with Google Calendar sync. Up to 4 people in a household join free, so your partner sees the same schedule you do without you passing it along. It works with Gmail today, on iPhone and Android.
 
-If school email is light in your house, a shared calendar you fill in yourself may be all you need. The point is that the schedule lives somewhere other than one person's head.
+If school and activity email is light in your house, a shared calendar you fill in yourself may be all you need. The point is that the schedule lives somewhere other than one person's head.

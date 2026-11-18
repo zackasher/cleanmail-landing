@@ -30,7 +30,7 @@ The best app for a shared family calendar depends on your devices. All-iPhone ho
 
 It comes down to two things: which phones are in your house, and where your time actually goes. If everyone uses iPhone, the iCloud calendar is free and already installed. If anyone uses Android, Google Calendar is the one app that works the same for everybody.
 
-Then be honest about the bottleneck. If the problem is getting your partner and kids to look at the calendar, any of these works. If the problem is that one person reads every school email and types the dates in, no calendar app fixes that by itself.
+Then be honest about the bottleneck. If the problem is getting your partner and kids to look at the calendar, any of these works. If the problem is that one person reads every school and activity email and types the dates in, no calendar app fixes that by itself.
 
 ## Which app is best when everyone uses iPhone?
 
@@ -46,7 +46,7 @@ Apps like Cozi earn their place when you want more than dates: shared grocery an
 
 ## Which calendar works best for households with Android and iPhone?
 
-Google Calendar. It runs natively on Android, has a solid iPhone app, and sits right next to Gmail, where most school email already lands. If both parents are on Android, it is the easiest shared calendar to set up.
+Google Calendar. It runs natively on Android, has a solid iPhone app, and sits right next to Gmail, where most school and activity email already lands. If both parents are on Android, it is the easiest shared calendar to set up.
 
 ### The mixed-household problem: two calendar systems, one schedule
 

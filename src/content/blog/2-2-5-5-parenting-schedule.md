@@ -26,7 +26,7 @@ A 2-2-5-5 parenting schedule splits custody in a repeating two-week cycle: two d
 - 2-2-5-5 and 5-2-2-5 are the same rotation counted from a different day.
 - The longest stretch away from either parent is five days, with four handoffs every two weeks.
 - A 2-2-3 rotation keeps every stretch to three days or less, at the cost of more handoffs.
-- Both parents have school days every week, so school emails and event dates must reach both households.
+- Both parents have school days every week, so school and activity emails and event dates must reach both households.
 
 ## What is a 2-2-5-5 parenting schedule?
 
@@ -96,7 +96,7 @@ Each parent always has the same two weekdays, which makes work travel, activitie
 
 ### The downside: a five-day stretch and midweek handoffs
 
-Each parent goes five days without the kids every two weeks, which can be hard on young children. There are four handoffs every two weeks, and the midweek ones mean backpacks, permission slips and homework moving between houses. Both parents have school days every week, so both need the school emails, not just the schedule-keeper.
+Each parent goes five days without the kids every two weeks, which can be hard on young children. There are four handoffs every two weeks, and the midweek ones mean backpacks, permission slips and homework moving between houses. Both parents have school days every week, so both need the school and activity emails, not just the schedule-keeper.
 
 Most parenting plans add rules for holidays, birthdays and trips that take priority over the rotation. If yours does not, add them before you start.
 
@@ -104,7 +104,7 @@ Most parenting plans add rules for holidays, birthdays and trips that take prior
 
 ### The copy-by-hand problem before the week starts
 
-On a 2-2-5-5, school email lands in one inbox while the kids are at the other house part of every week. The schedule-keeper copies dates into a calendar by hand, and the co-parent finds out about picture day when it is already over. Deadlines arrive scattered across separate emails, which is why hand-copying breaks down.
+On a 2-2-5-5, school and activity email lands in one inbox while the kids are at the other house part of every week. The schedule-keeper copies dates into a calendar by hand, and the co-parent finds out about picture day when it is already over. Deadlines arrive scattered across separate emails, which is why hand-copying breaks down.
 
 ### Getting dates out of email and onto a shared calendar
 
@@ -118,4 +118,4 @@ Pick a fixed start date and write down which weekdays belong to each parent and 
 
 ### Handling holidays, breaks and trade requests
 
-Decide before you start whether holidays override the rotation or alternate by year. Spring break and winter break usually get their own rules. For one-off swaps, keep it simple: a written request, a written yes, and the calendar updated by whoever asked. If school emails only reach one of you, forward the ones with dates so the shared calendar stays true for both households.
+Decide before you start whether holidays override the rotation or alternate by year. Spring break and winter break usually get their own rules. For one-off swaps, keep it simple: a written request, a written yes, and the calendar updated by whoever asked. If school and activity emails only reach one of you, forward the ones with dates so the shared calendar stays true for both households.

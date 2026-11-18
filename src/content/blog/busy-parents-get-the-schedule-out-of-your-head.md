@@ -22,7 +22,7 @@ Busy parents can cut the invisible mental load by moving the family schedule out
 
 ## Key takeaways
 
-- Invisible mental load is the unpaid work of remembering school dates, permission slips and logistics, and it usually lands on one parent by default.
+- Invisible mental load is the unpaid work of remembering school and activity dates, permission slips and logistics, and it usually lands on one parent by default.
 - A 10-question self-check turns "I do all the scheduling" into a score, so the conversation with your partner is concrete, not accusatory.
 - A shared Google Calendar takes about ten minutes to set up. A partner on iCloud or Outlook needs a Google Account, which can use their existing address.
 - A shared calendar solves who can see the dates, not how they get there. Email-to-calendar tools like Cleanmail take over the Sunday-night copying.
@@ -30,7 +30,7 @@ Busy parents can cut the invisible mental load by moving the family schedule out
 
 ## What is invisible mental load and how do busy parents recognize it?
 
-Invisible mental load is the unpaid work of remembering. You hold the picture day date, the field trip permission slip, the practice carpool and which kid needs sneakers on Thursday, all in your head. Nobody assigned it to you. It arrived with the school email account and stayed.
+Invisible mental load is the unpaid work of remembering. You hold the picture day date, the field trip permission slip, the practice carpool and which kid needs sneakers on Thursday, all in your head. Nobody assigned it to you. It arrived with the school and activity email account and stayed.
 
 ### The signals: you are the household's search engine
 
@@ -49,12 +49,12 @@ You cannot fix a load you have never measured. A five-minute self-check turns "I
 Answer honestly, one point per yes:
 
 1. Do you know, right now, where each kid needs to be this weekend?
-2. Did you copy dates from school email into a calendar by hand this month?
+2. Did you copy dates from school and activity email into a calendar by hand this month?
 3. Are you the one who answers "did you see that email?"
 4. Do you track permission slips for every kid?
 5. Could your partner name picture day without checking? (Score a point if the answer is no.)
 6. Do you sort messages by kid in your head?
-7. Do you check school email after 9 pm?
+7. Do you check school and activity email after 9 pm?
 8. Have you skipped your own appointment to manage a school deadline?
 9. Do you remind your partner of events more than once?
 10. Do you feel responsible when something is missed, even if your partner was "on" that week?
@@ -81,7 +81,7 @@ In the calendar's settings, set default notifications to email plus a pop-up, ti
 
 ### Where the manual setup breaks down
 
-The empty calendar works only if someone fills it. That someone is usually you, copying dates from school emails by hand every Sunday night. The steps above decide who can see the dates, not how they get there. If the copying is the part you dread, [Cleanmail](/) turns school email into a digest sorted by kid and puts the dates on the shared calendar automatically. Check the dates against the emails for the first few weeks.
+The empty calendar works only if someone fills it. That someone is usually you, copying dates from school and activity emails by hand every Sunday night. The steps above decide who can see the dates, not how they get there. If the copying is the part you dread, [Cleanmail](/) turns school and activity email into a digest sorted by kid and puts the dates on the shared calendar automatically. Check the dates against the emails for the first few weeks.
 
 ## Which family calendar app features actually save time for busy parents?
 
@@ -91,7 +91,7 @@ Score any app you're considering against these five:
 
 1. **Shared by default.** Both parents and any older kids see the same events without one person forwarding anything.
 2. **Sorted by kid.** You can see one child's events, because "the one about practice" is useless when it could belong to either kid.
-3. **Email handling.** School dates arrive by email. An app that turns those emails into calendar events removes the Sunday-night copying.
+3. **Email handling.** School and activity dates arrive by email. An app that turns those emails into calendar events removes the Sunday-night copying.
 4. **Reminders that reach people.** If your partner ignores app alerts but reads email, the reminder has to match how they actually behave.
 5. **A price you can justify monthly.** Small monthly fees add up fast across school apps.
 
@@ -111,7 +111,7 @@ A common pact is taking turns on deadline duty. It tends to fall apart within we
 
 ## What makes a good gift for busy parents who already have everything?
 
-The best gift for the schedule-keeper in your house is taking a recurring task off their plate, not another object. If Sunday nights go to copying school dates by hand, anything that takes over that job beats a candle or a gadget.
+The best gift for the schedule-keeper in your house is taking a recurring task off their plate, not another object. If Sunday nights go to copying school and activity dates by hand, anything that takes over that job beats a candle or a gadget.
 
 ### Gifts that remove a recurring task
 
@@ -129,7 +129,7 @@ An advent calendar for parents works when it trades a daily surprise for a daily
 
 ### Day-by-day setup
 
-Day 1: Pick the Gmail account that gets the school email. Days 2 and 3: Build one shared Google Calendar named something plain like "Kids" and invite your partner with edit rights. Day 4: Connect Cleanmail and pick the senders who email you about school and activities. Day 5: Delete duplicate events and add your kids' names so events sort by kid. Day 6: Add anything still in your head, like the field trip form due Friday. Day 7: Read your digest and check the week's dates.
+Day 1: Pick the Gmail account that gets the school and activity email. Days 2 and 3: Build one shared Google Calendar named something plain like "Kids" and invite your partner with edit rights. Day 4: Connect Cleanmail and pick the senders who email you about school and activities. Day 5: Delete duplicate events and add your kids' names so events sort by kid. Day 6: Add anything still in your head, like the field trip form due Friday. Day 7: Read your digest and check the week's dates.
 
 ### How to tell it is working by next picture day
 

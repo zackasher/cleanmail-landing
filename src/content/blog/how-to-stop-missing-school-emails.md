@@ -16,13 +16,13 @@ faqs:
 
 Every parent has had the moment. Your kid walks out of school on the one day they were supposed to wear a costume, bring a dollar, or come home early, and the email about it is sitting in your inbox, unread, from three days ago.
 
-It isn't a discipline problem. School email is built to be missed. It comes from a dozen senders, it arrives at random hours, and the one line that matters ("bring a white t-shirt Friday") is usually buried in the fourth paragraph of a newsletter.
+It isn't a discipline problem. School and activity email is built to be missed. It comes from a dozen senders, it arrives at random hours, and the one line that matters ("bring a white t-shirt Friday") is usually buried in the fourth paragraph of a newsletter.
 
 Here are five things that actually help.
 
 ## 1. Know who your senders are
 
-Most families get school email from more places than they realize: the district, the school office, each teacher, the PTA, the after-school program, every coach, and apps like ParentSquare or Remind that send email notifications.
+Most families get school and activity email from more places than they realize: the district, the school office, each teacher, the PTA, the after-school program, every coach, and apps like ParentSquare or Remind that send email notifications.
 
 Spend ten minutes searching your inbox for each kid's school, teacher, and team names, and write down every sender you find. You can't keep up with a list you've never seen.
 
@@ -32,11 +32,11 @@ ParentSquare, Remind, TeamSnap, and most class apps can send you an email for ev
 
 ## 3. Give school mail its own label
 
-In Gmail, open one email from a school sender, click the three dots, and choose **Filter messages like these**. Add a label like "School" and check **Also apply filter to matching conversations**. Repeat for each sender. Now everything school-related is one click away instead of mixed in with receipts and promotions.
+In Gmail, open one email from a school or activity sender, click the three dots, and choose **Filter messages like these**. Add a label like "School" and check **Also apply filter to matching conversations**. Repeat for each sender. Now everything school-related is one click away instead of mixed in with receipts and promotions.
 
 ## 4. Put dates on a calendar the moment you see them
 
-The email itself isn't the problem. The problem is the date inside it that never makes it onto the calendar. Every time you read a school email with a date in it, add it to the family calendar right then, even if it feels small. Picture day is small until it isn't.
+The email itself isn't the problem. The problem is the date inside it that never makes it onto the calendar. Every time you read a school and activity email with a date in it, add it to the family calendar right then, even if it feels small. Picture day is small until it isn't.
 
 If your household shares a Google Calendar, add it there so everyone sees it.
 

@@ -86,7 +86,7 @@ Signature: ______________________ Date: ______________________
 
 ### Line-by-line: why each clause is there
 
-The trip details section fixes the most common failure: forms that come back signed while the date never makes it onto anyone's calendar, so the parent still has to dig the details out of a school email later. Writing the return time on the form means whoever is on pickup duty knows it without asking.
+The trip details section fixes the most common failure: forms that come back signed while the date never makes it onto anyone's calendar, so the parent still has to dig the details out of a school and activity email later. Writing the return time on the form means whoever is on pickup duty knows it without asking.
 
 The medical authorization block matters because a form that only says "I give permission" gives staff nothing to act on if your child is hurt and you cannot be reached. Naming medications and allergies on the same page means the chaperone holding the clipboard has what they need in the moment.
 

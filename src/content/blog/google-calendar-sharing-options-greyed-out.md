@@ -18,7 +18,7 @@ faqs:
     a: "Partly. Sharing with specific people needs a Google Account, but that account can use any email address, including iCloud or Outlook. A person without a Google Account can only view a calendar you make public, through its public link or public address, and cannot edit it."
 ---
 
-Google Calendar sharing options are greyed out because you don't own the calendar, the calendar is subscribed rather than created by you, a Workspace admin has blocked sharing, or you're in the phone app, which has no sharing settings. Each cause has a specific fix, and which option is greyed out tells you which one applies. If the calendar can't be shared at all, there's still a way to get school dates in front of both of you.
+Google Calendar sharing options are greyed out because you don't own the calendar, the calendar is subscribed rather than created by you, a Workspace admin has blocked sharing, or you're in the phone app, which has no sharing settings. Each cause has a specific fix, and which option is greyed out tells you which one applies. If the calendar can't be shared at all, there's still a way to get school and activity dates in front of both of you.
 
 ## Key takeaways
 
@@ -123,4 +123,4 @@ Create your own calendar, copy the school events you care about into it, and sha
 
 ### Turning parent email into a shared household calendar instead
 
-The dates usually live in school email before they live anywhere else, so the inbox is the better starting point. Cleanmail sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. Your spouse sees the schedule without touching your inbox. It's $6.99 a month, and up to 4 people at home join free.
+The dates usually live in school and activity email before they live anywhere else, so the inbox is the better starting point. Cleanmail sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. Your spouse sees the schedule without touching your inbox. It's $6.99 a month, and up to 4 people at home join free.

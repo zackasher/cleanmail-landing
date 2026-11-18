@@ -15,7 +15,7 @@ faqs:
     a: "A family calendar app gives everyone one place to look. An app like Cleanmail also fills it in: it reads the school, sports and activity senders a parent picks in Gmail, sums them up by kid, and puts the dates on a calendar the household shares."
 ---
 
-It's Sunday night. The kids are finally asleep, and you're sitting with your laptop open, copying dates out of school emails into the family calendar. Picture day. The field trip form. Practice moved to Thursday. You've done this every week since September, and you'll do it again next week.
+It's Sunday night. The kids are finally asleep, and you're sitting with your laptop open, copying dates out of school and activity emails into the family calendar. Picture day. The field trip form. Practice moved to Thursday. You've done this every week since September, and you'll do it again next week.
 
 **Is a family calendar app worth it?** It depends on where your time actually goes. If the hard part is everyone seeing the same schedule, a free shared calendar solves that. If the hard part is filling the calendar in, reading every school, sports and activity email and typing the dates in by hand, then a paid app that does that part for you is usually worth it, because it gives you back the hours, not just a nicer place to look.
 
@@ -43,7 +43,7 @@ The catch with a shared calendar is the input. A shared calendar is only as curr
 
 ### 3. A calendar that fills itself from school email
 
-A calendar that fills itself from school email is the newest option. Instead of you reading every email and typing in the dates, an app reads the senders you choose and puts the dates on the calendar for you.
+A calendar that fills itself from school and activity email is the newest option. Instead of you reading every email and typing in the dates, an app reads the senders you choose and puts the dates on the calendar for you.
 
 **Good fit if:** you have two or more kids, several schools or teams, and more email than anyone has time to read.
 
@@ -61,7 +61,7 @@ If you answered "a lot," "always me," and "it stung," you're the family these ap
 
 ## What should an app that reads school email do?
 
-If you try an app that reads school email, check these before you hand over anything:
+If you try an app that reads school and activity email, check these before you hand over anything:
 
 - **Its digest covers only the senders you pick.** You should choose the school, the coach and the activity, not hand over your whole inbox.
 - **The app is read-only.** It shouldn't send, delete or change your email.

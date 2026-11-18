@@ -15,7 +15,7 @@ faqs:
     a: "Yes. Cleanmail is an app for iPhone and Android that connects to Gmail read-only, sums up mail from the school, camp, and sports senders you pick in a digest sorted by kid, and puts the dates it finds on your Google Calendar."
 ---
 
-It's Sunday night. I'm on the couch with my phone, scrolling through the week's school mail. The newsletter has picture day buried in paragraph four. The soccer coach moved Thursday's practice. The PTA sent a flyer as a PDF, and somewhere inside it is a date I definitely need.
+It's Sunday night. I'm on the couch with my phone, scrolling through the week's school and activity mail. The newsletter has picture day buried in paragraph four. The soccer coach moved Thursday's practice. The PTA sent a flyer as a PDF, and somewhere inside it is a date I definitely need.
 
 I open Google Calendar, then Gmail, then Google Calendar again. My thumb is tired and I have learned nothing about picture day.
 
@@ -29,7 +29,7 @@ A lot of parents assume Gmail already does this. It does, sort of, for a narrow 
 
 A school newsletter is none of those. Neither is "Hi families, quick reminder that Friday is crazy hat day!" So the stuff that actually runs a family week stays in your inbox until a human moves it. Usually the same human, every week.
 
-There are really two kinds of school dates:
+There are really two kinds of school and activity dates:
 
 1. **Calendar dates.** Breaks, holidays, conferences, the last day of school. These usually live on the school or district calendar.
 2. **Email dates.** Everything teachers, coaches, camps, and the PTA send during the week. These are the ones that sneak up on you.
@@ -76,13 +76,13 @@ Getting the date on the calendar is half the job. A few small habits make the ev
 - **Add a reminder the night before** for anything that needs stuff: a form, a costume, cash for the bake sale, an absurd hat.
 - **Share the calendar with your household.** If the dates only live in your head and your phone, you are the only one who knows. Share the calendar so every household member sees the same week.
 
-If school email is piling up before you even get to the dates, I wrote up a simple label-and-weekly-sweep system in [how to stop missing school emails](/blog/how-to-stop-missing-school-emails).
+If school and activity email is piling up before you even get to the dates, I wrote up a simple label-and-weekly-sweep system in [how to stop missing school emails](/blog/how-to-stop-missing-school-emails).
 
 Those four steps are the whole free system. It works. It's also a second part-time job, which is roughly where I landed before I built something else.
 
 ## Can school events go on Google Calendar automatically, straight from email?
 
-I built Cleanmail for exactly this part: a way to turn school emails into calendar events without touching each one. I'm a dad of two, and I was tired of being the family's human copy-and-paste machine.
+I built Cleanmail for exactly this part: a way to turn school and activity emails into calendar events without touching each one. I'm a dad of two, and I was tired of being the family's human copy-and-paste machine.
 
 Cleanmail is an app for iPhone and Android that connects to your Gmail read-only. You pick the senders that matter for each kid and activity: the school, the coach, camp, even the ParentSquare or Remind notification emails your school sends. Your digest only covers the senders you pick. Cleanmail sums up what matters in a digest sorted by kid, and it puts the dates it finds on your Google Calendar. No forwarding, no retyping, no Sunday night thumb workout.
 
