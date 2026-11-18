@@ -5,6 +5,7 @@ import BrandTagline from "./BrandTagline.astro";
 
 const { hideAppLink = false } = Astro.props;
 import { SWITCHING_PAGES } from "../data/switching-from";
+import { FEATURE_PAGES, FEATURE_PAGES_PATH_PREFIX } from "../data/feature-pages";
 ---
 {!hideAppLink && <AppLink />}
 <footer>
@@ -18,6 +19,7 @@ import { SWITCHING_PAGES } from "../data/switching-from";
     <a href={DELETE_ACCOUNT_PATH}>{DELETE_ACCOUNT_LINK_LABEL}</a>
     <a href="/google-calendar-sync">Google Calendar Sync</a>
     <a href="/family-calendar-app">Family Calendar App</a>
+    {FEATURE_PAGES.map((page) => <a href={`${FEATURE_PAGES_PATH_PREFIX}${page.slug}`}>{page.title}</a>)}
     <a href="/compare">Compare</a>
     {SWITCHING_PAGES.map((page) => <a href={`/switching-from/${page.slug}`}>Switching from {page.name}</a>)}
     <a href="/share">Share, get 2 weeks free</a>

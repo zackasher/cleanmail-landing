@@ -2,16 +2,32 @@
 import { imageSize } from "../data/image-sizes";
 import { WEB_APP_URL, WEB_APP_SIGN_IN_LABEL } from "../config";
 import { SWITCHING_PAGES } from "../data/switching-from";
+import { FEATURE_PAGES, FEATURE_PAGES_PATH_PREFIX } from "../data/feature-pages";
 const path = Astro.url.pathname.replace(/\/$/, "") || "/";
 const isHome = path === "/";
-const COMPARE_PATH = "/compare";
 const SWITCHING_PATH_PREFIX = "/switching-from/";
-// Later comparison pages (school platforms, email, flyers) join this list when they ship.
-const compareMenu = [
-  { href: COMPARE_PATH, label: "All comparisons" },
-  ...SWITCHING_PAGES.map((page) => ({ href: `${SWITCHING_PATH_PREFIX}${page.slug}`, label: `Switching from ${page.name}` })),
-];
-const compareActive = path === COMPARE_PATH || path.startsWith(SWITCHING_PATH_PREFIX);
+type MenuItem = { href: string; label: string; fullLabel: string };
+type NavMenu = { id: string; buttonLabel: string; allLabel: string; groupLabel: string; activePrefix: string; items: MenuItem[] };
+// A top-nav chip whose href is a key here opens a glass dropdown. New pages join their menu's items.
+const menus: Record<string, NavMenu> = {
+  "/features": {
+    id: "features-menu",
+    buttonLabel: "Show feature pages",
+    allLabel: "All features",
+    groupLabel: "Add dates from",
+    activePrefix: FEATURE_PAGES_PATH_PREFIX,
+    items: FEATURE_PAGES.map((page) => ({ href: `${FEATURE_PAGES_PATH_PREFIX}${page.slug}`, label: page.menuLabel, fullLabel: page.title })),
+  },
+  "/compare": {
+    id: "compare-menu",
+    buttonLabel: "Show comparison pages",
+    allLabel: "All comparisons",
+    groupLabel: "Switching from",
+    activePrefix: SWITCHING_PATH_PREFIX,
+    items: SWITCHING_PAGES.map((page) => ({ href: `${SWITCHING_PATH_PREFIX}${page.slug}`, label: page.name, fullLabel: `Switching from ${page.name}` })),
+  },
+};
+const isActive = (href: string) => path === href || (menus[href] !== undefined && path.startsWith(menus[href].activePrefix));
 const links = [
   { href: "/how-it-works", label: "How It Works" },
   { href: "/features", label: "Features" },
@@ -28,19 +44,19 @@ const links = [
   </a>
   <div class="navright">
     <div class="seg">
-      {links.map((l) => l.href === COMPARE_PATH ? (
+      {links.map((l) => menus[l.href] ? (
         <div class="drop">
-          <a href={l.href} class={`chip drop-chip${compareActive ? " active" : ""}`}>{l.label}</a>
-          <button class="drop-btn" type="button" aria-expanded="false" aria-controls="compare-menu" aria-label="Show comparison pages">
+          <a href={l.href} class={`chip drop-chip${isActive(l.href) ? " active" : ""}`} data-active-prefix={menus[l.href].activePrefix}>{l.label}</a>
+          <button class="drop-btn" type="button" aria-expanded="false" aria-controls={menus[l.href].id} aria-label={menus[l.href].buttonLabel}>
             <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
           </button>
-          <div class="drop-menu" id="compare-menu">
+          <div class="drop-menu" id={menus[l.href].id}>
             <div class="drop-panel">
-              <a class="drop-all" href={compareMenu[0].href}>{compareMenu[0].label}<span aria-hidden="true">→</span></a>
-              <p class="drop-eyebrow">Switching from</p>
-              {SWITCHING_PAGES.map((page) => (
-                <a class="drop-item" href={`${SWITCHING_PATH_PREFIX}${page.slug}`} aria-label={`Switching from ${page.name}`}>
-                  <span class="drop-dot" aria-hidden="true"></span>{page.name}
+              <a class="drop-all" href={l.href}>{menus[l.href].allLabel}<span aria-hidden="true">→</span></a>
+              <p class="drop-eyebrow">{menus[l.href].groupLabel}</p>
+              {menus[l.href].items.map((item) => (
+                <a class="drop-item" href={item.href} aria-label={item.fullLabel}>
+                  <span class="drop-dot" aria-hidden="true"></span>{item.label}
                 </a>
               ))}
             </div>
@@ -56,11 +72,11 @@ const links = [
     </button>
   </div>
   <div class="mobile-menu" id="mobile-menu">
-    {links.map((l) => l.href === COMPARE_PATH ? (
+    {links.map((l) => menus[l.href] ? (
       <>
         <a href={l.href}>{l.label}</a>
         <div class="mobile-sub">
-          {compareMenu.slice(1).map((item) => <a href={item.href}>{item.label}</a>)}
+          {menus[l.href].items.map((item) => <a href={item.href}>{item.fullLabel}</a>)}
         </div>
       </>
     ) : (
@@ -71,7 +87,7 @@ const links = [
 </nav>
 
 <style>
-  /* The glass lives on ::before, not on nav itself: a backdrop-filter on nav would stop the Compare panel's own blur from reaching the page. */
+  /* The glass lives on ::before, not on nav itself: a backdrop-filter on nav would stop the dropdown panels' own blur from reaching the page. */
   nav{position:sticky;top:14px;z-index:50;width:calc(100% - 40px);max-width:2200px;margin:14px auto 0;display:flex;align-items:center;justify-content:space-between;padding:11px 26px;border:1px solid rgba(255,255,255,.55);border-radius:22px;box-shadow:0 12px 34px rgba(27,34,54,.10), inset 0 1px 0 rgba(255,255,255,.7)}
   nav::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:linear-gradient(135deg, rgba(255,255,255,.34), rgba(255,255,255,.20));backdrop-filter:blur(8px) saturate(1.2)}
   nav{transition:width .55s cubic-bezier(.2,.7,.2,1)}
@@ -120,10 +136,12 @@ const links = [
 </style>
 
 <script>
-  function initCompareMenu() {
-    const drop = document.querySelector<HTMLElement>(".drop");
-    const button = drop?.querySelector<HTMLButtonElement>(".drop-btn");
-    if (!drop || !button || button.dataset.bound) return;
+  function initDropMenus() {
+    document.querySelectorAll<HTMLElement>(".drop").forEach(initDropMenu);
+  }
+  function initDropMenu(drop: HTMLElement) {
+    const button = drop.querySelector<HTMLButtonElement>(".drop-btn");
+    if (!button || button.dataset.bound) return;
     button.dataset.bound = "1";
     const setOpen = (open: boolean) => {
       drop.classList.toggle("open", open);
@@ -150,8 +168,9 @@ const links = [
     nav.classList.toggle("compact", p !== "/");
     nav.querySelectorAll(".chip").forEach((c) => {
       const href = c.getAttribute("href");
-      const compareActive = href === "/compare" && p.startsWith("/switching-from/");
-      c.classList.toggle("active", href === p || compareActive);
+      const prefix = c.getAttribute("data-active-prefix");
+      const underMenu = prefix !== null && p.startsWith(prefix);
+      c.classList.toggle("active", href === p || underMenu);
     });
   }
   function initBurger() {
@@ -167,11 +186,11 @@ const links = [
     document.addEventListener("click", () => menu.classList.remove("open"));
   }
   initBurger();
-  initCompareMenu();
+  initDropMenus();
   syncNav();
   document.addEventListener("astro:page-load", () => {
     initBurger();
-    initCompareMenu();
+    initDropMenus();
     syncNav();
   });
 </script>
