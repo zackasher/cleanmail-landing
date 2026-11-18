@@ -3,6 +3,7 @@
 export const HERO_BOX_HEADING_START = "One";
 export const HERO_BOX_HEADING_END = "for everyone at home.";
 export const HERO_BOX_POINTS = [
+  { text: "Stop forwarding school and activity emails to another app. Cleanmail finds them in your Gmail." },
   { text: "School and activity email, sorted by kid." },
   { text: "Dates land on your shared Google Calendar automatically." },
   { text: "Your digest summarizes only the senders you pick." },
