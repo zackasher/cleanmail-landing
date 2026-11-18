@@ -119,6 +119,8 @@ export const FEATURE_PAGES: FeaturePage[] = [
     // messages all day, so that line read as if everything waits a day.
     // Timing line is Counsel's, word for word (counsel-to-web-1795043000000): CA measured ~2 s median processing
     // but there is no guaranteed worst case, so never "instantly", "in real time", "immediately" or a number.
+    // Counsel 11/18 (counsel-to-web-1795043050000): no "when it is sent" (same instant claim), and teachers email
+    // through ParentSquare all day even on Digest, so every parent picks the teachers too.
     // Settings path verified on Zack's own ParentSquare app 11/16 (claude/research/email-setup-steps_recheck_2026-11-16.md);
     // sources in claude/marketing/parentsquare-page-sources_2026-11-18.md, re-check every 90 days (Counsel).
     slug: "parentsquare-to-google-calendar",
@@ -129,13 +131,13 @@ export const FEATURE_PAGES: FeaturePage[] = [
     lede: "Have ParentSquare email you each post, then pick your school and teachers in Cleanmail. Cleanmail reads the posts and puts the dates on your Google Calendar.",
     tiles: [
       { icon: ICON_PATHS.email, tone: "", title: "The whole post by email", body: "ParentSquare emails carry the full post, so Cleanmail can read it." },
-      { icon: ICON_PATHS.inboxes, tone: "teal", title: "One pick per name", body: "On Instant, pick your school and each teacher by name. On Digest, the school is enough." },
+      { icon: ICON_PATHS.inboxes, tone: "teal", title: "One pick per name", body: "Pick your school and each teacher by name." },
       { icon: ICON_PATHS.calendarCheck, tone: "orange", title: "Dates on Google Calendar", body: "Two-way sync of the events Cleanmail adds." },
       { icon: ICON_PATHS.digest, tone: "", title: "Sorted by kid", body: "One short digest for the whole household." },
     ],
     steps: [
       { title: "Turn on email in ParentSquare", body: "In the app: Menu, Account, Notifications. Under Posts, turn on Email Notifications." },
-      { title: "Choose Instant", body: "Cleanmail sees each post when it is sent. They show up in Cleanmail within minutes of reaching your inbox." },
+      { title: "Choose Instant", body: "They show up in Cleanmail within minutes of reaching your inbox." },
       { title: "Pick them in Cleanmail", body: "Your school and each teacher, by name." },
     ],
     screenshot: SENDERS_SCREENSHOT,
