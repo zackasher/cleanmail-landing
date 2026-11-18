@@ -4,6 +4,7 @@
 
 export type SwitchingRow = { label: string; cleanmail: string; rival: string };
 export type SwitchingSource = { label: string; url: string };
+export type SwitchingScreenshot = { src: string; width: number; height: number; alt: string };
 export type SwitchingPage = {
   slug: string;
   name: string;
@@ -11,12 +12,17 @@ export type SwitchingPage = {
   doesWell: string;
   rows: SwitchingRow[];
   keepNote: string;
+  screenshot: SwitchingScreenshot;
   sources: SwitchingSource[];
 };
 
 export const SWITCHING_FORWARDING_CLEANMAIL = "Not needed. Cleanmail reads the senders you choose in your Gmail.";
 export const SWITCHING_GOOGLE_CLEANMAIL = "Two-way sync of the events Cleanmail adds.";
 export const SWITCHING_TRADEMARK_LINE = "TimeTree, Cozi and Skylight are trademarks of their owners. Cleanmail is not affiliated with them.";
+
+// Real app screenshots of the test account (invented family), already public on the site.
+const DIGEST_SCREENSHOT: SwitchingScreenshot = { src: "/Digest_Sample.webp", width: 886, height: 1920, alt: "A Cleanmail digest sorted by kid, with school events" };
+const CALENDAR_SCREENSHOT: SwitchingScreenshot = { src: "/feat-weekly-1018.webp", width: 520, height: 1127, alt: "The Cleanmail Events tab in Month view, with event dots on the calendar" };
 
 export const SWITCHING_PAGES: SwitchingPage[] = [
   {
@@ -29,6 +35,7 @@ export const SWITCHING_PAGES: SwitchingPage[] = [
       { label: "Google Calendar", cleanmail: SWITCHING_GOOGLE_CLEANMAIL, rival: "Shows Google events in Cozi, and Cozi events in Google, read-only." },
     ],
     keepNote: "Events you keep only in Cozi stay in Cozi.",
+    screenshot: DIGEST_SCREENSHOT,
     sources: [
       { label: "Cozi: Introducing Cozi Max", url: "https://www.cozi.com/?p=44028" },
       { label: "Cozi: Using Cozi with other calendars", url: "https://cozi.com/using-cozi-with-other-calendars/" },
@@ -44,6 +51,7 @@ export const SWITCHING_PAGES: SwitchingPage[] = [
       { label: "Google Calendar", cleanmail: SWITCHING_GOOGLE_CLEANMAIL, rival: "Two-way sync." },
     ],
     keepNote: "Events you keep only in Skylight stay in Skylight.",
+    screenshot: DIGEST_SCREENSHOT,
     sources: [
       { label: "Skylight Help: How To Use Skylight Magic Import", url: "https://skylight.zendesk.com/hc/en-us/articles/18039340445211-How-To-Use-Skylight-Magic-Import" },
       { label: "Skylight Help: What does Skylight Calendar sync with?", url: "https://skylight.zendesk.com/hc/en-us/articles/35986090425627" },
@@ -58,6 +66,7 @@ export const SWITCHING_PAGES: SwitchingPage[] = [
       { label: "Google Calendar", cleanmail: SWITCHING_GOOGLE_CLEANMAIL, rival: "Shows your phone's Google events. Adding TimeTree events to Google is by hand." },
     ],
     keepNote: "Events you keep only in TimeTree stay in TimeTree.",
+    screenshot: CALENDAR_SCREENSHOT,
     sources: [
       { label: "TimeTree Help: showing your phone's calendars in TimeTree", url: "https://support.timetreeapp.com/hc/en-us/articles/360000629341" },
     ],
