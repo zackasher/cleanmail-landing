@@ -53,7 +53,7 @@ const legend = [
 ] as const;
 
 const reasons = [
-  { icon: ICON_PATHS.email, title: "School email organizer", body: "Your digest only covers the senders you pick. No forwarding.", color: "var(--purple)" },
+  { icon: ICON_PATHS.email, title: "School and activity email organizer", body: "Your digest only covers the senders you pick. No forwarding.", color: "var(--purple)" },
   { icon: ICON_PATHS.digest, title: "Email digest by kid", body: "The gist of every email, sorted by person.", color: "var(--orange)" },
   { icon: ICON_PATHS.sync, title: "Two-way Google Calendar sync", body: "Edit anywhere, it changes everywhere.", color: "var(--teal)" },
   { icon: ICON_PATHS.emailFast, title: "Automatic events from email", body: "Dates land on your calendar on their own.", color: "var(--purple)" },
@@ -75,11 +75,11 @@ const sources = [
 ];
 
 const faqs = [
-  { q: "Can I keep using Skylight or Cozi with Cleanmail?", a: "Yes. Cleanmail puts events on your Google Calendar, and Skylight and Cozi can both show your Google Calendar. Keep the one you like, and let Cleanmail fill it from your school email." },
-  { q: "What is the best family calendar app for school emails?", a: "If your family's schedule mostly arrives as school, camp, and sports email in Gmail, Cleanmail is built for exactly that. It sorts every update from the senders you pick into a digest by kid, turns the dates into events automatically, and keeps them in dedicated two-way sync with Google Calendar for a household of up to four people." },
+  { q: "Can I keep using Skylight or Cozi with Cleanmail?", a: "Yes. Cleanmail puts events on your Google Calendar, and Skylight and Cozi can both show your Google Calendar. Keep the one you like, and let Cleanmail fill it from your school and activity email." },
+  { q: "What is the best family calendar app for school and activity emails?", a: "If your family's schedule mostly arrives as school, camp, and sports email in Gmail, Cleanmail is built for exactly that. It sorts every update from the senders you pick into a digest by kid, turns the dates into events automatically, and keeps them in dedicated two-way sync with Google Calendar for a household of up to four people." },
   { q: "Which family calendar apps have two-way Google Calendar sync?", a: `As of ${COMPETITOR_FACTS_CHECKED_ON}, Cleanmail has dedicated two-way Google Calendar sync, Skylight offers two-way sync once you turn it on, and Cozi connects with read-only feeds. Cleanmail is the one that builds events straight from your Gmail, with nothing to forward.` },
   { q: "How is Cleanmail different from Skylight?", a: "Skylight turns email into events when you forward each email to a Skylight address. Cleanmail connects to Gmail read-only, picks up the senders you choose on its own, and sorts everything into one digest by kid, across up to three inboxes." },
-  { q: "How is Cleanmail different from Cozi?", a: "Cozi's Google Calendar connection is read-only feeds, and its email import works by forwarding on the Max plan. Cleanmail syncs with Google Calendar both ways and reads the school email you pick for you." },
+  { q: "How is Cleanmail different from Cozi?", a: "Cozi's Google Calendar connection is read-only feeds, and its email import works by forwarding on the Max plan. Cleanmail syncs with Google Calendar both ways and reads the school and activity email you pick for you." },
   { q: "How much do these apps cost?", a: `Cleanmail is ${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year after a ${TRIAL_DAYS}-day free trial, and renews automatically until you cancel. Skylight Calendar Plus, which adds email import, is $79 a year. Cozi Max, which adds email import, is $79 a year.` },
 ];
 
@@ -104,7 +104,7 @@ import { SWITCHING_PAGES } from "../data/switching-from";
   <section class="ip">
     <p class="ip-eyebrow">Compare</p>
     <h1 class="title">Cleanmail vs Skylight vs Cozi</h1>
-    <p class="ip-lede lede-lines wide"><span>Three family calendar apps, side by side.</span><span>If your family's schedule lives in school email, Cleanmail is the only one of the three that reads Gmail for you.</span></p>
+    <p class="ip-lede lede-lines wide"><span>Three family calendar apps, side by side.</span><span>If your family's schedule lives in school and activity email, Cleanmail is the only one of the three that reads Gmail for you.</span></p>
     <p class="byline">By {FOUNDER_NAME}, founder of Cleanmail · Updated {COMPETITOR_FACTS_CHECKED_ON}</p>
     <p class="cross-link">{SCHOOL_EMAIL_APPS_LINK_LEAD} <a href={SCHOOL_EMAIL_APPS_PATH}>{SCHOOL_EMAIL_APPS_LINK_LABEL}</a></p>
 
@@ -132,7 +132,7 @@ import { SWITCHING_PAGES } from "../data/switching-from";
 
     <div class="ip-section">
       <h2>Why families switch to Cleanmail</h2>
-      <p class="ip-sub">The family calendar app that writes itself from school email.</p>
+      <p class="ip-sub">The family calendar app that writes itself from school and activity email.</p>
       <div class="why">
       <div class="why-shot"><PhoneFrame><img class="shot" src="/mq-digest-1018.webp" {...imageSize("/mq-digest-1018.webp")} alt="A Cleanmail digest sorted by kid, with school events and updates" loading="lazy" /></PhoneFrame></div>
       <div class="why-tiles">

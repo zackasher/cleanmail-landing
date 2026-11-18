@@ -7,7 +7,7 @@ export const SCHOOL_EMAIL_APPS_HEADING = "Which one fits your family?";
 export const SCHOOL_EMAIL_APPS_DESCRIPTION =
   "How Cleanmail, Cozi, Skylight and TimeTree each get school and activity dates onto your family calendar, as of November 2026.";
 export const SCHOOL_EMAIL_APPS_INTRO =
-  "Four apps, one goal: fewer missed dates and less copying school email into a calendar. Here's how each one gets there, as of November 2026.";
+  "Four apps, one goal: fewer missed dates and less copying school and activity email into a calendar. Here's how each one gets there, as of November 2026.";
 export const BEST_FOR_LABEL = "Best for";
 
 // Only Cleanmail shows a logo: Counsel's standing rule is that other apps are named in plain text, never with their logos.
@@ -31,7 +31,7 @@ export const CLEANMAIL_APP: ComparedApp = {
   name: "Cleanmail: Family Inbox",
   bestFor: "Families whose week lives in Gmail",
   facts: [
-    { icon: ICON_PATHS.email, text: "Reads the school email already in your Gmail. Nothing to forward." },
+    { icon: ICON_PATHS.email, text: "Reads the school and activity email already in your Gmail. Nothing to forward." },
     { icon: ICON_PATHS.digest, text: "One digest, sorted by kid and activity." },
     { icon: ICON_PATHS.calendarCheck, text: "The dates land on your Google Calendar." },
     { icon: ICON_PATHS.household, text: "Up to 4 people share one household." },
