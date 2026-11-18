@@ -138,7 +138,7 @@ export const FEATURE_PAGES: FeaturePage[] = [
     steps: [
       { title: "Turn on email in ParentSquare", body: "In the app: Menu, Account, Notifications. Under Posts, turn on Email Notifications." },
       { title: "Choose Instant", body: "They show up in Cleanmail within minutes of reaching your inbox." },
-      { title: "Pick them in Cleanmail", body: "Your school and each teacher, by name." },
+      { title: "Pick them in Cleanmail", body: "In People setup, under the School activity, search for ParentSquare. Add each school and teacher that messages you." },
     ],
     screenshot: SENDERS_SCREENSHOT,
     // Zack 11/18: not the only app. The "if it emails you the full message" condition must stay (Marketing).
