@@ -1,11 +1,11 @@
 # Consumer Health Data Privacy Policy
 
-**Last updated:** November 9, 2026
+**Last updated:** November 19, 2026
 
 This policy covers "consumer health data" as Washington's My Health My Data Act (RCW 19.373) and similar state laws (including Nevada and Connecticut) define it. It adds to our [Privacy Policy](https://cleanmailapp.com/privacy), which covers everything else. Calibrate LLC ("we") operates Cleanmail.
 
 ## 1. What health data we collect
-Cleanmail does not ask for health information. Some can still reach us inside the school and activity email you choose to include in your digest, for example a nurse note, an allergy notice, a doctor's or therapist's appointment, or a learning-support meeting. If you add a health provider as a sender, the app tells you before you choose it that its emails may include health details, and choosing it and saving is your consent. Health appointments you type in yourself are collected too.
+Cleanmail does not ask for health information. Some can still reach us inside the school and activity email you choose to include in your digest, for example a nurse note, an allergy notice, a doctor's or therapist's appointment, or a learning-support meeting. If you add a health provider as a sender, the app tells you before you choose it that its emails may include health details, and choosing it and saving is your consent. During first-time setup, Cleanmail suggests health providers only if you choose to include them when you enter the names of the people in your household; otherwise they are skipped and never kept. If you include them, each one's sender name and address is held in your setup draft (deleted when you save, sign out or leave setup, and in any case after 2 hours), it is shown with the same note, and keeping it and saving is your consent. Health providers are never sent to our AI service during setup. Health appointments you type in yourself are collected too.
 
 ## 2. Why we collect it and how we use it
 Only to provide what you asked for: your digest, your calendar events and your reminders. We never use it for advertising, never sell it, and never use it to build a profile of you or your child.
