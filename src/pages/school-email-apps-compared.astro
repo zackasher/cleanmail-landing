@@ -3,7 +3,8 @@ import { imageSize } from "../data/image-sizes";
 import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PhoneFrame from "../components/PhoneFrame.astro";
-import { GET_APP_PATH, TRIAL_TERMS, COMPARE_PATH } from "../config";
+import { GET_APP_PATH, TRIAL_TERMS, COMPARE_PATH, BEST_APPS_PATH } from "../config";
+import { BEST_APPS_LINK_LEAD, BEST_APPS_LINK_LABEL } from "../data/best-apps-copy";
 import {
   SCHOOL_EMAIL_APPS_TITLE,
   SCHOOL_EMAIL_APPS_HEADING,
@@ -60,6 +61,7 @@ import "../styles/info-page.css";
       ))}
     </div>
     <p class="cross-link">{COMPARE_TABLE_LINK_LEAD} <a href={COMPARE_PATH}>{COMPARE_TABLE_LINK_LABEL}</a></p>
+    <p class="cross-link">{BEST_APPS_LINK_LEAD} <a href={BEST_APPS_PATH}>{BEST_APPS_LINK_LABEL}</a></p>
     <p class="trademarks">{COMPETITOR_TRADEMARK_NOTICE}</p>
 
     <div class="ip-callout close">

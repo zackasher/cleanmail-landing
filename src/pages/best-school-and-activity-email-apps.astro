@@ -1,0 +1,228 @@
+---
+import { imageSize } from "../data/image-sizes";
+import { pageTitle } from "../page-title";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PhoneFrame from "../components/PhoneFrame.astro";
+import { GET_APP_PATH, TRIAL_TERMS, COMPARE_PATH } from "../config";
+import {
+  SCHOOL_EMAIL_APPS_CTA_LABEL,
+  COMPARE_TABLE_LINK_LEAD,
+  COMPARE_TABLE_LINK_LABEL,
+  CLEANMAIL_APP_ICON,
+  CLEANMAIL_SCREEN,
+  CLEANMAIL_SCREEN_ALT,
+} from "../data/school-email-apps-copy";
+import {
+  BEST_APPS_TITLE,
+  BEST_APPS_DESCRIPTION,
+  BEST_APPS_HEADING,
+  BEST_APPS_EYEBROW,
+  BEST_APPS_ANSWER,
+  BEST_APPS_CRITERIA_HEADING,
+  BEST_APPS_CRITERIA,
+  BEST_APPS_LIST_HEADING,
+  BEST_APPS_DISCLOSURE,
+  BEST_APPS_OURS_LABEL,
+  BEST_APPS_ROW_LABELS,
+  BEST_APPS_TABLE_HEADERS,
+  BEST_APPS_SOURCES_HEADING,
+  BEST_APPS,
+  EMAIL_ACCESS,
+  BEST_APPS_FAQ_HEADING,
+  BEST_APPS_FAQS,
+  BEST_APPS_TRADEMARK_NOTICE,
+} from "../data/best-apps-copy";
+import "../styles/info-page.css";
+
+const APP_ICON_SIZE = 32;
+const PRICE_SENTENCE_BREAK = ". ";
+// Layout only: the approved price line is shown in two weights (price first, terms quieter). No words change.
+const splitPrice = (price: string) => {
+  const breakAt = price.indexOf(PRICE_SENTENCE_BREAK);
+  if (breakAt < 0) return { lead: price, rest: "" };
+  return { lead: price.slice(0, breakAt + 1), rest: price.slice(breakAt + 2) };
+};
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": BEST_APPS_FAQS.map((item) => ({
+    "@type": "Question",
+    "name": item.q,
+    "acceptedAnswer": { "@type": "Answer", "text": item.a },
+  })),
+};
+---
+<BaseLayout title={pageTitle(BEST_APPS_TITLE)} description={BEST_APPS_DESCRIPTION} faqSchema={faqSchema}>
+  <section class="ip ba">
+    <header class="ba-hero">
+      <div class="ba-hero-text">
+        <p class="ip-eyebrow">{BEST_APPS_EYEBROW}</p>
+        <h1>{BEST_APPS_HEADING}</h1>
+        <p class="ba-answer">{BEST_APPS_ANSWER}</p>
+        <p class="ba-note">{BEST_APPS_DISCLOSURE}</p>
+      </div>
+      <div class="ba-hero-phone">
+        <PhoneFrame><img class="ba-shot" src={CLEANMAIL_SCREEN} {...imageSize(CLEANMAIL_SCREEN)} alt={CLEANMAIL_SCREEN_ALT} fetchpriority="high" /></PhoneFrame>
+      </div>
+    </header>
+
+    <section class="ba-block" aria-labelledby="ba-criteria-heading">
+      <h2 id="ba-criteria-heading" class="ba-heading">{BEST_APPS_CRITERIA_HEADING}</h2>
+      <ul class="ba-criteria">
+        {BEST_APPS_CRITERIA.map((item) => (
+          <li class="ba-criterion">
+            <span class="ba-criterion-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d={item.icon} fill="currentColor" /></svg></span>
+            <span class="ba-criterion-text">
+              <strong>{item.label}</strong>
+              <span>{item.question}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="ba-block" aria-labelledby="ba-list-heading">
+      <h2 id="ba-list-heading" class="ba-heading">{BEST_APPS_LIST_HEADING}</h2>
+      <p class="ba-note ba-list-note">{BEST_APPS_DISCLOSURE}</p>
+      <div class="ba-table" role="table">
+        <div class="ba-row ba-head" role="row">
+          <span role="columnheader">{BEST_APPS_TABLE_HEADERS.app}</span>
+          <span role="columnheader">{BEST_APPS_TABLE_HEADERS.access}</span>
+          <span role="columnheader">{BEST_APPS_TABLE_HEADERS.what}</span>
+          <span role="columnheader">{BEST_APPS_TABLE_HEADERS.price}</span>
+        </div>
+        {BEST_APPS.map((app) => {
+          const price = splitPrice(app.price);
+          return (
+            <div class:list={["ba-row", { "ba-ours": app.ours }]} role="row">
+              <span class="ba-name" role="cell">
+                {app.ours
+                  ? <img class="ba-icon" src={CLEANMAIL_APP_ICON} alt="" width={APP_ICON_SIZE} height={APP_ICON_SIZE} />
+                  : <span class="ba-icon ba-initial" style={`background:${app.brandColor}`} aria-hidden="true">{app.name.charAt(0)}</span>}
+                <span>{app.name}{app.ours && <span class="ba-ours-tag">{BEST_APPS_OURS_LABEL}</span>}</span>
+              </span>
+              <span class="ba-access" role="cell">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d={EMAIL_ACCESS[app.emailAccess].icon} fill="currentColor" /></svg>
+                {EMAIL_ACCESS[app.emailAccess].label}
+              </span>
+              <span class="ba-what" role="cell">{app.whatItDoes}</span>
+              <span class="ba-price" role="cell">
+                <span class="ba-price-lead">{price.lead}</span>
+                {price.rest && <span class="ba-price-rest">{price.rest}</span>}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+      <details class="ba-sources">
+        <summary>{BEST_APPS_SOURCES_HEADING}</summary>
+        <ul>
+          {BEST_APPS.map((app) => (
+            <li>
+              <strong>{app.name}.</strong>
+              {app.howDatesReach && <> {BEST_APPS_ROW_LABELS.howDatesReach}: {app.howDatesReach}</>}
+              {app.doesNotDo && <> {BEST_APPS_ROW_LABELS.doesNotDo}: {app.doesNotDo}</>}
+              {" "}{BEST_APPS_ROW_LABELS.source}: {app.source}
+            </li>
+          ))}
+        </ul>
+      </details>
+    </section>
+
+    <div class="ba-cta">
+      <a class="try-button" href={GET_APP_PATH}>{SCHOOL_EMAIL_APPS_CTA_LABEL}</a>
+      <p class="ba-trial">{TRIAL_TERMS}</p>
+    </div>
+
+    <section class="ba-block" aria-labelledby="ba-faq-heading">
+      <h2 id="ba-faq-heading" class="ba-heading">{BEST_APPS_FAQ_HEADING}</h2>
+      <div class="ba-faq">
+        {BEST_APPS_FAQS.map((item) => (
+          <details>
+            <summary>{item.q}</summary>
+            <p>{item.a}</p>
+          </details>
+        ))}
+      </div>
+      <p class="ba-cross">{COMPARE_TABLE_LINK_LEAD} <a href={COMPARE_PATH}>{COMPARE_TABLE_LINK_LABEL}</a></p>
+      <p class="ba-trademarks">{BEST_APPS_TRADEMARK_NOTICE}</p>
+    </section>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Rules: claude/team/web-design-rules.md. One 960px column, spacing in multiples of 8, 3 text sizes (14, 16/18, headings). */
+  .ba{--ba-width:960px;--ba-gap:24px}
+  .ba-hero,.ba-block,.ba-cta{max-width:var(--ba-width);margin-inline:auto}
+
+  .ba-hero{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:64px;align-items:center}
+  .ba-hero .ip-eyebrow,.ba-hero h1{text-align:left;margin-inline:0}
+  .ba-hero h1{max-width:12em}
+  .ba-answer{margin:24px 0 0;max-width:34em;font-size:18px;line-height:1.55;color:var(--ink)}
+  .ba-note{margin:16px 0 0;max-width:40em;font-size:14px;line-height:1.5;color:var(--muted)}
+  .ba-hero-phone :global(.phone-wrap){width:240px}
+  .ba-shot{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+
+  .ba-block{margin-top:96px}
+  .ba-heading{margin:0 0 32px;font-size:28px;font-weight:500;letter-spacing:-.4px;color:var(--navy)}
+
+  .ba-criteria{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(17em,1fr));gap:40px 32px}
+  .ba-criterion{display:flex;gap:16px;align-items:flex-start}
+  .ba-criterion-icon{flex-shrink:0;display:inline-flex;width:48px;height:48px;border-radius:14px;align-items:center;justify-content:center;background:rgba(74,111,227,.1);color:var(--purple)}
+  .ba-criterion-icon svg{width:24px;height:24px}
+  .ba-criterion-text{display:flex;flex-direction:column;gap:4px;font-size:16px;line-height:1.45}
+  .ba-criterion-text strong{font-weight:600;color:var(--navy)}
+  .ba-criterion-text span{color:var(--muted)}
+
+  .ba-list-note{margin:-16px 0 24px}
+  .ba-table{background:#fff;border-radius:16px;box-shadow:0 2px 4px rgba(27,34,54,.04),0 12px 32px rgba(27,34,54,.06)}
+  .ba-row{display:grid;grid-template-columns:1.25fr 1fr 1.7fr 1.35fr;gap:24px;align-items:start;padding:24px 24px;font-size:16px;line-height:1.5;color:var(--ink)}
+  .ba-row+.ba-row{border-top:1px solid var(--line)}
+  .ba-head{padding-block:16px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .ba-ours{background:rgba(74,111,227,.05)}
+  .ba-name{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--navy)}
+  .ba-icon{width:32px;height:32px;border-radius:8px;flex-shrink:0}
+  .ba-initial{display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700}
+  .ba-ours-tag{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:rgba(74,111,227,.12);color:var(--purple);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;vertical-align:2px}
+  .ba-access{display:flex;align-items:flex-start;gap:8px}
+  .ba-access svg{width:20px;height:20px;margin-top:2px;flex-shrink:0;color:var(--purple)}
+  .ba-price{display:flex;flex-direction:column;gap:4px}
+  .ba-price-lead{font-weight:600;color:var(--navy)}
+  .ba-price-rest{font-size:14px;color:var(--muted)}
+  .ba-sources{margin-top:16px;font-size:14px;line-height:1.5;color:var(--muted)}
+  .ba-sources summary{cursor:pointer;font-weight:600}
+  .ba-sources ul{margin:8px 0 0;padding-left:16px;display:flex;flex-direction:column;gap:8px}
+
+  .ba-cta{margin-top:64px;text-align:center}
+  .try-button{display:inline-block;padding:16px 32px;border-radius:999px;background:var(--purple);color:#fff;font-weight:600;font-size:17px;text-decoration:none;box-shadow:0 4px 12px rgba(74,111,227,.28)}
+  .ba-trial{margin:16px auto 0;max-width:32em;font-size:14px;line-height:1.5;color:var(--muted)}
+
+  .ba-faq{max-width:720px;display:flex;flex-direction:column}
+  .ba-faq details{padding:24px 0;border-top:1px solid var(--line)}
+  .ba-faq details:last-child{border-bottom:1px solid var(--line)}
+  .ba-faq summary{cursor:pointer;font-size:17px;font-weight:600;color:var(--navy);list-style:none}
+  .ba-faq summary::-webkit-details-marker{display:none}
+  .ba-faq p{margin:8px 0 0;font-size:16px;line-height:1.6;color:var(--ink)}
+  .ba-cross{margin:32px 0 0;font-size:16px;color:var(--ink)}
+  .ba-cross a{color:var(--purple);font-weight:600}
+  .ba-trademarks{margin:16px 0 0;max-width:48em;font-size:12.5px;line-height:1.5;color:var(--muted)}
+
+  @media (max-width:52em){
+    .ba-hero{grid-template-columns:1fr;gap:32px}
+    .ba-hero-text{display:contents}
+    .ba-hero .ip-eyebrow{order:1}
+    .ba-hero h1{order:2}
+    .ba-hero-phone{order:3;justify-self:center;max-height:280px;overflow:hidden;-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent)}
+    .ba-hero-phone :global(.phone-wrap){width:220px}
+    .ba-answer{order:4;margin:0;font-size:17px}
+    .ba-hero .ba-note{order:5;margin:0}
+    .ba-block{margin-top:72px}
+    .ba-heading{font-size:24px;margin-bottom:24px}
+    .ba-criteria{gap:24px}
+    .ba-head{display:none}
+    .ba-row{grid-template-columns:1fr;gap:8px;padding:24px 20px}
+    .ba-name{font-size:17px}
+    .ba-access{color:var(--muted);font-size:15px}
+    .ba-price{margin-top:4px}
+  }
+</style>

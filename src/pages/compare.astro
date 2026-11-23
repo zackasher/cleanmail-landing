@@ -92,7 +92,8 @@ const faqSchema = {
     "acceptedAnswer": { "@type": "Answer", "text": item.a },
   })),
 };
-import { SCHOOL_EMAIL_APPS_PATH } from "../config";
+import { SCHOOL_EMAIL_APPS_PATH, BEST_APPS_PATH } from "../config";
+import { BEST_APPS_LINK_LEAD, BEST_APPS_LINK_LABEL } from "../data/best-apps-copy";
 import { SCHOOL_EMAIL_APPS_LINK_LEAD, SCHOOL_EMAIL_APPS_LINK_LABEL } from "../data/school-email-apps-copy";
 import { SWITCHING_PAGES } from "../data/switching-from";
 ---
@@ -107,6 +108,7 @@ import { SWITCHING_PAGES } from "../data/switching-from";
     <p class="ip-lede lede-lines wide"><span>Three family calendar apps, side by side.</span><span>If your family's schedule lives in school and activity email, Cleanmail is the only one of the three that reads Gmail for you.</span></p>
     <p class="byline">By {FOUNDER_NAME}, founder of Cleanmail · Updated {COMPETITOR_FACTS_CHECKED_ON}</p>
     <p class="cross-link">{SCHOOL_EMAIL_APPS_LINK_LEAD} <a href={SCHOOL_EMAIL_APPS_PATH}>{SCHOOL_EMAIL_APPS_LINK_LABEL}</a></p>
+    <p class="cross-link">{BEST_APPS_LINK_LEAD} <a href={BEST_APPS_PATH}>{BEST_APPS_LINK_LABEL}</a></p>
 
     <div class="ip-section">
       <h2>Side by side</h2>
