@@ -29,7 +29,7 @@ The rest of this post is the exact setup, step by step, using Google Calendar an
 
 One shared "Family" calendar with everything on it turns into confetti by October. A calendar per kid fixes that. You can see at a glance whose afternoon is whose, and you can hide everyone but one kid when you need to answer "wait, what does Sam have this week?"
 
-In Google Calendar, new calendars are made in a web browser, not the phone app:
+In Google Calendar, [new calendars are made in a web browser](https://support.google.com/calendar/answer/37095?hl=en), not the phone app:
 
 1. On your computer, open Google Calendar.
 2. On the left, next to **Other calendars**, click **Add other calendars** (the plus sign), then **Create new calendar**.
@@ -40,18 +40,18 @@ Repeat for each kid. Pick colors that are easy to tell apart at a glance. The ne
 
 ## Step 2: Share every kid's calendar with your household
 
-A schedule only one grown-up can see is a schedule only one grown-up can drive. Share each kid's calendar with everyone in the household who does pickups:
+A schedule only one grown-up can see is a schedule only one grown-up can drive. [Share each kid's calendar](https://support.google.com/calendar/answer/37082?hl=en) with everyone in the household who does pickups:
 
 1. On your computer, under **My calendars**, click the three dots next to the kid's calendar, then **Settings and sharing**.
 2. Click **Shared with** on the left, then **Add people and groups**.
 3. Type the other person's email address.
 4. Choose **Make changes and see event details** if they should add and edit events, then click **Send**.
 
-If your family already uses a Google family group, Google creates a calendar called "Family" for it automatically, and everyone in the group can edit it. That works well for whole-family events like holidays and birthdays. Keep the kid calendars for the kid stuff, so the colors still mean something.
+If your family already uses a Google family group, [Google creates a calendar called "Family"](https://support.google.com/calendar/answer/7157782?hl=en) for it automatically, and everyone in the group can edit it. That works well for whole-family events like holidays and birthdays. Keep the kid calendars for the kid stuff, so the colors still mean something.
 
 ## Step 3: Set reminders for each kid's calendar
 
-Each calendar can have its own default reminders. That matters when kids have different kinds of days. Practices might only need a reminder an hour ahead. School events like picture day or a costume parade usually need one the evening before, while there is still time to find the shirt.
+[Each calendar can have its own default reminders](https://support.google.com/calendar/answer/37242?hl=en). That matters when kids have different kinds of days. Practices might only need a reminder an hour ahead. School events like picture day or a costume parade usually need one the evening before, while there is still time to find the shirt.
 
 To set them, open **Settings**, click the kid's calendar under **Settings for my calendars**, and use **Event notifications** and **All-day event notifications** to add or change reminders. These settings are personal, so each grown-up can choose their own without changing anyone else's.
 
@@ -59,7 +59,7 @@ To set them, open **Settings**, click the kid's calendar under **Settings for my
 
 Here is the part most schedule advice skips. Calendars only help with dates that make it onto them, and a lot of kid dates arrive buried in a newsletter, a coach update, or the fourth paragraph of a PTA email.
 
-A simple Gmail setup helps:
+A simple setup with [Gmail filters](https://support.google.com/mail/answer/6579?hl=en) helps:
 
 1. Create a label for each kid, or for each school or team.
 2. Open Gmail on your computer, click **Show search options** in the search bar, and type a school or coach's address in **From**.

@@ -69,15 +69,15 @@ A shared Google Calendar takes about ten minutes to set up. Here is the exact se
 
 ### Step 1: Create and name the calendar
 
-In Google Calendar on a computer, click the + next to "Other calendars," choose "Create new calendar," and name it something plain like "Kids Schedule." Skip clever names; you want both of you to recognize it instantly in a list. Then check that it appears in the Google Calendar app on your phone.
+In Google Calendar on a computer, [click the + next to "Other calendars,"](https://support.google.com/calendar/answer/37095?hl=en) choose "Create new calendar," and name it something plain like "Kids Schedule." Skip clever names; you want both of you to recognize it instantly in a list. Then check that it appears in the Google Calendar app on your phone.
 
 ### Step 2: Share it with the other parent
 
-Open the calendar's "Settings and sharing" page, click "Shared with," then "Add people and groups," and enter the other parent's email address. Set their permission to "Make changes and see event details" so either of you can edit, not just view. Google emails them a link to add the calendar.
+Open the calendar's ["Settings and sharing" page](https://support.google.com/calendar/answer/37082?hl=en), click "Shared with," then "Add people and groups," and enter the other parent's email address. Set their permission to "Make changes and see event details" so either of you can edit, not just view. Google emails them a link to add the calendar.
 
 ### Step 3: Set reminders the other parent will actually see
 
-In the calendar's settings, set default notifications to email plus a pop-up, timed the evening before and the morning of each event. One parent often absorbs the reminder work while the other ignores app alerts. In Pew Research Center's 2015 report ["Raising Kids and Running a Household,"](https://www.pewresearch.org/social-trends/2015/11/04/raising-kids-and-running-a-household-how-working-parents-share-the-load/) 54% of parents in homes where both parents work full time said the mother does more of managing the kids' schedules and activities, 39% said they share it equally, and 6% said the father does more. Email reminders reach the parent who reads email but dismisses alerts.
+In the calendar's settings, [set default notifications](https://support.google.com/calendar/answer/37242?hl=en) to email plus a pop-up, timed the evening before and the morning of each event. One parent often absorbs the reminder work while the other ignores app alerts. In Pew Research Center's 2015 report ["Raising Kids and Running a Household,"](https://www.pewresearch.org/social-trends/2015/11/04/raising-kids-and-running-a-household-how-working-parents-share-the-load/) 54% of parents in homes where both parents work full time said the mother does more of managing the kids' schedules and activities, 39% said they share it equally, and 6% said the father does more. Email reminders reach the parent who reads email but dismisses alerts.
 
 ### Where the manual setup breaks down
 
