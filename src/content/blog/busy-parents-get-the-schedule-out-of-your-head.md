@@ -11,7 +11,7 @@ faqs:
   - q: "How do I stop school emails from burying my personal email?"
     a: "Use a tool that pulls the dates out of those messages and puts them on your shared calendar, with a digest sorted by kid. That way you stop sorting messages in your head. Check the first few weeks of dates against the original emails, and keep school mail going to one address rather than several."
   - q: "Can my spouse see the family calendar if they use iCloud instead of Gmail?"
-    a: "Yes, with a Google Account. They can create one with their iCloud address; then you share the calendar with that address and set the permission to make changes. Without a Google Account, they can only view a calendar you make public. Set email reminders so alerts reach them however they actually read."
+    a: "Share the calendar to the address they use from its Settings and sharing page, and set the permission to make changes. Google emails them a link to add the calendar. Set email reminders so alerts reach them however they actually read."
   - q: "What is the best way to split school and activity tracking between two parents?"
     a: "Split by kid or by task type, never by month. Rotating duty fails because dates arrive scattered across inboxes, and the pact quietly collapses within weeks. Keep the shared calendar as the one place for dates, so nobody asks whether an email was seen."
   - q: "How much should I expect to pay for a family scheduling app per month?"
@@ -23,8 +23,8 @@ Busy parents can cut the invisible mental load by moving the family schedule out
 ## Key takeaways
 
 - Invisible mental load is the unpaid work of remembering school and activity dates, permission slips and logistics, and it usually lands on one parent by default.
-- A 10-question self-check turns "I do all the scheduling" into a score, so the conversation with your partner is concrete, not accusatory.
-- A shared Google Calendar takes about ten minutes to set up. A partner on iCloud or Outlook needs a Google Account, which can use their existing address.
+- A 10-question self-check turns "I do all the scheduling" into a score, so the conversation with the other parent is concrete, not accusatory.
+- A shared Google Calendar takes about ten minutes to set up.
 - A shared calendar solves who can see the dates, not how they get there. Email-to-calendar tools like Cleanmail take over the Sunday-night copying.
 - Split school and activity tracking by kid or task type, never by month, because rotating pacts collapse when dates arrive scattered across inboxes.
 
@@ -42,7 +42,7 @@ School news arrives in pieces across inboxes and apps, so the remembering is har
 
 ## How can a mental load check help you spot an uneven split?
 
-You cannot fix a load you have never measured. A five-minute self-check turns "I do all the scheduling" from a feeling into a number, which makes the conversation with your partner concrete instead of accusatory.
+You cannot fix a load you have never measured. A five-minute self-check turns "I do all the scheduling" from a feeling into a number, which makes the conversation with the other parent concrete instead of accusatory.
 
 ### Score yourself: the 10-question schedule-keeper check
 
@@ -52,12 +52,12 @@ Answer honestly, one point per yes:
 2. Did you copy dates from school and activity email into a calendar by hand this month?
 3. Are you the one who answers "did you see that email?"
 4. Do you track permission slips for every kid?
-5. Could your partner name picture day without checking? (Score a point if the answer is no.)
+5. Could the other parent name picture day without checking? (Score a point if the answer is no.)
 6. Do you sort messages by kid in your head?
 7. Do you check school and activity email after 9 pm?
 8. Have you skipped your own appointment to manage a school deadline?
-9. Do you remind your partner of events more than once?
-10. Do you feel responsible when something is missed, even if your partner was "on" that week?
+9. Do you remind the other parent of events more than once?
+10. Do you feel responsible when something is missed, even if the other parent was "on" that week?
 
 ### Reading your score and what to change first
 
@@ -71,13 +71,13 @@ A shared Google Calendar takes about ten minutes to set up. Here is the exact se
 
 In Google Calendar on a computer, click the + next to "Other calendars," choose "Create new calendar," and name it something plain like "Kids Schedule." Skip clever names; you want both of you to recognize it instantly in a list. Then check that it appears in the Google Calendar app on your phone.
 
-### Step 2: Share it with your partner
+### Step 2: Share it with the other parent
 
-Open the calendar's "Settings and sharing" page, scroll to "Share with specific people," and enter your partner's address. If they use iCloud or Outlook, they need a Google Account first, and they can create one with that same address. Set their permission to "Make changes to events" so either of you can edit, not just view.
+Open the calendar's "Settings and sharing" page, click "Shared with," then "Add people and groups," and enter the other parent's email address. Set their permission to "Make changes and see event details" so either of you can edit, not just view. Google emails them a link to add the calendar.
 
-### Step 3: Set reminders a reluctant partner will actually see
+### Step 3: Set reminders the other parent will actually see
 
-In the calendar's settings, set default notifications to email plus a pop-up, timed the evening before and the morning of each event. One parent often absorbs the reminder work while the other ignores app alerts; Pew Research Center surveys have found that in two-parent households, managing the kids' schedules and activities falls more often to one parent. Email reminders reach the partner who reads email but dismisses alerts.
+In the calendar's settings, set default notifications to email plus a pop-up, timed the evening before and the morning of each event. One parent often absorbs the reminder work while the other ignores app alerts. In Pew Research Center's 2015 report "Raising Kids and Running a Household," 54% of parents in homes where both parents work full time said the mother does more of managing the kids' schedules and activities, 39% said they share it equally, and 6% said the father does more. Email reminders reach the parent who reads email but dismisses alerts.
 
 ### Where the manual setup breaks down
 
@@ -92,18 +92,18 @@ Score any app you're considering against these five:
 1. **Shared by default.** Both parents and any older kids see the same events without one person forwarding anything.
 2. **Sorted by kid.** You can see one child's events, because "the one about practice" is useless when it could belong to either kid.
 3. **Email handling.** School and activity dates arrive by email. An app that turns those emails into calendar events removes the Sunday-night copying.
-4. **Reminders that reach people.** If your partner ignores app alerts but reads email, the reminder has to match how they actually behave.
+4. **Reminders that reach people.** If the other parent ignores app alerts but reads email, the reminder has to match how they actually behave.
 5. **A price you can justify monthly.** Small monthly fees add up fast across school apps.
 
 ### Where Cleanmail falls short on its own list
 
 Cleanmail is built around Gmail, so it starts from email. And at $6.99 a month, with up to 4 people at home joining free, it only earns its keep if the Sunday copying is costing you real time each week.
 
-## How do you get a reluctant partner to actually use a shared family calendar?
+## How do you get a reluctant spouse to actually use a shared family calendar?
 
-### Match the delivery to how your partner already reads
+### Match the delivery to how your spouse already reads
 
-If your partner ignores app alerts but answers email, stop fighting that and put the schedule where their attention already is. A short daily or weekly digest, sorted by kid, asks for thirty seconds, not a new app habit, and it reaches the parent who reads email subject lines but dismisses alerts. A system that only works when both parents change long habits at once quietly fails within a month.
+If your spouse ignores app alerts but answers email, stop fighting that and put the schedule where their attention already is. A short daily or weekly digest, sorted by kid, asks for thirty seconds, not a new app habit, and it reaches the parent who reads email subject lines but dismisses alerts. A system that only works when both parents change long habits at once quietly fails within a month.
 
 ### The three-week pact problem and how to avoid it
 
@@ -129,8 +129,8 @@ An advent calendar for parents works when it trades a daily surprise for a daily
 
 ### Day-by-day setup
 
-Day 1: Pick the Gmail account that gets the school and activity email. Days 2 and 3: Build one shared Google Calendar named something plain like "Kids" and invite your partner with edit rights. Day 4: Connect Cleanmail and pick the senders who email you about school and activities. Day 5: Delete duplicate events and add your kids' names so events sort by kid. Day 6: Add anything still in your head, like the field trip form due Friday. Day 7: Read your digest and check the week's dates.
+Day 1: Pick the Gmail account that gets the school and activity email. Days 2 and 3: Build one shared Google Calendar named something plain like "Kids" and invite the other parent with edit rights. Day 4: Connect Cleanmail and pick the senders who email you about school and activities. Day 5: Delete duplicate events and add your kids' names so events sort by kid. Day 6: Add anything still in your head, like the field trip form due Friday. Day 7: Read your digest and check the week's dates.
 
 ### How to tell it is working by next picture day
 
-Measure the drop, not perfection. Track two numbers: minutes spent copying dates by hand each Sunday, and how many "did you see that email?" texts you send in a week. If hand-copying stops and the texts halve, the load moved off your head and onto the calendar. If your partner still ignores alerts, put the calendar widget on their phone's home screen, so the schedule reaches them where they already look.
+Measure the drop, not perfection. Track two numbers: minutes spent copying dates by hand each Sunday, and how many "did you see that email?" texts you send in a week. If hand-copying stops and the texts halve, the load moved off your head and onto the calendar. If the other parent still ignores alerts, put the calendar widget on their phone's home screen, so the schedule reaches them where they already look.
