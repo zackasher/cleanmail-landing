@@ -77,7 +77,7 @@ Open the calendar's "Settings and sharing" page, click "Shared with," then "Add 
 
 ### Step 3: Set reminders the other parent will actually see
 
-In the calendar's settings, set default notifications to email plus a pop-up, timed the evening before and the morning of each event. One parent often absorbs the reminder work while the other ignores app alerts. In Pew Research Center's 2015 report "Raising Kids and Running a Household," 54% of parents in homes where both parents work full time said the mother does more of managing the kids' schedules and activities, 39% said they share it equally, and 6% said the father does more. Email reminders reach the parent who reads email but dismisses alerts.
+In the calendar's settings, set default notifications to email plus a pop-up, timed the evening before and the morning of each event. One parent often absorbs the reminder work while the other ignores app alerts. In Pew Research Center's 2015 report ["Raising Kids and Running a Household,"](https://www.pewresearch.org/social-trends/2015/11/04/raising-kids-and-running-a-household-how-working-parents-share-the-load/) 54% of parents in homes where both parents work full time said the mother does more of managing the kids' schedules and activities, 39% said they share it equally, and 6% said the father does more. Email reminders reach the parent who reads email but dismisses alerts.
 
 ### Where the manual setup breaks down
 
