@@ -10,7 +10,7 @@ export const BEST_APPS_HEADING = "The best apps for school and activity emails i
 export const BEST_APPS_EYEBROW = "How to choose";
 
 export const BEST_APPS_ANSWER =
-  "The best app for school and activity emails is one that reads the senders you choose straight from your inbox, so you never forward anything, and puts the dates on the calendar your household already checks. If you have more than one kid, look for one that sorts by child. Try it on a real week of school and activity email before you pay.";
+  "Pick an app that reads the school and activity senders you choose straight from your inbox and puts the dates on the calendar your household already checks. Then try it on a real week of email before you pay.";
 
 export const BEST_APPS_CRITERIA_HEADING = "How to choose";
 export const BEST_APPS_CRITERIA = [
@@ -51,8 +51,6 @@ export interface BestAppEntry {
   emailAccess: EmailAccessKind;
   name: string;
   ours?: boolean;
-  // Initial square color, taken from each app's own site or App Store page 11/23/2026 (Zack 11/23: "give the other apps squares a color based on their brand"). A color square with a letter, never their logo.
-  brandColor?: string;
   whatItDoes: string;
   howDatesReach?: string;
   price: string;
@@ -75,7 +73,6 @@ export const BEST_APPS: BestAppEntry[] = [
   },
   {
     name: "HappyParent HQ",
-    brandColor: "#5A7868",
     emailAccess: "either",
     whatItDoes: "a family timeline built from school email, with a 14-day free trial.",
     howDatesReach: "connects Gmail, Outlook, Apple Mail or IMAP, or by forwarding.",
@@ -84,7 +81,6 @@ export const BEST_APPS: BestAppEntry[] = [
   },
   {
     name: "Leto",
-    brandColor: "#5302EB",
     emailAccess: "connects",
     whatItDoes: "turns school emails into tasks and events; free for families whose PTA or school partners with Leto.",
     howDatesReach: "connects to Gmail (view-only), processes the senders you choose, adds events to the calendar you use.",
@@ -93,7 +89,6 @@ export const BEST_APPS: BestAppEntry[] = [
   },
   {
     name: "NUET",
-    brandColor: "#1A5E4B",
     emailAccess: "connects",
     whatItDoes: "pulls events from selected emails, photos and messages into one place.",
     howDatesReach: "connects your email; keeps your calendar in sync.",
@@ -102,7 +97,6 @@ export const BEST_APPS: BestAppEntry[] = [
   },
   {
     name: "SchoolMail: Parent Calendar",
-    brandColor: "#2E8F8B",
     emailAccess: "notStated",
     whatItDoes: "turns school emails into calendar events you can add or skip with one tap.",
     howDatesReach: "not stated on its App Store listing.",
@@ -111,7 +105,6 @@ export const BEST_APPS: BestAppEntry[] = [
   },
   {
     name: "Sense",
-    brandColor: "#2D3265",
     emailAccess: "forward",
     whatItDoes: "a family calendar and organizer with lists, chores, meals and reminders.",
     howDatesReach:

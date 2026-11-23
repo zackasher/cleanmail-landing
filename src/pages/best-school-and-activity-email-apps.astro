@@ -98,7 +98,7 @@ const faqSchema = {
               <span class="ba-name" role="cell">
                 {app.ours
                   ? <img class="ba-icon" src={CLEANMAIL_APP_ICON} alt="" width={APP_ICON_SIZE} height={APP_ICON_SIZE} />
-                  : <span class="ba-icon ba-initial" style={`background:${app.brandColor}`} aria-hidden="true">{app.name.charAt(0)}</span>}
+                  : <span class="ba-icon ba-initial" aria-hidden="true">{app.name.charAt(0)}</span>}
                 <span>{app.name}{app.ours && <span class="ba-ours-tag">{BEST_APPS_OURS_LABEL}</span>}</span>
               </span>
               <span class="ba-access" role="cell">
@@ -158,7 +158,7 @@ const faqSchema = {
   .ba-hero{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:64px;align-items:center}
   .ba-hero .ip-eyebrow,.ba-hero h1{text-align:left;margin-inline:0}
   .ba-hero h1{max-width:12em}
-  .ba-answer{margin:24px 0 0;max-width:34em;font-size:18px;line-height:1.55;color:var(--ink)}
+  .ba-answer{margin:24px 0 0;max-width:36.5em;font-size:18px;line-height:1.55;color:var(--ink)}
   .ba-note{margin:16px 0 0;max-width:40em;font-size:14px;line-height:1.5;color:var(--muted)}
   .ba-hero-phone :global(.phone-wrap){width:240px}
   .ba-shot{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
@@ -182,7 +182,8 @@ const faqSchema = {
   .ba-ours{background:rgba(74,111,227,.05)}
   .ba-name{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--navy)}
   .ba-icon{width:32px;height:32px;border-radius:8px;flex-shrink:0}
-  .ba-initial{display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700}
+  /* One neutral Cleanmail tint for every rival square (Counsel 11/23, Zack "ok fine, remove"): a rival's brand color would borrow its look. */
+  .ba-initial{display:inline-flex;align-items:center;justify-content:center;background:rgba(74,111,227,.1);color:var(--purple);font-size:16px;font-weight:700}
   .ba-ours-tag{display:inline-block;margin-left:8px;padding:2px 8px;border-radius:999px;background:rgba(74,111,227,.12);color:var(--purple);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;vertical-align:2px}
   .ba-access{display:flex;align-items:flex-start;gap:8px}
   .ba-access svg{width:20px;height:20px;margin-top:2px;flex-shrink:0;color:var(--purple)}
