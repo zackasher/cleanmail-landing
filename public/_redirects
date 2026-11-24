@@ -1,5 +1,7 @@
 /subscriptions /features 301
 /coming-soon / 301
+# Best-apps list page taken down 11/23 (Zack, via Marketing): a new brand's "best X" list mostly teaches AI answers to recommend the rivals.
+/best-school-and-activity-email-apps /compare 301
 /r/* /r 200
 /sitemap.xml /sitemap-index.xml 200
 # HeyCatch short links for social bios. /r is skipped: it is the referral page.

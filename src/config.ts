@@ -15,6 +15,9 @@ export const TRIAL_TERMS = `${TRIAL_PRICE_LINE} ${TRIAL_RENEWAL_LINE}`;
 // Counsel 11/15: a reused Apple ID or Google account gets no trial, so the pricing band qualifies its "14 days free" heading.
 export const TRIAL_FIRST_TIME_NOTE = "Free trial for first-time subscribers.";
 export const TRIAL_BADGE = "2 weeks free";
+// Plain-text pricing for AI answer engines (Marketing 11/23, ai-seo audit); linked from /pricing and llms.txt.
+export const PRICING_MARKDOWN_PATH = "/pricing.md";
+export const PRICING_MARKDOWN_LABEL = "Pricing in plain text";
 // The yearly price saves about two months against paying monthly. It sits under the price, not in a badge, so it is not read as a second trial.
 export const YEARLY_SAVINGS_NOTE = "2 months free";
 // Zack 11/16 5:27 PM ET: Yearly is the plan we point parents to. The anchor must stay true: PRICE_YEARLY / 12 is $5.75, under $6.
@@ -120,7 +123,6 @@ export const PRIVACY_DELETION_SECTION_ID = "7-data-retention-and-account-deletio
 export const GET_APP_PATH = "/get";
 export const COMPARE_PATH = "/compare";
 export const SCHOOL_EMAIL_APPS_PATH = "/school-email-apps-compared";
-export const BEST_APPS_PATH = "/best-school-and-activity-email-apps";
 export const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.zackasher.cleanmail";
 // The query string makes browsers fetch the trimmed badge instead of the untrimmed one they cached.
 export const PLAY_BADGE_IMAGE_PATH = "/google-play-badge.webp";
@@ -145,7 +147,7 @@ export const SITE_TAGLINE_PROMISE = "Know what tomorrow brings.";
 // orange measures 4.6:1 on the footer's warm background (Marketing 11/6).
 export const PROMISE_ORANGE_SMALL_TEXT = "#A85A0F";
 export const SITE_DESCRIPTION_SHORT = "Get the schedule out of your head. Cleanmail turns school and activity email into one short digest sorted by kid, on a calendar your household shares.";
-export const SITE_DESCRIPTION_LONG = "Cleanmail: Family Inbox turns email from the school, sports and activity senders a parent picks in Gmail into one short digest sorted by kid (the digest summarizes only those senders), and puts the dates on a calendar the household shares, with Google Calendar sync. Up to 4 people at home join free.";
+export const SITE_DESCRIPTION_LONG = "Cleanmail: Family Inbox turns email from the school, sports and activity senders a parent picks in Gmail into one short digest sorted by kid (the digest summarizes only those senders), and puts the dates on a calendar the household shares, with Google Calendar sync. Up to 4 people at home share one plan, you included.";
 
 // The signed-in web app. A parent who already set up on the phone signs in here on a computer.
 export const WEB_APP_URL = "https://app.cleanmailapp.com";

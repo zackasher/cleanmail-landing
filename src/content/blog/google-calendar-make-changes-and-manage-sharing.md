@@ -149,4 +149,4 @@ A handful of products now work on this part, turning school and activity email i
 
 ### Where Cleanmail fits, and where it doesn't
 
-Cleanmail, our own product, sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. It's $6.99 a month, and up to 4 people at home join free. Where it falls short: it works from email, so a plan that arrives by text still needs adding by hand. A paper flyer can go in with a photo. Anyone wanting fine-grained free/busy control per person should stick to the Google Calendar settings above.
+Cleanmail, our own product, sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. It's $6.99 a month, and up to 4 people at home share one plan, you included. Where it falls short: it works from email, so a plan that arrives by text still needs adding by hand. A paper flyer can go in with a photo. Anyone wanting fine-grained free/busy control per person should stick to the Google Calendar settings above.

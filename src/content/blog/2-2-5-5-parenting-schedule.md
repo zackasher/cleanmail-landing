@@ -15,7 +15,7 @@ faqs:
   - q: "Do courts approve a 2-2-5-5 parenting schedule?"
     a: "It is one of the common 50/50 rotations parents agree to, and courts generally look at whether a plan serves the children. Rules differ by state, so check with your court or a family lawyer, and write down your exchange times, holiday rules and how both parents stay informed about school."
   - q: "What's the best app for tracking a 50/50 custody calendar and school emails?"
-    a: "The test is simple: can the second parent see the field trip without asking? Look for a shared calendar both households can view, filled from school email instead of retyped by hand. Cleanmail sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. It's $6.99 a month, and up to 4 people at home join free."
+    a: "The test is simple: can the second parent see the field trip without asking? Look for a shared calendar both households can view, filled from school email instead of retyped by hand. Cleanmail sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. It's $6.99 a month, and up to 4 people at home share one plan, you included."
 ---
 
 A 2-2-5-5 parenting schedule splits custody in a repeating two-week cycle: two days with one parent, two with the other, then five and five. Each parent keeps the same two weekdays every week, and the weekends alternate. This guide shows how the rotation works, how it compares to 2-2-3 and 3-4-4-3, and how to choose.
@@ -108,7 +108,7 @@ On a 2-2-5-5, school and activity email lands in one inbox while the kids are at
 
 ### Getting dates out of email and onto a shared calendar
 
-The fix is a shared calendar both households can see, filled automatically instead of retyped. Cleanmail sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. It's $6.99 a month, and up to 4 people at home join free. The honest test: does the second parent see the field trip without asking?
+The fix is a shared calendar both households can see, filled automatically instead of retyped. Cleanmail sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. It's $6.99 a month, and up to 4 people at home share one plan, you included. The honest test: does the second parent see the field trip without asking?
 
 ## How do you set up and adjust a 2-2-5-5 schedule?
 

@@ -108,6 +108,6 @@ Keep one shared place for the family schedule, one you both actually check, so t
 
 Look for four things: it pulls dates out of school and activity email, it sorts what matters by kid, it shows up somewhere your family already looks, and your partner can see it without being forwarded anything.
 
-Cleanmail does exactly that. You pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest sorted by kid that summarizes only those senders, and puts the dates on a calendar everyone at home shares, with Google Calendar sync. Up to 4 people in a household join free, so your partner sees the same schedule you do without you passing it along. It works with Gmail today, on iPhone and Android.
+Cleanmail does exactly that. You pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest sorted by kid that summarizes only those senders, and puts the dates on a calendar everyone at home shares, with Google Calendar sync. Up to 4 people at home share one plan, you included, so your partner sees the same schedule you do without you passing it along. It works with Gmail today, on iPhone and Android.
 
 If school and activity email is light in your house, a shared calendar you fill in yourself may be all you need. The point is that the schedule lives somewhere other than one person's head.

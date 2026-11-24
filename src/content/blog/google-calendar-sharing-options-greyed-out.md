@@ -123,4 +123,4 @@ Create your own calendar, copy the school events you care about into it, and sha
 
 ### Turning parent email into a shared household calendar instead
 
-The dates usually live in school and activity email before they live anywhere else, so the inbox is the better starting point. Cleanmail sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. Your spouse sees the schedule without touching your inbox. It's $6.99 a month, and up to 4 people at home join free.
+The dates usually live in school and activity email before they live anywhere else, so the inbox is the better starting point. Cleanmail sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. Your spouse sees the schedule without touching your inbox. It's $6.99 a month, and up to 4 people at home share one plan, you included.

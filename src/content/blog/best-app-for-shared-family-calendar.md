@@ -95,7 +95,7 @@ Paid organizers add structure on top: lists, meal planning, a simpler family vie
 
 A shared calendar only works after the events are in it. Your family's schedule doesn't start in a calendar app. It starts in the school newsletter, the coach's email, the PTA reminder and the dance studio update. Somebody reads all of it, finds the dates and types them in. Usually it is the same parent every time, and that parent becomes the person everyone asks.
 
-That is the gap Cleanmail was built for. You pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest sorted by kid that summarizes only those senders, and puts the dates on a calendar everyone at home shares. It also syncs to Google Calendar, so nobody has to learn a new place to look. Up to 4 people in a household join free, and it works on iPhone and Android with Gmail.
+That is the gap Cleanmail was built for. You pick the school, sports and activity senders in Gmail. Cleanmail turns them into one short digest sorted by kid that summarizes only those senders, and puts the dates on a calendar everyone at home shares. It also syncs to Google Calendar, so nobody has to learn a new place to look. Up to 4 people at home share one plan, you included, and it works on iPhone and Android with Gmail.
 
 ### When you don't need a new tool
 

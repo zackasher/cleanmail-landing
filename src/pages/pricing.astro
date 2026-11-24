@@ -3,12 +3,12 @@ import { pageTitle } from "../page-title";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import CTA from "../components/CTA.astro";
 import TrustLine from "../components/TrustLine.astro";
-import { PRICE_MONTHLY, PRICE_YEARLY, PRICE_YEARLY_PER_MONTH, TRIAL_DAYS, TRIAL_TERMS, TRIAL_FIRST_TIME_NOTE, TRIAL_BADGE, YEARLY_SAVINGS_NOTE, HOUSEHOLD_SIZE, BEST_VALUE_BADGE, YEARLY_VALUE_ANCHOR } from "../config";
+import { PRICE_MONTHLY, PRICE_YEARLY, PRICE_YEARLY_PER_MONTH, TRIAL_DAYS, TRIAL_TERMS, TRIAL_FIRST_TIME_NOTE, TRIAL_BADGE, YEARLY_SAVINGS_NOTE, HOUSEHOLD_SIZE, BEST_VALUE_BADGE, YEARLY_VALUE_ANCHOR, PRICING_MARKDOWN_PATH, PRICING_MARKDOWN_LABEL } from "../config";
 import "../styles/info-page.css";
 ---
 <BaseLayout
   title={pageTitle("Pricing")}
-  description={`${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year. One parent pays and up to ${HOUSEHOLD_SIZE} people at home join free. Preview your digest first, then ${TRIAL_DAYS} days free. Renews until you cancel.`}
+  description={`${PRICE_MONTHLY} a month or ${PRICE_YEARLY} a year. Up to ${HOUSEHOLD_SIZE} people at home share one plan, you included. Preview your digest first, then ${TRIAL_DAYS} days free. Renews until you cancel.`}
  hideFooterAppLink={true}>
   <section class="ip">
     <p class="ip-eyebrow">Pricing</p>
@@ -37,7 +37,7 @@ import "../styles/info-page.css";
     </div>
 
     <ul class="price-points">
-      <li>One parent pays. Up to {HOUSEHOLD_SIZE} people in your household join free.</li>
+      <li>One parent pays. Up to {HOUSEHOLD_SIZE} people at home share one plan, you included.</li>
       <li>Setup is quick and easy, and you see a preview of your digest before you choose a plan.</li>
     </ul>
 
@@ -45,9 +45,12 @@ import "../styles/info-page.css";
       <CTA />
       <TrustLine />
     </div>
+    <p class="price-plain"><a href={PRICING_MARKDOWN_PATH}>{PRICING_MARKDOWN_LABEL}</a></p>
   </section>
 
   <style>
+    .price-plain{margin:24px 0 0;text-align:center;font-size:14px}
+    .price-plain a{color:var(--muted)}
     .trial-band{max-width:560px;margin:34px auto 0;text-align:center;background:linear-gradient(135deg,rgba(232,140,48,.14),rgba(93,196,184,.14));border:1px solid rgba(232,140,48,.35);border-radius:20px;padding:18px 22px}
     .trial-head{margin:0;font-size:clamp(20px,2.6vw,24px);font-weight:600;color:var(--navy)}
     .trial-terms{margin:6px 0 0;font-size:14.5px;color:var(--muted)}

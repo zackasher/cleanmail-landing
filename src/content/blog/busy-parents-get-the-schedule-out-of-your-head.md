@@ -115,7 +115,7 @@ The best gift for the schedule-keeper in your house is taking a recurring task o
 
 ### Gifts that remove a recurring task
 
-Pay for the thing that does the copying. Cleanmail sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. It's $6.99 a month, and up to 4 people at home join free. Handing over the mental load is the point; the card is just the delivery.
+Pay for the thing that does the copying. Cleanmail sums up the emails from the senders you pick into one short digest sorted by kid, and puts the dates on a calendar your household shares. It's $6.99 a month, and up to 4 people at home share one plan, you included. Handing over the mental load is the point; the card is just the delivery.
 
 ### Gifts that add clutter: what to skip
 
