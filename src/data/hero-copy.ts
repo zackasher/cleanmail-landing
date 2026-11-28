@@ -16,7 +16,7 @@ export const HERO_PREVIEW_SLIDES = [
   { label: "List", headingWord: "schedule", src: "/feat-cancel-1018.webp", width: 520, height: 1127, alt: "The Cleanmail Events tab in List view, with a cancelled soccer practice" },
   { label: "Digest", headingWord: "digest", src: "/Digest_Sample.webp", width: 886, height: 1920, alt: "The Cleanmail app showing a digest sorted by kid, with school events for Liam", collapsedSrc: "/hero-preview-poster.webp", collapsedAlt: "The same digest with every banner folded, showing Liam and Sara at a glance" },
 ];
-export const HERO_PREVIEW_AUTO_ADVANCE_MS = 4000;
+export const HERO_PREVIEW_AUTO_ADVANCE_MS = 2000;
 export const HERO_PREVIEW_PEEK_DELAY_MS = 1200;
 export const HERO_PREVIEW_SWIPE_THRESHOLD_PX = 40;
 export const HERO_HEADING_SWAP_EVENT = "cleanmail:hero-slide";
